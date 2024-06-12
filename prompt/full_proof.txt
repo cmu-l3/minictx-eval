@@ -1,0 +1,86 @@
+import MiniF2F.Minif2fImport
+
+open BigOperators
+
+open Real
+
+open Nat
+
+open Topology
+
+
+theorem amc12_2000_p5 (x p : ℝ) (h₀ : x < 2) (h₁ : abs (x - 2) = p) : x - p = 2 - 2 * p := by
+  suffices abs (x - 2) = -(x - 2) by
+    rw [h₁] at this
+    linarith
+  apply abs_of_neg
+  linarith
+
+  
+theorem mathd_algebra_110 (q e : ℂ) (h₀ : q = 2 - 2 * Complex.I) (h₁ : e = 5 + 5 * Complex.I) :
+    q * e = 20 := by
+  rw [h₀, h₁]
+  ring_nf
+  rw [pow_two, Complex.I_mul_I]
+  ring
+  
+
+theorem mathd_numbertheory_188 : Nat.gcd 180 168 = 12 := by
+  apply Eq.refl
+
+  
+theorem amc12_2001_p9 (f : ℝ → ℝ) (h₀ : ∀ x > 0, ∀ y > 0, f (x * y) = f x / y) (h₁ : f 500 = 3) :
+    f 600 = 5 / 2 := by
+  specialize h₀ 500 _ (6 / 5) _
+  · linarith
+  · linarith
+  calc
+    f 600 = f (500 * (6 / 5)) := by
+      congr
+      norm_num
+    _ = f 500 / (6 / 5) := by rw [h₀]
+    _ = 3 / (6 / 5) := by rw [h₁]
+    _ = 5 / 2 := by norm_num
+
+
+theorem mathd_algebra_327 (a : ℝ) (h₀ : 1 / 5 * abs (9 + 2 * a) < 1) : -7 < a ∧ a < -2 := by
+  have h₁ := (mul_lt_mul_left (show 0 < (5 : ℝ) by linarith)).mpr h₀
+  have h₂ : abs (9 + 2 * a) < 5; linarith
+  have h₃ := abs_lt.mp h₂
+  cases' h₃ with h₃ h₄
+  constructor <;> nlinarith
+  
+  
+theorem amc12_2001_p2 (a b n : ℕ) (h₀ : 1 ≤ a ∧ a ≤ 9) (h₁ : 0 ≤ b ∧ b ≤ 9) (h₂ : n = 10 * a + b)
+    (h₃ : n = a * b + a + b) : b = 9 := by
+  rw [h₂] at h₃
+  simp at h₃
+  have h₄ : 10 * a = (b + 1) * a; linarith
+  simp at h₄
+  cases' h₄ with h₅ h₆
+  linarith
+  exfalso
+  simp_all [le_refl]
+
+  
+theorem mathd_algebra_139 (s : ℝ → ℝ → ℝ)
+   (h₀ : ∀ (x) (_ : x ≠ 0), ∀ (y) (_ : y ≠ 0), s x y = (1 / y - 1 / x) / (x - y)) :
+    s 3 11 = 1 / 33 := by
+  rw [h₀]
+  norm_num
+  ring
+  
+  
+theorem amc12_2000_p11 (a b : ℝ) (h₀ : a ≠ 0 ∧ b ≠ 0) (h₁ : a * b = a - b) :
+    a / b + b / a - a * b = 2 := by
+  field_simp [h₀.1, h₀.2]
+  simp only [h₁, mul_comm, mul_sub]
+  ring
+  
+
+theorem mathd_numbertheory_84 : Int.floor ((9 : ℝ) / 160 * 100) = 5 := by
+  rw [Int.floor_eq_iff]
+  constructor
+  all_goals norm_num
+  
+/- Now here is your exercise. If needed, think through the next step using a comment. -/

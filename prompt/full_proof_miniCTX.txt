@@ -1,0 +1,23 @@
+Your task is to generate complete proofs for problems stated in Lean4. You may use any tactics available in Mathlib, but no additional context, definitions, or theorems from the problem’s file will be provided. Focus on crafting proofs using general knowledge and techniques applicable in Lean4.
+Here are some examples:
+
+example {{x y : ℤ}} (hx : x + 3 ≤ 2) (hy : y + 2 * x ≥ 3) : y > 3 :=
+  calc
+    y = y + 2 * x - 2 * x := by ring
+    _ ≥ 3 - 2 * x := by rel [hy]
+    _ = 9 - 2 * (x + 3) := by ring
+    _ ≥ 9 - 2 * 2 := by rel [hx]
+    _ > 3 := by numbers
+
+lemma deriv_scale {{f : CS (n + 1) E}} : (f.scale R).deriv = R⁻¹ • f.deriv.scale R := by
+  ext v ; by_cases hR : R = 0 <;> simp [hR, scale]
+  · simp [deriv, smul] ; exact deriv_const _ _
+  · exact ((f.hasDerivAt (R⁻¹ • v)).scomp v (by simpa using (hasDerivAt_id v).const_smul R⁻¹)).deriv
+
+theorem mul_dvd_mul_left (a : α) (h : b ∣ c) : a * b ∣ a * c := by
+  obtain ⟨d, rfl⟩ := h
+  use d
+  rw [mul_assoc]
+
+/- Now here is your exercise. There is no need to restate the problem. If needed, think through the proof using comments. -/
+{}

@@ -1,0 +1,11 @@
+/- You are proving a theorem in Lean 4.
+You are given the following information:
+- The current proof state, inside [STATE]...[/STATE]
+
+Your task is to generate the next tactic in the proof.
+Put the next tactic inside [TAC]...[/TAC]
+-/
+[STATE]
+{}
+[/STATE]
+[TAC]
