@@ -1,0 +1,15 @@
+[submodule "math2001-bump"]
+	path = math2001-bump
+	url = https://github.com/hanwenzhu/math2001-bump.git
+[submodule "mathlib4"]
+	path = mathlib4
+	url = https://github.com/leanprover-community/mathlib4.git
+[submodule "repl"]
+	path = repl
+	url = https://github.com/leanprover-community/repl.git
+[submodule "pfr"]
+	path = pfr
+	url = https://github.com/teorth/pfr.git
+[submodule "PrimeNumberTheoremAnd"]
+	path = PrimeNumberTheoremAnd
+	url = https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
