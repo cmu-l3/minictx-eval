@@ -13,3 +13,6 @@
 [submodule "PrimeNumberTheoremAnd"]
 	path = PrimeNumberTheoremAnd
 	url = https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
+[submodule "HTPILeanPackage4.7"]
+	path = HTPILeanPackage4.7
+	url = https://github.com/hanwenzhu/HTPILeanPackage4.7.git
