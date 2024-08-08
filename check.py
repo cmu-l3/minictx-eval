@@ -14,7 +14,7 @@ from repl_wrapper import InteractiveThread
 
 openai.api_key = ""  # Fill openai API key
 
-os.environ["TOKENIZERS_PARALLELISM"] = "true"  #remove warnings
+os.environ["TOKENIZERS_PARALLELISM"] = "true"  
 
 def _load_data(dataset_name, dataset_path):
     if 'minif2f' in dataset_name:
@@ -167,10 +167,7 @@ def _prompt_fewshot(theorem_statement, state = None, tactics = None, task = "ful
         return prompt 
     elif task == "tactic_prediction":
         ctx = theorem_statement + "\n  " + "  ".join(tactics)
-        # prompt = prompt.format(ctx, state)
         prompt = prompt.format(state)
-        # with open(f"prompt/{task}_steps.txt", "r") as infile:
-        #     prompt = infile.read().format(theorem_statement + "\n  " + "  ".join(tactics))
         return prompt
     elif task == "state_prediction":
         prompt += theorem_statement
@@ -190,11 +187,9 @@ def _error_message(output):
     if output == None: return True
     if "messages" in output:
         for d in output["messages"]:
-            #if d["severity"] == "error": print("error: ", d["data"])
             return True
     if "message" in output:
         if "error" in output["message"]:
-            #print("error :", output)
             return True
     return False
 
@@ -260,7 +255,6 @@ def evaluation(example, task, thread_id, repl_path, lean_env_path, model, tokeni
                 else:
                     print("invalid step: ", next_tactic, output)
                     continue
-            # print("invalid step", next_tactic, output)
 
         thread.stop()
         thread.join()
@@ -270,18 +264,15 @@ def _eval_tactic(next_tactic, thread, proof_state, example):
     if 'admit' in next_tactic or 'sorry' in next_tactic:
         return {"status": "invalid"}
     output = thread.submit_and_receive({"tactic": next_tactic, "proofState": proof_state})
-    # print("tactic: ", next_tactic)
-    # print("output: ", output)
     if not _error_message(output):
         if output == "" and "sorry" not in output:
             return {"status": "invalid"}
         elif example["full_name"] != None and example["full_name"] in next_tactic:
-        # FIXME: forbid recursion
+        # forbid recursion
             return {"status": "invalid"}
         elif output["goals"] == [] and len(output) == 2: 
             return {"status": "done", "output": output}
         elif output["proofState"] > proof_state:
-            #print("valid step: ", next_tactic, output)
             return {"status": "valid", "output": output}
         else:
             return {"status": "invalid"}
@@ -340,18 +331,11 @@ def evaluation_API(example, thread_id, repl_path, lean_env_path, model, prompt_f
             "proof": response}
 
 def best_first_search(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=64, max_iters=250):
-    # FIXME: ensure this always holds
     theorem_statement = example["theoremStatement"] + " := by"
-
-    # # FIXME: hard-coded to MiniF2F
-    # imports = "import MiniF2F.Minif2fImport\n\nopen BigOperators Real Nat Topology\n"
-
-    # FIXME: hard-coded to prime-number
     imports = example["srcContext"]
     
     thread = InteractiveThread(thread_id, repl_path, lean_env_path, initial_context = imports, timeout=600)
     thread.start()
-    # output = thread.submit_and_receive({"cmd": imports + theorem_statement + " sorry", "env": 0})
     output = thread.submit_and_receive({"cmd": theorem_statement + " sorry", "env": 0})
 
     if output != None and "sorries" in output:
@@ -384,7 +368,6 @@ def best_first_search(example, task, thread_id, repl_path, lean_env_path, model,
 
         prompt = prompt_fn(theorem_statement, goal, tactics, task)
         tactic_cands, tactic_scores = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
-        # print(tactic_cands)
         visited = set([goal])
         for next_tactic, tactic_score in zip(tactic_cands, tactic_scores):
             outcome = _eval_tactic(next_tactic, thread, proof_state, example)
@@ -405,8 +388,6 @@ def best_first_search(example, task, thread_id, repl_path, lean_env_path, model,
                     visited.add(new_goal)
             else:
                 continue
-
-        # max_iters -= 1
 
     thread.stop()
     thread.join()
@@ -448,7 +429,7 @@ def state_prediction(example, task, thread_id, repl_path, lean_env_path, model, 
     prompt = prompt_fn(theorem_statement, task = task)
     responses = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
     print(max([compare_lean_state(example["response"], response) for response in responses[0]]))
-    # return max([compare_lean_state(example["response"], response) for response in responses])
+    return max([compare_lean_state(example["response"], response) for response in responses])
 
 
 def make_output_dir(output_dir):
@@ -507,8 +488,6 @@ if __name__ == "__main__":
     
     prompt_fn = _prompt_fewshot
 
-
-    # TODO: implement parallel
     thread_id = 1
 
     successes = 0
