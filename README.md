@@ -48,7 +48,7 @@ This repository contains the evaluation scripts for miniCTX: Neural Theorem Prov
 
 Open `script.sh` and verify that the paths and parameters are correctly set according to your setup. The script contains the following variables:
 
-- `TASK`: The task name (default: `tactic_prediction`).
+- `TASK`: The task name, selected from `tactic_prediction`, `tactic_prediction_context`, `full_proof`, `full_proof_context`.
 - `MAX_ITERS`: The maximum number of iterations (default: `100`).
 - `NUM_SAMPLES`: The number of samples (default: `32`).
 - `TEMPERATURES`: The temperatures for sampling (default: `0.0`).
