@@ -6,11 +6,16 @@ import time
 import transformers
 import vllm
 import re
+import sys
 from datetime import datetime
 from pathlib import Path
 from tqdm import tqdm, trange
 
 from repl_wrapper import InteractiveThread
+
+import openai
+import tiktoken
+import tempfile
 
 openai.api_key = ""  # Fill openai API key
 
@@ -69,22 +74,23 @@ def _load_data(dataset_name, dataset_path):
 
     return data
 
-import openai
-import tiktoken
-
-def truncate_middle(text, max_tokens=8000):
-    tokens = enc.encode(text)
-    
+def truncate_middle(text, tokenizer, max_tokens=8000):
+    tokens = tokenizer.encode(text)
     if len(tokens) <= max_tokens:
-        return text  
-    
-    half_max_tokens = max_tokens // 2
-    head_tokens = tokens[:half_max_tokens]
-    tail_tokens = tokens[-half_max_tokens:]
-    
-    truncated_text = enc.decode(head_tokens) + " ... " + enc.decode(tail_tokens)
-    
+        return text
+
+    keep_tokens = max_tokens // 2
+    head_tokens = tokens[:keep_tokens]
+    tail_tokens = tokens[-keep_tokens:]
+
+    truncated_text = tokenizer.decode(head_tokens) + "..." + tokenizer.decode(tail_tokens)
     return truncated_text
+
+def discard_after_marker(text, marker='/- BEGIN EXERCISES -/\n'):
+    marker_index = text.find(marker)
+    if marker_index != -1:
+        return text[:marker_index] + marker
+    return text
 
 def generate_api(prompt, model, temperatures, num_samples, max_tokens=256):
     texts, scores = [], []
@@ -97,30 +103,28 @@ def generate_api(prompt, model, temperatures, num_samples, max_tokens=256):
                 {"role": "user", "content": prompt}
             ],
             max_tokens=max_tokens,
-            temperature=0.0
+            temperature=temperature,
+            n=num_samples,
         )
-        
-        content = responses.choices[0].message.content
-        texts.append(content)
-        scores.append(0)
+
+        for choice in responses.choices:
+            content = choice.message.content
+            texts.append(content)
+            scores.append(0)
 
     texts, scores = _unique_sorted(texts, scores)
     return texts, scores
 
-def _prompt_fewshot(theorem_statement, ctx):
-    with open("prompt/full_proof_miniCTX.txt", "r") as infile:
-        prompt = infile.read()
-    new_ctx = truncate_middle(ctx)
-    prompt = prompt.format(theorem_statement)
-    return prompt
-
 def process_responses_GPT4o(responses):
-    response = responses[0][0]
-    pattern = re.compile(r'```lean(.*?)```', re.DOTALL | re.IGNORECASE)
-    match = pattern.search(response)
-    if match:
-        return match.group(1).strip()
-    return response
+    processed_responses = []
+    for response in responses[0]:
+        pattern = re.compile(r'```lean(.*?)```', re.DOTALL | re.IGNORECASE)
+        match = pattern.search(response)
+        if match:
+            processed_responses.append(match.group(1).strip())
+        else:
+            processed_responses.append(response)
+    return processed_responses
 
 def remove_last_comment(ctx):
     pattern = r'/--[^/]*?-/(\n*)$'
@@ -157,21 +161,30 @@ def _unique_sorted(texts, scores):
             scores_.append(s)
     return texts_, scores_
 
-
-def _prompt_fewshot(theorem_statement, state = None, tactics = None, task = "full_proof"):
+def _prompt_fewshot(tokenizer, theorem_statement, ctx = None, state = None, tactics = None, task = "tactic_prediction"):
     with open(f"prompt/{task}.txt", "r") as infile:
         prompt = infile.read()
     
-    if task == "full_proof":
-        prompt += theorem_statement + " := by"
-        return prompt 
-    elif task == "tactic_prediction":
-        ctx = theorem_statement + "\n  " + "  ".join(tactics)
+    if task == "tactic_prediction":
         prompt = prompt.format(state)
         return prompt
-    elif task == "state_prediction":
-        prompt += theorem_statement
+    elif task == "tactic_prediction_context":
+        ctx = discard_after_marker(ctx)  # Discard exercise context for HTPI
+        ctx = truncate_middle(ctx, tokenizer)
+        ctx = ctx + theorem_statement + "\n  " + "\n  ".join(tactics)
+        prompt = prompt.format(ctx, state)
         return prompt
+    elif task == "full_proof_context":
+        ctx = ctx
+        new_ctx = truncate_middle(ctx, tokenizer)
+        prompt = prompt.format(new_ctx, theorem_statement)
+        return prompt
+    elif task == "full_proof":
+        prompt = prompt.format(theorem_statement)
+        return prompt
+    else:
+        print(f"Error: Task '{task}' is unsupported")
+        sys.exit(1)
 
 def _load_model(model_name, tp_degree):
     model = vllm.LLM(
@@ -204,62 +217,6 @@ def get_goal(output):
 
     return None
 
-def evaluation(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=512):
-    theorem_statement = example["statement"] + " := by"
-
-    if task == "full_proof":
-        prompt = prompt_fn(theorem_statement, '', task)
-        responses = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
-        
-        thread = InteractiveThread(thread_id, repl_path, lean_env_path)
-        thread.start()
-
-        imports = "import MiniF2F.Minif2fImport\n  open BigOperators Real Nat Topology\n"
-        cmd = {"cmd": imports + theorem_statement + responses[0][0]}
-        output = thread.submit_and_receive(cmd)
-        thread.stop()
-        thread.join()
-
-        if len(output) == 1 and 'env' in output: 
-            return "Correct", output
-        return "Error", output
-
-    if task == "tactic_prediction":
-        thread = InteractiveThread(thread_id, repl_path, lean_env_path)
-        thread.start()
-        imports = "import MiniF2F.Minif2fImport\n  open BigOperators Real Nat Topology\n"
-        output = thread.submit_and_receive({"cmd": imports + theorem_statement + " sorry"})
-
-        proofState = output["sorries"][0]["proofState"]
-
-        print()
-        print(f"Problem: {theorem_statement}")
-
-        for tries in range(10):  #10 tries
-            prompt = prompt_fn(theorem_statement, task)
-            responses = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
-            next_tactic = responses[0][0].strip()
-            output = thread.submit_and_receive({"tactic": next_tactic, "proofState": proofState})
-            if not _error_message(output):
-                if output == "" and "sorry" not in output:
-                    print("error empty tactic")
-                elif output["goals"] == [] and len(output) == 2: 
-                    theorem_statement += "\n  " + next_tactic
-                    thread.stop()
-                    thread.join()
-                    return "Correct", theorem_statement, output
-                elif output["proofState"] == proofState + 1:
-                    proofState += 1
-                    theorem_statement += "\n  " + next_tactic
-                    print("valid step: ", next_tactic, output)
-                else:
-                    print("invalid step: ", next_tactic, output)
-                    continue
-
-        thread.stop()
-        thread.join()
-        return "Error" 
-
 def _eval_tactic(next_tactic, thread, proof_state, example):
     if 'admit' in next_tactic or 'sorry' in next_tactic:
         return {"status": "invalid"}
@@ -279,56 +236,56 @@ def _eval_tactic(next_tactic, thread, proof_state, example):
     return {"status": "invalid"}
 
 
-def evaluation_API(example, thread_id, repl_path, lean_env_path, model, prompt_fn, temperature, num_samples, max_tokens=512):
+def evaluation_API(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=512, max_iters=None):
     theorem_statement = example["theoremStatement"] + " := by\n  "
 
     
     imports = example["srcContext"]
 
-    prompt = prompt_fn(theorem_statement, imports)
-    responses = generate(prompt, model, [temperature], num_samples, max_tokens)
-    response = process_responses_GPT4o(responses)
+    prompt = prompt_fn(tokenizer, theorem_statement, imports, task=task)
 
-    with tempfile.NamedTemporaryFile(mode='w+', delete=False) as temp:
-        json.dump({"cmd": remove_last_comment(imports)}, temp, ensure_ascii=False)
-        temp.write("\n\n")
-        json.dump({"cmd": response, "env": 0}, temp, ensure_ascii=False)
-        temp.write("\n\n")
-        temp.flush()
-        temp_name = temp.name
+    responses = generate_api(prompt, model, [temperature], num_samples, max_tokens)
+    responses = process_responses_GPT4o(responses)
     
-    command = f'lake env ../{repl_path}/.lake/build/bin/repl < {temp_name}'
-    try:
-        result = subprocess.run(command, shell=True, capture_output=True, text=True, cwd=lean_env_path, timeout=60)
+    for response in responses:
+        with tempfile.NamedTemporaryFile(mode='w+', delete=False) as temp:
+            json.dump({"cmd": remove_last_comment(imports)}, temp, ensure_ascii=False)
+            temp.write("\n\n")
+            json.dump({"cmd": response, "env": 0}, temp, ensure_ascii=False)
+            temp.write("\n\n")
+            temp.flush()
+            temp_name = temp.name
+        
+        command = f'lake env ../{repl_path}/.lake/build/bin/repl < {temp_name}'
+        try:
+            result = subprocess.run(command, shell=True, capture_output=True, text=True, cwd=lean_env_path, timeout=60)
 
-        result_dict = result.stdout.split("\n\n")
-        env = json.loads(result_dict[0])
-        output = json.loads(result_dict[1])
+            result_dict = result.stdout.split("\n\n")
+            env = json.loads(result_dict[0])
+            output = json.loads(result_dict[1])
+        except:
+            continue
+        if env == None: 
+            continue
+        env_error = []
 
-    except:
-        return {"success": False,
-            "proof": response}
-    if env == None: 
-        return {"success": False,
-            "proof": None}
-    env_error = []
-    if "messages" in env:
-        env_error = env["messages"]
+        if "messages" in env:
+            env_error = env["messages"]
 
-    no_error = True
-    if "messages" in output:
-        errors = [message for message in output["messages"] if message not in env_error]
-        print(errors)
-        for message in errors:
-            if message["severity"] == 'error':
-                no_error = False
+        no_error = True
+        if "messages" in output:
+            errors = [message for message in output["messages"] if message not in env_error]
+            print(errors)
+            for message in errors:
+                if message["severity"] == 'error':
+                    no_error = False
 
 
-    if 'env' in output and no_error: 
-        return {"success": True,
-                "proof": response}
+        if 'env' in output and no_error: 
+            return {"success": True,
+                    "proof": response}
     return {"success": False,
-            "proof": response}
+            "proof": None}
 
 def best_first_search(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=64, max_iters=250):
     theorem_statement = example["theoremStatement"] + " := by"
@@ -337,6 +294,7 @@ def best_first_search(example, task, thread_id, repl_path, lean_env_path, model,
     thread = InteractiveThread(thread_id, repl_path, lean_env_path, initial_context = imports, timeout=600)
     thread.start()
     output = thread.submit_and_receive({"cmd": theorem_statement + " sorry", "env": 0})
+    
 
     if output != None and "sorries" in output:
         proof_state = output["sorries"][-1]["proofState"]
@@ -366,10 +324,14 @@ def best_first_search(example, task, thread_id, repl_path, lean_env_path, model,
         # Dequeue the tuple with minimum score
         score, tactics, goal, proof_state = heapq.heappop(queue)
 
-        prompt = prompt_fn(theorem_statement, goal, tactics, task)
+        prompt = prompt_fn(tokenizer, theorem_statement, imports, goal, tactics, task)
+
         tactic_cands, tactic_scores = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
         visited = set([goal])
         for next_tactic, tactic_score in zip(tactic_cands, tactic_scores):
+            
+            next_tactic = next_tactic.strip()
+
             outcome = _eval_tactic(next_tactic, thread, proof_state, example)
             if outcome['status'] == 'done':
                 thread.stop()
@@ -393,44 +355,16 @@ def best_first_search(example, task, thread_id, repl_path, lean_env_path, model,
     thread.join()
     return {'success': False, 'msg': "Search ended"}
 
-def _print_output(example, out):
+def _print_output(example, out, task):
     print(out)
     if 'proof' in out:
-        print(example['theoremStatement'] + ' := by\n  ' + '  '.join(out['proof']))
+        if "tactic_prediction" in task:
+            print(example['theoremStatement'] + ' := by\n  ' + '\n  '.join(out['proof']))
+        if "full_proof" in task:
+            print(out['proof'])
 
 def normalize_string(s):
     return '\n'.join([line.replace(' ', '') for line in s.strip().split('\n')])
-
-def compare_lean_state(correct_state, output_string):
-    start_index = output_string.find("/-")
-    comment_content = ""
-    if start_index >= 0:
-        output_string = output_string[start_index+2:]
-        print(output_string)
-        end_index = output_string.find("-/")
-        if end_index > 0: comment_content = output_string[:end_index]
-        
-    normalized_correct = normalize_string(correct_state)
-    normalized_output = normalize_string(comment_content)
-
-    correct_lines = normalized_correct.split('\n')[1:-1]
-    output_lines = normalized_output.split('\n')
-    
-    matching_lines_set = set(correct_lines).intersection(set(output_lines))
-    matching_lines_count = len(matching_lines_set)
-    
-    total_lines = len(correct_lines)
-    percentage_matched = (matching_lines_count / total_lines) if total_lines > 0 else 0
-    
-    return percentage_matched
-
-def state_prediction(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=512):
-    theorem_statement = example["query"]
-    prompt = prompt_fn(theorem_statement, task = task)
-    responses = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
-    print(max([compare_lean_state(example["response"], response) for response in responses[0]]))
-    return max([compare_lean_state(example["response"], response) for response in responses])
-
 
 def make_output_dir(output_dir):
     dt = datetime.now().strftime("%d-%m-%Y-%H-%M")
@@ -453,31 +387,30 @@ if __name__ == "__main__":
     parser.add_argument(
         '--task',
         default='tactic_prediction',
-        choices=['tactic_prediction', 'full_proof', 'state_prediction']
+        choices=['tactic_prediction', 'tactic_prediction_context', 'full_proof', 'full_proof_context']
     )
     parser.add_argument(
         '--dataset-name',
-        default='minif2f-test'
+        default='mathlib'
     )
-    parser.add_argument('--dataset-path', default='data/minif2f.jsonl')
-    parser.add_argument('--output-dir', default='output/minif2f')
+    parser.add_argument('--dataset-path', default='data/mathlib.jsonl')
+    parser.add_argument('--output-dir', default='output/mathlib')
     parser.add_argument('--tp-degree', type=int, default=1)
     parser.add_argument('--max-iters', type=int, default=100)
     parser.add_argument('--num-samples', type=int, default=32)
     parser.add_argument('--temperatures', type=float, default=0.0)
     parser.add_argument('--repl-path', default='./repl')
-    parser.add_argument('--lean-env-path', default='./miniF2F-lean4')
+    parser.add_argument('--lean-env-path', default='./mathlib4')
 
     
     args = parser.parse_args()
 
     use_API = False
 
-    if "GPT" in args.model_name:
-        enc = tiktoken.encoding_for_model(args.model_name) 
+    if "gpt" in args.model_name:
         use_API = True
         model = args.model_name
-        tokenizer = None
+        tokenizer = tiktoken.encoding_for_model(args.model_name) 
         evaluation = evaluation_API
     else:
         model, tokenizer = _load_model(args.model_name, args.tp_degree)
@@ -495,21 +428,18 @@ if __name__ == "__main__":
     for example in examples:
         example["full_name"] = get_full_name(example["theoremStatement"])
         count += 1
-        if use_API:
-            out = evaluation(example, thread_id, repl_path, lean_env_path, model, prompt_fn, temperature, num_samples)
-        else:
-            out = evaluation(example, args.task, thread_id, args.repl_path, args.lean_env_path, model, tokenizer, prompt_fn, args.temperatures, args.num_samples, max_iters = args.max_iters)
+        out = evaluation(example, args.task, thread_id, args.repl_path, args.lean_env_path, model, tokenizer, prompt_fn, args.temperatures, args.num_samples, max_iters = args.max_iters)
         if out['success']: 
             successes += 1
-            example["proof"] = (True, out["proof"])
+            example["proof"] = out
         else:
-            example["proof"] = (False, None)
-        _print_output(example, out)
+            example["proof"] = out
+        _print_output(example, out, args.task)
         print(f"Successes: {successes}/{count} ")
     
     filename = 'result.jsonl'
 
-    filepath = output_dir + filename
+    filepath = output_dir + "/" +  filename
 
     with open(filepath, 'w') as file:
         for entry in examples:

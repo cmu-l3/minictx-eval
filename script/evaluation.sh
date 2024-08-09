@@ -1,6 +1,6 @@
 #!/bin/bash
 
-TASK="tactic_prediction"
+TASK="tactic_prediction_full"
 MAX_ITERS=100
 NUM_SAMPLES=32
 TEMPERATURES=0.0
