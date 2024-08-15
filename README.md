@@ -24,20 +24,24 @@ This repository contains the evaluation scripts for miniCTX: Neural Theorem Prov
 
 2. **Set up and build your target Lean project**
 
-   For example, to set up Mathlib 4:
-
+   To setup the projects in this repository:
    ```bash
-   lake new mathlib4
-   cd mathlib4
-   lake exe cache get
+   git submodule init
+   git submodule update
    ```
 
-3. **Set up and build Lean REPL**
-
-   Clone and build the REPL project:
-
+   Then build the project; for instance, for Mathlib:
    ```bash
-   git clone <repl_repository_url>
+   cd mathlib4
+   lake exe cache get
+   lake build
+   ```
+
+2. **Set up and build Lean REPL**
+
+   After running `git submodule init` and `git submodule update`:
+   
+   ```bash
    cd repl
    lake build
    ```
