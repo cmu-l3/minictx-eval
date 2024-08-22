@@ -16,3 +16,6 @@
 [submodule "HTPILeanPackage4.7"]
 	path = HTPILeanPackage4.7
 	url = https://github.com/hanwenzhu/HTPILeanPackage4.7.git
+[submodule "miniF2F-lean4"]
+	path = miniF2F-lean4
+	url = https://github.com/yangky11/miniF2F-lean4.git
