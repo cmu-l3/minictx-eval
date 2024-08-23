@@ -33,6 +33,11 @@ def _load_data(dataset_name, dataset_path):
             data = [x for x in data if x['split'] == 'valid']
         else:
             data = [x for x in data if x['split'] == 'test']
+            for example in data:
+                example["theoremStatement"] = example["statement"]
+                del example["statement"]
+                example["srcContext"] = "import MiniF2F.Minif2fImport\n  open BigOperators Real Nat Topology\n"
+
     elif 'prime' in dataset_name:
         data = []
         with open(dataset_path) as f:
