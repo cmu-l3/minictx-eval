@@ -261,7 +261,7 @@ def evaluation_API(example, task, thread_id, repl_path, lean_env_path, model, to
             temp.flush()
             temp_name = temp.name
         
-        command = f'lake env ../{repl_path}/.lake/build/bin/repl < {temp_name}'
+        command = f'lake env {repl_path}/.lake/build/bin/repl < {temp_name}'
         try:
             result = subprocess.run(command, shell=True, capture_output=True, text=True, cwd=lean_env_path, timeout=60)
 
