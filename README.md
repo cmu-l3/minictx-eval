@@ -1,6 +1,6 @@
 # minictx-eval
 
-This repository contains the evaluation scripts for miniCTX: Neural Theorem Proving with (Long-)Contexts.
+This repository contains the evaluation scripts for [miniCTX: Neural Theorem Proving with (Long-)Contexts](https://cmu-l3.github.io/minictx/).
 
 ## Requirements
 
