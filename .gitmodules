@@ -19,3 +19,9 @@
 [submodule "miniF2F-lean4"]
 	path = miniF2F-lean4
 	url = https://github.com/yangky11/miniF2F-lean4.git
+[submodule "HepLean-v4.7"]
+	path = HepLean-v4.7
+	url = https://github.com/hanwenzhu/HepLean-v4.7.git
+[submodule "SciLean"]
+	path = SciLean
+	url = https://github.com/lecopivo/SciLean.git
