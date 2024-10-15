@@ -2,26 +2,26 @@
 	path = math2001-bump
 	url = https://github.com/hanwenzhu/math2001-bump.git
 [submodule "mathlib4"]
-	path = mathlib4
+	path = test-envs/mathlib4
 	url = https://github.com/leanprover-community/mathlib4.git
 [submodule "repl"]
 	path = repl
 	url = https://github.com/leanprover-community/repl.git
 [submodule "pfr"]
-	path = pfr
+	path = test-envs/pfr
 	url = https://github.com/teorth/pfr.git
 [submodule "PrimeNumberTheoremAnd"]
-	path = PrimeNumberTheoremAnd
+	path = test-envs/PrimeNumberTheoremAnd
 	url = https://github.com/AlexKontorovich/PrimeNumberTheoremAnd.git
 [submodule "HTPILeanPackage4.7"]
-	path = HTPILeanPackage4.7
+	path = test-envs/HTPILeanPackage4.7
 	url = https://github.com/hanwenzhu/HTPILeanPackage4.7.git
 [submodule "miniF2F-lean4"]
-	path = miniF2F-lean4
+	path = test-envs/miniF2F-lean4
 	url = https://github.com/yangky11/miniF2F-lean4.git
 [submodule "HepLean-v4.7"]
-	path = HepLean-v4.7
+	path = test-envs/HepLean-v4.7
 	url = https://github.com/hanwenzhu/HepLean-v4.7.git
 [submodule "SciLean"]
-	path = SciLean
+	path = test-envs/SciLean
 	url = https://github.com/lecopivo/SciLean.git
