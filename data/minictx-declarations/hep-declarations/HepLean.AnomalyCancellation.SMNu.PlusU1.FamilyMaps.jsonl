@@ -1,0 +1,3 @@
+{"name":"SMRHN.PlusU1.familyUniversalAF","declaration":"/-- The family universal maps on `Sols`. -/\ndef SMRHN.PlusU1.familyUniversalAF (n : ℕ) : ACCSystem.Sols (SMRHN.PlusU1 1) → ACCSystem.Sols (SMRHN.PlusU1 n)"}
+{"name":"SMRHN.PlusU1.familyUniversalLinear","declaration":"/-- The family universal maps on `LinSols`. -/\ndef SMRHN.PlusU1.familyUniversalLinear (n : ℕ) : ACCSystemLinear.LinSols (SMRHN.PlusU1 1).toACCSystemLinear →ₗ[ℚ]\n  ACCSystemLinear.LinSols (SMRHN.PlusU1 n).toACCSystemLinear"}
+{"name":"SMRHN.PlusU1.familyUniversalQuad","declaration":"/-- The family universal maps on `QuadSols`. -/\ndef SMRHN.PlusU1.familyUniversalQuad (n : ℕ) : ACCSystemQuad.QuadSols (SMRHN.PlusU1 1).toACCSystemQuad → ACCSystemQuad.QuadSols (SMRHN.PlusU1 n).toACCSystemQuad"}

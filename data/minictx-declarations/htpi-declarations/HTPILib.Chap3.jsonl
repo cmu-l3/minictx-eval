@@ -1,0 +1,51 @@
+{"name":"HTPI.Exercises.Exercise_3_2_1b","declaration":"theorem HTPI.Exercises.Exercise_3_2_1b (P : Prop) (Q : Prop) (R : Prop) (h1 : ¬R → P → ¬Q) : P → Q → R"}
+{"name":"HTPI.Like_Example_3_4_1","declaration":"theorem HTPI.Like_Example_3_4_1 (U : Type) (A : Set U) (B : Set U) (C : Set U) (D : Set U) (h1 : A ⊆ B) (h2 : ¬∃ c, c ∈ C ∩ D) : A ∩ C ⊆ B \\ D"}
+{"name":"HTPI.Theorem_3_4_7","declaration":"theorem HTPI.Theorem_3_4_7 (n : ℤ) : 6 ∣ n ↔ 2 ∣ n ∧ 3 ∣ n"}
+{"name":"HTPI.Exercises.Exercise_3_6_6b","declaration":"theorem HTPI.Exercises.Exercise_3_6_6b (U : Type) : ∃! A, ∀ (B : Set U), A ∪ B = A"}
+{"name":"HTPI.odd","declaration":"def HTPI.odd (n : ℤ) : Prop"}
+{"name":"HTPI.Example_3_6_4","declaration":"theorem HTPI.Example_3_6_4 (U : Type) (A : Set U) (B : Set U) (C : Set U) (h1 : ∃ x, x ∈ A ∩ B) (h2 : ∃ x, x ∈ A ∩ C) (h3 : ∃! x, x ∈ A) : ∃ x, x ∈ B ∩ C"}
+{"name":"HTPI.Exercises.Exercise_3_6_8a","declaration":"theorem HTPI.Exercises.Exercise_3_6_8a (U : Type) (A : Set U) : ∃! B, ∀ (C : Set U), C \\ A = C ∩ B"}
+{"name":"HTPI.Exercises.Exercise_3_3_8","declaration":"theorem HTPI.Exercises.Exercise_3_3_8 (U : Type) (F : Set (Set U)) (A : Set U) (h1 : A ∈ F) : A ⊆ ⋃₀ F"}
+{"name":"HTPI.Exercises.Exercise_3_5_9","declaration":"theorem HTPI.Exercises.Exercise_3_5_9 (U : Type) (A : Set U) (B : Set U) (h1 : 𝒫(A ∪ B) = 𝒫 A ∪ 𝒫 B) : A ⊆ B ∨ B ⊆ A"}
+{"name":"HTPI.Example_3_6_2","declaration":"theorem HTPI.Example_3_6_2 (U : Type) : ∃! A, ∀ (B : Set U), A ∪ B = B"}
+{"name":"HTPI.Exercises.Exercise_3_6_7b","declaration":"theorem HTPI.Exercises.Exercise_3_6_7b (U : Type) : ∃! A, ∀ (B : Set U), A ∩ B = A"}
+{"name":"HTPI.Exercises.Exercise_3_5_18","declaration":"theorem HTPI.Exercises.Exercise_3_5_18 (U : Type) (F : Set (Set U)) (G : Set (Set U)) (H : Set (Set U)) (h1 : ∀ A ∈ F, ∀ B ∈ G, A ∪ B ∈ H) : ⋂₀ H ⊆ ⋂₀ F ∪ ⋂₀ G"}
+{"name":"HTPI.Example_3_5_2","declaration":"theorem HTPI.Example_3_5_2 (U : Type) (A : Set U) (B : Set U) (C : Set U) : A \\ (B \\ C) ⊆ A \\ B ∪ C"}
+{"name":"HTPI.Like_Example_3_2_5","declaration":"theorem HTPI.Like_Example_3_2_5 (U : Type) (A : Set U) (B : Set U) (C : Set U) (a : U) (h1 : a ∈ A) (h2 : a ∉ A \\ B) (h3 : a ∈ B → a ∈ C) : a ∈ C"}
+{"name":"HTPI.Exercises.Exercise_3_4_19","declaration":"theorem HTPI.Exercises.Exercise_3_4_19 (U : Type) (F : Set (Set U)) (G : Set (Set U)) : ⋃₀ F ∩ ⋃₀ G ⊆ ⋃₀ (F ∩ G) ↔ ∀ (A B : Set U), A ∈ F → B ∈ G → A ∩ B ⊆ ⋃₀ (F ∩ G)"}
+{"name":"HTPI.Exercises.Exercise_3_2_2a","declaration":"theorem HTPI.Exercises.Exercise_3_2_2a (P : Prop) (Q : Prop) (R : Prop) (h1 : P → Q) (h2 : R → ¬Q) : P → ¬R"}
+{"name":"HTPI.Exercises.Exercise_3_4_18a","declaration":"theorem HTPI.Exercises.Exercise_3_4_18a (U : Type) (F : Set (Set U)) (G : Set (Set U)) : ⋃₀ (F ∩ G) ⊆ ⋃₀ F ∩ ⋃₀ G"}
+{"name":"HTPI.Exercises.Exercise_3_2_2b","declaration":"theorem HTPI.Exercises.Exercise_3_2_2b (P : Prop) (Q : Prop) (h1 : P) : Q → ¬(Q → ¬P)"}
+{"name":"HTPI.Exercises.Exercise_3_3_16","declaration":"theorem HTPI.Exercises.Exercise_3_3_16 (U : Type) (B : Set U) (F : Set (Set U)) : F ⊆ 𝒫 B → ⋃₀ F ⊆ B"}
+{"name":"HTPI.union_comm","declaration":"theorem HTPI.union_comm {U : Type} (X : Set U) (Y : Set U) : X ∪ Y = Y ∪ X"}
+{"name":"HTPI.Exercises.Exercise_3_4_7","declaration":"theorem HTPI.Exercises.Exercise_3_4_7 (U : Type) (A : Set U) (B : Set U) : 𝒫(A ∩ B) = 𝒫 A ∩ 𝒫 B"}
+{"name":"HTPI.Exercises.Exercise_3_5_8","declaration":"theorem HTPI.Exercises.Exercise_3_5_8 (U : Type) (A : Set U) (B : Set U) : 𝒫 A ∪ 𝒫 B ⊆ 𝒫(A ∪ B)"}
+{"name":"HTPI.Exercises.Exercise_3_5_7","declaration":"theorem HTPI.Exercises.Exercise_3_5_7 (U : Type) (A : Set U) (B : Set U) (C : Set U) : A ∪ C ⊆ B ∪ C ↔ A \\ C ⊆ B \\ C"}
+{"name":"HTPI.Exercises.Exercise_3_4_17","declaration":"theorem HTPI.Exercises.Exercise_3_4_17 (U : Type) (A : Set U) : A = ⋃₀ (𝒫 A)"}
+{"name":"HTPI.Exercises.Exercise_3_3_10","declaration":"theorem HTPI.Exercises.Exercise_3_3_10 (U : Type) (B : Set U) (F : Set (Set U)) (h1 : ∀ A ∈ F, B ⊆ A) : B ⊆ ⋂₀ F"}
+{"name":"HTPI.Exercises.Like_Exercise_3_7_5","declaration":"theorem HTPI.Exercises.Like_Exercise_3_7_5 (U : Type) (F : Set (Set U)) (h1 : 𝒫⋃₀ F ⊆ ⋃₀ {x | ∃ A ∈ F, 𝒫 A = x}) : ∃ A ∈ F, ∀ B ∈ F, B ⊆ A"}
+{"name":"HTPI.Example_3_3_5","declaration":"theorem HTPI.Example_3_3_5 (U : Type) (B : Set U) (F : Set (Set U)) : ⋃₀ F ⊆ B → F ⊆ 𝒫 B"}
+{"name":"HTPI.Exercises.Exercise_3_3_17","declaration":"theorem HTPI.Exercises.Exercise_3_3_17 (U : Type) (F : Set (Set U)) (G : Set (Set U)) (h1 : ∀ A ∈ F, ∀ B ∈ G, A ⊆ B) : ⋃₀ F ⊆ ⋂₀ G"}
+{"name":"HTPI.Exercises.Exercise_3_3_13","declaration":"theorem HTPI.Exercises.Exercise_3_3_13 (U : Type) (F : Set (Set U)) (G : Set (Set U)) : F ⊆ G → ⋂₀ G ⊆ ⋂₀ F"}
+{"name":"HTPI.even","declaration":"def HTPI.even (n : ℤ) : Prop"}
+{"name":"HTPI.Example_3_4_5","declaration":"theorem HTPI.Example_3_4_5 (U : Type) (A : Set U) (B : Set U) (C : Set U) : A ∩ (B \\ C) = (A ∩ B) \\ C"}
+{"name":"HTPI.Exercises.Exercise_3_3_1","declaration":"theorem HTPI.Exercises.Exercise_3_3_1 (U : Type) (P : HTPI.Pred U) (Q : HTPI.Pred U) (h1 : ∃ x, P x → Q x) : (∀ (x : U), P x) → ∃ x, Q x"}
+{"name":"HTPI.Exercises.Exercise_3_5_24a","declaration":"theorem HTPI.Exercises.Exercise_3_5_24a (U : Type) (A : Set U) (B : Set U) (C : Set U) : (A ∪ B) ∆ C ⊆ A ∆ C ∪ B ∆ C"}
+{"name":"HTPI.Exercises.Exercise_3_3_18a","declaration":"theorem HTPI.Exercises.Exercise_3_3_18a (a : ℤ) (b : ℤ) (c : ℤ) (h1 : a ∣ b) (h2 : a ∣ c) : a ∣ b + c"}
+{"name":"HTPI.Theorem_3_3_7","declaration":"theorem HTPI.Theorem_3_3_7 (a : ℤ) (b : ℤ) (c : ℤ) : a ∣ b → b ∣ c → a ∣ c"}
+{"name":"HTPI.Exercises.Exercise_3_5_5","declaration":"theorem HTPI.Exercises.Exercise_3_5_5 (U : Type) (A : Set U) (B : Set U) (C : Set U) (h1 : A ∩ C ⊆ B ∩ C) (h2 : A ∪ C ⊆ B ∪ C) : A ⊆ B"}
+{"name":"HTPI.Exercises.Exercise_3_6_10","declaration":"theorem HTPI.Exercises.Exercise_3_6_10 (U : Type) (A : Set U) (h1 : ∀ (F : Set (Set U)), ⋃₀ F = A → A ∈ F) : ∃! x, x ∈ A"}
+{"name":"HTPI.Exercises.Exercise_3_4_4","declaration":"theorem HTPI.Exercises.Exercise_3_4_4 (U : Type) (A : Set U) (B : Set U) (C : Set U) (h1 : A ⊆ B) (h2 : ¬A ⊆ C) : ¬B ⊆ C"}
+{"name":"HTPI.Exercises.Exercise_3_5_2","declaration":"theorem HTPI.Exercises.Exercise_3_5_2 (U : Type) (A : Set U) (B : Set U) (C : Set U) : (A ∪ B) \\ C ⊆ A ∪ B \\ C"}
+{"name":"HTPI.Example_3_2_4_v3","declaration":"theorem HTPI.Example_3_2_4_v3 (P : Prop) (Q : Prop) (R : Prop) (h : P → Q → R) : ¬R → P → ¬Q"}
+{"name":"HTPI.empty_union","declaration":"theorem HTPI.empty_union {U : Type} (B : Set U) : ∅ ∪ B = B"}
+{"name":"HTPI.Example_3_5_4","declaration":"theorem HTPI.Example_3_5_4 (x : ℝ) (h1 : x ≤ x ^ 2) : x ≤ 0 ∨ 1 ≤ x"}
+{"name":"HTPI.Exercises.Exercise_3_4_15","declaration":"theorem HTPI.Exercises.Exercise_3_4_15 (U : Type) (B : Set U) (F : Set (Set U)) : ⋃₀ {X | ∃ A ∈ F, X = A \\ B} ⊆ ⋃₀ (F \\ 𝒫 B)"}
+{"name":"HTPI.Exercises.Exercise_3_4_10","declaration":"theorem HTPI.Exercises.Exercise_3_4_10 (x : ℤ) (y : ℤ) (h1 : HTPI.odd x) (h2 : HTPI.odd y) : HTPI.even (x - y)"}
+{"name":"HTPI.Exercises.Exercise_3_2_1a","declaration":"theorem HTPI.Exercises.Exercise_3_2_1a (P : Prop) (Q : Prop) (R : Prop) (h1 : P → Q) (h2 : Q → R) : P → R"}
+{"name":"HTPI.Exercises.Exercise_3_3_9","declaration":"theorem HTPI.Exercises.Exercise_3_3_9 (U : Type) (F : Set (Set U)) (A : Set U) (h1 : A ∈ F) : ⋂₀ F ⊆ A"}
+{"name":"HTPI.Exercises.Exercise_3_4_27a","declaration":"theorem HTPI.Exercises.Exercise_3_4_27a (n : ℤ) : 15 ∣ n ↔ 3 ∣ n ∧ 5 ∣ n"}
+{"name":"HTPI.Example_3_2_4_v2","declaration":"theorem HTPI.Example_3_2_4_v2 (P : Prop) (Q : Prop) (R : Prop) (h : P → Q → R) : ¬R → P → ¬Q"}
+{"name":"HTPI.Exercises.Exercise_3_4_6","declaration":"theorem HTPI.Exercises.Exercise_3_4_6 (U : Type) (A : Set U) (B : Set U) (C : Set U) : A \\ (B ∩ C) = A \\ B ∪ A \\ C"}
+{"name":"HTPI.Exercises.Exercise_3_4_2","declaration":"theorem HTPI.Exercises.Exercise_3_4_2 (U : Type) (A : Set U) (B : Set U) (C : Set U) (h1 : A ⊆ B) (h2 : A ⊆ C) : A ⊆ B ∩ C"}
+{"name":"HTPI.Exercises.Exercise_3_5_17b","declaration":"theorem HTPI.Exercises.Exercise_3_5_17b (U : Type) (F : Set (Set U)) (B : Set U) : B ∪ ⋂₀ F = {x | ∀ A ∈ F, x ∈ B ∪ A}"}

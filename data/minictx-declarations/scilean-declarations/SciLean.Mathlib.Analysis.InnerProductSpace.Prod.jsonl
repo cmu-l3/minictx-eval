@@ -1,0 +1,17 @@
+{"name":"SciLean.ProdLp.instMetricSpaceProdLp","declaration":"instance SciLean.ProdLp.instMetricSpaceProdLp {α : Type u_1} {p : ℝ} {β : Type u_2} [MetricSpace α] [MetricSpace β] : MetricSpace (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdLp.instAddCommGroupProdLp","declaration":"instance SciLean.ProdLp.instAddCommGroupProdLp {α : Type u_1} {p : ℝ} {β : Type u_2} [AddCommGroup α] [AddCommGroup β] : AddCommGroup (SciLean.ProdLp p α β)"}
+{"name":"SciLean.«term_×[_]_»","declaration":"def SciLean.«term_×[_]_»  : Lean.TrailingParserDescr"}
+{"name":"SciLean.ProdLp.instUniformSpaceProdLp","declaration":"instance SciLean.ProdLp.instUniformSpaceProdLp {α : Type u_1} {p : ℝ} {β : Type u_2} [UniformSpace α] [UniformSpace β] : UniformSpace (SciLean.ProdLp p α β)"}
+{"name":"SciLean.«term_×₂_»","declaration":"def SciLean.«term_×₂_»  : Lean.TrailingParserDescr"}
+{"name":"SciLean.ProdLp.instCompleteSpaceProdLpInstUniformSpaceProdLp","declaration":"instance SciLean.ProdLp.instCompleteSpaceProdLpInstUniformSpaceProdLp {α : Type u_1} {p : ℝ} {β : Type u_2} [UniformSpace α] [CompleteSpace α] [UniformSpace β] [CompleteSpace β] : CompleteSpace (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdLp.instDist","declaration":"instance SciLean.ProdLp.instDist {α : Type u_1} {p : ℝ} {β : Type u_2} [Dist α] [Dist β] : Dist (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdLp.instAddGroupProdLp","declaration":"instance SciLean.ProdLp.instAddGroupProdLp {α : Type u_1} {p : ℝ} {β : Type u_2} [AddGroup α] [AddGroup β] : AddGroup (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdLp.instInnerProductSpaceProdLpOfNatRealInstOfNatAtLeastTwoInstNatCastInstNatAtLeastTwoNatInstOfNatNatInstNormedAddCommGroupProdLp","declaration":"instance SciLean.ProdLp.instInnerProductSpaceProdLpOfNatRealInstOfNatAtLeastTwoInstNatCastInstNatAtLeastTwoNatInstOfNatNatInstNormedAddCommGroupProdLp {α : Type u_1} {K : Type u_2} {β : Type u_3} [RCLike K] [NormedAddCommGroup α] [InnerProductSpace K α] [NormedAddCommGroup β] [InnerProductSpace K β] : InnerProductSpace K (SciLean.ProdLp 2 α β)"}
+{"name":"SciLean.ProdLp","declaration":"def SciLean.ProdLp  : ℝ → Type u_1 → Type u_2 → Type (max u_1 u_2)"}
+{"name":"SciLean.ProdLp.instInner","declaration":"instance SciLean.ProdLp.instInner {α : Type u_1} {K : Type u_2} {β : Type u_3} [RCLike K] [Inner K α] [Inner K β] : Inner K (SciLean.ProdLp 2 α β)"}
+{"name":"SciLean.ProdLp.instNorm","declaration":"instance SciLean.ProdLp.instNorm {α : Type u_1} {p : ℝ} {β : Type u_2} [Norm α] [Norm β] : Norm (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdLp.instModuleProdLpToAddCommMonoidInstAddCommGroupProdLp","declaration":"instance SciLean.ProdLp.instModuleProdLpToAddCommMonoidInstAddCommGroupProdLp {α : Type u_1} {p : ℝ} {K : Type u_2} {β : Type u_3} [Semiring K] [AddCommGroup α] [Module K α] [AddCommGroup β] [Module K β] : Module K (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdL2.fst","declaration":"def SciLean.ProdL2.fst {α : Type u_1} {β : Type u_2} (self : SciLean.ProdLp 2 α β) : α"}
+{"name":"SciLean.ProdLp.instNormedAddCommGroupProdLp","declaration":"instance SciLean.ProdLp.instNormedAddCommGroupProdLp {α : Type u_1} {p : ℝ} {β : Type u_2} [NormedAddCommGroup α] [NormedAddCommGroup β] : NormedAddCommGroup (SciLean.ProdLp p α β)"}
+{"name":"SciLean.ProdL2.mk","declaration":"def SciLean.ProdL2.mk {α : Type u_1} {β : Type u_2} (fst : α) (snd : β) : SciLean.ProdLp 2 α β"}
+{"name":"SciLean.ProdL2.snd","declaration":"def SciLean.ProdL2.snd {α : Type u_1} {β : Type u_2} (self : SciLean.ProdLp 2 α β) : β"}

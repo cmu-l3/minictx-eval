@@ -1,0 +1,38 @@
+INFO 10-16 18:29:39 llm_engine.py:169] Initializing an LLM engine (v0.5.1) with config: model='l3lab/ntp-mathlib-context-deepseek-coder-1.3b', speculative_config=None, tokenizer='l3lab/ntp-mathlib-context-deepseek-coder-1.3b', skip_tokenizer_init=False, tokenizer_mode=auto, revision=None, rope_scaling=None, rope_theta=None, tokenizer_revision=None, trust_remote_code=False, dtype=torch.bfloat16, max_seq_len=10000, download_dir=None, load_format=LoadFormat.AUTO, tensor_parallel_size=1, pipeline_parallel_size=1, disable_custom_all_reduce=False, quantization=None, enforce_eager=False, kv_cache_dtype=auto, quantization_param_path=None, device_config=cuda, decoding_config=DecodingConfig(guided_decoding_backend='outlines'), observability_config=ObservabilityConfig(otlp_traces_endpoint=None), seed=0, served_model_name=l3lab/ntp-mathlib-context-deepseek-coder-1.3b, use_v2_block_manager=False, enable_prefix_caching=False)
+WARNING 10-16 18:29:40 utils.py:562] Using 'pin_memory=False' as WSL is detected. This may slow down the performance.
+INFO 10-16 18:29:40 weight_utils.py:218] Using model weights format ['*.bin']
+INFO 10-16 18:29:42 model_runner.py:255] Loading model weights took 2.5583 GB
+INFO 10-16 18:29:44 gpu_executor.py:84] # GPU blocks: 1388, # CPU blocks: 1365
+INFO 10-16 18:29:44 model_runner.py:924] Capturing the model for CUDA graphs. This may lead to unexpected consequences if the model is not static. To run the model in eager mode, set 'enforce_eager=True' or use '--enforce-eager' in the CLI.
+INFO 10-16 18:29:44 model_runner.py:928] CUDA graphs can take additional 1~3 GiB memory per GPU. If you are running out of memory, consider decreasing `gpu_memory_utilization` or enforcing eager mode. You can also reduce the `max_num_seqs` as needed to decrease memory usage.
+INFO 10-16 18:29:51 model_runner.py:1117] Graph capturing finished in 7 secs.
+True
+Session 1: fail to initialize lean repl
+Fatal Python error: init_threadstate: thread state already initialized
+Python runtime state: initialized
+
+Thread 0x00007f9ff330e440 (most recent call first):
+  File "/home/jiewenh/miniconda3/envs/minictx/lib/python3.11/threading.py", line 327 in wait
+  File "/home/jiewenh/miniconda3/envs/minictx/lib/python3.11/threading.py", line 629 in wait
+  File "/home/jiewenh/llemma/minictx-eval/repl_wrapper.py", line 49 in submit_and_receive
+  File "/home/jiewenh/llemma/minictx-eval/check_dev.py", line 321 in best_first_search
+  File "/home/jiewenh/llemma/minictx-eval/check_dev.py", line 470 in <module>
+lake env /home/jiewenh/llemma/minictx-eval/repl/.lake/build/bin/repl < <(cat /tmp/tmpigb17_uj -)
+
+{'success': False, 'msg': 'Search ended'}
+Successes: 0/1 
+True
+Session 1: fail to initialize lean repl
+Fatal Python error: init_threadstate: thread state already initialized
+Python runtime state: initialized
+
+Thread 0x00007f9ff330e440 (most recent call first):
+  File "/home/jiewenh/miniconda3/envs/minictx/lib/python3.11/threading.py", line 327 in wait
+  File "/home/jiewenh/miniconda3/envs/minictx/lib/python3.11/threading.py", line 629 in wait
+  File "/home/jiewenh/llemma/minictx-eval/repl_wrapper.py", line 49 in submit_and_receive
+  File "/home/jiewenh/llemma/minictx-eval/check_dev.py", line 321 in best_first_search
+  File "/home/jiewenh/llemma/minictx-eval/check_dev.py", line 470 in <module>
+lake env /home/jiewenh/llemma/minictx-eval/repl/.lake/build/bin/repl < <(cat /tmp/tmpiymf61ka -)
+
+{'success': False, 'msg': 'Search ended'}
+Successes: 0/2 

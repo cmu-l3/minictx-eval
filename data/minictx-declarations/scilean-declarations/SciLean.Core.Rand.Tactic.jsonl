@@ -1,0 +1,7 @@
+{"name":"SciLean.Rand.termDerive_random_approx_By_","declaration":"def SciLean.Rand.termDerive_random_approx_By_  : Lean.ParserDescr"}
+{"name":"SciLean.Rand.convRand_pull_E","declaration":"def SciLean.Rand.convRand_pull_E  : Lean.ParserDescr"}
+{"name":"SciLean.Rand.print_mean_variance","declaration":"def SciLean.Rand.print_mean_variance {R : Type} [SciLean.RealScalar R] [ToString R] (r : SciLean.Rand R) (n : ℕ) (msg : String) : IO Unit"}
+{"name":"SciLean.Rand.convRand_compute_mean","declaration":"def SciLean.Rand.convRand_compute_mean  : Lean.ParserDescr"}
+{"name":"SciLean.Rand.convRand_push_E","declaration":"def SciLean.Rand.convRand_push_E  : Lean.ParserDescr"}
+{"name":"SciLean.Rand.convRand_AD","declaration":"def SciLean.Rand.convRand_AD  : Lean.ParserDescr"}
+{"name":"SciLean.Rand.«convRand_fdE_as_E_,_»","declaration":"def SciLean.Rand.«convRand_fdE_as_E_,_»  : Lean.ParserDescr"}

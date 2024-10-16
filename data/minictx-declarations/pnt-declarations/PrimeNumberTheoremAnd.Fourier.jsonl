@@ -1,0 +1,26 @@
+{"name":"FS","declaration":"def FS (f : SchwartzMap ℝ ℂ) : SchwartzMap ℝ ℂ"}
+{"name":"FS4","declaration":"theorem FS4 (f : SchwartzMap ℝ ℂ) : FS^[4] f = f"}
+{"name":"fourierIntegral_deriv_aux2","declaration":"theorem fourierIntegral_deriv_aux2 (e : BoundedContinuousFunction ℝ ℂ) {f : ℝ → ℂ} (hf : MeasureTheory.Integrable f MeasureTheory.volume) : MeasureTheory.Integrable (⇑e * f) MeasureTheory.volume"}
+{"name":"fourierIntegral_decay_aux","declaration":"theorem fourierIntegral_decay_aux (f : ℝ → ℂ) (k : ℕ) (h1 : ContDiff ℝ (↑k) f) (h2 : ∀ n ≤ k, MeasureTheory.Integrable (iteratedDeriv n f) MeasureTheory.volume) (x : ℝ) : ‖(2 * ↑Real.pi * Complex.I * ↑x) ^ k • Real.fourierIntegral f x‖ ≤ ∫ (y : ℝ), ‖iteratedDeriv k f y‖"}
+{"name":"FS_toFun","declaration":"theorem FS_toFun (f : SchwartzMap ℝ ℂ) : ⇑(FS f) = Real.fourierIntegral ⇑f"}
+{"name":"deriv_ofReal","declaration":"theorem deriv_ofReal  : deriv Complex.ofReal' = fun x => 1"}
+{"name":"nnnorm_eq_of_mem_circle","declaration":"theorem nnnorm_eq_of_mem_circle (z : ↥circle) : ‖↑z‖₊ = 1"}
+{"name":"F_sub","declaration":"theorem F_sub {f : ℝ → ℂ} {g : ℝ → ℂ} (hf : MeasureTheory.Integrable f MeasureTheory.volume) (hg : MeasureTheory.Integrable g MeasureTheory.volume) (x : ℝ) : Real.fourierIntegral (fun x => f x - g x) x = Real.fourierIntegral f x - Real.fourierIntegral g x"}
+{"name":"F_neg","declaration":"theorem F_neg {f : ℝ → ℂ} {u : ℝ} : Real.fourierIntegral (fun x => -f x) u = -Real.fourierIntegral f u"}
+{"name":"fourierIntegral_self_add_deriv_deriv","declaration":"theorem fourierIntegral_self_add_deriv_deriv (f : W21) (u : ℝ) : (1 + ↑u ^ 2) * Real.fourierIntegral f.toFun u =\n  Real.fourierIntegral (fun u => f.toFun u - 1 / (4 * ↑Real.pi ^ 2) * deriv^[2] f.toFun u) u"}
+{"name":"instCoeForAllRealForAllComplex","declaration":"def instCoeForAllRealForAllComplex {E : Type u_1} : Coe (E → ℝ) (E → ℂ)"}
+{"name":"fourierIntegral_decay","declaration":"theorem fourierIntegral_decay (f : SchwartzMap ℝ ℂ) (k : ℕ) : ∃ C, ∀ (x : ℝ), ‖x‖ ^ k * ‖Real.fourierIntegral (⇑f) x‖ ≤ C"}
+{"name":"nnnorm_circle_smul","declaration":"theorem nnnorm_circle_smul (z : ↥circle) (s : ℂ) : ‖z • s‖₊ = ‖s‖₊"}
+{"name":"iteratedDeriv_schwartz","declaration":"theorem iteratedDeriv_schwartz (f : SchwartzMap ℝ ℂ) (n : ℕ) : iteratedDeriv n ⇑f = ⇑((⇑(SchwartzMap.derivCLM ℝ))^[n] f)"}
+{"name":"F_add","declaration":"theorem F_add {f : ℝ → ℂ} {g : ℝ → ℂ} (hf : MeasureTheory.Integrable f MeasureTheory.volume) (hg : MeasureTheory.Integrable g MeasureTheory.volume) (x : ℝ) : Real.fourierIntegral (fun x => f x + g x) x = Real.fourierIntegral f x + Real.fourierIntegral g x"}
+{"name":"F_mul","declaration":"theorem F_mul {f : ℝ → ℂ} {c : ℂ} {u : ℝ} : Real.fourierIntegral (fun x => c * f x) u = c * Real.fourierIntegral f u"}
+{"name":"MS_iterate","declaration":"theorem MS_iterate (a : ℂ) (f : SchwartzMap ℝ ℂ) (n : ℕ) : ⇑((MS a)^[n] f) = fun x => (a * ↑x) ^ n • f x"}
+{"name":"MS_apply","declaration":"theorem MS_apply (a : ℂ) (f : SchwartzMap ℝ ℂ) (x : ℝ) : (MS a f) x = (a * ↑x) • f x"}
+{"name":"schwarz_reduce","declaration":"theorem schwarz_reduce (f : ℝ → ℂ) (h1 : ContDiff ℝ ⊤ f) (h2 : ∀ (k n : ℕ), ∃ C, ∀ (x : ℝ), ‖x‖ ^ k * ‖iteratedFDeriv ℝ n f x‖ ≤ C) (x : ℝ) : { toFun := f, smooth' := h1, decay' := h2 } x = f x"}
+{"name":"e_apply","declaration":"theorem e_apply (u : ℝ) (v : ℝ) : (e u) v = ↑(Real.fourierChar (-v * u))"}
+{"name":"bla","declaration":"theorem bla (a : ℂ) (f : ℝ → ℂ) (n : ℕ) (hf : ContDiff ℝ (↑n) f) : (iteratedDeriv n fun x => a * ↑x * f x) = fun x => a * ↑x * iteratedDeriv n f x + ↑n * a * iteratedDeriv (n - 1) f x"}
+{"name":"hasDerivAt_e","declaration":"theorem hasDerivAt_e {u : ℝ} {x : ℝ} : HasDerivAt (⇑(e u)) (-2 * ↑Real.pi * ↑u * Complex.I * (e u) x) x"}
+{"name":"MS","declaration":"def MS (a : ℂ) (f : SchwartzMap ℝ ℂ) : SchwartzMap ℝ ℂ"}
+{"name":"FS_apply","declaration":"theorem FS_apply (f : SchwartzMap ℝ ℂ) (x : ℝ) : (FS f) x = Real.fourierIntegral (⇑f) x"}
+{"name":"fourierfourier","declaration":"theorem fourierfourier {f : ℝ → ℂ} (hfi : MeasureTheory.Integrable f MeasureTheory.volume) (hfi' : MeasureTheory.Integrable (Real.fourierIntegral f) MeasureTheory.volume) (hfc : Continuous f) (x : ℝ) : Real.fourierIntegral (Real.fourierIntegral f) x = f (-x)"}
+{"name":"e","declaration":"def e (u : ℝ) : BoundedContinuousFunction ℝ ℂ"}

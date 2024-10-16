@@ -1,0 +1,53 @@
+{"name":"Sieve.squarefree_of_mem_divisors_prodPrimes","declaration":"theorem Sieve.squarefree_of_mem_divisors_prodPrimes (s : Sieve) {d : ℕ} (hd : d ∈ Nat.divisors s.prodPrimes) : Squarefree d"}
+{"name":"Sieve.nu_ne_zero_of_mem_divisors_prodPrimes","declaration":"theorem Sieve.nu_ne_zero_of_mem_divisors_prodPrimes (s : Sieve) {d : ℕ} (hd : d ∈ Nat.divisors s.prodPrimes) : s.nu d ≠ 0"}
+{"name":"Sieve.siftedSum_as_delta","declaration":"theorem Sieve.siftedSum_as_delta (s : Sieve) : Sieve.siftedSum s = Finset.sum s.support fun d => s.weights d * Sieve.delta (Nat.gcd s.prodPrimes d)"}
+{"name":"Sieve.support","declaration":"def Sieve.support (self : Sieve) : Finset ℕ"}
+{"name":"Sieve.errSum","declaration":"def Sieve.errSum (s : Sieve) (μPlus : ℕ → ℝ) : ℝ"}
+{"name":"Sieve.LowerBoundSieve","declaration":"structure Sieve.LowerBoundSieve  : Type"}
+{"name":"Sieve.nu","declaration":"def Sieve.nu (self : Sieve) : ArithmeticFunction ℝ"}
+{"name":"Sieve.LowerBoundSieve.μMinus","declaration":"def Sieve.LowerBoundSieve.μMinus (self : Sieve.LowerBoundSieve) : ℕ → ℝ"}
+{"name":"Sieve.LowerBoundSieve.hμMinus","declaration":"def Sieve.LowerBoundSieve.hμMinus (self : Sieve.LowerBoundSieve) : Sieve.LowerMoebius self.μMinus"}
+{"name":"Sieve.conv_selbergTerms_eq_selbergTerms_mul_nu","declaration":"theorem Sieve.conv_selbergTerms_eq_selbergTerms_mul_nu (s : Sieve) {d : ℕ} (hd : d ∣ s.prodPrimes) : (Finset.sum (Nat.divisors s.prodPrimes) fun l => if l ∣ d then (Sieve.selbergTerms s) l else 0) =\n  (Sieve.selbergTerms s) d * (s.nu d)⁻¹"}
+{"name":"Sieve.lambdaSquared_mainSum_eq_diag_quad_form","declaration":"theorem Sieve.lambdaSquared_mainSum_eq_diag_quad_form (s : Sieve) (w : ℕ → ℝ) : Sieve.mainSum s (Sieve.lambdaSquared w) =\n  Finset.sum (Nat.divisors s.prodPrimes) fun l =>\n    1 / (Sieve.selbergTerms s) l *\n      (Finset.sum (Nat.divisors s.prodPrimes) fun d => if l ∣ d then s.nu d * w d else 0) ^ 2"}
+{"name":"Sieve.multSum_eq_main_err","declaration":"theorem Sieve.multSum_eq_main_err (s : Sieve) (d : ℕ) : Sieve.multSum s d = s.nu d * s.totalMass + Sieve.rem s d"}
+{"name":"Sieve.selbergTerms_apply","declaration":"def Sieve.selbergTerms_apply (s : Sieve) (d : ℕ) : (Sieve.selbergTerms s) d = s.nu d * Finset.prod d.primeFactors fun p => 1 / (1 - s.nu p)"}
+{"name":"Sieve.rem","declaration":"def Sieve.rem (s : Sieve) (d : ℕ) : ℝ"}
+{"name":"Sieve.delta","declaration":"def Sieve.delta (n : ℕ) : ℝ"}
+{"name":"Sieve.weights_nonneg","declaration":"def Sieve.weights_nonneg (self : Sieve) (n : ℕ) : 0 ≤ self.weights n"}
+{"name":"Sieve.lambdaSquared_mainSum_eq_quad_form","declaration":"theorem Sieve.lambdaSquared_mainSum_eq_quad_form (s : Sieve) (w : ℕ → ℝ) : Sieve.mainSum s (Sieve.lambdaSquared w) =\n  Finset.sum (Nat.divisors s.prodPrimes) fun d1 =>\n    Finset.sum (Nat.divisors s.prodPrimes) fun d2 => s.nu d1 * w d1 * s.nu d2 * w d2 * (s.nu (Nat.gcd d1 d2))⁻¹"}
+{"name":"Sieve.upper_bound_of_UpperBoundSieve","declaration":"theorem Sieve.upper_bound_of_UpperBoundSieve (s : Sieve) (μPlus : Sieve.UpperBoundSieve) : Sieve.siftedSum s ≤ Finset.sum (Nat.divisors s.prodPrimes) fun d => μPlus.μPlus d * Sieve.multSum s d"}
+{"name":"Sieve.lambdaSquared","declaration":"def Sieve.lambdaSquared (weights : ℕ → ℝ) : ℕ → ℝ"}
+{"name":"Sieve.squarefree_of_dvd_prodPrimes","declaration":"theorem Sieve.squarefree_of_dvd_prodPrimes (s : Sieve) {d : ℕ} (hd : d ∣ s.prodPrimes) : Squarefree d"}
+{"name":"Sieve.UpperBoundSieve.hμPlus","declaration":"def Sieve.UpperBoundSieve.hμPlus (self : Sieve.UpperBoundSieve) : Sieve.UpperMoebius self.μPlus"}
+{"name":"Sieve.prodPrimes_ne_zero","declaration":"theorem Sieve.prodPrimes_ne_zero (s : Sieve) : s.prodPrimes ≠ 0"}
+{"name":"Sieve.lbToμMinus","declaration":"instance Sieve.lbToμMinus  : CoeFun Sieve.LowerBoundSieve fun x => ℕ → ℝ"}
+{"name":"Sieve.totalMass","declaration":"def Sieve.totalMass (self : Sieve) : ℝ"}
+{"name":"Sieve.UpperBoundSieve.mk","declaration":"ctor Sieve.UpperBoundSieve.mk (μPlus : ℕ → ℝ) (hμPlus : Sieve.UpperMoebius μPlus) : Sieve.UpperBoundSieve"}
+{"name":"Sieve.upperMoebius_of_lambda_sq","declaration":"theorem Sieve.upperMoebius_of_lambda_sq (weights : ℕ → ℝ) (hw : weights 1 = 1) : Sieve.UpperMoebius (Sieve.lambdaSquared weights)"}
+{"name":"Sieve.nu_lt_self_of_dvd_prodPrimes","declaration":"theorem Sieve.nu_lt_self_of_dvd_prodPrimes (s : Sieve) (d : ℕ) (hdP : d ∣ s.prodPrimes) (hd_ne_one : d ≠ 1) : s.nu d < 1"}
+{"name":"Sieve.nu_lt_one_of_prime","declaration":"def Sieve.nu_lt_one_of_prime (self : Sieve) (p : ℕ) : Nat.Prime p → p ∣ self.prodPrimes → self.nu p < 1"}
+{"name":"Sieve.ubToμPlus","declaration":"instance Sieve.ubToμPlus  : CoeFun Sieve.UpperBoundSieve fun x => ℕ → ℝ"}
+{"name":"Sieve.lambdaSquared_eq_zero_of_support","declaration":"theorem Sieve.lambdaSquared_eq_zero_of_support (w : ℕ → ℝ) (y : ℝ) (hw : ∀ (d : ℕ), ¬↑d ^ 2 ≤ y → w d = 0) (d : ℕ) (hd : ¬↑d ≤ y) : Sieve.lambdaSquared w d = 0"}
+{"name":"Sieve.selbergTerms","declaration":"def Sieve.selbergTerms (s : Sieve) : ArithmeticFunction ℝ"}
+{"name":"Sieve.weights","declaration":"def Sieve.weights (self : Sieve) : ℕ → ℝ"}
+{"name":"Sieve.siftedSum_le_mainSum_errSum_of_UpperBoundSieve","declaration":"theorem Sieve.siftedSum_le_mainSum_errSum_of_UpperBoundSieve (s : Sieve) (μPlus : Sieve.UpperBoundSieve) : Sieve.siftedSum s ≤ s.totalMass * Sieve.mainSum s μPlus.μPlus + Sieve.errSum s μPlus.μPlus"}
+{"name":"Sieve.mainSum","declaration":"def Sieve.mainSum (s : Sieve) (μPlus : ℕ → ℝ) : ℝ"}
+{"name":"Sieve.LowerBoundSieve.mk","declaration":"ctor Sieve.LowerBoundSieve.mk (μMinus : ℕ → ℝ) (hμMinus : Sieve.LowerMoebius μMinus) : Sieve.LowerBoundSieve"}
+{"name":"Sieve.selbergTerms_pos","declaration":"theorem Sieve.selbergTerms_pos (s : Sieve) (l : ℕ) (hl : l ∣ s.prodPrimes) : 0 < (Sieve.selbergTerms s) l"}
+{"name":"Sieve.UpperBoundSieve","declaration":"structure Sieve.UpperBoundSieve  : Type"}
+{"name":"Sieve.prodPrimes","declaration":"def Sieve.prodPrimes (self : Sieve) : ℕ"}
+{"name":"Sieve.selbergTerms_mult","declaration":"theorem Sieve.selbergTerms_mult (s : Sieve) : ArithmeticFunction.IsMultiplicative (Sieve.selbergTerms s)"}
+{"name":"Sieve.siftedSum","declaration":"def Sieve.siftedSum (s : Sieve) : ℝ"}
+{"name":"Sieve.nu_pos_of_prime","declaration":"def Sieve.nu_pos_of_prime (self : Sieve) (p : ℕ) : Nat.Prime p → p ∣ self.prodPrimes → 0 < self.nu p"}
+{"name":"Sieve.nu_pos_of_dvd_prodPrimes","declaration":"theorem Sieve.nu_pos_of_dvd_prodPrimes (s : Sieve) {d : ℕ} (hd : d ∣ s.prodPrimes) : 0 < s.nu d"}
+{"name":"Sieve.nu_mult","declaration":"def Sieve.nu_mult (self : Sieve) : ArithmeticFunction.IsMultiplicative self.nu"}
+{"name":"Sieve.nu_ne_zero","declaration":"theorem Sieve.nu_ne_zero (s : Sieve) {d : ℕ} (hd : d ∣ s.prodPrimes) : s.nu d ≠ 0"}
+{"name":"Sieve.UpperBoundSieve.μPlus","declaration":"def Sieve.UpperBoundSieve.μPlus (self : Sieve.UpperBoundSieve) : ℕ → ℝ"}
+{"name":"Sieve.nu_eq_conv_one_div_selbergTerms","declaration":"theorem Sieve.nu_eq_conv_one_div_selbergTerms (s : Sieve) (d : ℕ) (hdP : d ∣ s.prodPrimes) : (s.nu d)⁻¹ = Finset.sum (Nat.divisors s.prodPrimes) fun l => if l ∣ d then 1 / (Sieve.selbergTerms s) l else 0"}
+{"name":"Sieve.LowerMoebius","declaration":"def Sieve.LowerMoebius (μMinus : ℕ → ℝ) : Prop"}
+{"name":"Sieve.UpperMoebius","declaration":"def Sieve.UpperMoebius (μ_plus : ℕ → ℝ) : Prop"}
+{"name":"Sieve.prodPrimes_squarefree","declaration":"def Sieve.prodPrimes_squarefree (self : Sieve) : Squarefree self.prodPrimes"}
+{"name":"Sieve.one_div_selbergTerms_eq_conv_moebius_nu","declaration":"theorem Sieve.one_div_selbergTerms_eq_conv_moebius_nu (s : Sieve) (l : ℕ) (hl : Squarefree l) (hnu_nonzero : s.nu l ≠ 0) : 1 / (Sieve.selbergTerms s) l = Finset.sum (Nat.divisors l) fun d => ↑(ArithmeticFunction.moebius (l / d)) * (s.nu d)⁻¹"}
+{"name":"Sieve.multSum","declaration":"def Sieve.multSum (s : Sieve) (d : ℕ) : ℝ"}
+{"name":"Sieve.mk","declaration":"ctor Sieve.mk (support : Finset ℕ) (prodPrimes : ℕ) (prodPrimes_squarefree : Squarefree prodPrimes) (weights : ℕ → ℝ) (weights_nonneg : ∀ (n : ℕ), 0 ≤ weights n) (totalMass : ℝ) (nu : ArithmeticFunction ℝ) (nu_mult : ArithmeticFunction.IsMultiplicative nu) (nu_pos_of_prime : ∀ (p : ℕ), Nat.Prime p → p ∣ prodPrimes → 0 < nu p) (nu_lt_one_of_prime : ∀ (p : ℕ), Nat.Prime p → p ∣ prodPrimes → nu p < 1) : Sieve"}
+{"name":"Sieve","declaration":"structure Sieve  : Type"}

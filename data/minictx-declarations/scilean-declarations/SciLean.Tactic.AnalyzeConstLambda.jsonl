@@ -1,0 +1,10 @@
+{"name":"SciLean.ConstLambdaData.constName","declaration":"def SciLean.ConstLambdaData.constName (self : SciLean.ConstLambdaData) : Lean.Name"}
+{"name":"SciLean.ConstLambdaData.unusedArgs","declaration":"def SciLean.ConstLambdaData.unusedArgs (self : SciLean.ConstLambdaData) : Array Lean.Name"}
+{"name":"SciLean.ConstLambdaData.trailingIds","declaration":"def SciLean.ConstLambdaData.trailingIds (self : SciLean.ConstLambdaData) : SciLean.ArraySet Nat"}
+{"name":"SciLean.ConstLambdaData.mainArgs","declaration":"def SciLean.ConstLambdaData.mainArgs (self : SciLean.ConstLambdaData) : Array Lean.Name"}
+{"name":"SciLean.ConstLambdaData.declSuffix","declaration":"def SciLean.ConstLambdaData.declSuffix (self : SciLean.ConstLambdaData) : String"}
+{"name":"SciLean.ConstLambdaData.mk","declaration":"ctor SciLean.ConstLambdaData.mk (constName : Lean.Name) (mainArgs : Array Lean.Name) (unusedArgs : Array Lean.Name) (trailingArgs : Array Lean.Name) (mainIds : SciLean.ArraySet Nat) (trailingIds : SciLean.ArraySet Nat) (declSuffix : String) : SciLean.ConstLambdaData"}
+{"name":"SciLean.ConstLambdaData.trailingArgs","declaration":"def SciLean.ConstLambdaData.trailingArgs (self : SciLean.ConstLambdaData) : Array Lean.Name"}
+{"name":"SciLean.ConstLambdaData","declaration":"structure SciLean.ConstLambdaData  : Type"}
+{"name":"SciLean.ConstLambdaData.mainIds","declaration":"def SciLean.ConstLambdaData.mainIds (self : SciLean.ConstLambdaData) : SciLean.ArraySet Nat"}
+{"name":"SciLean.analyzeConstLambda","declaration":"/-- Analyze function appearing in fprop rules or on lhs of ftrans rules  -/\ndef SciLean.analyzeConstLambda (e : Lean.Expr) : Lean.MetaM SciLean.ConstLambdaData"}

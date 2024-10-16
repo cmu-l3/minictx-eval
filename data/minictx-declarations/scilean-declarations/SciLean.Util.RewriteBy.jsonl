@@ -1,0 +1,3 @@
+{"name":"SciLean.elabConvRewrite","declaration":"def SciLean.elabConvRewrite (e : Lean.Expr) (assumptions : Array Lean.Syntax) (stx : Lean.TSyntax `conv) : Lean.Elab.TermElabM (Lean.Expr × Lean.Expr)"}
+{"name":"SciLean.term_Rewrite_byAssuming__","declaration":"def SciLean.term_Rewrite_byAssuming__  : Lean.TrailingParserDescr"}
+{"name":"SciLean.rewriteByConv","declaration":"def SciLean.rewriteByConv (e : Lean.Expr) (stx : Lean.TSyntax `conv) : Lean.MetaM (Lean.Expr × Lean.Expr)"}

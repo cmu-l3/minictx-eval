@@ -1,0 +1,2 @@
+{"name":"SciLean.NotationOverField.«termDefaultScalar%»","declaration":"def SciLean.NotationOverField.«termDefaultScalar%»  : Lean.ParserDescr"}
+{"name":"SciLean.NotationOverField.commandSet_default_scalar_","declaration":"def SciLean.NotationOverField.commandSet_default_scalar_  : Lean.ParserDescr"}

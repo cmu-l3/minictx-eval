@@ -1,0 +1,5 @@
+{"name":"PureU1.Three.three_sol_zero","declaration":"theorem PureU1.Three.three_sol_zero (S : ACCSystem.Sols (PureU1 3)) : S.val 0 = 0 ∨ S.val 1 = 0 ∨ S.val 2 = 0"}
+{"name":"PureU1.Three.cube_for_linSol'","declaration":"theorem PureU1.Three.cube_for_linSol' (S : ACCSystemLinear.LinSols (PureU1 3).toACCSystemLinear) : 3 * S.val 0 * S.val 1 * S.val 2 = 0 ↔ (PureU1 3).cubicACC S.val = 0"}
+{"name":"PureU1.Three.cube_for_linSol","declaration":"theorem PureU1.Three.cube_for_linSol (S : ACCSystemLinear.LinSols (PureU1 3).toACCSystemLinear) : S.val 0 = 0 ∨ S.val 1 = 0 ∨ S.val 2 = 0 ↔ (PureU1 3).cubicACC S.val = 0"}
+{"name":"PureU1.Three.solOfLinear","declaration":"/-- Given a `LinSol` with a charge equal to zero a `Sol`. -/\ndef PureU1.Three.solOfLinear (S : ACCSystemLinear.LinSols (PureU1 3).toACCSystemLinear) (hS : S.val 0 = 0 ∨ S.val 1 = 0 ∨ S.val 2 = 0) : ACCSystem.Sols (PureU1 3)"}
+{"name":"PureU1.Three.solOfLinear_surjects","declaration":"theorem PureU1.Three.solOfLinear_surjects (S : ACCSystem.Sols (PureU1 3)) : ∃ T, ∃ (hT : T.val 0 = 0 ∨ T.val 1 = 0 ∨ T.val 2 = 0), PureU1.Three.solOfLinear T hT = S"}

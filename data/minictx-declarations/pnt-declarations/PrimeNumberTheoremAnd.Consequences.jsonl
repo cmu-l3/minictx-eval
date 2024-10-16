@@ -1,0 +1,15 @@
+{"name":"primorial_bounds","declaration":"theorem primorial_bounds  : ∃ E,\n  (E =o[Filter.atTop] fun x => x) ∧\n    ∀ (x : ℝ), ↑(Finset.prod (Finset.filter Nat.Prime (Finset.range ⌊x⌋₊)) fun p => p) = Real.exp (x + E x)"}
+{"name":"mu_pnt","declaration":"theorem mu_pnt  : (fun x => Finset.sum (Finset.range ⌊x⌋₊) fun n => ArithmeticFunction.moebius n) =o[Filter.atTop] fun x => x"}
+{"name":"prime_between","declaration":"theorem prime_between {ε : ℝ} (hε : 0 < ε) : ∀ᶠ (x : ℝ) in Filter.atTop, ∃ p, Nat.Prime p ∧ x < ↑p ∧ ↑p < (1 + ε) * x"}
+{"name":"pn_pn_plus_one","declaration":"theorem pn_pn_plus_one  : ∃ c,\n  (c =o[Filter.atTop] fun x => 1) ∧\n    ∀ (n : ℕ), ↑(Nat.nth Nat.Prime (n + 1)) - ↑(Nat.nth Nat.Prime n) = c n * ↑(Nat.nth Nat.Prime n)"}
+{"name":"pn_asymptotic","declaration":"theorem pn_asymptotic  : ∃ c, (c =o[Filter.atTop] fun x => 1) ∧ ∀ (n : ℕ), ↑(Nat.nth Nat.Prime n) = (1 + c n) * ↑n * Real.log ↑n"}
+{"name":"lambda_pnt","declaration":"theorem lambda_pnt  : (fun x => Finset.sum (Finset.range ⌊x⌋₊) fun n => (-1) ^ ArithmeticFunction.cardFactors n) =o[Filter.atTop] fun x => x"}
+{"name":"pi_asymp","declaration":"theorem pi_asymp  : ∃ c,\n  (c =o[Filter.atTop] fun x => 1) ∧\n    ∀ (x : ℝ), ↑(Nat.primeCounting ⌊x⌋₊) = (1 + c x) * ∫ (t : ℝ) in Set.Icc 2 x, 1 / Real.log t"}
+{"name":"mu_pnt_alt","declaration":"theorem mu_pnt_alt  : (fun x => Finset.sum (Finset.range ⌊x⌋₊) fun n => ↑(ArithmeticFunction.moebius n) / ↑n) =o[Filter.atTop] fun x => 1"}
+{"name":"finsum_range_eq_sum_range'","declaration":"theorem finsum_range_eq_sum_range' {R : Type u_1} [AddCommMonoid R] {f : ArithmeticFunction R} (x : ℝ) : (finsum fun n => finsum fun x => f n) = Finset.sum (Finset.Iic ⌊x⌋₊) fun n => f n"}
+{"name":"primorial_bounds_finprod","declaration":"theorem primorial_bounds_finprod  : ∃ E,\n  (E =o[Filter.atTop] fun x => x) ∧\n    ∀ (x : ℝ), ↑(finprod fun p => finprod fun x => finprod fun x => p) = Real.exp (x + E x)"}
+{"name":"chebyshev_asymptotic_finsum","declaration":"theorem chebyshev_asymptotic_finsum  : Asymptotics.IsEquivalent Filter.atTop (fun x => finsum fun p => finsum fun x => finsum fun x => Real.log ↑p) fun x => ↑x"}
+{"name":"sum_mobius_div_self_le","declaration":"theorem sum_mobius_div_self_le (N : ℕ) : |Finset.sum (Finset.range N) fun n => ↑(ArithmeticFunction.moebius n) / ↑n| ≤ 1"}
+{"name":"finsum_range_eq_sum_range","declaration":"theorem finsum_range_eq_sum_range {R : Type u_1} [AddCommMonoid R] {f : ArithmeticFunction R} (x : ℝ) : (finsum fun n => finsum fun x => f n) = Finset.sum (Finset.range ⌈x⌉₊) fun n => f n"}
+{"name":"chebyshev_asymptotic","declaration":"theorem chebyshev_asymptotic  : Asymptotics.IsEquivalent Filter.atTop\n  (fun x => Finset.sum (Finset.filter Nat.Prime (Finset.range ⌈x⌉₊)) fun p => Real.log ↑p) fun x => x"}
+{"name":"pi_alt","declaration":"theorem pi_alt  : ∃ c, (c =o[Filter.atTop] fun x => 1) ∧ ∀ (x : ℝ), ↑(Nat.primeCounting ⌊x⌋₊) = (1 + c x) * x / Real.log x"}

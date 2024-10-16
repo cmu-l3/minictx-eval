@@ -1,0 +1,1 @@
+{"name":"PureU1.Two.equiv","declaration":"/-- An equivalence between `LinSols` and `Sols`. -/\ndef PureU1.Two.equiv  : ACCSystemLinear.LinSols (PureU1 2).toACCSystemLinear ≃ ACCSystem.Sols (PureU1 2)"}

@@ -1,0 +1,4 @@
+{"name":"convInduction","declaration":"def convInduction  : Lean.Elab.Tactic.Tactic"}
+{"name":"conv_induction_list","declaration":"def conv_induction_list  : Lean.ParserDescr"}
+{"name":"convInductionList","declaration":"def convInductionList  : Lean.Elab.Tactic.Tactic"}
+{"name":"conv_induction","declaration":"def conv_induction  : Lean.ParserDescr"}

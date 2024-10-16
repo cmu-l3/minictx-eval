@@ -1,0 +1,1 @@
+{"name":"MeasureTheory.IsFiniteMeasure_comap_equiv","declaration":"instance MeasureTheory.IsFiniteMeasure_comap_equiv {α : Type u_1} {β : Type u_2} [MeasurableSpace α] [MeasurableSpace β] {μ : MeasureTheory.Measure α} (f : β ≃ᵐ α) [MeasureTheory.IsFiniteMeasure μ] : MeasureTheory.IsFiniteMeasure (MeasureTheory.Measure.comap (⇑f) μ)"}

@@ -1,0 +1,3 @@
+{"name":"pullLimitOut","declaration":"def pullLimitOut (e : Lean.Expr) : Lean.MetaM Lean.Expr"}
+{"name":"pullLimitOutTactic","declaration":"def pullLimitOutTactic  : Lean.Elab.Tactic.Tactic"}
+{"name":"pull_limit_out","declaration":"def pull_limit_out  : Lean.ParserDescr"}

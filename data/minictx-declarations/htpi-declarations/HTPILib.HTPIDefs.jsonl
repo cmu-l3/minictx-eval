@@ -1,0 +1,153 @@
+{"name":"HTPI.«tacticFix_:_»","declaration":"def HTPI.«tacticFix_:_»  : Lean.ParserDescr"}
+{"name":"HTPI.ExprToString","declaration":"def HTPI.ExprToString (e : Lean.Expr) : String"}
+{"name":"HTPI.doSuffices","declaration":"def HTPI.doSuffices (form : Lean.Expr) (pfstx : Lean.Syntax) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.tacticDouble_neg__","declaration":"def HTPI.tacticDouble_neg__  : Lean.ParserDescr"}
+{"name":"HTPI.parseIdOrTerm","declaration":"def HTPI.parseIdOrTerm (it : HTPI.IdOrTerm) : Lean.Term"}
+{"name":"HTPI.tacticBy_strong_induc","declaration":"def HTPI.tacticBy_strong_induc  : Lean.ParserDescr"}
+{"name":"HTPI.idOrTerm?Type","declaration":"def HTPI.idOrTerm?Type  : Lean.ParserDescr"}
+{"name":"HTPI.doInduc","declaration":"def HTPI.doInduc (strong : Bool) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.doRewrite","declaration":"def HTPI.doRewrite (symm : Bool) (rule : Lean.Term) (l : Option HTPI.OneLoc) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.matchNeg","declaration":"def HTPI.matchNeg (e1 : Lean.Expr) (e2 : Lean.Expr) : Lean.Elab.Tactic.TacticM (Bool × Bool)"}
+{"name":"HTPI.ColonTerm","declaration":"def HTPI.ColonTerm  : Type"}
+{"name":"HTPI.tacticFix_","declaration":"def HTPI.tacticFix_  : Lean.ParserDescr"}
+{"name":"HTPI.doSwap","declaration":"def HTPI.doSwap  : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.tacticContrapos__","declaration":"def HTPI.tacticContrapos__  : Lean.ParserDescr"}
+{"name":"HTPI.PropForm.ex","declaration":"ctor HTPI.PropForm.ex  : Lean.Level → Lean.Name → Lean.Expr → Lean.Expr → Lean.BinderInfo → HTPI.PropForm"}
+{"name":"HTPI.sum_empty","declaration":"theorem HTPI.sum_empty {A : Type} [AddZeroClass A] {k : ℕ} {n : ℕ} {f : ℕ → A} (h : n < k) : Sum i from k to n, f i = 0"}
+{"name":"HTPI.getHeadData","declaration":"def HTPI.getHeadData (e : Lean.Expr) : Lean.Expr × List Lean.Expr"}
+{"name":"HTPI.doEquivTac","declaration":"def HTPI.doEquivTac (f : Option HTPI.ColonTerm) (l : Option HTPI.OneLoc) (tac : Lean.Name) (ruleFunc : Lean.Expr → Lean.Elab.Tactic.TacticM HTPI.ruleType) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.tacticShow_By_","declaration":"def HTPI.tacticShow_By_  : Lean.ParserDescr"}
+{"name":"HTPI.PropForm.iff","declaration":"ctor HTPI.PropForm.iff  : Lean.Expr → Lean.Expr → HTPI.PropForm"}
+{"name":"HTPI.withId","declaration":"def HTPI.withId  : Lean.ParserDescr"}
+{"name":"HTPI.tacticAssume_","declaration":"def HTPI.tacticAssume_  : Lean.ParserDescr"}
+{"name":"HTPI.With2Ids","declaration":"def HTPI.With2Ids  : Type"}
+{"name":"HTPI.with2Ids","declaration":"def HTPI.with2Ids  : Lean.ParserDescr"}
+{"name":"HTPI.PropForm.all","declaration":"ctor HTPI.PropForm.all  : Lean.Name → Lean.Expr → Lean.Expr → Lean.BinderInfo → HTPI.PropForm"}
+{"name":"HTPI.exun_elim","declaration":"theorem HTPI.exun_elim {α : Sort u} {p : α → Prop} {b : Prop} (h2 : ∃! x, p x) (h1 : ∀ (x : α), p x → (∀ (y z : α), p y → p z → y = z) → b) : b"}
+{"name":"HTPI.not_imp_not_iff_and","declaration":"theorem HTPI.not_imp_not_iff_and {p : Prop} {q : Prop} : ¬(p → ¬q) ↔ p ∧ q"}
+{"name":"HTPI.mkIff","declaration":"def HTPI.mkIff (l : Lean.Expr) (r : Lean.Expr) : Lean.Expr"}
+{"name":"HTPI.doAssume","declaration":"def HTPI.doAssume (w : Lean.Term) (t : Option Lean.Term) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.whnfNotExUn","declaration":"def HTPI.whnfNotExUn (e : Lean.Expr) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.tacticDefinition___1","declaration":"def HTPI.tacticDefinition___1  : Lean.ParserDescr"}
+{"name":"HTPI.addToName","declaration":"def HTPI.addToName (n : Lean.Name) (s : String) : Lean.Name"}
+{"name":"HTPI.mkUn","declaration":"def HTPI.mkUn (lev : Lean.Level) (v : Lean.Name) (t : Lean.Expr) (b : Lean.Expr) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.myTrace","declaration":"def HTPI.myTrace (msg : String) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.tacticExists_unique","declaration":"def HTPI.tacticExists_unique  : Lean.ParserDescr"}
+{"name":"HTPI.sum_from_zero_step","declaration":"theorem HTPI.sum_from_zero_step {A : Type} [AddZeroClass A] {n : ℕ} {f : ℕ → A} : Sum i from 0 to n + 1, f i = (Sum i from 0 to n, f i) + f (n + 1)"}
+{"name":"HTPI.dontUnfoldNum","declaration":"def HTPI.dontUnfoldNum  : List Lean.Name"}
+{"name":"HTPI.unfoldOrWhnf","declaration":"def HTPI.unfoldOrWhnf (tac : Lean.Name) (e : Lean.Expr) (w : Bool) (rep : Bool) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.«tacticAssume_:_»","declaration":"def HTPI.«tacticAssume_:_»  : Lean.ParserDescr"}
+{"name":"HTPI.tacticTraceExpr__","declaration":"def HTPI.tacticTraceExpr__  : Lean.ParserDescr"}
+{"name":"HTPI.PropForm.or","declaration":"ctor HTPI.PropForm.or  : Lean.Expr → Lean.Expr → HTPI.PropForm"}
+{"name":"HTPI.not_or_not_distrib","declaration":"theorem HTPI.not_or_not_distrib {p : Prop} {q : Prop} : ¬(p ∨ ¬q) ↔ ¬p ∧ q"}
+{"name":"HTPI.getPropForm","declaration":"def HTPI.getPropForm (e : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.PropForm"}
+{"name":"HTPI.tacticOr_right_","declaration":"def HTPI.tacticOr_right_  : Lean.ParserDescr"}
+{"name":"HTPI.induc_from","declaration":"theorem HTPI.induc_from (P : ℕ → Prop) (k : ℕ) (h1 : P k) (h2 : ∀ n ≥ k, P n → P (n + 1)) (n : ℕ) : n ≥ k → P n"}
+{"name":"Iff.rtl","declaration":"def Iff.rtl {p : Prop} {q : Prop} (h : p ↔ q) : q → p"}
+{"name":"HTPI.cpRule","declaration":"def HTPI.cpRule (form : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.binderString","declaration":"def HTPI.binderString (bi : Lean.BinderInfo) : String"}
+{"name":"HTPI.tacticDefinition!__","declaration":"def HTPI.tacticDefinition!__  : Lean.ParserDescr"}
+{"name":"HTPI.mkExists","declaration":"def HTPI.mkExists (l : Lean.Level) (x : Lean.Name) (bi : Lean.BinderInfo) (t : Lean.Expr) (b : Lean.Expr) : Lean.Expr"}
+{"name":"HTPI.checkIdUsed","declaration":"opaque HTPI.checkIdUsed (tac : Lean.Name) (i : Lean.Syntax) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.sum_from_to","declaration":"def HTPI.sum_from_to {A : Type} [AddZeroClass A] (k : ℕ) (n : ℕ) (f : ℕ → A) : A"}
+{"name":"HTPI.equivRuleFromForm","declaration":"def HTPI.equivRuleFromForm (p : Lean.Expr) (ruleFunc : Lean.Expr → Lean.Elab.Tactic.TacticM HTPI.ruleType) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.colonTerm","declaration":"def HTPI.colonTerm  : Lean.ParserDescr"}
+{"name":"HTPI.doDefinitionRep","declaration":"opaque HTPI.doDefinitionRep (label : Lean.Name) (e : Lean.Expr) (e1 : Lean.Expr) (prop : Bool) (rule : Lean.Ident) (firstNum : ℕ) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.qnRuleFromInfoNoNeg","declaration":"def HTPI.qnRuleFromInfoNoNeg (v : Lean.Name) (t : Lean.Expr) (b : Lean.Expr) (qf : Lean.Name → Lean.BinderInfo → Lean.Expr → Lean.Expr → Lean.Expr) (rs : Lean.Name × Lean.Name) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.getDefineFormLabel","declaration":"def HTPI.getDefineFormLabel (f : Option HTPI.ColonTerm) (l : Option HTPI.OneLoc) : Lean.Elab.Tactic.TacticM (Lean.Expr × Lean.Name)"}
+{"name":"HTPI.tacticBy_casesOn__","declaration":"def HTPI.tacticBy_casesOn__  : Lean.ParserDescr"}
+{"name":"HTPI.PropForm.t","declaration":"ctor HTPI.PropForm.t  : HTPI.PropForm"}
+{"name":"HTPI.setUpCases","declaration":"def HTPI.setUpCases (t : Lean.Term) (wids : Option HTPI.With2Ids) : Lean.Elab.Tactic.TacticM (Bool × Lean.Ident × Lean.Ident)"}
+{"name":"HTPI.tacticDefine__","declaration":"def HTPI.tacticDefine__  : Lean.ParserDescr"}
+{"name":"HTPI.tacticContradict__","declaration":"def HTPI.tacticContradict__  : Lean.ParserDescr"}
+{"name":"HTPI.unfoldHeadCore","declaration":"opaque HTPI.unfoldHeadCore (e : Lean.Expr) (first : Bool) (rep : Bool) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.PropForm.exun","declaration":"ctor HTPI.PropForm.exun  : Lean.Level → Lean.Name → Lean.Expr → Lean.Expr → Lean.BinderInfo → HTPI.PropForm"}
+{"name":"HTPI.myFail","declaration":"def HTPI.myFail {α : Type} (tac : Lean.Name) (msg : String) : Lean.Elab.Tactic.TacticM α"}
+{"name":"HTPI.not_not_iff","declaration":"theorem HTPI.not_not_iff {p : Prop} {q : Prop} : ¬(¬p ↔ q) ↔ (p ↔ q)"}
+{"name":"HTPI.BinRel","declaration":"def HTPI.BinRel (t : Type u) : Type u"}
+{"name":"HTPI.tacticDefinition!___1","declaration":"def HTPI.tacticDefinition!___1  : Lean.ParserDescr"}
+{"name":"HTPI.not_not_or_distrib","declaration":"theorem HTPI.not_not_or_distrib {p : Prop} {q : Prop} : ¬(¬p ∨ q) ↔ p ∧ ¬q"}
+{"name":"HTPI.not_and_not_distrib","declaration":"theorem HTPI.not_and_not_distrib {p : Prop} {q : Prop} : ¬(p ∧ ¬q) ↔ ¬p ∨ q"}
+{"name":"HTPI.«tacticShow_:=_»","declaration":"def HTPI.«tacticShow_:=_»  : Lean.ParserDescr"}
+{"name":"HTPI.mkRel","declaration":"def HTPI.mkRel (e1 : Lean.Expr) (e2 : Lean.Expr) (prop : Bool) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.exprIsProp","declaration":"def HTPI.exprIsProp (e : Lean.Expr) : Lean.Elab.Tactic.TacticM Bool"}
+{"name":"HTPI.doObtain","declaration":"def HTPI.doObtain (itw : HTPI.IdOrTerm?Type) (ith : HTPI.IdOrTerm?Type) (tm : Lean.Term) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.ensureContra","declaration":"def HTPI.ensureContra (w : Option HTPI.WithId) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.DisjSyllData","declaration":"def HTPI.DisjSyllData (disj : Lean.Expr) (neg : Lean.Expr) : Lean.Elab.Tactic.TacticM (Bool × Bool)"}
+{"name":"HTPI.doFix","declaration":"def HTPI.doFix (w : Lean.Term) (t : Option Lean.Term) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.sum_seq","declaration":"def HTPI.sum_seq {A : Type} [AddZeroClass A] (m : ℕ) (k : ℕ) (f : ℕ → A) : A"}
+{"name":"HTPI.PropForm.none","declaration":"ctor HTPI.PropForm.none  : HTPI.PropForm"}
+{"name":"HTPI.binegRule","declaration":"def HTPI.binegRule (form : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"«term_⊈_»","declaration":"def «term_⊈_»  : Lean.TrailingParserDescr"}
+{"name":"HTPI.formFromIdent","declaration":"def HTPI.formFromIdent (h : Lean.Syntax) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.OneLoc","declaration":"def HTPI.OneLoc  : Type"}
+{"name":"HTPI.SyntaxToString.SyntaxListToString","declaration":"opaque HTPI.SyntaxToString.SyntaxListToString (ss : List Lean.Syntax) : String"}
+{"name":"HTPI.findNegPropAll","declaration":"def HTPI.findNegPropAll (e : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.PropForm"}
+{"name":"HTPI.tacticDefinition__","declaration":"def HTPI.tacticDefinition__  : Lean.ParserDescr"}
+{"name":"HTPI.tacticDemorgan__","declaration":"def HTPI.tacticDemorgan__  : Lean.ParserDescr"}
+{"name":"HTPI.not_not_and_distrib","declaration":"theorem HTPI.not_not_and_distrib {p : Prop} {q : Prop} : ¬(¬p ∧ q) ↔ p ∨ ¬q"}
+{"name":"HTPI.PropForm.implies","declaration":"ctor HTPI.PropForm.implies  : Lean.Expr → Lean.Expr → HTPI.PropForm"}
+{"name":"HTPI.ruleType","declaration":"def HTPI.ruleType  : Type"}
+{"name":"HTPI.PropForm.and","declaration":"ctor HTPI.PropForm.and  : Lean.Expr → Lean.Expr → HTPI.PropForm"}
+{"name":"HTPI.orstrat","declaration":"def HTPI.orstrat (tac : Lean.Name) (w : Option HTPI.WithId) (left : Bool) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.tacticOr_left_","declaration":"def HTPI.tacticOr_left_  : Lean.ParserDescr"}
+{"name":"HTPI.PropForm.not","declaration":"ctor HTPI.PropForm.not  : Lean.Expr → HTPI.PropForm"}
+{"name":"HTPI.getLabel","declaration":"def HTPI.getLabel (tac : Lean.Name) (w : Option HTPI.WithId) (dflt : optParam Lean.Ident (Lean.mkIdent `this)) : Lean.Elab.Tactic.TacticM Lean.Ident"}
+{"name":"HTPI.unfoldExUn","declaration":"def HTPI.unfoldExUn (lev : Lean.Level) (v : Lean.Name) (t : Lean.Expr) (b : Lean.Expr) : Lean.BinderInfo → Lean.Expr"}
+{"name":"HTPI.doObtainExUn","declaration":"def HTPI.doObtainExUn (itw : HTPI.IdOrTerm?Type) (ith1 : HTPI.IdOrTerm?Type) (ith2 : HTPI.IdOrTerm?Type) (tm : Lean.Term) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.equivRule","declaration":"def HTPI.equivRule (f : Option HTPI.ColonTerm) (l : Option HTPI.OneLoc) (ruleFunc : Lean.Expr → Lean.Elab.Tactic.TacticM HTPI.ruleType) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.qnRuleFromInfo","declaration":"def HTPI.qnRuleFromInfo (v : Lean.Name) (t : Lean.Expr) (b : Lean.Expr) (qf : Lean.Name → Lean.BinderInfo → Lean.Expr → Lean.Expr → Lean.Expr) (n : Bool) (rs : Lean.Name × Lean.Name) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.oneLoc","declaration":"def HTPI.oneLoc  : Lean.ParserDescr"}
+{"name":"HTPI.doDefine","declaration":"def HTPI.doDefine (tac : Lean.Name) (f : Option HTPI.ColonTerm) (l : Option HTPI.OneLoc) (w : Bool) (rep : Bool) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.qnRule","declaration":"def HTPI.qnRule (form : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.isLocalVar","declaration":"def HTPI.isLocalVar (s : Lean.Syntax) : Lean.Elab.Tactic.TacticM Bool"}
+{"name":"HTPI.unfoldHead","declaration":"def HTPI.unfoldHead (e : Lean.Expr) (tac : Lean.Name) (first : Bool) (rep : Bool) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.dmRuleFromInfoNoNeg","declaration":"def HTPI.dmRuleFromInfoNoNeg (l : Lean.Expr) (r : Lean.Expr) (conn : Lean.Expr → Lean.Expr → Lean.Expr) (rs : Array Lean.Name) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.IdOrTerm?Type","declaration":"def HTPI.IdOrTerm?Type  : Type"}
+{"name":"HTPI.doIntroOption","declaration":"def HTPI.doIntroOption (tac : Lean.Name) (i : Lean.Term) (t : Option Lean.Term) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.tacticDisj_syll___","declaration":"def HTPI.tacticDisj_syll___  : Lean.ParserDescr"}
+{"name":"HTPI.tacticConditional__","declaration":"def HTPI.tacticConditional__  : Lean.ParserDescr"}
+{"name":"HTPI.mkAppList","declaration":"def HTPI.mkAppList (h : Lean.Expr) (args : List Lean.Expr) : Lean.Expr"}
+{"name":"HTPI.tacticDef_step__","declaration":"def HTPI.tacticDef_step__  : Lean.ParserDescr"}
+{"name":"HTPI.tacticObtain__From_","declaration":"def HTPI.tacticObtain__From_  : Lean.ParserDescr"}
+{"name":"HTPI.mkDeclaredTypeButIsExpectedMsg","declaration":"def HTPI.mkDeclaredTypeButIsExpectedMsg (decType : Lean.Expr) (expectedType : Lean.Expr) : Lean.MetaM Lean.MessageData"}
+{"name":"HTPI.cdlRule","declaration":"def HTPI.cdlRule (form : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.dnRule","declaration":"def HTPI.dnRule (form : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.tacticWhnf__","declaration":"def HTPI.tacticWhnf__  : Lean.ParserDescr"}
+{"name":"HTPI.idOrTerm","declaration":"def HTPI.idOrTerm  : Lean.ParserDescr"}
+{"name":"HTPI.sumFromTo","declaration":"def HTPI.sumFromTo  : Lean.ParserDescr"}
+{"name":"HTPI.exprFromPf","declaration":"def HTPI.exprFromPf (t : Lean.Term) (w : ℕ) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.applyToExData","declaration":"def HTPI.applyToExData {α : Type} (f : Lean.Level → Lean.Name → Lean.Expr → Lean.Expr → Lean.BinderInfo → α) (lev : Lean.Level) (l : Lean.Expr) (r : Lean.Expr) : α"}
+{"name":"HTPI.traceThisSyntax","declaration":"def HTPI.traceThisSyntax (s : Lean.Syntax) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.fixCase","declaration":"def HTPI.fixCase (clear : Bool) (label : Lean.Ident) (g : Lean.Name) (c : String) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.dontUnfold","declaration":"def HTPI.dontUnfold  : List Lean.Name"}
+{"name":"HTPI.sum_step","declaration":"theorem HTPI.sum_step {A : Type} [AddZeroClass A] {k : ℕ} {n : ℕ} {f : ℕ → A} (h : k ≤ n) : Sum i from k to n + 1, f i = (Sum i from k to n, f i) + f (n + 1)"}
+{"name":"HTPI.parseIdOrTerm?Type","declaration":"def HTPI.parseIdOrTerm?Type (tac : Lean.Name) (it : HTPI.IdOrTerm?Type) : Lean.Elab.Tactic.TacticM (Lean.Term × Option Lean.Term)"}
+{"name":"HTPI.doDefinition","declaration":"def HTPI.doDefinition (all : Bool) (f : Option HTPI.ColonTerm) (l : Option HTPI.OneLoc) (wid : Option HTPI.WithId) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.dmRule","declaration":"def HTPI.dmRule (form : Lean.Expr) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.doReplace","declaration":"def HTPI.doReplace (tac : Lean.Name) (l : Option HTPI.OneLoc) (res : Lean.Expr) (pf : Lean.Syntax) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.Pred","declaration":"def HTPI.Pred (t : Type u) : Type u"}
+{"name":"HTPI.IdOrTerm","declaration":"def HTPI.IdOrTerm  : Type"}
+{"name":"HTPI.tacticObtain___From_","declaration":"def HTPI.tacticObtain___From_  : Lean.ParserDescr"}
+{"name":"«term_∆_»","declaration":"def «term_∆_»  : Lean.TrailingParserDescr"}
+{"name":"HTPI.dmRuleFromInfo","declaration":"def HTPI.dmRuleFromInfo (l : Lean.Expr) (r : Lean.Expr) (conn : Lean.Expr → Lean.Expr → Lean.Expr) (n : Bool) (rs : Array Lean.Name) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.formFromLoc","declaration":"def HTPI.formFromLoc (l : Option HTPI.OneLoc) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.SyntaxToString","declaration":"opaque HTPI.SyntaxToString (s : Lean.Syntax) : String"}
+{"name":"HTPI.WithId","declaration":"def HTPI.WithId  : Type"}
+{"name":"HTPI.not_imp_iff_not_and","declaration":"theorem HTPI.not_imp_iff_not_and {p : Prop} {q : Prop} : ¬(q → p) ↔ ¬p ∧ q"}
+{"name":"HTPI.equivMakeRule","declaration":"def HTPI.equivMakeRule (f : Lean.Expr) (ruleFunc : Lean.Expr → Lean.Elab.Tactic.TacticM HTPI.ruleType) : Lean.Elab.Tactic.TacticM HTPI.ruleType"}
+{"name":"HTPI.doHave","declaration":"def HTPI.doHave (n : Lean.Name) (form : Lean.Expr) (pfstx : Lean.Syntax) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"HTPI.PropForm","declaration":"inductive HTPI.PropForm  : Type"}
+{"name":"HTPI.unexpandSumFromTo","declaration":"def HTPI.unexpandSumFromTo  : Lean.PrettyPrinter.Unexpander"}
+{"name":"HTPI.numNames","declaration":"def HTPI.numNames  : List Lean.Name"}
+{"name":"HTPI.PropForm.f","declaration":"ctor HTPI.PropForm.f  : HTPI.PropForm"}
+{"name":"HTPI.tacticBicond_neg__","declaration":"def HTPI.tacticBicond_neg__  : Lean.ParserDescr"}
+{"name":"HTPI.tacticQuant_neg__","declaration":"def HTPI.tacticQuant_neg__  : Lean.ParserDescr"}
+{"name":"HTPI.fixElt","declaration":"def HTPI.fixElt (e : Lean.Expr) (doFix : Bool) : Lean.Elab.Tactic.TacticM Lean.Expr"}
+{"name":"HTPI.matchFirstNeg","declaration":"def HTPI.matchFirstNeg (e1 : Lean.Expr) (e2 : Lean.Expr) : Lean.Elab.Tactic.TacticM Bool"}
+{"name":"HTPI.sum_base","declaration":"theorem HTPI.sum_base {A : Type} [AddZeroClass A] {k : ℕ} {f : ℕ → A} : Sum i from k to k, f i = f k"}
+{"name":"HTPI.tacticShow_From_","declaration":"def HTPI.tacticShow_From_  : Lean.ParserDescr"}
+{"name":"HTPI.negData","declaration":"def HTPI.negData (e : Lean.Expr) : Lean.Elab.Tactic.TacticM (Lean.Expr × Bool)"}
+{"name":"HTPI.traceThisExpr","declaration":"def HTPI.traceThisExpr (e : Lean.Expr) : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"Iff.ltr","declaration":"def Iff.ltr {p : Prop} {q : Prop} (h : p ↔ q) : p → q"}
+{"name":"HTPI.tacticBy_induc","declaration":"def HTPI.tacticBy_induc  : Lean.ParserDescr"}

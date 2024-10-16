@@ -1,0 +1,6 @@
+{"name":"SciLean.termSorry_proof","declaration":"def SciLean.termSorry_proof  : Lean.ParserDescr"}
+{"name":"SciLean.sorryDataAxiom","declaration":"axiom SciLean.sorryDataAxiom {α : Type u_1} : α"}
+{"name":"SciLean.tacticSorry_data","declaration":"def SciLean.tacticSorry_data  : Lean.ParserDescr"}
+{"name":"SciLean.tacticSorry_proof","declaration":"def SciLean.tacticSorry_proof  : Lean.ParserDescr"}
+{"name":"SciLean.sorryProofAxiom","declaration":"axiom SciLean.sorryProofAxiom {P : Prop} : P"}
+{"name":"SciLean.termSorry_data","declaration":"def SciLean.termSorry_data  : Lean.ParserDescr"}

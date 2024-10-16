@@ -1,0 +1,13 @@
+{"name":"PhiFour.phi4PreFeynmanRules","declaration":"/-- The pre-Feynman rules for `Phi^4` theory. -/\ndef PhiFour.phi4PreFeynmanRules  : PreFeynmanRule"}
+{"name":"PhiFour.figureEight_symmetryFactor","declaration":"/-- The symmetry factor of `figureEight` is 8. We can get this from\n`#eval symmetryFactor figureEight`. -/\ntheorem PhiFour.figureEight_symmetryFactor  : FeynmanDiagram.symmetryFactor PhiFour.figureEight = 8"}
+{"name":"PhiFour.instOfNatHalfEdgeLabelPhi4PreFeynmanRules","declaration":"instance PhiFour.instOfNatHalfEdgeLabelPhi4PreFeynmanRules (a : ℕ) : OfNat PhiFour.phi4PreFeynmanRules.HalfEdgeLabel a"}
+{"name":"PhiFour.phi4PreFeynmanRules_HalfEdgeLabel","declaration":"theorem PhiFour.phi4PreFeynmanRules_HalfEdgeLabel  : PhiFour.phi4PreFeynmanRules.HalfEdgeLabel = Fin 1"}
+{"name":"PhiFour.instOfNatVertexLabelPhi4PreFeynmanRules","declaration":"instance PhiFour.instOfNatVertexLabelPhi4PreFeynmanRules (a : ℕ) : OfNat PhiFour.phi4PreFeynmanRules.VertexLabel a"}
+{"name":"PhiFour.instOfNatEdgeLabelPhi4PreFeynmanRules","declaration":"instance PhiFour.instOfNatEdgeLabelPhi4PreFeynmanRules (a : ℕ) : OfNat PhiFour.phi4PreFeynmanRules.EdgeLabel a"}
+{"name":"PhiFour.instIsFinitePreFeynmanRulePhi4PreFeynmanRules","declaration":"instance PhiFour.instIsFinitePreFeynmanRulePhi4PreFeynmanRules  : PreFeynmanRule.IsFinitePreFeynmanRule PhiFour.phi4PreFeynmanRules"}
+{"name":"PhiFour.phi4PreFeynmanRules_edgeLabelMap","declaration":"theorem PhiFour.phi4PreFeynmanRules_edgeLabelMap (x : Fin 1) : PhiFour.phi4PreFeynmanRules.edgeLabelMap x =\n  match x with\n  | 0 => CategoryTheory.Over.mk ![0, 0]"}
+{"name":"PhiFour.figureEight","declaration":"/-- The figure eight Feynman diagram. -/\ndef PhiFour.figureEight  : FeynmanDiagram PhiFour.phi4PreFeynmanRules"}
+{"name":"PhiFour.figureEight_connected","declaration":"/-- `figureEight` is connected. We can get this from\n`#eval Connected figureEight`. -/\ntheorem PhiFour.figureEight_connected  : FeynmanDiagram.Connected PhiFour.figureEight"}
+{"name":"PhiFour.phi4PreFeynmanRules_vertexLabelMap","declaration":"theorem PhiFour.phi4PreFeynmanRules_vertexLabelMap (x : Fin 2) : PhiFour.phi4PreFeynmanRules.vertexLabelMap x =\n  match x with\n  | 0 => CategoryTheory.Over.mk ![0]\n  | 1 => CategoryTheory.Over.mk ![0, 0, 0, 0]"}
+{"name":"PhiFour.phi4PreFeynmanRules_EdgeLabel","declaration":"theorem PhiFour.phi4PreFeynmanRules_EdgeLabel  : PhiFour.phi4PreFeynmanRules.EdgeLabel = Fin 1"}
+{"name":"PhiFour.phi4PreFeynmanRules_VertexLabel","declaration":"theorem PhiFour.phi4PreFeynmanRules_VertexLabel  : PhiFour.phi4PreFeynmanRules.VertexLabel = Fin 2"}

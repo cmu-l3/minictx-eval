@@ -1,0 +1,28 @@
+{"name":"GroupTheory.SO3.instTopologicalGroupSO3InstTopologicalSpaceSO3SO3Group","declaration":"instance GroupTheory.SO3.instTopologicalGroupSO3InstTopologicalSpaceSO3SO3Group  : TopologicalGroup GroupTheory.SO3"}
+{"name":"GroupTheory.SO3","declaration":"/-- The group of `3×3` real matrices with determinant 1 and `A * Aᵀ = 1`. -/\ndef GroupTheory.SO3  : Type"}
+{"name":"GroupTheory.SO3.toGL","declaration":"/-- The inclusion of `SO(3)` into `GL (Fin 3) ℝ`. -/\ndef GroupTheory.SO3.toGL  : GroupTheory.SO3 →* GL (Fin 3) ℝ"}
+{"name":"GroupTheory.SO3Group_div","declaration":"theorem GroupTheory.SO3Group_div (a : GroupTheory.SO3) (b : GroupTheory.SO3) : a / b = DivInvMonoid.div' a b"}
+{"name":"GroupTheory.SO3.exists_stationary_vec","declaration":"theorem GroupTheory.SO3.exists_stationary_vec (A : GroupTheory.SO3) : ∃ v, Orthonormal ℝ (Set.restrict {0} fun x => v) ∧ (GroupTheory.SO3.toEnd A) v = v"}
+{"name":"GroupTheory.SO3.toEnd","declaration":"/-- The endomorphism of `EuclideanSpace ℝ (Fin 3)` associated to a element of `SO(3)`. -/\ndef GroupTheory.SO3.toEnd (A : GroupTheory.SO3) : Module.End ℝ (EuclideanSpace ℝ (Fin 3))"}
+{"name":"GroupTheory.SO3.toProd_continuous","declaration":"theorem GroupTheory.SO3.toProd_continuous  : Continuous ⇑GroupTheory.SO3.toProd"}
+{"name":"GroupTheory.SO3.toProd_eq_transpose","declaration":"theorem GroupTheory.SO3.toProd_eq_transpose {A : GroupTheory.SO3} : GroupTheory.SO3.toProd A = (↑A, { unop' := Matrix.transpose ↑A })"}
+{"name":"GroupTheory.SO3Group_inv","declaration":"theorem GroupTheory.SO3Group_inv (A : GroupTheory.SO3) : A⁻¹ = { val := Matrix.transpose ↑A, property := ⋯ }"}
+{"name":"GroupTheory.SO3Group","declaration":"instance GroupTheory.SO3Group  : Group GroupTheory.SO3"}
+{"name":"GroupTheory.SO3.one_in_spectrum","declaration":"theorem GroupTheory.SO3.one_in_spectrum (A : GroupTheory.SO3) : 1 ∈ spectrum ℝ ↑A"}
+{"name":"GroupTheory.SO3.det_id_minus","declaration":"theorem GroupTheory.SO3.det_id_minus (A : GroupTheory.SO3) : Matrix.det (1 - ↑A) = 0"}
+{"name":"GroupTheory.SO3.toProd_injective","declaration":"theorem GroupTheory.SO3.toProd_injective  : Function.Injective ⇑GroupTheory.SO3.toProd"}
+{"name":"GroupTheory.SO3.exists_basis_preserved","declaration":"theorem GroupTheory.SO3.exists_basis_preserved (A : GroupTheory.SO3) : ∃ b, (GroupTheory.SO3.toEnd A) (b 0) = b 0"}
+{"name":"GroupTheory.instTopologicalSpaceSO3","declaration":"/-- SO3 has the subtype topology. -/\ninstance GroupTheory.instTopologicalSpaceSO3  : TopologicalSpace GroupTheory.SO3"}
+{"name":"GroupTheory.SO3.toProd_embedding","declaration":"/-- The embedding of `SO(3)` into the monoid of matrices times the opposite of\nthe monoid of matrices. -/\ntheorem GroupTheory.SO3.toProd_embedding  : Embedding ⇑GroupTheory.SO3.toProd"}
+{"name":"GroupTheory.SO3.one_is_eigenvalue","declaration":"theorem GroupTheory.SO3.one_is_eigenvalue (A : GroupTheory.SO3) : Module.End.HasEigenvalue (GroupTheory.SO3.toEnd A) 1"}
+{"name":"GroupTheory.SO3.toGL_embedding","declaration":"/-- The embedding of `SO(3)` into `GL (Fin 3) ℝ`. -/\ntheorem GroupTheory.SO3.toGL_embedding  : Embedding GroupTheory.SO3.toGL.toFun"}
+{"name":"GroupTheory.SO3Group_mul_coe","declaration":"theorem GroupTheory.SO3Group_mul_coe (A : GroupTheory.SO3) (B : GroupTheory.SO3) : ↑(A * B) = ↑A * ↑B"}
+{"name":"GroupTheory.SO3.toProd_apply","declaration":"theorem GroupTheory.SO3.toProd_apply  : ∀ (a : GroupTheory.SO3),\n  GroupTheory.SO3.toProd a = (↑(GroupTheory.SO3.toGL a), (MulOpposite.op ↑(GroupTheory.SO3.toGL a))⁻¹)"}
+{"name":"GroupTheory.SO3.subtype_val_eq_toGL","declaration":"theorem GroupTheory.SO3.subtype_val_eq_toGL  : Subtype.val = Units.val ∘ GroupTheory.SO3.toGL.toFun"}
+{"name":"GroupTheory.SO3.det_minus_id","declaration":"theorem GroupTheory.SO3.det_minus_id (A : GroupTheory.SO3) : Matrix.det (↑A - 1) = 0"}
+{"name":"GroupTheory.SO3.toProd","declaration":"/-- The inclusion of `SO(3)` into the monoid of matrices times the opposite of\nthe monoid of matrices. -/\ndef GroupTheory.SO3.toProd  : GroupTheory.SO3 →* Matrix (Fin 3) (Fin 3) ℝ × (Matrix (Fin 3) (Fin 3) ℝ)ᵐᵒᵖ"}
+{"name":"GroupTheory.SO3.coe_inv","declaration":"theorem GroupTheory.SO3.coe_inv (A : GroupTheory.SO3) : ↑A⁻¹ = (↑A)⁻¹"}
+{"name":"GroupTheory.SO3.toEnd_apply","declaration":"theorem GroupTheory.SO3.toEnd_apply (A : GroupTheory.SO3) : ∀ (a : EuclideanSpace ℝ (Fin 3)),\n  (GroupTheory.SO3.toEnd A) a =\n    (LinearEquiv.symm (EuclideanSpace.basisFun (Fin 3) ℝ).repr.toLinearEquiv)\n      (Matrix.mulVec ↑A ⇑((OrthonormalBasis.toBasis (EuclideanSpace.basisFun (Fin 3) ℝ)).repr a))"}
+{"name":"GroupTheory.SO3.toGL_injective","declaration":"theorem GroupTheory.SO3.toGL_injective  : Function.Injective ⇑GroupTheory.SO3.toGL"}
+{"name":"GroupTheory.SO3Group_one_coe","declaration":"theorem GroupTheory.SO3Group_one_coe  : ↑1 = 1"}
+{"name":"GroupTheory.SO3_notation","declaration":"/-- Notation for the group `SO3`. -/\ndef GroupTheory.SO3_notation  : Lean.ParserDescr"}

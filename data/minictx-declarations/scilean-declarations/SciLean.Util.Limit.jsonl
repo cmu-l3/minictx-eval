@@ -1,0 +1,7 @@
+{"name":"Filter.limit","declaration":"def Filter.limit {α : Type u_1} {β : Type u_2} [TopologicalSpace β] [Nonempty β] (l : Filter α) (f : α → β) : β"}
+{"name":"SciLean.Notation.«termLimit_∈_,_»","declaration":"def SciLean.Notation.«termLimit_∈_,_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«termLimit_→_,_»","declaration":"def SciLean.Notation.«termLimit_→_,_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«termLimit_→∞,_»","declaration":"def SciLean.Notation.«termLimit_→∞,_»  : Lean.ParserDescr"}
+{"name":"Filter.limit_of_const","declaration":"theorem Filter.limit_of_const {α : Type u_1} {β : Type u_2} [TopologicalSpace β] [Nonempty β] (l : Filter α) (b : β) : (Filter.limit l fun x => b) = b"}
+{"name":"Filter.limit_of_continuous","declaration":"theorem Filter.limit_of_continuous {α : Type u_1} {β : Type u_2} [TopologicalSpace α] [TopologicalSpace β] [Nonempty β] (a : α) (f : α → β) (hf : Continuous f) : Filter.limit (nhds a) f = f a"}
+{"name":"SciLean.Notation.unexpandFilterLimit","declaration":"def SciLean.Notation.unexpandFilterLimit  : Lean.PrettyPrinter.Unexpander"}

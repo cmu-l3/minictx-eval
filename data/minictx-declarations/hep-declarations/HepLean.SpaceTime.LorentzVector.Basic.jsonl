@@ -1,0 +1,23 @@
+{"name":"LorentzVector.spaceReflection_time","declaration":"theorem LorentzVector.spaceReflection_time {d : ℕ} (v : LorentzVector d) : LorentzVector.time (LorentzVector.spaceReflection v) = LorentzVector.time v"}
+{"name":"LorentzVector.stdBasis_repr_apply_support_val","declaration":"theorem LorentzVector.stdBasis_repr_apply_support_val {d : ℕ} : ∀ (a : Fin 1 ⊕ Fin d → ℝ), (LorentzVector.stdBasis.repr a).support.val = Multiset.map Subtype.val Finset.univ.val"}
+{"name":"LorentzVector.stdBasis_repr_apply_toFun","declaration":"theorem LorentzVector.stdBasis_repr_apply_toFun {d : ℕ} : ∀ (a : Fin 1 ⊕ Fin d → ℝ) (a_1 : Fin 1 ⊕ Fin d), (LorentzVector.stdBasis.repr a) a_1 = a a_1"}
+{"name":"LorentzVector.spaceReflection_space","declaration":"theorem LorentzVector.spaceReflection_space {d : ℕ} (v : LorentzVector d) : LorentzVector.space (LorentzVector.spaceReflection v) = -LorentzVector.space v"}
+{"name":"instAddCommMonoidLorentzVector","declaration":"/-- An instance of an additive commutative monoid on `LorentzVector`. -/\ninstance instAddCommMonoidLorentzVector (d : ℕ) : AddCommMonoid (LorentzVector d)"}
+{"name":"LorentzVector.timeVec","declaration":"/-- The standard unit time vector. -/\ndef LorentzVector.timeVec {d : ℕ} : LorentzVector d"}
+{"name":"LorentzVector.spaceReflection","declaration":"/-- The reflection of space. -/\ndef LorentzVector.spaceReflection {d : ℕ} (v : LorentzVector d) : LorentzVector d"}
+{"name":"LorentzVector.decomp_stdBasis'","declaration":"theorem LorentzVector.decomp_stdBasis' {d : ℕ} (v : LorentzVector d) : (v (Sum.inl 0) • LorentzVector.stdBasis (Sum.inl 0) +\n    Finset.sum Finset.univ fun a₂ => v (Sum.inr a₂) • LorentzVector.stdBasis (Sum.inr a₂)) =\n  v"}
+{"name":"LorentzVector.timeVec_space","declaration":"theorem LorentzVector.timeVec_space {d : ℕ} : LorentzVector.space LorentzVector.timeVec = 0"}
+{"name":"instAddCommGroupLorentzVector","declaration":"instance instAddCommGroupLorentzVector (d : ℕ) : AddCommGroup (LorentzVector d)"}
+{"name":"LorentzVector.stdBasis","declaration":"/-- The standard basis of `LorentzVector` indexed by `Fin 1 ⊕ Fin (d)`. -/\ndef LorentzVector.stdBasis {d : ℕ} : Basis (Fin 1 ⊕ Fin d) ℝ (LorentzVector d)"}
+{"name":"instModuleRealLorentzVector","declaration":"/-- An instance of a module on `LorentzVector`. -/\ninstance instModuleRealLorentzVector (d : ℕ) : Module ℝ (LorentzVector d)"}
+{"name":"LorentzVector.timeVec_time","declaration":"theorem LorentzVector.timeVec_time {d : ℕ} : LorentzVector.time LorentzVector.timeVec = 1"}
+{"name":"LorentzVector.time","declaration":"/-- The time component. -/\ndef LorentzVector.time {d : ℕ} (v : LorentzVector d) : ℝ"}
+{"name":"instTopologicalSpaceLorentzVector","declaration":"/-- The structure of a topological space `LorentzVector d`. -/\ninstance instTopologicalSpaceLorentzVector (d : ℕ) : TopologicalSpace (LorentzVector d)"}
+{"name":"LorentzVector.spaceReflectionLin_apply","declaration":"theorem LorentzVector.spaceReflectionLin_apply {d : ℕ} (x : LorentzVector d) : ∀ (a : Fin 1 ⊕ Fin d), LorentzVector.spaceReflectionLin x a = Sum.elim (x ∘ Sum.inl) (-x ∘ Sum.inr) a"}
+{"name":"LorentzVector.termE","declaration":"/-- Notation for `stdBasis`. -/\ndef LorentzVector.termE  : Lean.ParserDescr"}
+{"name":"LorentzVector.decomp_stdBasis","declaration":"theorem LorentzVector.decomp_stdBasis {d : ℕ} (v : LorentzVector d) : (Finset.sum Finset.univ fun i => v i • LorentzVector.stdBasis i) = v"}
+{"name":"LorentzVector.space","declaration":"/-- The space components. -/\ndef LorentzVector.space {d : ℕ} (v : LorentzVector d) : EuclideanSpace ℝ (Fin d)"}
+{"name":"LorentzVector.spaceReflectionLin","declaration":"/-- The reflection of space as a linear map. -/\ndef LorentzVector.spaceReflectionLin {d : ℕ} : LorentzVector d →ₗ[ℝ] LorentzVector d"}
+{"name":"LorentzVector.stdBasis_repr_symm_apply","declaration":"theorem LorentzVector.stdBasis_repr_symm_apply {d : ℕ} : ∀ (a : Fin 1 ⊕ Fin d →₀ ℝ) (a_1 : Fin 1 ⊕ Fin d), (LinearEquiv.symm LorentzVector.stdBasis.repr) a a_1 = a a_1"}
+{"name":"LorentzVector.stdBasis_apply","declaration":"theorem LorentzVector.stdBasis_apply {d : ℕ} (μ : Fin 1 ⊕ Fin d) (ν : Fin 1 ⊕ Fin d) : LorentzVector.stdBasis μ ν = if μ = ν then 1 else 0"}
+{"name":"LorentzVector","declaration":"/-- The type of (contravariant) Lorentz Vectors in `d`-space dimensions. -/\ndef LorentzVector (d : ℕ) : Type"}

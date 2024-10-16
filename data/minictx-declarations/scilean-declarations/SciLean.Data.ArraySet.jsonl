@@ -1,0 +1,19 @@
+{"name":"Array.toArraySet","declaration":"def Array.toArraySet {α : Type u_1} [ord : Ord α] (as : Array α) : SciLean.ArraySet α"}
+{"name":"SciLean.ArraySet.lexOrd","declaration":"def SciLean.ArraySet.lexOrd {α : Type u_1} [Ord α] (a : SciLean.ArraySet α) (b : SciLean.ArraySet α) : Ordering"}
+{"name":"SciLean.instHashableArraySet","declaration":"instance SciLean.instHashableArraySet  : {α : Type u_1} → {ord : Ord α} → [inst : Hashable α] → Hashable (SciLean.ArraySet α)"}
+{"name":"SciLean.ArraySet.mem","declaration":"def SciLean.ArraySet.mem {α : Type u_1} [ord : Ord α] (as : SciLean.ArraySet α) (a : α) [DecidableEq α] : Bool"}
+{"name":"SciLean.ArraySet.instGetElemArraySetNatLtInstLTNatSize","declaration":"instance SciLean.ArraySet.instGetElemArraySetNatLtInstLTNatSize {α : Type u_1} [ord : Ord α] : GetElem (SciLean.ArraySet α) Nat α fun as i => i < SciLean.ArraySet.size as"}
+{"name":"SciLean.ArraySet.instToStringArraySet","declaration":"instance SciLean.ArraySet.instToStringArraySet {α : Type u_1} [ord : Ord α] [ToString α] : ToString (SciLean.ArraySet α)"}
+{"name":"SciLean.ArraySet.size","declaration":"def SciLean.ArraySet.size {α : Type u_1} [ord : Ord α] (as : SciLean.ArraySet α) : Nat"}
+{"name":"SciLean.ArraySet.instDecidableSubsetArraySetInstHasSubsetArraySet","declaration":"instance SciLean.ArraySet.instDecidableSubsetArraySetInstHasSubsetArraySet {α : Type u_1} [ord : Ord α] (a : SciLean.ArraySet α) (b : SciLean.ArraySet α) : Decidable (a ⊆ b)"}
+{"name":"SciLean.ArraySet.instMembershipArraySet","declaration":"instance SciLean.ArraySet.instMembershipArraySet {α : Type u_1} [ord : Ord α] [DecidableEq α] : Membership α (SciLean.ArraySet α)"}
+{"name":"SciLean.ArraySet.isSet","declaration":"def SciLean.ArraySet.isSet {α : Type u_1} [ord : Ord α] (self : SciLean.ArraySet α) : Array.sortAndDeduplicate self.data = self.data"}
+{"name":"SciLean.ArraySet.mk","declaration":"ctor SciLean.ArraySet.mk {α : Type u_1} [ord : Ord α] (data : Array α) (isSet : Array.sortAndDeduplicate data = data) : SciLean.ArraySet α"}
+{"name":"SciLean.ArraySet.instHasSubsetArraySet","declaration":"instance SciLean.ArraySet.instHasSubsetArraySet {α : Type u_1} [ord : Ord α] : HasSubset (SciLean.ArraySet α)"}
+{"name":"SciLean.ArraySet.instDecidableMemArraySetInstMembershipArraySet","declaration":"instance SciLean.ArraySet.instDecidableMemArraySetInstMembershipArraySet {α : Type u_1} [ord : Ord α] [DecidableEq α] (a : α) (as : SciLean.ArraySet α) : Decidable (a ∈ as)"}
+{"name":"SciLean.ArraySet.instDecidableEqArraySet","declaration":"instance SciLean.ArraySet.instDecidableEqArraySet {α : Type u_1} [ord : Ord α] (a : SciLean.ArraySet α) (b : SciLean.ArraySet α) [DecidableEq α] : Decidable (a = b)"}
+{"name":"SciLean.ArraySet","declaration":"/-- `Array α` that is guaranteed to be sorted based on `[Ord α]` and has no duplicates.\n\nWARRNING: `Ord α` is assumed to be lawful, currently there is no typeclass for it.\n-/\nstructure SciLean.ArraySet (α : Type u_1) [ord : Ord α] : Type u_1"}
+{"name":"SciLean.ArraySet.instCoeArraySetArray","declaration":"instance SciLean.ArraySet.instCoeArraySetArray {α : Type u_1} [ord : Ord α] : Coe (SciLean.ArraySet α) (Array α)"}
+{"name":"SciLean.ArraySet.toArray","declaration":"def SciLean.ArraySet.toArray {α : Type u_1} [ord : Ord α] (as : SciLean.ArraySet α) : Array α"}
+{"name":"SciLean.ArraySet.data","declaration":"def SciLean.ArraySet.data {α : Type u_1} [ord : Ord α] (self : SciLean.ArraySet α) : Array α"}
+{"name":"SciLean.ArraySet.toList","declaration":"def SciLean.ArraySet.toList {α : Type u_1} [ord : Ord α] (as : SciLean.ArraySet α) : List α"}

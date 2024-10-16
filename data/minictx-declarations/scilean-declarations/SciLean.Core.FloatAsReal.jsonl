@@ -1,0 +1,21 @@
+{"name":"SciLean.instMeasureSpaceFloat","declaration":"instance SciLean.instMeasureSpaceFloat  : MeasureTheory.MeasureSpace Float"}
+{"name":"SciLean.instDenselyNormedFieldFloat","declaration":"instance SciLean.instDenselyNormedFieldFloat  : DenselyNormedField Float"}
+{"name":"SciLean.instRealScalarFloat","declaration":"instance SciLean.instRealScalarFloat  : SciLean.RealScalar Float"}
+{"name":"SciLean.instSeminormedRingFloat","declaration":"instance SciLean.instSeminormedRingFloat  : SeminormedRing Float"}
+{"name":"SciLean.instNormedFieldFloat","declaration":"instance SciLean.instNormedFieldFloat  : NormedField Float"}
+{"name":"SciLean.re_float","declaration":"theorem SciLean.re_float (a : Float) : ↑(RCLike.re a) = a"}
+{"name":"SciLean.instLinearOrderedCommRingFloat","declaration":"instance SciLean.instLinearOrderedCommRingFloat  : LinearOrderedCommRing Float"}
+{"name":"SciLean.instRCLikeFloat","declaration":"instance SciLean.instRCLikeFloat  : RCLike Float"}
+{"name":"SciLean.instFieldFloat","declaration":"instance SciLean.instFieldFloat  : Field Float"}
+{"name":"SciLean.instStarRingFloatToNonUnitalNonAssocSemiringToNonUnitalNonAssocCommSemiringToNonUnitalNonAssocCommRingToNonUnitalCommRingToNonUnitalSeminormedCommRingToSeminormedCommRingToNormedCommRingToNormedFieldInstDenselyNormedFieldFloat","declaration":"instance SciLean.instStarRingFloatToNonUnitalNonAssocSemiringToNonUnitalNonAssocCommSemiringToNonUnitalNonAssocCommRingToNonUnitalCommRingToNonUnitalSeminormedCommRingToSeminormedCommRingToNormedCommRingToNormedFieldInstDenselyNormedFieldFloat  : StarRing Float"}
+{"name":"SciLean.instIsRealFloat","declaration":"instance SciLean.instIsRealFloat  : SciLean.IsReal Float"}
+{"name":"SciLean.instDecidableEqFloat","declaration":"instance SciLean.instDecidableEqFloat  : DecidableEq Float"}
+{"name":"SciLean.instStarRingFloatToNonUnitalNonAssocSemiringToNonUnitalNonAssocCommSemiringToNonUnitalNonAssocCommRingToNonUnitalCommRingInstCommRingFloat","declaration":"instance SciLean.instStarRingFloatToNonUnitalNonAssocSemiringToNonUnitalNonAssocCommSemiringToNonUnitalNonAssocCommRingToNonUnitalCommRingInstCommRingFloat  : StarRing Float"}
+{"name":"SciLean.instCompleteSpaceFloatToUniformSpaceToPseudoMetricSpaceInstSeminormedRingFloat","declaration":"instance SciLean.instCompleteSpaceFloatToUniformSpaceToPseudoMetricSpaceInstSeminormedRingFloat  : CompleteSpace Float"}
+{"name":"SciLean.instLinearOrderedFieldFloat","declaration":"instance SciLean.instLinearOrderedFieldFloat  : LinearOrderedField Float"}
+{"name":"SciLean.instCommRingFloat","declaration":"instance SciLean.instCommRingFloat  : CommRing Float"}
+{"name":"SciLean.instNormedAlgebraRealFloatNormedFieldInstSeminormedRingFloat","declaration":"instance SciLean.instNormedAlgebraRealFloatNormedFieldInstSeminormedRingFloat  : NormedAlgebra ℝ Float"}
+{"name":"SciLean.conj_float","declaration":"theorem SciLean.conj_float (a : Float) : (starRingEnd Float) a = a"}
+{"name":"SciLean.instMeasurableSpaceFloat","declaration":"instance SciLean.instMeasurableSpaceFloat  : MeasurableSpace Float"}
+{"name":"SciLean.im_float","declaration":"theorem SciLean.im_float (a : Float) : ↑(RCLike.im a) = 0"}
+{"name":"SciLean.instAlgebraRealFloatInstCommSemiringRealToSemiringToDivisionSemiringToSemifieldToLinearOrderedSemifieldInstLinearOrderedFieldFloat","declaration":"instance SciLean.instAlgebraRealFloatInstCommSemiringRealToSemiringToDivisionSemiringToSemifieldToLinearOrderedSemifieldInstLinearOrderedFieldFloat  : Algebra ℝ Float"}

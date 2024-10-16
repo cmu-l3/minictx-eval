@@ -1,0 +1,31 @@
+{"name":"SciLean.HeadFunInfo.arity","declaration":"def SciLean.HeadFunInfo.arity (info : SciLean.HeadFunInfo) : Nat"}
+{"name":"SciLean.TrailingArgCase.trivial","declaration":"/-- Trailing arguments are exactly equal to `yⱼ`\ni.e. `yⱼ = a''ⱼ` where `a'' := trailingArgs.map (fun i => aᵢ)` -/\nctor SciLean.TrailingArgCase.trivial  : SciLean.TrailingArgCase"}
+{"name":"SciLean.TrailingArgCase.trivialUncurried","declaration":"/-- Traling arguments are just `y₀` i.e. `n=1` and `y₀ = (a''₁, ..., a''ₖ)`\nwhere `a'' := trailingIds.map (fun i => aᵢ)`\n\nIt is guaranteed that `k>1`, when `k=1` then we are in `TrailingArgCase.trivial` case -/\nctor SciLean.TrailingArgCase.trivialUncurried  : SciLean.TrailingArgCase"}
+{"name":"SciLean.HeadFunInfo.fvar","declaration":"ctor SciLean.HeadFunInfo.fvar (id : Lean.FVarId) (arity : Nat) : SciLean.HeadFunInfo"}
+{"name":"SciLean.instDecidableEqMainArgCase","declaration":"instance SciLean.instDecidableEqMainArgCase  : DecidableEq SciLean.MainArgCase"}
+{"name":"SciLean.LambdaInfo.argNum","declaration":"/-- number of function arguments in the body -/\ndef SciLean.LambdaInfo.argNum (self : SciLean.LambdaInfo) : Nat"}
+{"name":"SciLean.MainArgCase.nonTrivailNoTrailing","declaration":"/-- Main arguments are just functions of `x` and do not depend on `yⱼ`\n\nThis allows to write the lambda function as composition\n```\nfun x y₀ ... yₙ₋₁ => f a₀ ... aₘ₋₁\n=\nf' ∘ g'\n=\n(fun (a'₁, ..., a'ₖ) y₀ ... yₙ₋₁ => f a₀ ... aₘ₋₁) ∘ (fun x => (a'₁, ..., a'ₖ))\n```\nwhere the function `f'` is in `MainArgCase.trivialUncurried` case -/\nctor SciLean.MainArgCase.nonTrivailNoTrailing  : SciLean.MainArgCase"}
+{"name":"SciLean.HeadFunInfo.bvar","declaration":"ctor SciLean.HeadFunInfo.bvar (i : Nat) (arity : Nat) : SciLean.HeadFunInfo"}
+{"name":"SciLean.TrailingArgCase","declaration":"inductive SciLean.TrailingArgCase  : Type"}
+{"name":"SciLean.TrailingArgCase.noTrailingArg","declaration":"/-- there are no trailing arguments -/\nctor SciLean.TrailingArgCase.noTrailingArg  : SciLean.TrailingArgCase"}
+{"name":"SciLean.LambdaInfo","declaration":"/-- Info about lambda function `fun x y₀ ... yₙ₋₁ => f a₀ ... aₘ₋₁`\n-/\nstructure SciLean.LambdaInfo  : Type"}
+{"name":"SciLean.instDecidableEqTrailingArgCase","declaration":"instance SciLean.instDecidableEqTrailingArgCase  : DecidableEq SciLean.TrailingArgCase"}
+{"name":"SciLean.MainArgCase","declaration":"inductive SciLean.MainArgCase  : Type"}
+{"name":"SciLean.HeadFunInfo","declaration":"inductive SciLean.HeadFunInfo  : Type"}
+{"name":"SciLean.LambdaInfo.mk","declaration":"ctor SciLean.LambdaInfo.mk (arity : Nat) (argNum : Nat) (headFunInfo : SciLean.HeadFunInfo) (mainIds : SciLean.ArraySet Nat) (trailingIds : SciLean.ArraySet Nat) (mainArgCase : SciLean.MainArgCase) (trailingArgCase : SciLean.TrailingArgCase) : SciLean.LambdaInfo"}
+{"name":"SciLean.analyzeLambda","declaration":"/-- Decompose function as `fun x i₁ ... iₙ => f (g x) (h i₁ ... iₙ)`\n\n`f = fun y₁ ... yₘ i₁ ... iₙ => f' y₁ ... yₘ`\n-/\ndef SciLean.analyzeLambda (e : Lean.Expr) : Lean.MetaM SciLean.LambdaInfo"}
+{"name":"SciLean.LambdaInfo.trailingArgCase","declaration":"def SciLean.LambdaInfo.trailingArgCase (self : SciLean.LambdaInfo) : SciLean.TrailingArgCase"}
+{"name":"SciLean.HeadFunInfo.const","declaration":"ctor SciLean.HeadFunInfo.const (constName : Lean.Name) (arity : Nat) : SciLean.HeadFunInfo"}
+{"name":"SciLean.LambdaInfo.mainIds","declaration":"/-- Set of argument indices `i` saying that `aᵢ` depends on `x`, they might depend `yⱼ` too -/\ndef SciLean.LambdaInfo.mainIds (self : SciLean.LambdaInfo) : SciLean.ArraySet Nat"}
+{"name":"SciLean.MainArgCase.trivialUncurried","declaration":"/-- Main arguments are just `x` i.e. `x = (a'₁, ..., a'ₖ)` where `a' = mainIds.map (fun i => aᵢ)` are main arguments -/\nctor SciLean.MainArgCase.trivialUncurried  : SciLean.MainArgCase"}
+{"name":"SciLean.instReprMainArgCase","declaration":"instance SciLean.instReprMainArgCase  : Repr SciLean.MainArgCase"}
+{"name":"SciLean.LambdaInfo.headFunInfo","declaration":"/-- info on the head function `f` -/\ndef SciLean.LambdaInfo.headFunInfo (self : SciLean.LambdaInfo) : SciLean.HeadFunInfo"}
+{"name":"SciLean.LambdaInfo.trailingIds","declaration":"/-- Set of argument indices `i` saying that `aᵢ` depends on at least one of `yⱼ` but not on `x` -/\ndef SciLean.LambdaInfo.trailingIds (self : SciLean.LambdaInfo) : SciLean.ArraySet Nat"}
+{"name":"SciLean.HeadFunInfo.ctorName","declaration":"def SciLean.HeadFunInfo.ctorName (info : SciLean.HeadFunInfo) : Lean.Name"}
+{"name":"SciLean.instReprTrailingArgCase","declaration":"instance SciLean.instReprTrailingArgCase  : Repr SciLean.TrailingArgCase"}
+{"name":"SciLean.MainArgCase.nonTrivialWithTrailing","declaration":"/-- Main arguments depend on `x` and `yⱼ` -/\nctor SciLean.MainArgCase.nonTrivialWithTrailing  : SciLean.MainArgCase"}
+{"name":"SciLean.HeadFunInfo.isFVar","declaration":"def SciLean.HeadFunInfo.isFVar (info : SciLean.HeadFunInfo) (id : Lean.FVarId) : Bool"}
+{"name":"SciLean.LambdaInfo.mainArgCase","declaration":"def SciLean.LambdaInfo.mainArgCase (self : SciLean.LambdaInfo) : SciLean.MainArgCase"}
+{"name":"SciLean.LambdaInfo.arity","declaration":"/-- number of lambda binders -/\ndef SciLean.LambdaInfo.arity (self : SciLean.LambdaInfo) : Nat"}
+{"name":"SciLean.MainArgCase.noMainArg","declaration":"/-- there are no main arguments -/\nctor SciLean.MainArgCase.noMainArg  : SciLean.MainArgCase"}
+{"name":"SciLean.TrailingArgCase.nonTrivial","declaration":"/-- Trailing arguments are non trivial function of `yⱼ`\n\nIn this case we usually want to find inverse map `h` mapping `a''` to `yⱼ`\n```\nfun x y₀ ... yₙ₋₁ => f a₀ ... aₘ₋₁\n=\n(·∘h) ∘ f'\n=\n(·∘h) ∘ (fun x a''₁ ... a''ₖ => f a₀ ... aₘ₋₁\n```\nwhere the function `f'` is now in `TrailingArgCase.trivial` case\n(constructing such `f'` is a bit tricky as it potentially requires to also\nuse `h` to replace `yⱼ` with `a''` in main arguments)\n -/\nctor SciLean.TrailingArgCase.nonTrivial  : SciLean.TrailingArgCase"}

@@ -1,0 +1,4 @@
+{"name":"SM.SMNoGrav.One.accGrav_Q_neq_zero","declaration":"theorem SM.SMNoGrav.One.accGrav_Q_neq_zero {S : ACCSystem.Sols (SM.SMNoGrav 1)} (hQ : SMCharges.Q S.val 0 ≠ 0) (FLTThree : FermatLastTheoremWith ℚ 3) : SMACCs.accGrav S.val = 0"}
+{"name":"SM.SMNoGrav.One.accGravSatisfied","declaration":"/-- Any solution to the ACCs without gravity satisfies the gravitational ACC. -/\ntheorem SM.SMNoGrav.One.accGravSatisfied {S : ACCSystem.Sols (SM.SMNoGrav 1)} (FLTThree : FermatLastTheoremWith ℚ 3) : SMACCs.accGrav S.val = 0"}
+{"name":"SM.SMNoGrav.One.E_zero_iff_Q_zero","declaration":"theorem SM.SMNoGrav.One.E_zero_iff_Q_zero {S : ACCSystem.Sols (SM.SMNoGrav 1)} : SMCharges.Q S.val 0 = 0 ↔ SMCharges.E S.val 0 = 0"}
+{"name":"SM.SMNoGrav.One.accGrav_Q_zero","declaration":"theorem SM.SMNoGrav.One.accGrav_Q_zero {S : ACCSystem.Sols (SM.SMNoGrav 1)} (hQ : SMCharges.Q S.val 0 = 0) : SMACCs.accGrav S.val = 0"}

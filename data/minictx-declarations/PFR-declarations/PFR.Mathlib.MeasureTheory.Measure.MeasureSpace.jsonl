@@ -1,0 +1,1 @@
+{"name":"MeasureTheory.full_measure_of_null_compl","declaration":"theorem MeasureTheory.full_measure_of_null_compl {α : Type u_1} [MeasurableSpace α] [MeasurableSingletonClass α] {μ : MeasureTheory.Measure α} {A : Finset α} (hA : ↑↑μ (↑A)ᶜ = 0) : ↑↑μ ↑A = ↑↑μ Set.univ"}

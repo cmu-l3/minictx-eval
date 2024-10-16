@@ -1,0 +1,72 @@
+{"name":"HTPI.Exercises.Theorem_5_3_3_2","declaration":"theorem HTPI.Exercises.Theorem_5_3_3_2 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : f ∘ g = id) : HTPI.onto f"}
+{"name":"HTPI.Exercises.Exercise_5_2_11b","declaration":"theorem HTPI.Exercises.Exercise_5_2_11b {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : ¬HTPI.onto f → HTPI.one_to_one g → ¬HTPI.onto (g ∘ f)"}
+{"name":"HTPI.Exercises.Theorem_5_4_9","declaration":"theorem HTPI.Exercises.Theorem_5_4_9 {A : Type} (f : A → A → A) (B : Set A) : ∃ C, HTPI.closure2 f B C"}
+{"name":"HTPI.plus''","declaration":"def HTPI.plus''  : ℤ → ℤ → ℤ"}
+{"name":"HTPI.func_from_graph_rtl","declaration":"theorem HTPI.func_from_graph_rtl {A : Type} {B : Type} (F : Set (A × B)) : HTPI.is_func_graph F → ∃ f, HTPI.graph f = F"}
+{"name":"HTPI.Theorem_5_3_1","declaration":"theorem HTPI.Theorem_5_3_1 {A : Type} {B : Type} (f : A → B) (h1 : HTPI.one_to_one f) (h2 : HTPI.onto f) : ∃ g, HTPI.graph g = HTPI.inv (HTPI.graph f)"}
+{"name":"HTPI.graph_def","declaration":"theorem HTPI.graph_def {A : Type} {B : Type} (f : A → B) (a : A) (b : B) : (a, b) ∈ HTPI.graph f ↔ f a = b"}
+{"name":"HTPI.image","declaration":"def HTPI.image {A : Type} {B : Type} (f : A → B) (X : Set A) : Set B"}
+{"name":"HTPI.inverse_image_def","declaration":"theorem HTPI.inverse_image_def {A : Type} {B : Type} (f : A → B) (Y : Set B) (a : A) : a ∈ HTPI.inverse_image f Y ↔ f a ∈ Y"}
+{"name":"HTPI.Exercises.Exercise_5_1_17a","declaration":"theorem HTPI.Exercises.Exercise_5_1_17a {A : Type} (f : A → A) (a : A) (h : ∀ (x : A), f x = a) (g : A → A) : f ∘ g = f"}
+{"name":"HTPI.Exercises.Exercise_5_2_10b","declaration":"theorem HTPI.Exercises.Exercise_5_2_10b {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : HTPI.one_to_one (g ∘ f) → HTPI.one_to_one f"}
+{"name":"HTPI.Exercises.Exercise_5_1_13a","declaration":"theorem HTPI.Exercises.Exercise_5_1_13a {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) (f : A → C) (h1 : ∀ (b : B), b ∈ HTPI.Ran R ∧ b ∈ HTPI.Dom S) (h2 : HTPI.graph f = HTPI.comp S R) : HTPI.is_func_graph S"}
+{"name":"HTPI.Exercises.Exercise_5_3_14a","declaration":"theorem HTPI.Exercises.Exercise_5_3_14a {A : Type} {B : Type} (f : A → B) (g : B → A) (h : f ∘ g = id) (x : A) : x ∈ HTPI.Ran (HTPI.graph g) → g (f x) = x"}
+{"name":"HTPI.graph","declaration":"def HTPI.graph {A : Type} {B : Type} (f : A → B) : Set (A × B)"}
+{"name":"HTPI.Exercises.Exercise_5_2_12","declaration":"theorem HTPI.Exercises.Exercise_5_2_12 {A : Type} {B : Type} (f : A → B) (g : B → Set A) (h : ∀ (b : B), g b = {a | f a = b}) : HTPI.onto f → HTPI.one_to_one g"}
+{"name":"HTPI.Theorem_5_3_2_1","declaration":"theorem HTPI.Theorem_5_3_2_1 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : HTPI.graph g = HTPI.inv (HTPI.graph f)) : g ∘ f = id"}
+{"name":"HTPI.Theorem_5_1_4","declaration":"theorem HTPI.Theorem_5_1_4 {A : Type} {B : Type} (f : A → B) (g : A → B) : (∀ (a : A), f a = g a) → f = g"}
+{"name":"HTPI.Exercises.Exercise_5_4_7","declaration":"theorem HTPI.Exercises.Exercise_5_4_7 {A : Type} (f : A → A) (g : A → A) (C : Set A) (h1 : f ∘ g = id) (h2 : HTPI.closed f C) : HTPI.closed g (HTPI.Exercises.complement C)"}
+{"name":"HTPI.closure_family","declaration":"def HTPI.closure_family {A : Type} (F : Set (A → A)) (B : Set A) (C : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_5_3_11b","declaration":"theorem HTPI.Exercises.Exercise_5_3_11b {A : Type} {B : Type} (f : A → B) (g : B → A) : HTPI.onto f → g ∘ f = id → HTPI.graph g = HTPI.inv (HTPI.graph f)"}
+{"name":"HTPI.Exercises.Exercise_5_3_18","declaration":"theorem HTPI.Exercises.Exercise_5_3_18 {A : Type} {B : Type} {C : Type} (f : A → C) (g : B → C) (h1 : HTPI.one_to_one g) (h2 : HTPI.onto g) : ∃ h, g ∘ h = f"}
+{"name":"HTPI.Theorem_5_4_5","declaration":"theorem HTPI.Theorem_5_4_5 {A : Type} (f : A → A) (B : Set A) : ∃ C, HTPI.closure f B C"}
+{"name":"HTPI.Exercises.Exercise_5_4_13a","declaration":"theorem HTPI.Exercises.Exercise_5_4_13a {A : Type} (F : Set (A → A)) (B : Set A) : ∃ C, HTPI.closure_family F B C"}
+{"name":"HTPI.Exercises.Exercise_5_4_9a","declaration":"theorem HTPI.Exercises.Exercise_5_4_9a {A : Type} (f : A → A) (C1 : Set A) (C2 : Set A) (h1 : HTPI.closed f C1) (h2 : HTPI.closed f C2) : HTPI.closed f (C1 ∪ C2)"}
+{"name":"HTPI.Exercises.Exercise_5_1_15a","declaration":"theorem HTPI.Exercises.Exercise_5_1_15a {A : Type} {B : Type} (f : A → B) (R : HTPI.BinRel A) (S : HTPI.BinRel B) (h : ∀ (x y : B), S x y ↔ ∃ u v, f u = x ∧ f v = y ∧ R u v) : HTPI.reflexive R → HTPI.reflexive S"}
+{"name":"HTPI.plus'","declaration":"def HTPI.plus'  : ℤ → ℤ → ℤ"}
+{"name":"HTPI.Exercises.Exercise_5_2_17a","declaration":"theorem HTPI.Exercises.Exercise_5_2_17a {A : Type} {B : Type} (f : A → B) (R : HTPI.BinRel A) (S : HTPI.BinRel B) (h1 : ∀ (x y : B), S x y ↔ ∃ u v, f u = x ∧ f v = y ∧ R u v) (h2 : HTPI.onto f) : HTPI.reflexive R → HTPI.reflexive S"}
+{"name":"HTPI.Theorem_5_5_2_2","declaration":"theorem HTPI.Theorem_5_5_2_2 {A : Type} {B : Type} (f : A → B) (W : Set A) (X : Set A) (h1 : HTPI.one_to_one f) : HTPI.image f (W ∩ X) = HTPI.image f W ∩ HTPI.image f X"}
+{"name":"HTPI.is_func_graph","declaration":"def HTPI.is_func_graph {A : Type} {B : Type} (G : Set (A × B)) : Prop"}
+{"name":"HTPI.square2","declaration":"def HTPI.square2  : ℕ → ℕ"}
+{"name":"HTPI.Theorem_5_3_3_2","declaration":"theorem HTPI.Theorem_5_3_3_2 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : f ∘ g = id) : HTPI.onto f"}
+{"name":"HTPI.closed","declaration":"def HTPI.closed {A : Type} (f : A → A) (C : Set A) : Prop"}
+{"name":"HTPI.square1","declaration":"def HTPI.square1 (n : ℕ) : ℕ"}
+{"name":"HTPI.image_def","declaration":"theorem HTPI.image_def {A : Type} {B : Type} (f : A → B) (X : Set A) (b : B) : b ∈ HTPI.image f X ↔ ∃ x ∈ X, f x = b"}
+{"name":"HTPI.closed_family","declaration":"def HTPI.closed_family {A : Type} (F : Set (A → A)) (C : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_5_3_17a","declaration":"theorem HTPI.Exercises.Exercise_5_3_17a {A : Type} : HTPI.symmetric (HTPI.Exercises.conjugate A)"}
+{"name":"HTPI.inverse_image","declaration":"def HTPI.inverse_image {A : Type} {B : Type} (f : A → B) (Y : Set B) : Set A"}
+{"name":"HTPI.Exercises.Exercise_5_1_17b","declaration":"theorem HTPI.Exercises.Exercise_5_1_17b {A : Type} (f : A → A) (a : A) (h : ∀ (g : A → A), f ∘ g = f) : ∃ y, ∀ (x : A), f x = y"}
+{"name":"HTPI.Exercises.Exercise_5_1_16b","declaration":"theorem HTPI.Exercises.Exercise_5_1_16b {A : Type} {B : Type} (R : HTPI.BinRel B) (S : HTPI.BinRel (A → B)) (h : ∀ (f g : A → B), S f g ↔ ∀ (x : A), R (f x) (g x)) : HTPI.symmetric R → HTPI.symmetric S"}
+{"name":"HTPI.Theorem_5_2_5_1","declaration":"theorem HTPI.Theorem_5_2_5_1 {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : HTPI.one_to_one f → HTPI.one_to_one g → HTPI.one_to_one (g ∘ f)"}
+{"name":"HTPI.Exercises.Exercise_5_4_10a","declaration":"theorem HTPI.Exercises.Exercise_5_4_10a {A : Type} (f : A → A) (B1 : Set A) (B2 : Set A) (C1 : Set A) (C2 : Set A) (h1 : HTPI.closure f B1 C1) (h2 : HTPI.closure f B2 C2) : B1 ⊆ B2 → C1 ⊆ C2"}
+{"name":"HTPI.Exercises.Exercise_5_2_21a","declaration":"theorem HTPI.Exercises.Exercise_5_2_21a {A : Type} {B : Type} {C : Type} (f : B → C) (g : A → B) (h : A → B) (h1 : HTPI.one_to_one f) (h2 : f ∘ g = f ∘ h) : g = h"}
+{"name":"HTPI.closed2","declaration":"def HTPI.closed2 {A : Type} (f : A → A → A) (C : Set A) : Prop"}
+{"name":"HTPI.Theorem_5_1_5","declaration":"theorem HTPI.Theorem_5_1_5 {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : ∃ h, HTPI.graph h = HTPI.comp (HTPI.graph g) (HTPI.graph f)"}
+{"name":"HTPI.Exercises.Exercise_5_2_16","declaration":"theorem HTPI.Exercises.Exercise_5_2_16 {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) (f : A → C) (g : B → C) (h1 : HTPI.graph f = HTPI.comp S R) (h2 : HTPI.graph g = S) (h3 : HTPI.one_to_one g) : HTPI.is_func_graph R"}
+{"name":"HTPI.plus","declaration":"def HTPI.plus (m : ℤ) (n : ℤ) : ℤ"}
+{"name":"HTPI.Exercises.Exercise_5_2_17b","declaration":"theorem HTPI.Exercises.Exercise_5_2_17b {A : Type} {B : Type} (f : A → B) (R : HTPI.BinRel A) (S : HTPI.BinRel B) (h1 : ∀ (x y : B), S x y ↔ ∃ u v, f u = x ∧ f v = y ∧ R u v) (h2 : HTPI.one_to_one f) : HTPI.transitive R → HTPI.transitive S"}
+{"name":"HTPI.Exercises.Exercise_5_2_10a","declaration":"theorem HTPI.Exercises.Exercise_5_2_10a {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : HTPI.onto (g ∘ f) → HTPI.onto g"}
+{"name":"HTPI.Theorem_5_3_2_2","declaration":"theorem HTPI.Theorem_5_3_2_2 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : HTPI.graph g = HTPI.inv (HTPI.graph f)) : f ∘ g = id"}
+{"name":"HTPI.closure","declaration":"def HTPI.closure {A : Type} (f : A → A) (B : Set A) (C : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_5_2_21b","declaration":"theorem HTPI.Exercises.Exercise_5_2_21b {A : Type} {B : Type} {C : Type} (f : B → C) (a : A) (h1 : ∀ (g h : A → B), f ∘ g = f ∘ h → g = h) : HTPI.one_to_one f"}
+{"name":"HTPI.Exercises.complement","declaration":"def HTPI.Exercises.complement {A : Type} (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.Exercise_5_3_17b","declaration":"theorem HTPI.Exercises.Exercise_5_3_17b {A : Type} (f1 : A → A) (f2 : A → A) (h1 : HTPI.Exercises.conjugate A f1 f2) (h2 : ∃ a, f1 a = a) : ∃ a, f2 a = a"}
+{"name":"HTPI.func_from_graph","declaration":"theorem HTPI.func_from_graph {A : Type} {B : Type} (F : Set (A × B)) : (∃ f, HTPI.graph f = F) ↔ HTPI.is_func_graph F"}
+{"name":"HTPI.func_from_graph_ltr","declaration":"theorem HTPI.func_from_graph_ltr {A : Type} {B : Type} (F : Set (A × B)) : (∃ f, HTPI.graph f = F) → HTPI.is_func_graph F"}
+{"name":"HTPI.Exercises.Exercise_5_2_11a","declaration":"theorem HTPI.Exercises.Exercise_5_2_11a {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : HTPI.onto f → ¬HTPI.one_to_one g → ¬HTPI.one_to_one (g ∘ f)"}
+{"name":"HTPI.Theorem_5_2_5_2","declaration":"theorem HTPI.Theorem_5_2_5_2 {A : Type} {B : Type} {C : Type} (f : A → B) (g : B → C) : HTPI.onto f → HTPI.onto g → HTPI.onto (g ∘ f)"}
+{"name":"HTPI.Exercises.Exercise_5_4_10b","declaration":"theorem HTPI.Exercises.Exercise_5_4_10b {A : Type} (f : A → A) (B1 : Set A) (B2 : Set A) (C1 : Set A) (C2 : Set A) (h1 : HTPI.closure f B1 C1) (h2 : HTPI.closure f B2 C2) : HTPI.closure f (B1 ∪ B2) (C1 ∪ C2)"}
+{"name":"HTPI.Theorem_5_5_2_1","declaration":"theorem HTPI.Theorem_5_5_2_1 {A : Type} {B : Type} (f : A → B) (W : Set A) (X : Set A) : HTPI.image f (W ∩ X) ⊆ HTPI.image f W ∩ HTPI.image f X"}
+{"name":"HTPI.one_to_one","declaration":"def HTPI.one_to_one {A : Type} {B : Type} (f : A → B) : Prop"}
+{"name":"HTPI.comp_def","declaration":"theorem HTPI.comp_def {A : Type} {B : Type} {C : Type} (g : B → C) (f : A → B) (x : A) : (g ∘ f) x = g (f x)"}
+{"name":"HTPI.Exercises.func_from_graph_ltr","declaration":"theorem HTPI.Exercises.func_from_graph_ltr {A : Type} {B : Type} (F : Set (A × B)) : (∃ f, HTPI.graph f = F) → HTPI.is_func_graph F"}
+{"name":"HTPI.Exercises.Exercise_5_1_15c","declaration":"theorem HTPI.Exercises.Exercise_5_1_15c {A : Type} {B : Type} (f : A → B) (R : HTPI.BinRel A) (S : HTPI.BinRel B) (h : ∀ (x y : B), S x y ↔ ∃ u v, f u = x ∧ f v = y ∧ R u v) : HTPI.transitive R → HTPI.transitive S"}
+{"name":"HTPI.Exercises.Exercise_5_1_14a","declaration":"theorem HTPI.Exercises.Exercise_5_1_14a {A : Type} {B : Type} (f : A → B) (R : HTPI.BinRel A) (S : HTPI.BinRel B) (h : ∀ (x y : A), R x y ↔ S (f x) (f y)) : HTPI.reflexive S → HTPI.reflexive R"}
+{"name":"HTPI.Exercises.Theorem_5_3_2_2","declaration":"theorem HTPI.Exercises.Theorem_5_3_2_2 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : HTPI.graph g = HTPI.inv (HTPI.graph f)) : f ∘ g = id"}
+{"name":"HTPI.Theorem_5_3_3_1","declaration":"theorem HTPI.Theorem_5_3_3_1 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : g ∘ f = id) : HTPI.one_to_one f"}
+{"name":"HTPI.onto","declaration":"def HTPI.onto {A : Type} {B : Type} (f : A → B) : Prop"}
+{"name":"HTPI.Exercises.conjugate","declaration":"def HTPI.Exercises.conjugate (A : Type) (f1 : A → A) (f2 : A → A) : Prop"}
+{"name":"HTPI.closure2","declaration":"def HTPI.closure2 {A : Type} (f : A → A → A) (B : Set A) (C : Set A) : Prop"}
+{"name":"HTPI.Theorem_5_3_5","declaration":"theorem HTPI.Theorem_5_3_5 {A : Type} {B : Type} (f : A → B) (g : B → A) (h1 : g ∘ f = id) (h2 : f ∘ g = id) : HTPI.graph g = HTPI.inv (HTPI.graph f)"}
+{"name":"HTPI.Theorem_5_4_9","declaration":"theorem HTPI.Theorem_5_4_9 {A : Type} (f : A → A → A) (B : Set A) : ∃ C, HTPI.closure2 f B C"}
+{"name":"HTPI.Exercises.Exercise_5_3_11a","declaration":"theorem HTPI.Exercises.Exercise_5_3_11a {A : Type} {B : Type} (f : A → B) (g : B → A) : HTPI.one_to_one f → f ∘ g = id → HTPI.graph g = HTPI.inv (HTPI.graph f)"}

@@ -1,0 +1,19 @@
+{"name":"SpaceTime.stdBasis_not_eq","declaration":"theorem SpaceTime.stdBasis_not_eq {μ : Fin 4} {ν : Fin 4} (h : μ ≠ ν) : SpaceTime.stdBasis μ ν = 0"}
+{"name":"SpaceTime.smul_apply","declaration":"theorem SpaceTime.smul_apply (x : SpaceTime) (a : ℝ) (i : Fin 4) : (a • x) i = a * x i"}
+{"name":"SpaceTime.asSmoothManifold","declaration":"/-- The structure of a smooth manifold on spacetime. -/\ndef SpaceTime.asSmoothManifold  : ModelWithCorners ℝ SpaceTime SpaceTime"}
+{"name":"SpaceTime.stdBasis_1","declaration":"theorem SpaceTime.stdBasis_1  : SpaceTime.stdBasis 1 = ![0, 1, 0, 0]"}
+{"name":"SpaceTime.instChartedSpaceSpaceTimeToTopologicalSpaceToUniformSpaceToPseudoMetricSpaceToSeminormedAddCommGroupEuclideanNormedAddCommGroup","declaration":"instance SpaceTime.instChartedSpaceSpaceTimeToTopologicalSpaceToUniformSpaceToPseudoMetricSpaceToSeminormedAddCommGroupEuclideanNormedAddCommGroup  : ChartedSpace SpaceTime SpaceTime"}
+{"name":"euclideanNormedSpace","declaration":"instance euclideanNormedSpace  : NormedSpace ℝ SpaceTime"}
+{"name":"SpaceTime.explicit","declaration":"theorem SpaceTime.explicit (x : SpaceTime) : x = ![x 0, x 1, x 2, x 3]"}
+{"name":"SpaceTime.space","declaration":"/-- The space part of spacetime. -/\ndef SpaceTime.space (x : SpaceTime) : EuclideanSpace ℝ (Fin 3)"}
+{"name":"SpaceTime.stdBasis_3","declaration":"theorem SpaceTime.stdBasis_3  : SpaceTime.stdBasis 3 = ![0, 0, 0, 1]"}
+{"name":"SpaceTime.stdBasis_0","declaration":"theorem SpaceTime.stdBasis_0  : SpaceTime.stdBasis 0 = ![1, 0, 0, 0]"}
+{"name":"SpaceTime.stdBasis_2","declaration":"theorem SpaceTime.stdBasis_2  : SpaceTime.stdBasis 2 = ![0, 0, 1, 0]"}
+{"name":"instModuleRealSpaceTimeSemiringInstAddCommMonoidSpaceTime","declaration":"/-- Give spacetime the structure of a module over the reals. -/\ninstance instModuleRealSpaceTimeSemiringInstAddCommMonoidSpaceTime  : Module ℝ SpaceTime"}
+{"name":"SpaceTime.stdBasis","declaration":"/-- The standard basis for spacetime. -/\ndef SpaceTime.stdBasis  : Basis (Fin 4) ℝ SpaceTime"}
+{"name":"euclideanNormedAddCommGroup","declaration":"instance euclideanNormedAddCommGroup  : NormedAddCommGroup SpaceTime"}
+{"name":"SpaceTime.stdBasis_apply","declaration":"theorem SpaceTime.stdBasis_apply (μ : Fin 4) (ν : Fin 4) : SpaceTime.stdBasis μ ν = if μ = ν then 1 else 0"}
+{"name":"SpaceTime.add_apply","declaration":"theorem SpaceTime.add_apply (x : SpaceTime) (y : SpaceTime) (i : Fin 4) : (x + y) i = x i + y i"}
+{"name":"SpaceTime","declaration":"/-- The space-time -/\ndef SpaceTime  : Type"}
+{"name":"SpaceTime.stdBasis_mulVec","declaration":"theorem SpaceTime.stdBasis_mulVec (μ : Fin 4) (ν : Fin 4) (Λ : Matrix (Fin 4) (Fin 4) ℝ) : Matrix.mulVec Λ (SpaceTime.stdBasis μ) ν = Λ ν μ"}
+{"name":"instAddCommMonoidSpaceTime","declaration":"/-- Give spacetime the structure of an additive commutative monoid. -/\ninstance instAddCommMonoidSpaceTime  : AddCommMonoid SpaceTime"}

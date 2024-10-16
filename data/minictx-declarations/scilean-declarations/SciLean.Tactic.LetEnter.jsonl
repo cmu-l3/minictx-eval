@@ -1,0 +1,2 @@
+{"name":"Lean.Elab.Tactic.Conv.convLetEnter","declaration":"def Lean.Elab.Tactic.Conv.convLetEnter  : Lean.Elab.Tactic.Tactic"}
+{"name":"Lean.Elab.Tactic.Conv.let_enter","declaration":"/-- Conv tactic `enter_let x` focuses on the value of let binding `let x := _`\n\n`enter_let x n` focuses on `(n-1)`th occurrence of let binding `let x := _`\n-/\ndef Lean.Elab.Tactic.Conv.let_enter  : Lean.ParserDescr"}

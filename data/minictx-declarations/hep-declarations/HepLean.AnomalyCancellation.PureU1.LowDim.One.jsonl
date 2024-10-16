@@ -1,0 +1,1 @@
+{"name":"PureU1.One.solEqZero","declaration":"theorem PureU1.One.solEqZero (S : ACCSystemLinear.LinSols (PureU1 1).toACCSystemLinear) : S = 0"}

@@ -1,0 +1,12 @@
+{"name":"Parser.Attr.restrict_push","declaration":"def Parser.Attr.restrict_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.distrib_eval","declaration":"def Parser.Attr.distrib_eval  : Lean.ParserDescr"}
+{"name":"Parser.Attr.action_push","declaration":"def Parser.Attr.action_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.restrict_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.restrict_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.distrib_eval_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.distrib_eval_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.toDistrib_push","declaration":"def Parser.Attr.toDistrib_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.toDistrib_pull","declaration":"def Parser.Attr.toDistrib_pull  : Lean.ParserDescr"}
+{"name":"Parser.Attr.toDistrib_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.toDistrib_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.toDistrib_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.toDistrib_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.restrict_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.restrict_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.restrict_pull","declaration":"def Parser.Attr.restrict_pull  : Lean.ParserDescr"}
+{"name":"Parser.Attr.action_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.action_push_proc  : Lean.ParserDescr"}

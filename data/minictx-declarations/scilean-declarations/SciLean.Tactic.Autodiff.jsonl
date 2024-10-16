@@ -1,0 +1,3 @@
+{"name":"SciLean.Tactic.convAutodiff","declaration":"def SciLean.Tactic.convAutodiff  : Lean.ParserDescr"}
+{"name":"SciLean.Tactic.lift_lets_simproc","declaration":"def SciLean.Tactic.lift_lets_simproc  : Lean.Meta.Simp.Simproc"}
+{"name":"SciLean.Tactic.tacticAutodiff","declaration":"def SciLean.Tactic.tacticAutodiff  : Lean.ParserDescr"}

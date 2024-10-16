@@ -1,0 +1,2 @@
+{"name":"prodMKLeft_unit_equiv","declaration":"/-- Measurable equivalence with the product with the one-point space `Unit`.-/\ndef prodMKLeft_unit_equiv (α : Type u_4) [MeasurableSpace α] : Unit × α ≃ᵐ α"}
+{"name":"prodAssoc","declaration":"/-- Canonical bijection between `(α × β) × γ` and `α × β × γ`. -/\ndef prodAssoc {α : Type u_1} {β : Type u_2} {γ : Type u_3} : {x : MeasurableSpace α} → {x_1 : MeasurableSpace β} → {x_2 : MeasurableSpace γ} → (α × β) × γ ≃ᵐ α × β × γ"}

@@ -1,0 +1,7 @@
+{"name":"StandardModel.repU1_fundamentalSU2_commute","declaration":"theorem StandardModel.repU1_fundamentalSU2_commute (u1 : ↥(unitary ℂ)) (g : ↥(Matrix.specialUnitaryGroup (Fin 2) ℂ)) : StandardModel.repU1 u1 * StandardModel.fundamentalSU2 g = StandardModel.fundamentalSU2 g * StandardModel.repU1 u1"}
+{"name":"StandardModel.fundamentalSU2_apply_coe","declaration":"theorem StandardModel.fundamentalSU2_apply_coe (g : ↥(Matrix.specialUnitaryGroup (Fin 2) ℂ)) : ↑(StandardModel.fundamentalSU2 g) = ↑g"}
+{"name":"StandardModel.repU1Map","declaration":"/-- The 2d representation of U(1) with charge 3 as a map from U(1) to `unitaryGroup (Fin 2) ℂ`. -/\ndef StandardModel.repU1Map (g : ↥(unitary ℂ)) : ↥(Matrix.unitaryGroup (Fin 2) ℂ)"}
+{"name":"StandardModel.fundamentalSU2","declaration":"/-- The fundamental representation of SU(2) as a homomorphism to `unitaryGroup (Fin 2) ℂ`. -/\ndef StandardModel.fundamentalSU2  : ↥(Matrix.specialUnitaryGroup (Fin 2) ℂ) →* ↥(Matrix.unitaryGroup (Fin 2) ℂ)"}
+{"name":"StandardModel.repU1_apply_coe","declaration":"theorem StandardModel.repU1_apply_coe (g : ↥(unitary ℂ)) : ↑(StandardModel.repU1 g) = g ^ 3 • 1"}
+{"name":"StandardModel.repU1Map_coe","declaration":"theorem StandardModel.repU1Map_coe (g : ↥(unitary ℂ)) : ↑(StandardModel.repU1Map g) = g ^ 3 • 1"}
+{"name":"StandardModel.repU1","declaration":"/-- The 2d representation of U(1) with charge 3 as a homomorphism\nfrom U(1) to `unitaryGroup (Fin 2) ℂ`. -/\ndef StandardModel.repU1  : ↥(unitary ℂ) →* ↥(Matrix.unitaryGroup (Fin 2) ℂ)"}

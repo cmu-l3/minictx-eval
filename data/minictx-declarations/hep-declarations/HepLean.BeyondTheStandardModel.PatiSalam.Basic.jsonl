@@ -1,0 +1,9 @@
+{"name":"PatiSalam.sm_ℤ₆_factor_through_gaugeGroupℤ₂SubGroup","declaration":"/-- An informal lemma. -/\ndef PatiSalam.sm_ℤ₆_factor_through_gaugeGroupℤ₂SubGroup  : InformalLemma"}
+{"name":"PatiSalam.inclSM_ker","declaration":"/-- An informal lemma. -/\ndef PatiSalam.inclSM_ker  : InformalLemma"}
+{"name":"PatiSalam.gaugeGroupℤ₂SubGroup","declaration":"/-- An informal definition. -/\ndef PatiSalam.gaugeGroupℤ₂SubGroup  : InformalDefinition"}
+{"name":"PatiSalam.gaugeGroupISpinEquiv","declaration":"/-- An informal definition. -/\ndef PatiSalam.gaugeGroupISpinEquiv  : InformalDefinition"}
+{"name":"PatiSalam.GaugeGroupℤ₂","declaration":"/-- An informal definition. -/\ndef PatiSalam.GaugeGroupℤ₂  : InformalDefinition"}
+{"name":"PatiSalam.inclSM","declaration":"/-- An informal definition. -/\ndef PatiSalam.inclSM  : InformalDefinition"}
+{"name":"PatiSalam.embedSMℤ₆Toℤ₂","declaration":"/-- An informal definition. -/\ndef PatiSalam.embedSMℤ₆Toℤ₂  : InformalDefinition"}
+{"name":"PatiSalam.GaugeGroupI","declaration":"/-- An informal definition. -/\ndef PatiSalam.GaugeGroupI  : InformalDefinition"}
+{"name":"PatiSalam.embedSMℤ₃","declaration":"/-- An informal definition. -/\ndef PatiSalam.embedSMℤ₃  : InformalDefinition"}

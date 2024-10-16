@@ -1,0 +1,12 @@
+{"name":"PureU1.sort_perm","declaration":"theorem PureU1.sort_perm {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) (M : (PureU1.FamilyPermutations n).group) : PureU1.sort (((PureU1.FamilyPermutations n).rep M) S) = PureU1.sort S"}
+{"name":"PureU1.sort_apply","declaration":"theorem PureU1.sort_apply {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) (j : Fin n) : PureU1.sort S j = S ((Tuple.sort S) j)"}
+{"name":"AddSemiconjBy.eq_zero_iff","declaration":"theorem AddSemiconjBy.eq_zero_iff {G : Type u_1} [AddGroup G] (a : G) {x : G} {y : G} (h : AddSemiconjBy a x y) : x = 0 ↔ y = 0"}
+{"name":"PureU1.sort_sorted","declaration":"theorem PureU1.sort_sorted {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) : PureU1.Sorted (PureU1.sort S)"}
+{"name":"PureU1.sort","declaration":"/-- Given a charge assignment `S`, the corresponding sorted charge assignment. -/\ndef PureU1.sort {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges"}
+{"name":"PureU1.sortAFL","declaration":"/-- The sort function acting on `LinSols`. -/\ndef PureU1.sortAFL {n : ℕ} (S : ACCSystemLinear.LinSols (PureU1 n).toACCSystemLinear) : ACCSystemLinear.LinSols (PureU1 n).toACCSystemLinear"}
+{"name":"PureU1.Sorted","declaration":"/-- A charge is sorted if for all `i ≤ j`, then `S i ≤ S j`. -/\ndef PureU1.Sorted {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) : Prop"}
+{"name":"PureU1.sortAFL_zero","declaration":"theorem PureU1.sortAFL_zero {n : ℕ} (S : ACCSystemLinear.LinSols (PureU1 n).toACCSystemLinear) (hS : PureU1.sortAFL S = 0) : S = 0"}
+{"name":"PureU1.sort_projection","declaration":"theorem PureU1.sort_projection {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) : PureU1.sort (PureU1.sort S) = PureU1.sort S"}
+{"name":"SemiconjBy.eq_one_iff","declaration":"theorem SemiconjBy.eq_one_iff {G : Type u_1} [Group G] (a : G) {x : G} {y : G} (h : SemiconjBy a x y) : x = 1 ↔ y = 1"}
+{"name":"PureU1.sort_zero","declaration":"theorem PureU1.sort_zero {n : ℕ} (S : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) (hS : PureU1.sort S = 0) : S = 0"}
+{"name":"PureU1.sortAFL_val","declaration":"theorem PureU1.sortAFL_val {n : ℕ} (S : ACCSystemLinear.LinSols (PureU1 n).toACCSystemLinear) : (PureU1.sortAFL S).val = PureU1.sort S.val"}

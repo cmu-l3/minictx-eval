@@ -1,0 +1,88 @@
+{"name":"HTPI.Theorem_4_5_4_part_3","declaration":"theorem HTPI.Theorem_4_5_4_part_3 {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) (X : Set A) : X ∈ HTPI.mod A R → ¬HTPI.empty X"}
+{"name":"HTPI.Exercises.Lemma_4_5_7_symm","declaration":"theorem HTPI.Exercises.Lemma_4_5_7_symm {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.symmetric (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.inv_def","declaration":"theorem HTPI.inv_def {A : Type} {B : Type} (R : Set (A × B)) (a : A) (b : B) : (b, a) ∈ HTPI.inv R ↔ (a, b) ∈ R"}
+{"name":"HTPI.empty","declaration":"def HTPI.empty {A : Type} (X : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_2_9b","declaration":"theorem HTPI.Exercises.Exercise_4_2_9b {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) : HTPI.Ran R ⊆ HTPI.Dom S → HTPI.Dom (HTPI.comp S R) = HTPI.Dom R"}
+{"name":"HTPI.equiv_rel","declaration":"def HTPI.equiv_rel {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.Exercises.overlap_implies_equal","declaration":"theorem HTPI.Exercises.overlap_implies_equal {A : Type} (F : Set (Set A)) (h : HTPI.partition F) (X : Set A) : X ∈ F → ∀ Y ∈ F, ∀ x ∈ X, x ∈ Y → X = Y"}
+{"name":"HTPI.transitive","declaration":"def HTPI.transitive {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_5_20b","declaration":"theorem HTPI.Exercises.Exercise_4_5_20b {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel A) (h1 : HTPI.equiv_rel R) (h2 : HTPI.equiv_rel S) (x : A) : HTPI.equivClass (HTPI.Exercises.conj R S) x = HTPI.equivClass R x ∩ HTPI.equivClass S x"}
+{"name":"HTPI.Theorem_4_5_6","declaration":"theorem HTPI.Theorem_4_5_6 {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : ∃ R, HTPI.equiv_rel R ∧ HTPI.mod A R = F"}
+{"name":"HTPI.Exercises.Theorem_4_3_4_1","declaration":"theorem HTPI.Exercises.Theorem_4_3_4_1 {A : Type} (R : HTPI.BinRel A) : HTPI.reflexive R ↔ {(x, y) | x = y} ⊆ HTPI.extension R"}
+{"name":"HTPI.Lemma_4_5_8","declaration":"theorem HTPI.Lemma_4_5_8 {A : Type} (F : Set (Set A)) (h : HTPI.partition F) (X : Set A) : X ∈ F → ∀ x ∈ X, HTPI.equivClass (HTPI.EqRelFromPart F) x = X"}
+{"name":"HTPI.Exercises.Theorem_4_4_11","declaration":"theorem HTPI.Exercises.Theorem_4_4_11 {A : Type} (F : Set (Set A)) : HTPI.lub (HTPI.sub A) (⋃₀ F) F"}
+{"name":"HTPI.upperBd","declaration":"def HTPI.upperBd {A : Type} (R : HTPI.BinRel A) (a : A) (B : Set A) : Prop"}
+{"name":"HTPI.overlap_implies_equal","declaration":"theorem HTPI.overlap_implies_equal {A : Type} (F : Set (Set A)) (h : HTPI.partition F) (X : Set A) : X ∈ F → ∀ Y ∈ F, ∀ x ∈ X, x ∈ Y → X = Y"}
+{"name":"HTPI.symmetric","declaration":"def HTPI.symmetric {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.Exercises.conj","declaration":"def HTPI.Exercises.conj {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel A) (x : A) (y : A) : Prop"}
+{"name":"HTPI.Lemma_4_5_7_trans","declaration":"theorem HTPI.Lemma_4_5_7_trans {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.transitive (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.Exercises.Exercise_4_4_9_part","declaration":"theorem HTPI.Exercises.Exercise_4_4_9_part {A : Type} {B : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel B) (L : HTPI.BinRel (A × B)) (h1 : HTPI.total_order R) (h2 : HTPI.total_order S) (h3 : ∀ (a a' : A) (b b' : B), L (a, b) (a', b') ↔ R a a' ∧ (a = a' → S b b')) (a : A) (a' : A) (b : B) (b' : B) : L (a, b) (a', b') ∨ L (a', b') (a, b)"}
+{"name":"HTPI.Exercises.dot","declaration":"def HTPI.Exercises.dot {A : Type} (F : Set (Set A)) (G : Set (Set A)) : Set (Set A)"}
+{"name":"HTPI.Theorem_4_2_5_3","declaration":"theorem HTPI.Theorem_4_2_5_3 {A : Type} {B : Type} (R : Set (A × B)) : HTPI.Ran (HTPI.inv R) = HTPI.Dom R"}
+{"name":"HTPI.Exercises.Example_4_4_3_1","declaration":"theorem HTPI.Exercises.Example_4_4_3_1 {A : Type} : HTPI.partial_order (HTPI.sub A)"}
+{"name":"HTPI.Exercises.Exercise_4_3_13b","declaration":"theorem HTPI.Exercises.Exercise_4_3_13b {A : Type} (R1 : HTPI.BinRel A) (R2 : HTPI.BinRel A) (h1 : HTPI.symmetric R1) (h2 : HTPI.symmetric R2) : HTPI.symmetric (HTPI.RelFromExt (HTPI.extension R1 ∪ HTPI.extension R2))"}
+{"name":"HTPI.Lemma_4_5_5_2","declaration":"theorem HTPI.Lemma_4_5_5_2 {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) (x : A) (y : A) : y ∈ HTPI.equivClass R x ↔ HTPI.equivClass R y = HTPI.equivClass R x"}
+{"name":"HTPI.partial_order","declaration":"def HTPI.partial_order {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.Ran","declaration":"def HTPI.Ran {A : Type} {B : Type} (R : Set (A × B)) : Set B"}
+{"name":"HTPI.Lemma_4_5_5_1","declaration":"theorem HTPI.Lemma_4_5_5_1 {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) (x : A) : x ∈ HTPI.equivClass R x"}
+{"name":"HTPI.RelFromExt","declaration":"def HTPI.RelFromExt {A : Type} {B : Type} (R : Set (A × B)) (a : A) (b : B) : Prop"}
+{"name":"HTPI.Dom","declaration":"def HTPI.Dom {A : Type} {B : Type} (R : Set (A × B)) : Set A"}
+{"name":"HTPI.pairwise_disjoint","declaration":"def HTPI.pairwise_disjoint {A : Type} (F : Set (Set A)) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_3_18","declaration":"theorem HTPI.Exercises.Exercise_4_3_18 {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel A) (h1 : HTPI.transitive R) (h2 : HTPI.transitive S) (h3 : HTPI.comp (HTPI.extension S) (HTPI.extension R) ⊆ HTPI.comp (HTPI.extension R) (HTPI.extension S)) : HTPI.transitive (HTPI.RelFromExt (HTPI.comp (HTPI.extension R) (HTPI.extension S)))"}
+{"name":"HTPI.Exercises.equiv_mod","declaration":"def HTPI.Exercises.equiv_mod (m : ℤ) (x : ℤ) (y : ℤ) : Prop"}
+{"name":"HTPI.Theorem_4_5_4","declaration":"theorem HTPI.Theorem_4_5_4 {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) : HTPI.partition (HTPI.mod A R)"}
+{"name":"HTPI.Exercises.Exercise_4_2_14c","declaration":"theorem HTPI.Exercises.Exercise_4_2_14c {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) (T : Set (B × C)) : HTPI.comp (S ∩ T) R = HTPI.comp S R ∩ HTPI.comp T R"}
+{"name":"HTPI.smallestElt","declaration":"def HTPI.smallestElt {A : Type} (R : HTPI.BinRel A) (b : A) (B : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_2_9c","declaration":"theorem HTPI.Exercises.Exercise_4_2_9c {___ : Sort u_1} {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) : ___ → HTPI.Ran (HTPI.comp S R) = HTPI.Ran S"}
+{"name":"HTPI.Theorem_4_5_4_part_1","declaration":"theorem HTPI.Theorem_4_5_4_part_1 {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) (x : A) : x ∈ ⋃₀ HTPI.mod A R"}
+{"name":"HTPI.Exercises.elt_mod_equiv_class_of_elt","declaration":"theorem HTPI.Exercises.elt_mod_equiv_class_of_elt {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) (X : Set A) : X ∈ HTPI.mod A R → ∀ x ∈ X, HTPI.equivClass R x = X"}
+{"name":"HTPI.Exercises.Exercise_4_3_13c","declaration":"theorem HTPI.Exercises.Exercise_4_3_13c {A : Type} (R1 : HTPI.BinRel A) (R2 : HTPI.BinRel A) (h1 : HTPI.transitive R1) (h2 : HTPI.transitive R2) : HTPI.transitive (HTPI.RelFromExt (HTPI.extension R1 ∪ HTPI.extension R2))"}
+{"name":"HTPI.Exercises.Theorem_4_5_10","declaration":"theorem HTPI.Exercises.Theorem_4_5_10 (m : ℤ) : HTPI.equiv_rel (HTPI.Exercises.equiv_mod m)"}
+{"name":"HTPI.Exercises.Exercise_4_2_12a","declaration":"theorem HTPI.Exercises.Exercise_4_2_12a {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) (T : Set (B × C)) : HTPI.comp S R \\ HTPI.comp T R ⊆ HTPI.comp (S \\ T) R"}
+{"name":"HTPI.Theorem_4_3_4_2","declaration":"theorem HTPI.Theorem_4_3_4_2 {A : Type} (R : HTPI.BinRel A) : HTPI.symmetric R ↔ HTPI.extension R = HTPI.inv (HTPI.extension R)"}
+{"name":"HTPI.Exercises.Exercise_4_3_12c","declaration":"theorem HTPI.Exercises.Exercise_4_3_12c {A : Type} (R : HTPI.BinRel A) (h1 : HTPI.transitive R) : HTPI.transitive (HTPI.RelFromExt (HTPI.inv (HTPI.extension R)))"}
+{"name":"HTPI.ext_def","declaration":"theorem HTPI.ext_def {A : Type} {B : Type} (R : Rel A B) (a : A) (b : B) : (a, b) ∈ HTPI.extension R ↔ R a b"}
+{"name":"HTPI.Theorem_4_2_5_5","declaration":"theorem HTPI.Theorem_4_2_5_5 {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) : HTPI.inv (HTPI.comp S R) = HTPI.comp (HTPI.inv R) (HTPI.inv S)"}
+{"name":"HTPI.Lemma_4_5_7_ref","declaration":"theorem HTPI.Lemma_4_5_7_ref {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.reflexive (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.Exercises.Exercise_4_3_19","declaration":"theorem HTPI.Exercises.Exercise_4_3_19 {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel (Set A)) (h : ∀ (X Y : Set A), S X Y ↔ ∃ x y, x ∈ X ∧ y ∈ Y ∧ R x y) : HTPI.transitive R → HTPI.transitive S"}
+{"name":"HTPI.lub","declaration":"def HTPI.lub {A : Type} (R : HTPI.BinRel A) (a : A) (B : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_3_20","declaration":"theorem HTPI.Exercises.Exercise_4_3_20 {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel (Set A)) (h : ∀ (X Y : Set A), S X Y ↔ X ≠ ∅ ∧ Y ≠ ∅ ∧ ∀ (x y : A), x ∈ X → y ∈ Y → R x y) : HTPI.transitive R → HTPI.transitive S"}
+{"name":"HTPI.Theorem_4_2_5_2","declaration":"theorem HTPI.Theorem_4_2_5_2 {A : Type} {B : Type} (R : Set (A × B)) : HTPI.Dom (HTPI.inv R) = HTPI.Ran R"}
+{"name":"HTPI.Exercises.Exercise_4_4_15a","declaration":"theorem HTPI.Exercises.Exercise_4_4_15a {A : Type} (R1 : HTPI.BinRel A) (R2 : HTPI.BinRel A) (B : Set A) (b : A) (h1 : HTPI.partial_order R1) (h2 : HTPI.partial_order R2) (h3 : HTPI.extension R1 ⊆ HTPI.extension R2) : HTPI.smallestElt R1 b B → HTPI.smallestElt R2 b B"}
+{"name":"HTPI.Theorem_4_2_5_1","declaration":"theorem HTPI.Theorem_4_2_5_1 {A : Type} {B : Type} (R : Set (A × B)) : HTPI.inv (HTPI.inv R) = R"}
+{"name":"HTPI.EqRelFromPart","declaration":"def HTPI.EqRelFromPart {A : Type} (F : Set (Set A)) (x : A) (y : A) : Prop"}
+{"name":"HTPI.comp","declaration":"def HTPI.comp {A : Type} {B : Type} {C : Type} (S : Set (B × C)) (R : Set (A × B)) : Set (A × C)"}
+{"name":"HTPI.Exercises.Lemma_4_5_7_ref","declaration":"theorem HTPI.Exercises.Lemma_4_5_7_ref {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.reflexive (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.Exercises.Exercise_4_5_20c","declaration":"theorem HTPI.Exercises.Exercise_4_5_20c {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel A) (h1 : HTPI.equiv_rel R) (h2 : HTPI.equiv_rel S) : HTPI.mod A (HTPI.Exercises.conj R S) = HTPI.Exercises.dot (HTPI.mod A R) (HTPI.mod A S)"}
+{"name":"HTPI.Exercises.Exercise_4_2_12b","declaration":"theorem HTPI.Exercises.Exercise_4_2_12b {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) (T : Set (B × C)) : HTPI.comp (S \\ T) R ⊆ HTPI.comp S R \\ HTPI.comp T R"}
+{"name":"HTPI.Theorem_4_2_5_4","declaration":"theorem HTPI.Theorem_4_2_5_4 {A : Type} {B : Type} {C : Type} {D : Type} (R : Set (A × B)) (S : Set (B × C)) (T : Set (C × D)) : HTPI.comp T (HTPI.comp S R) = HTPI.comp (HTPI.comp T S) R"}
+{"name":"HTPI.Exercises.Exercise_4_2_14d","declaration":"theorem HTPI.Exercises.Exercise_4_2_14d {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) (T : Set (B × C)) : HTPI.comp (S ∪ T) R = HTPI.comp S R ∪ HTPI.comp T R"}
+{"name":"HTPI.Exercises.Theorem_4_3_4_3","declaration":"theorem HTPI.Exercises.Theorem_4_3_4_3 {A : Type} (R : HTPI.BinRel A) : HTPI.transitive R ↔ HTPI.comp (HTPI.extension R) (HTPI.extension R) ⊆ HTPI.extension R"}
+{"name":"HTPI.Lemma_4_5_7","declaration":"theorem HTPI.Lemma_4_5_7 {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.equiv_rel (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.Exercises.Exercise_4_4_22","declaration":"theorem HTPI.Exercises.Exercise_4_4_22 {A : Type} (R : HTPI.BinRel A) (B1 : Set A) (B2 : Set A) (x1 : A) (x2 : A) (h1 : HTPI.partial_order R) (h2 : HTPI.lub R x1 B1) (h3 : HTPI.lub R x2 B2) : B1 ⊆ B2 → R x1 x2"}
+{"name":"HTPI.elementhood","declaration":"def HTPI.elementhood (A : Type) (a : A) (X : Set A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_5_20a","declaration":"theorem HTPI.Exercises.Exercise_4_5_20a {A : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel A) (h1 : HTPI.equiv_rel R) (h2 : HTPI.equiv_rel S) : HTPI.equiv_rel (HTPI.Exercises.conj R S)"}
+{"name":"HTPI.inv","declaration":"def HTPI.inv {A : Type} {B : Type} (R : Set (A × B)) : Set (B × A)"}
+{"name":"HTPI.Exercises.Exercise_4_2_9a","declaration":"theorem HTPI.Exercises.Exercise_4_2_9a {A : Type} {B : Type} {C : Type} (R : Set (A × B)) (S : Set (B × C)) : HTPI.Dom (HTPI.comp S R) ⊆ HTPI.Dom R"}
+{"name":"HTPI.Exercises.Exercise_4_4_18a","declaration":"theorem HTPI.Exercises.Exercise_4_4_18a {A : Type} (R : HTPI.BinRel A) (B1 : Set A) (B2 : Set A) (h1 : HTPI.partial_order R) (h2 : ∀ x ∈ B1, ∃ y ∈ B2, R x y) (h3 : ∀ x ∈ B2, ∃ y ∈ B1, R x y) (x : A) : HTPI.upperBd R x B1 ↔ HTPI.upperBd R x B2"}
+{"name":"HTPI.Theorem_4_4_6_3","declaration":"theorem HTPI.Theorem_4_4_6_3 {A : Type} (R : HTPI.BinRel A) (B : Set A) (b : A) (h1 : HTPI.total_order R) (h2 : HTPI.minimalElt R b B) : HTPI.smallestElt R b B"}
+{"name":"HTPI.Exercises.Lemma_4_5_7_trans","declaration":"theorem HTPI.Exercises.Lemma_4_5_7_trans {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.transitive (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.extension","declaration":"def HTPI.extension {A : Type} {B : Type} (R : Rel A B) : Set (A × B)"}
+{"name":"HTPI.reflexive","declaration":"def HTPI.reflexive {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_3_12a","declaration":"theorem HTPI.Exercises.Exercise_4_3_12a {A : Type} (R : HTPI.BinRel A) (h1 : HTPI.reflexive R) : HTPI.reflexive (HTPI.RelFromExt (HTPI.inv (HTPI.extension R)))"}
+{"name":"HTPI.Exercises.Lemma_4_5_8","declaration":"theorem HTPI.Exercises.Lemma_4_5_8 {A : Type} (F : Set (Set A)) (h : HTPI.partition F) (X : Set A) : X ∈ F → ∀ x ∈ X, HTPI.equivClass (HTPI.EqRelFromPart F) x = X"}
+{"name":"HTPI.antisymmetric","declaration":"def HTPI.antisymmetric {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.Exercises.Exercise_4_4_8","declaration":"theorem HTPI.Exercises.Exercise_4_4_8 {A : Type} {B : Type} (R : HTPI.BinRel A) (S : HTPI.BinRel B) (T : HTPI.BinRel (A × B)) (h1 : HTPI.partial_order R) (h2 : HTPI.partial_order S) (h3 : ∀ (a a' : A) (b b' : B), T (a, b) (a', b') ↔ R a a' ∧ S b b') : HTPI.partial_order T"}
+{"name":"HTPI.RelFromExt_def","declaration":"theorem HTPI.RelFromExt_def {A : Type} {B : Type} (R : Set (A × B)) (a : A) (b : B) : HTPI.RelFromExt R a b ↔ (a, b) ∈ R"}
+{"name":"HTPI.Lemma_4_5_7_symm","declaration":"theorem HTPI.Lemma_4_5_7_symm {A : Type} (F : Set (Set A)) (h : HTPI.partition F) : HTPI.symmetric (HTPI.EqRelFromPart F)"}
+{"name":"HTPI.Theorem_4_4_6_2","declaration":"theorem HTPI.Theorem_4_4_6_2 {A : Type} (R : HTPI.BinRel A) (B : Set A) (b : A) (h1 : HTPI.partial_order R) (h2 : HTPI.smallestElt R b B) : HTPI.minimalElt R b B ∧ ∀ (c : A), HTPI.minimalElt R c B → b = c"}
+{"name":"HTPI.equivClass","declaration":"def HTPI.equivClass {A : Type} (R : HTPI.BinRel A) (x : A) : Set A"}
+{"name":"HTPI.Exercises.Exercise_4_4_15b","declaration":"theorem HTPI.Exercises.Exercise_4_4_15b {A : Type} (R1 : HTPI.BinRel A) (R2 : HTPI.BinRel A) (B : Set A) (b : A) (h1 : HTPI.partial_order R1) (h2 : HTPI.partial_order R2) (h3 : HTPI.extension R1 ⊆ HTPI.extension R2) : HTPI.minimalElt R2 b B → HTPI.minimalElt R1 b B"}
+{"name":"HTPI.total_order","declaration":"def HTPI.total_order {A : Type} (R : HTPI.BinRel A) : Prop"}
+{"name":"HTPI.minimalElt","declaration":"def HTPI.minimalElt {A : Type} (R : HTPI.BinRel A) (b : A) (B : Set A) : Prop"}
+{"name":"HTPI.Exercises.Theorem_4_4_6_1","declaration":"theorem HTPI.Exercises.Theorem_4_4_6_1 {A : Type} (R : HTPI.BinRel A) (B : Set A) (b : A) (h1 : HTPI.partial_order R) (h2 : HTPI.smallestElt R b B) (c : A) : HTPI.smallestElt R c B → b = c"}
+{"name":"HTPI.partition","declaration":"def HTPI.partition {A : Type} (F : Set (Set A)) : Prop"}
+{"name":"HTPI.Theorem_4_5_4_part_2","declaration":"theorem HTPI.Theorem_4_5_4_part_2 {A : Type} (R : HTPI.BinRel A) (h : HTPI.equiv_rel R) : HTPI.pairwise_disjoint (HTPI.mod A R)"}
+{"name":"HTPI.Exercises.Exercise_4_4_24","declaration":"theorem HTPI.Exercises.Exercise_4_4_24 {A : Type} (R : Set (A × A)) : HTPI.smallestElt (HTPI.sub (A × A)) (R ∪ HTPI.inv R) {T | R ⊆ T ∧ HTPI.symmetric (HTPI.RelFromExt T)}"}
+{"name":"HTPI.sub","declaration":"def HTPI.sub (A : Type) (X : Set A) (Y : Set A) : Prop"}
+{"name":"HTPI.mod","declaration":"def HTPI.mod (A : Type) (R : HTPI.BinRel A) : Set (Set A)"}

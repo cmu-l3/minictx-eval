@@ -1,0 +1,5 @@
+{"name":"SciLean.instCoeFunApproxForAll","declaration":"instance SciLean.instCoeFunApproxForAll {α : Type u_1} [TopologicalSpace α] [Nonempty α] {N : Type} (lN : Filter N) (a : α) : CoeFun (SciLean.Approx lN a) fun x => N → α"}
+{"name":"SciLean.Approx","declaration":"def SciLean.Approx {α : Type u_1} [TopologicalSpace α] [Nonempty α] {N : outParam Type} (lN : Filter N) (a : α) : Type (max 1 u_1)"}
+{"name":"SciLean.Approx.exact","declaration":"def SciLean.Approx.exact {α : Type u_1} [TopologicalSpace α] [Nonempty α] {a : α} : SciLean.ApproxSolution ⊤ (Eq a)"}
+{"name":"SciLean.Approx.limit","declaration":"def SciLean.Approx.limit {α : Type u_1} [TopologicalSpace α] [Nonempty α] {N : Type} {lN : Filter N} (M : Type) (lM : Filter M) {aₙ : N → α} (x : (n : N) → SciLean.Approx lM (aₙ n)) : SciLean.Approx (Filter.prod lN lM) (Filter.limit lN fun n => aₙ n)"}
+{"name":"SciLean.«command_Approx__:_:=_By_»","declaration":"def SciLean.«command_Approx__:_:=_By_»  : Lean.ParserDescr"}

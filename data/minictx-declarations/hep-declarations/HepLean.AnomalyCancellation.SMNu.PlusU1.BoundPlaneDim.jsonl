@@ -1,0 +1,3 @@
+{"name":"SMRHN.PlusU1.ExistsPlane","declaration":"/-- A proposition which is true if for a given `n`, a plane of charges of dimension `n` exists\nin which each point is a solution. -/\ndef SMRHN.PlusU1.ExistsPlane (n : ℕ) : Prop"}
+{"name":"SMRHN.PlusU1.plane_exists_dim_le_7","declaration":"theorem SMRHN.PlusU1.plane_exists_dim_le_7 {n : ℕ} (hn : SMRHN.PlusU1.ExistsPlane n) : n ≤ 7"}
+{"name":"SMRHN.PlusU1.exists_plane_exists_basis","declaration":"theorem SMRHN.PlusU1.exists_plane_exists_basis {n : ℕ} (hE : SMRHN.PlusU1.ExistsPlane n) : ∃ B, LinearIndependent ℚ B"}

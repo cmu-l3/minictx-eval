@@ -1,0 +1,4 @@
+{"name":"SciLean.Rand.conditionSnd","declaration":"/-- Condition on the second variable of a pair. -/\ndef SciLean.Rand.conditionSnd {X : Type} {Y : Type} (r : SciLean.Rand (X × Y)) (y : Y) : SciLean.Rand X"}
+{"name":"SciLean.Rand.HasCondition","declaration":"/-- Given random variable `r : Rand (X×Y)`. Can we condition `r` based on observation of `X`?\n\nCan we come up with conditional rand variable `r₂ : X₁ → Rand X₁`  -/\ndef SciLean.Rand.HasCondition {X : Type} {Y : Type} (r : SciLean.Rand (X × Y)) : Prop"}
+{"name":"SciLean.Rand.condition","declaration":"def SciLean.Rand.condition {X : Type} {X₁ : Type} {X₂ : Type} (r : SciLean.Rand X) (dec : X₁ × X₂ ≃ X) (x₁ : X₁) : SciLean.Rand X₂"}
+{"name":"SciLean.Rand.conditionFst","declaration":"/-- Condition on the first variable of a pair. -/\ndef SciLean.Rand.conditionFst {X : Type} {Y : Type} (r : SciLean.Rand (X × Y)) (x : X) : SciLean.Rand Y"}

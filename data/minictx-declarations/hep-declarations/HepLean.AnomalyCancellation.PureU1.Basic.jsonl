@@ -1,0 +1,21 @@
+{"name":"PureU1.accCubeTriLinSymm_toFun_apply_apply","declaration":"theorem PureU1.accCubeTriLinSymm_toFun_apply_apply {n : ℕ} (S : ACCSystemCharges.Charges (PureU1.PureU1Charges n)) (S : ACCSystemCharges.Charges (PureU1.PureU1Charges n)) (T : ACCSystemCharges.Charges (PureU1.PureU1Charges n)) : ((PureU1.accCubeTriLinSymm S✝) S) T = Finset.sum Finset.univ fun i => S✝ i * S i * T i"}
+{"name":"PureU1_quadraticACCs","declaration":"theorem PureU1_quadraticACCs (n : ℕ) : ∀ (a : Fin 0), (PureU1 n).quadraticACCs a = Fin.elim0 a"}
+{"name":"PureU1.PureU1Charges_numberCharges","declaration":"theorem PureU1.PureU1Charges_numberCharges (n : ℕ) : (PureU1.PureU1Charges n).numberCharges = n"}
+{"name":"pureU1_cube","declaration":"theorem pureU1_cube {n : ℕ} (S : ACCSystem.Sols (PureU1 (Nat.succ n))) : (Finset.sum Finset.univ fun i => S.val i ^ 3) = 0"}
+{"name":"pureU1_anomalyFree_ext","declaration":"theorem pureU1_anomalyFree_ext {n : ℕ} {S : ACCSystemLinear.LinSols (PureU1 (Nat.succ n)).toACCSystemLinear} {T : ACCSystemLinear.LinSols (PureU1 (Nat.succ n)).toACCSystemLinear} (h : ∀ (i : Fin n), S.val (Fin.castSucc i) = T.val (Fin.castSucc i)) : S = T"}
+{"name":"pureU1_linear","declaration":"theorem pureU1_linear {n : ℕ} (S : ACCSystemLinear.LinSols (PureU1 (Nat.succ n)).toACCSystemLinear) : (Finset.sum Finset.univ fun i => S.val i) = 0"}
+{"name":"PureU1_linearACCs","declaration":"theorem PureU1_linearACCs (n : ℕ) (i : Fin 1) : (PureU1 n).linearACCs i =\n  match i with\n  | 0 => PureU1.accGrav n"}
+{"name":"PureU1_numberLinear","declaration":"theorem PureU1_numberLinear (n : ℕ) : (PureU1 n).numberLinear = 1"}
+{"name":"PureU1.sum_of_anomaly_free_linear","declaration":"theorem PureU1.sum_of_anomaly_free_linear {k : ℕ} {n : ℕ} (f : Fin k → ACCSystemLinear.LinSols (PureU1 n).toACCSystemLinear) (j : Fin n) : (Finset.sum Finset.univ fun i => f i).val j = Finset.sum Finset.univ fun i => (f i).val j"}
+{"name":"PureU1.accGrav","declaration":"/-- The gravitational anomaly. -/\ndef PureU1.accGrav (n : ℕ) : ACCSystemCharges.Charges (PureU1.PureU1Charges n) →ₗ[ℚ] ℚ"}
+{"name":"PureU1.accCube_explicit","declaration":"theorem PureU1.accCube_explicit (n : ℕ) (S : ACCSystemCharges.Charges (PureU1.PureU1Charges n)) : (PureU1.accCube n) S = Finset.sum Finset.univ fun i => S i ^ 3"}
+{"name":"PureU1_cubicACC_toFun","declaration":"theorem PureU1_cubicACC_toFun (n : ℕ) (S : ACCSystemCharges.Charges (PureU1.PureU1Charges n)) : (PureU1 n).cubicACC.toFun S = Finset.sum Finset.univ fun i => S i * S i * S i"}
+{"name":"PureU1.accCube","declaration":"/-- The cubic anomaly equation. -/\ndef PureU1.accCube (n : ℕ) : HomogeneousCubic (ACCSystemCharges.Charges (PureU1.PureU1Charges n))"}
+{"name":"PureU1_numberCharges","declaration":"theorem PureU1_numberCharges (n : ℕ) : (PureU1 n).numberCharges = n"}
+{"name":"PureU1.PureU1Charges","declaration":"/-- The vector space of charges. -/\ndef PureU1.PureU1Charges (n : ℕ) : ACCSystemCharges"}
+{"name":"PureU1","declaration":"/-- The ACC system for a pure $U(1)$ gauge theory with $n$ fermions. -/\ndef PureU1 (n : ℕ) : ACCSystem"}
+{"name":"PureU1_numberQuadratic","declaration":"theorem PureU1_numberQuadratic (n : ℕ) : (PureU1 n).numberQuadratic = 0"}
+{"name":"pureU1EqCharges","declaration":"/-- An equivalence of vector spaces of charges when the number of fermions is equal. -/\ndef pureU1EqCharges {n : ℕ} {m : ℕ} (h : n = m) : ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges ≃ₗ[ℚ] ACCSystemCharges.Charges (PureU1 m).toACCSystemCharges"}
+{"name":"pureU1_last","declaration":"theorem pureU1_last {n : ℕ} (S : ACCSystemLinear.LinSols (PureU1 (Nat.succ n)).toACCSystemLinear) : S.val (Fin.last n) = -Finset.sum Finset.univ fun i => S.val (Fin.castSucc i)"}
+{"name":"PureU1.accCubeTriLinSymm","declaration":"/-- The symmetric trilinear form used to define the cubic anomaly. -/\ndef PureU1.accCubeTriLinSymm {n : ℕ} : TriLinearSymm (ACCSystemCharges.Charges (PureU1.PureU1Charges n))"}
+{"name":"PureU1.sum_of_charges","declaration":"theorem PureU1.sum_of_charges {k : ℕ} {n : ℕ} (f : Fin k → ACCSystemCharges.Charges (PureU1 n).toACCSystemCharges) (j : Fin n) : Finset.sum Finset.univ (fun i => f i) j = Finset.sum Finset.univ fun i => f i j"}

@@ -1,0 +1,9 @@
+{"name":"Function.modify_same","declaration":"theorem Function.modify_same {α : Sort u} {β : α → Sort v} [DecidableEq α] (a : α) (g : β a → β a) (f : (a : α) → β a) : Function.modify f a g a = g (f a)"}
+{"name":"Function.reduceD","declaration":"def Function.reduceD {α : Type u_1} {ι : Type u_2} [SciLean.IndexType ι] (f : ι → α) (op : α → α → α) (default : α) : α"}
+{"name":"Function.reduceMD","declaration":"/-- TODO: needs beter implementation but that requires refining EnumType and Index\n-/\ndef Function.reduceMD {α : Type u_1} {ι : Type u_2} [SciLean.IndexType ι] {m : Type u_1 → Type u_4} [Monad m] (f : ι → α) (op : α → α → m α) (default : α) : m α"}
+{"name":"Function.Inverse","declaration":"def Function.Inverse {β : Sort u_1} {α : Sort u_2} (g : β → α) (f : α → β) : Prop"}
+{"name":"Function.foldl","declaration":"def Function.foldl {α : Sort u_1} {β : Type u_2} {ι : Type u_3} [SciLean.IndexType ι] (f : ι → α) (op : β → α → β) (init : β) : β"}
+{"name":"Function.foldlM","declaration":"def Function.foldlM {α : Sort u_1} {β : Type u_2} {ι : Type u_3} [SciLean.IndexType ι] {m : Type u_2 → Type u_2} [Monad m] (f : ι → α) (op : β → α → m β) (init : β) : m β"}
+{"name":"Function.reduce","declaration":"def Function.reduce {α : Type u_1} {ι : Type u_2} [SciLean.IndexType ι] [Inhabited α] (f : ι → α) (op : α → α → α) : α"}
+{"name":"Function.modify","declaration":"/-- Similar to `Function.update` but `g` specifies how to change the value at `a'`. -/\ndef Function.modify {α : Sort u} {β : α → Sort v} [DecidableEq α] (f : (a : α) → β a) (a' : α) (g : β a' → β a') (a : α) : β a"}
+{"name":"Function.modify_noteq","declaration":"theorem Function.modify_noteq {α : Sort u} {β : α → Sort v} [DecidableEq α] {a : α} {a' : α} (h : a ≠ a') (g : β a' → β a') (f : (a : α) → β a) : Function.modify f a' g a = f a"}

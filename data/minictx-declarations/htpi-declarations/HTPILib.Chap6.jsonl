@@ -1,0 +1,102 @@
+{"name":"HTPI.extendPO_is_ref","declaration":"theorem HTPI.extendPO_is_ref {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.reflexive (HTPI.extendPO R b)"}
+{"name":"HTPI.extendPO_extends","declaration":"theorem HTPI.extendPO_extends {A : Type} (R : HTPI.BinRel A) (b : A) (x : A) (y : A) : R x y → HTPI.extendPO R b x y"}
+{"name":"HTPI.Example_6_1_1","declaration":"theorem HTPI.Example_6_1_1 (n : ℕ) : Sum i from 0 to n, 2 ^ i = 2 ^ (n + 1) - 1"}
+{"name":"HTPI.cumul_image","declaration":"def HTPI.cumul_image {A : Type} (f : A → A) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.Exercise_6_5_14","declaration":"theorem HTPI.Exercises.Exercise_6_5_14 {A : Type} (R : Set (A × A)) : HTPI.smallestElt (HTPI.sub (A × A)) (HTPI.Exercises.cumul_comp R) {S | R ⊆ S ∧ HTPI.transitive (HTPI.RelFromExt S)}"}
+{"name":"HTPI.Exercises.Exercise_6_3_16","declaration":"theorem HTPI.Exercises.Exercise_6_3_16 {___ : ℕ} (n : ℕ) : HTPI.Exercises.seq_6_3_16 n = ___"}
+{"name":"HTPI.Exercises.cumul_un_image2","declaration":"def HTPI.Exercises.cumul_un_image2 {A : Type} (f : A → A → A) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.Exercise_6_4_7c","declaration":"theorem HTPI.Exercises.Exercise_6_4_7c (n : ℕ) : Sum i from 0 to n, HTPI.Fib (2 * i + 1) = HTPI.Fib (2 * n + 2)"}
+{"name":"HTPI.Exercises.Exercise_6_4_4a","declaration":"theorem HTPI.Exercises.Exercise_6_4_4a  : ¬∃ q p, p * p = 6 * (q * q) ∧ q ≠ 0"}
+{"name":"HTPI.Exercises.Lemma_6_2_1_2","declaration":"theorem HTPI.Exercises.Lemma_6_2_1_2 {A : Type} {R : HTPI.BinRel A} {B : Set A} {b : A} {c : A} (h1 : HTPI.partial_order R) (h2 : b ∈ B) (h3 : HTPI.minimalElt R c (B \\ {b})) (h4 : ¬R b c) : HTPI.minimalElt R c B"}
+{"name":"HTPI.Example_6_1_3","declaration":"theorem HTPI.Example_6_1_3 (n : ℕ) : n ≥ 5 → 2 ^ n > n ^ 2"}
+{"name":"HTPI.Exercises.cumul_comp","declaration":"def HTPI.Exercises.cumul_comp {A : Type} (R : Set (A × A)) : Set (A × A)"}
+{"name":"HTPI.Exercises.Exercise_6_1_15","declaration":"theorem HTPI.Exercises.Exercise_6_1_15 (n : ℕ) : n ≥ 10 → 2 ^ n > n ^ 3"}
+{"name":"HTPI.Exercises.Exercise_6_4_5","declaration":"theorem HTPI.Exercises.Exercise_6_4_5 (n : ℕ) : n ≥ 12 → ∃ a b, 3 * a + 7 * b = n"}
+{"name":"HTPI.Exercises.Exercise_6_4_8a","declaration":"theorem HTPI.Exercises.Exercise_6_4_8a (m : ℕ) (n : ℕ) : HTPI.Fib (m + n + 1) = HTPI.Fib m * HTPI.Fib n + HTPI.Fib (m + 1) * HTPI.Fib (n + 1)"}
+{"name":"HTPI.Exercises.image2","declaration":"def HTPI.Exercises.image2 {A : Type} (f : A → A → A) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.seq_6_3_15","declaration":"def HTPI.Exercises.seq_6_3_15 (k : ℕ) : ℤ"}
+{"name":"HTPI.Exercises.rep_image_family_step","declaration":"theorem HTPI.Exercises.rep_image_family_step {A : Type} (F : Set (A → A)) (n : ℕ) (B : Set A) : HTPI.Exercises.rep_image_family F (n + 1) B = {x | ∃ f ∈ F, x ∈ HTPI.image f (HTPI.Exercises.rep_image_family F n B)}"}
+{"name":"HTPI.Lemma_6_2_1_1","declaration":"theorem HTPI.Lemma_6_2_1_1 {A : Type} {R : HTPI.BinRel A} {B : Set A} {b : A} {c : A} (h1 : HTPI.partial_order R) (h2 : b ∈ B) (h3 : HTPI.minimalElt R c (B \\ {b})) (h4 : R b c) : HTPI.minimalElt R b B"}
+{"name":"HTPI.Exercises.Exercise_6_2_4a","declaration":"theorem HTPI.Exercises.Exercise_6_2_4a {A : Type} (R : HTPI.BinRel A) (h : ∀ (x y : A), R x y ∨ R y x) (n : ℕ) : n ≥ 1 → ∀ (B : Set A), HTPI.numElts B n → ∃ x ∈ B, ∀ y ∈ B, ∃ z, R x z ∧ R z y"}
+{"name":"HTPI.rep_image_sub_closed","declaration":"theorem HTPI.rep_image_sub_closed {A : Type} {f : A → A} {B : Set A} {D : Set A} (h1 : B ⊆ D) (h2 : HTPI.closed f D) (n : ℕ) : HTPI.rep_image f n B ⊆ D"}
+{"name":"HTPI.extendPO_all_comp","declaration":"theorem HTPI.extendPO_all_comp {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) (x : A) : HTPI.extendPO R b b x ∨ HTPI.extendPO R b x b"}
+{"name":"HTPI.rep_image","declaration":"def HTPI.rep_image {A : Type} (f : A → A) (n : ℕ) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.Exercise_6_5_3","declaration":"theorem HTPI.Exercises.Exercise_6_5_3 {A : Type} (F : Set (A → A)) (B : Set A) : HTPI.closure_family F B (HTPI.Exercises.cumul_image_family F B)"}
+{"name":"HTPI.Exercises.fact_pos","declaration":"theorem HTPI.Exercises.fact_pos (n : ℕ) : HTPI.fact n ≥ 1"}
+{"name":"HTPI.Exercises.rep_image2","declaration":"def HTPI.Exercises.rep_image2 {A : Type} (f : A → A → A) (n : ℕ) (B : Set A) : Set A"}
+{"name":"HTPI.fact","declaration":"def HTPI.fact (k : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.Exercise_6_3_13b","declaration":"theorem HTPI.Exercises.Exercise_6_3_13b (k : ℕ) (n : ℕ) : n ≥ 2 * k ^ 2 → HTPI.fact n ≥ k ^ n"}
+{"name":"HTPI.Exercises.Exercise_6_2_3","declaration":"theorem HTPI.Exercises.Exercise_6_2_3 (A : Type) (R : HTPI.BinRel A) (h : HTPI.total_order R) (n : ℕ) : n ≥ 1 → ∀ (B : Set A), HTPI.numElts B n → ∃ b, HTPI.smallestElt R b B"}
+{"name":"HTPI.Exercises.sq_even_iff_even","declaration":"theorem HTPI.Exercises.sq_even_iff_even (n : ℕ) : HTPI.nat_even (n * n) ↔ HTPI.nat_even n"}
+{"name":"HTPI.Fib","declaration":"def HTPI.Fib (n : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.Example_6_2_2","declaration":"theorem HTPI.Exercises.Example_6_2_2 {A : Type} (R : HTPI.BinRel A) (h1 : ∃ n, HTPI.numElts {x | x = x} n) (h2 : HTPI.partial_order R) : ∃ T, HTPI.total_order T ∧ ∀ (x y : A), R x y → T x y"}
+{"name":"HTPI.Exercises.Exercise_6_5_8a","declaration":"theorem HTPI.Exercises.Exercise_6_5_8a {A : Type} (f : A → A → A) (B : Set A) (m : ℕ) (n : ℕ) : m ≤ n → HTPI.Exercises.rep_un_image2 f m B ⊆ HTPI.Exercises.rep_un_image2 f n B"}
+{"name":"HTPI.Exercises.Exercise_6_4_7a","declaration":"theorem HTPI.Exercises.Exercise_6_4_7a (n : ℕ) : (Sum i from 0 to n, HTPI.Fib i) + 1 = HTPI.Fib (n + 2)"}
+{"name":"HTPI.Exercises.Exercise_6_3_7b","declaration":"theorem HTPI.Exercises.Exercise_6_3_7b (f : ℕ → ℝ) (c : ℝ) (n : ℕ) : Sum i from 0 to n, c * f i = c * Sum i from 0 to n, f i"}
+{"name":"HTPI.Exercises.rep_image_family","declaration":"def HTPI.Exercises.rep_image_family {A : Type} (F : Set (A → A)) (n : ℕ) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.Exercise_6_3_13a","declaration":"theorem HTPI.Exercises.Exercise_6_3_13a (k : ℕ) (n : ℕ) : HTPI.fact (k ^ 2 + n) ≥ k ^ (2 * n)"}
+{"name":"HTPI.Exercises.div_mod_char","declaration":"theorem HTPI.Exercises.div_mod_char (m : ℕ) (n : ℕ) (q : ℕ) (r : ℕ) (h1 : n = m * q + r) (h2 : r < m) : q = n / m ∧ r = n % m"}
+{"name":"HTPI.Example_6_4_1","declaration":"theorem HTPI.Example_6_4_1 (m : ℕ) : m > 0 → ∀ (n : ℕ), ∃ q r, n = m * q + r ∧ r < m"}
+{"name":"HTPI.extendPO_is_antisymm","declaration":"theorem HTPI.extendPO_is_antisymm {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.antisymmetric (HTPI.extendPO R b)"}
+{"name":"HTPI.Like_Example_6_1_1","declaration":"theorem HTPI.Like_Example_6_1_1 (n : ℕ) : (Sum i from 0 to n, 2 ^ i) + 1 = 2 ^ (n + 1)"}
+{"name":"HTPI.Exercises.extendPO_is_antisymm","declaration":"theorem HTPI.Exercises.extendPO_is_antisymm {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.antisymmetric (HTPI.extendPO R b)"}
+{"name":"HTPI.Exercises.rep_un_image2_step","declaration":"theorem HTPI.Exercises.rep_un_image2_step {A : Type} (f : A → A → A) (n : ℕ) (B : Set A) : HTPI.Exercises.rep_un_image2 f (n + 1) B = HTPI.Exercises.un_image2 f (HTPI.Exercises.rep_un_image2 f n B)"}
+{"name":"HTPI.Exercises.triple_rec_formula","declaration":"theorem HTPI.Exercises.triple_rec_formula (n : ℕ) : HTPI.Exercises.triple_rec n = 2 ^ n * HTPI.Fib n"}
+{"name":"HTPI.Exercises.rep_un_image2_sub_closed","declaration":"theorem HTPI.Exercises.rep_un_image2_sub_closed {A : Type} {f : A → A → A} {B : Set A} {D : Set A} (h1 : B ⊆ D) (h2 : HTPI.closed2 f D) (n : ℕ) : HTPI.Exercises.rep_un_image2 f n B ⊆ D"}
+{"name":"HTPI.Exercises.Exercise_6_5_11","declaration":"theorem HTPI.Exercises.Exercise_6_5_11 {A : Type} (R : Set (A × A)) (m : ℕ) (n : ℕ) : HTPI.Exercises.rep_comp R (m + n) = HTPI.comp (HTPI.Exercises.rep_comp R m) (HTPI.Exercises.rep_comp R n)"}
+{"name":"HTPI.Exercises.Exercise_6_1_13","declaration":"theorem HTPI.Exercises.Exercise_6_1_13 (a : ℤ) (b : ℤ) (n : ℕ) : a - b ∣ a ^ n - b ^ n"}
+{"name":"HTPI.Exercises.un_image2","declaration":"def HTPI.Exercises.un_image2 {A : Type} (f : A → A → A) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.Like_Exercise_6_2_16","declaration":"theorem HTPI.Exercises.Like_Exercise_6_2_16 {A : Type} (f : A → A) (h : HTPI.one_to_one f) (n : ℕ) (B : Set A) : HTPI.numElts B n → HTPI.closed f B → ∀ y ∈ B, ∃ x ∈ B, f x = y"}
+{"name":"HTPI.Exercises.rep_comp_sub_trans","declaration":"theorem HTPI.Exercises.rep_comp_sub_trans {A : Type} {R : Set (A × A)} {S : Set (A × A)} (h1 : R ⊆ S) (h2 : HTPI.transitive (HTPI.RelFromExt S)) (n : ℕ) : n ≥ 1 → HTPI.Exercises.rep_comp R n ⊆ S"}
+{"name":"HTPI.Exercises.nonzero_is_successor","declaration":"theorem HTPI.Exercises.nonzero_is_successor (n : ℕ) : n ≠ 0 → ∃ m, n = m + 1"}
+{"name":"HTPI.Exercises.extendPO_is_ref","declaration":"theorem HTPI.Exercises.extendPO_is_ref {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.reflexive (HTPI.extendPO R b)"}
+{"name":"HTPI.Exercises.quot_rem_unique","declaration":"theorem HTPI.Exercises.quot_rem_unique (m : ℕ) (q : ℕ) (r : ℕ) (q' : ℕ) (r' : ℕ) (h1 : m * q + r = m * q' + r') (h2 : r < m) (h3 : r' < m) : q = q' ∧ r = r'"}
+{"name":"HTPI.Exercises.seq_6_3_16","declaration":"def HTPI.Exercises.seq_6_3_16 (k : ℕ) : ℕ"}
+{"name":"HTPI.extendPO_is_po","declaration":"theorem HTPI.extendPO_is_po {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.partial_order (HTPI.extendPO R b)"}
+{"name":"HTPI.Example_6_3_2_cheating","declaration":"theorem HTPI.Example_6_3_2_cheating (a : ℝ) (m : ℕ) (n : ℕ) : a ^ (m + n) = a ^ m * a ^ n"}
+{"name":"HTPI.Exercises.Fib_like_formula","declaration":"theorem HTPI.Exercises.Fib_like_formula (n : ℕ) : HTPI.Exercises.Fib_like n = 2 ^ n"}
+{"name":"HTPI.Exercises.Exercise_6_1_16a2","declaration":"theorem HTPI.Exercises.Exercise_6_1_16a2 (n : ℕ) : ¬(HTPI.nat_even n ∧ HTPI.nat_odd n)"}
+{"name":"HTPI.rep_image_base","declaration":"theorem HTPI.rep_image_base {A : Type} (f : A → A) (B : Set A) : HTPI.rep_image f 0 B = B"}
+{"name":"HTPI.Exercises.rep_comp_one","declaration":"theorem HTPI.Exercises.rep_comp_one {A : Type} (R : Set (A × A)) : HTPI.Exercises.rep_comp R 1 = R"}
+{"name":"HTPI.Exercises.Exercise_6_3_4","declaration":"theorem HTPI.Exercises.Exercise_6_3_4 (n : ℕ) : 3 * Sum i from 0 to n, (2 * i + 1) ^ 2 = (n + 1) * (2 * n + 1) * (2 * n + 3)"}
+{"name":"HTPI.Exercises.rep_un_image2_base","declaration":"theorem HTPI.Exercises.rep_un_image2_base {A : Type} (f : A → A → A) (B : Set A) : HTPI.Exercises.rep_un_image2 f 0 B = B"}
+{"name":"HTPI.nat_odd","declaration":"def HTPI.nat_odd (n : ℕ) : Prop"}
+{"name":"HTPI.Exercises.quot_rem_unique_lemma","declaration":"theorem HTPI.Exercises.quot_rem_unique_lemma {m : ℕ} {q : ℕ} {r : ℕ} {q' : ℕ} {r' : ℕ} (h1 : m * q + r = m * q' + r') (h2 : r' < m) : q ≤ q'"}
+{"name":"HTPI.Example_6_3_1","declaration":"theorem HTPI.Example_6_3_1 (n : ℕ) : n ≥ 4 → HTPI.fact n > 2 ^ n"}
+{"name":"HTPI.Exercises.idExt","declaration":"def HTPI.Exercises.idExt (A : Type) : Set (A × A)"}
+{"name":"HTPI.Exercises.rep_comp","declaration":"def HTPI.Exercises.rep_comp {A : Type} (R : Set (A × A)) (n : ℕ) : Set (A × A)"}
+{"name":"HTPI.Exercises.Exercise_6_1_16a1","declaration":"theorem HTPI.Exercises.Exercise_6_1_16a1 (n : ℕ) : HTPI.nat_even n ∨ HTPI.nat_odd n"}
+{"name":"HTPI.Exercises.Like_Exercise_6_1_4","declaration":"theorem HTPI.Exercises.Like_Exercise_6_1_4 (n : ℕ) : Sum i from 0 to n, 2 * i + 1 = (n + 1) ^ 2"}
+{"name":"HTPI.Exercises.Exercise_6_5_8b","declaration":"theorem HTPI.Exercises.Exercise_6_5_8b {A : Type} (f : A → A → A) (B : Set A) : HTPI.closure2 f B (HTPI.Exercises.cumul_un_image2 f B)"}
+{"name":"HTPI.Exercises.cumul_image2","declaration":"def HTPI.Exercises.cumul_image2 {A : Type} (f : A → A → A) (B : Set A) : Set A"}
+{"name":"HTPI.Exercises.rep_image2_base","declaration":"theorem HTPI.Exercises.rep_image2_base {A : Type} (f : A → A → A) (B : Set A) : HTPI.Exercises.rep_image2 f 0 B = B"}
+{"name":"HTPI.extendPO","declaration":"def HTPI.extendPO {A : Type} (R : HTPI.BinRel A) (b : A) (x : A) (y : A) : Prop"}
+{"name":"HTPI.rep_image_step","declaration":"theorem HTPI.rep_image_step {A : Type} (f : A → A) (n : ℕ) (B : Set A) : HTPI.rep_image f (n + 1) B = HTPI.image f (HTPI.rep_image f n B)"}
+{"name":"HTPI.extendPO_is_trans","declaration":"theorem HTPI.extendPO_is_trans {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.transitive (HTPI.extendPO R b)"}
+{"name":"HTPI.Exercises.Exercise_6_5_6","declaration":"theorem HTPI.Exercises.Exercise_6_5_6 {A : Type} (f : A → A → A) (B : Set A) : HTPI.closed2 f (HTPI.Exercises.cumul_image2 f B)"}
+{"name":"HTPI.exists_eq_add_one_of_ne_zero","declaration":"theorem HTPI.exists_eq_add_one_of_ne_zero {n : ℕ} (h1 : n ≠ 0) : ∃ k, n = k + 1"}
+{"name":"HTPI.Like_Example_6_1_2","declaration":"theorem HTPI.Like_Example_6_1_2 (n : ℕ) : 3 ∣ n ^ 3 + 2 * n"}
+{"name":"HTPI.Example_6_3_2","declaration":"theorem HTPI.Example_6_3_2 (a : ℝ) (m : ℕ) (n : ℕ) : a ^ (m + n) = a ^ m * a ^ n"}
+{"name":"HTPI.well_ord_princ","declaration":"theorem HTPI.well_ord_princ (S : Set ℕ) : (∃ n, n ∈ S) → ∃ n ∈ S, ∀ m ∈ S, n ≤ m"}
+{"name":"HTPI.Exercises.Like_Exercise_6_1_1","declaration":"theorem HTPI.Exercises.Like_Exercise_6_1_1 (n : ℕ) : 2 * Sum i from 0 to n, i = n * (n + 1)"}
+{"name":"HTPI.Exercises.rep_un_image2","declaration":"def HTPI.Exercises.rep_un_image2 {A : Type} (f : A → A → A) (n : ℕ) (B : Set A) : Set A"}
+{"name":"HTPI.Example_6_3_4","declaration":"theorem HTPI.Example_6_3_4 (x : ℝ) : x > -1 → ∀ (n : ℕ), (1 + x) ^ n ≥ 1 + ↑n * x"}
+{"name":"HTPI.Exercises.Exercise_6_4_8d","declaration":"theorem HTPI.Exercises.Exercise_6_4_8d (m : ℕ) (k : ℕ) : HTPI.Fib m ∣ HTPI.Fib (m * k)"}
+{"name":"HTPI.Theorem_6_5_1","declaration":"theorem HTPI.Theorem_6_5_1 {A : Type} (f : A → A) (B : Set A) : HTPI.closure f B (HTPI.cumul_image f B)"}
+{"name":"HTPI.Exercises.Fib_like","declaration":"def HTPI.Exercises.Fib_like (n : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.extendPO_is_trans","declaration":"theorem HTPI.Exercises.extendPO_is_trans {A : Type} (R : HTPI.BinRel A) (b : A) (h : HTPI.partial_order R) : HTPI.transitive (HTPI.extendPO R b)"}
+{"name":"HTPI.Exercises.rep_image_family_sub_closed","declaration":"theorem HTPI.Exercises.rep_image_family_sub_closed {A : Type} (F : Set (A → A)) (B : Set A) (D : Set A) (h1 : B ⊆ D) (h2 : HTPI.closed_family F D) (n : ℕ) : HTPI.Exercises.rep_image_family F n B ⊆ D"}
+{"name":"HTPI.Exercises.rep_image2_step","declaration":"theorem HTPI.Exercises.rep_image2_step {A : Type} (f : A → A → A) (n : ℕ) (B : Set A) : HTPI.Exercises.rep_image2 f (n + 1) B = HTPI.Exercises.image2 f (HTPI.Exercises.rep_image2 f n B)"}
+{"name":"HTPI.Exercises.triple_rec","declaration":"def HTPI.Exercises.triple_rec (n : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.closed_lemma","declaration":"theorem HTPI.Exercises.closed_lemma {A : Type} {f : A → A → A} {B : Set A} {x : A} {y : A} {nx : ℕ} {ny : ℕ} {n : ℕ} (h1 : x ∈ HTPI.Exercises.rep_un_image2 f nx B) (h2 : y ∈ HTPI.Exercises.rep_un_image2 f ny B) (h3 : nx ≤ n) (h4 : ny ≤ n) : f x y ∈ HTPI.Exercises.cumul_un_image2 f B"}
+{"name":"HTPI.Exercises.Exercise_6_3_15","declaration":"theorem HTPI.Exercises.Exercise_6_3_15 (n : ℕ) : HTPI.Exercises.seq_6_3_15 n = 2 ^ n - ↑n - 1"}
+{"name":"HTPI.exists_eq_add_two_of_ne_zero_one","declaration":"theorem HTPI.exists_eq_add_two_of_ne_zero_one {n : ℕ} (h1 : n ≠ 0) (h2 : n ≠ 1) : ∃ k, n = k + 2"}
+{"name":"HTPI.sq_even_iff_even","declaration":"theorem HTPI.sq_even_iff_even (n : ℕ) : HTPI.nat_even (n * n) ↔ HTPI.nat_even n"}
+{"name":"HTPI.Exercises.rep_image_family_base","declaration":"theorem HTPI.Exercises.rep_image_family_base {A : Type} (F : Set (A → A)) (B : Set A) : HTPI.Exercises.rep_image_family F 0 B = B"}
+{"name":"HTPI.Exercises.Exercise_6_1_9a","declaration":"theorem HTPI.Exercises.Exercise_6_1_9a (n : ℕ) : 2 ∣ n ^ 2 + n"}
+{"name":"HTPI.nat_even","declaration":"def HTPI.nat_even (n : ℕ) : Prop"}
+{"name":"HTPI.Exercise_6_2_2","declaration":"theorem HTPI.Exercise_6_2_2 {A : Type} (R : HTPI.BinRel A) (h : HTPI.partial_order R) (n : ℕ) (B : Set A) : HTPI.numElts B n → ∃ T, HTPI.partial_order T ∧ (∀ (x y : A), R x y → T x y) ∧ ∀ x ∈ B, ∀ (y : A), T x y ∨ T y x"}
+{"name":"HTPI.Exercises.cumul_image_family","declaration":"def HTPI.Exercises.cumul_image_family {A : Type} (F : Set (A → A)) (B : Set A) : Set A"}
+{"name":"HTPI.Theorem_6_4_5","declaration":"theorem HTPI.Theorem_6_4_5  : ¬∃ q p, p * p = 2 * (q * q) ∧ q ≠ 0"}
+{"name":"HTPI.Lemma_6_2_1_2","declaration":"theorem HTPI.Lemma_6_2_1_2 {A : Type} {R : HTPI.BinRel A} {B : Set A} {b : A} {c : A} (h1 : HTPI.partial_order R) (h2 : b ∈ B) (h3 : HTPI.minimalElt R c (B \\ {b})) (h4 : ¬R b c) : HTPI.minimalElt R c B"}
+{"name":"HTPI.Example_6_2_1","declaration":"theorem HTPI.Example_6_2_1 {A : Type} (R : HTPI.BinRel A) (h : HTPI.partial_order R) (n : ℕ) : n ≥ 1 → ∀ (B : Set A), HTPI.numElts B n → ∃ x, HTPI.minimalElt R x B"}

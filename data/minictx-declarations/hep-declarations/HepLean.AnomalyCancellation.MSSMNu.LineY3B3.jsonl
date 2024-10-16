@@ -1,0 +1,6 @@
+{"name":"MSSMACC.lineY₃B₃","declaration":"/-- The line through $Y_3$ and $B_3$ as `Sols`. -/\ndef MSSMACC.lineY₃B₃ (a : ℚ) (b : ℚ) : ACCSystem.Sols MSSMACC"}
+{"name":"MSSMACC.doublePoint_Y₃_B₃","declaration":"theorem MSSMACC.doublePoint_Y₃_B₃ (R : ACCSystemLinear.LinSols MSSMACC.toACCSystemLinear) : ((MSSMACCs.cubeTriLin MSSMACC.Y₃.val) MSSMACC.B₃.val) R.val = 0"}
+{"name":"MSSMACC.lineY₃B₃_doublePoint","declaration":"theorem MSSMACC.lineY₃B₃_doublePoint (R : ACCSystemLinear.LinSols MSSMACC.toACCSystemLinear) (a : ℚ) (b : ℚ) : ((MSSMACCs.cubeTriLin (MSSMACC.lineY₃B₃ a b).val) (MSSMACC.lineY₃B₃ a b).val) R.val = 0"}
+{"name":"MSSMACC.lineY₃B₃Charges","declaration":"/-- The line through $Y_3$ and $B_3$ as `LinSols`. -/\ndef MSSMACC.lineY₃B₃Charges (a : ℚ) (b : ℚ) : ACCSystemLinear.LinSols MSSMACC.toACCSystemLinear"}
+{"name":"MSSMACC.lineY₃B₃Charges_cubic","declaration":"theorem MSSMACC.lineY₃B₃Charges_cubic (a : ℚ) (b : ℚ) : MSSMACCs.accCube (MSSMACC.lineY₃B₃Charges a b).val = 0"}
+{"name":"MSSMACC.lineY₃B₃Charges_quad","declaration":"theorem MSSMACC.lineY₃B₃Charges_quad (a : ℚ) (b : ℚ) : MSSMACCs.accQuad (MSSMACC.lineY₃B₃Charges a b).val = 0"}

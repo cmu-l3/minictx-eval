@@ -1,0 +1,8 @@
+{"name":"ChebyshevPsi","declaration":"def ChebyshevPsi (x : ℝ) : ℝ"}
+{"name":"mellintransform2","declaration":"def mellintransform2  : Lean.ParserDescr"}
+{"name":"SmoothedChebyshev","declaration":"def SmoothedChebyshev (ψ : ℝ → ℝ) (ε : ℝ) (X : ℝ) : ℂ"}
+{"name":"LogDerivativeDirichlet","declaration":"theorem LogDerivativeDirichlet (s : ℂ) (hs : 1 < s.re) : -deriv riemannZeta s / riemannZeta s = ∑' (n : ℕ), ↑(ArithmeticFunction.vonMangoldt n) / ↑n ^ s"}
+{"name":"SmoothedChebyshevClose","declaration":"theorem SmoothedChebyshevClose {ψ : ℝ → ℝ} (ε : ℝ) (ε_pos : 0 < ε) (suppΨ : Function.support ψ ⊆ Set.Icc (1 / 2) 2) (Ψnonneg : ∀ x > 0, 0 ≤ ψ x) (mass_one : ∫ (x : ℝ) in Set.Ioi 0, ψ x / x = 1) (X : ℝ) : (fun X => ‖SmoothedChebyshev ψ ε X - ↑(ChebyshevPsi X)‖) =O[Filter.atTop] fun X => ε * X * Real.log X"}
+{"name":"SmoothedChebyshevDirichlet","declaration":"theorem SmoothedChebyshevDirichlet {ψ : ℝ → ℝ} (diffΨ : ContDiff ℝ 1 ψ) (ε : ℝ) (εpos : 0 < ε) (suppΨ : Function.support ψ ⊆ Set.Icc (1 / 2) 2) (X : ℝ) (X_pos : 0 < X) : SmoothedChebyshev ψ ε X = ↑(∑' (n : ℕ), ArithmeticFunction.vonMangoldt n * Smooth1 ψ ε (↑n / X))"}
+{"name":"MediumPNT","declaration":"/-- *** Prime Number Theorem (Medium Strength) *** The `ChebyshevPsi` function is asymptotic to `x`. -/\ntheorem MediumPNT  : ∃ c, ∃ (_ : c > 0), (ChebyshevPsi - id) =O[Filter.atTop] fun x => x * Real.exp (-c * Real.log x ^ (1 / 18))"}
+{"name":"SmoothedChebyshevIntegrand","declaration":"def SmoothedChebyshevIntegrand (ψ : ℝ → ℝ) (ε : ℝ) (X : ℝ) : ℂ → ℂ"}

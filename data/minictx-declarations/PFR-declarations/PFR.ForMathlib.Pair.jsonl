@@ -1,0 +1,3 @@
+{"name":"prod","declaration":"/-- The pair of two random variables -/\ndef prod {Ω : Type u_1} {S : Type u_2} {T : Type u_3} (X : Ω → S) (Y : Ω → T) (ω : Ω) : S × T"}
+{"name":"«term⟨_,_⟩».delab","declaration":"/-- Pretty printer defined by `notation3` command. -/\ndef «term⟨_,_⟩».delab  : Lean.PrettyPrinter.Delaborator.Delab"}
+{"name":"«term⟨_,_⟩»","declaration":"/-- The pair of two random variables -/\ndef «term⟨_,_⟩»  : Lean.ParserDescr"}

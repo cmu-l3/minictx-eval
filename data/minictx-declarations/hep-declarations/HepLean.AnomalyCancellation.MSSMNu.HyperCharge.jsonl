@@ -1,0 +1,2 @@
+{"name":"MSSMACC.YAsCharge","declaration":"/-- The hypercharge as an element of `MSSMACC.charges`. -/\ndef MSSMACC.YAsCharge  : ACCSystemCharges.Charges MSSMACC.toACCSystemCharges"}
+{"name":"MSSMACC.Y","declaration":"/-- The hypercharge as an element of `MSSMACC.Sols`. -/\ndef MSSMACC.Y  : ACCSystem.Sols MSSMACC"}

@@ -1,0 +1,7 @@
+{"name":"SciLean.Notation.«term<∂_,_»","declaration":"def SciLean.Notation.«term<∂_,_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«term<∂!_,_»","declaration":"def SciLean.Notation.«term<∂!_,_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«term<∂_»","declaration":"def SciLean.Notation.«term<∂_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«term<∂!_»","declaration":"def SciLean.Notation.«term<∂!_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«term<∂!(_),_»","declaration":"def SciLean.Notation.«term<∂!(_),_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.«term<∂(_),_»","declaration":"def SciLean.Notation.«term<∂(_),_»  : Lean.ParserDescr"}
+{"name":"SciLean.Notation.unexpandRevDeriv","declaration":"def SciLean.Notation.unexpandRevDeriv  : Lean.PrettyPrinter.Unexpander"}

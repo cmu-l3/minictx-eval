@@ -1,0 +1,11 @@
+{"name":"realTensorColor.instFintypeColorType","declaration":"instance realTensorColor.instFintypeColorType  : Fintype realTensorColor.ColorType"}
+{"name":"realTensorColor.colorTypEquivFin1Fin1","declaration":"/-- An equivalence between `ColorType ≃ Fin 1 ⊕ Fin 1`. -/\ndef realTensorColor.colorTypEquivFin1Fin1  : realTensorColor.ColorType ≃ Fin 1 ⊕ Fin 1"}
+{"name":"realTensorColor.instDecidableEqColorType","declaration":"instance realTensorColor.instDecidableEqColorType  : DecidableEq realTensorColor.ColorType"}
+{"name":"realTensorColor.ColorType.down","declaration":"ctor realTensorColor.ColorType.down  : realTensorColor.ColorType"}
+{"name":"realTensorColor.ColorType","declaration":"/-- The type colors for real Lorentz tensors. -/\ninductive realTensorColor.ColorType  : Type"}
+{"name":"realLorentzTensor","declaration":"/-- The `TensorStructure` associated with real Lorentz tensors. -/\ndef realLorentzTensor (d : ℕ) : TensorStructure ℝ"}
+{"name":"realTensorColor","declaration":"/-- The color structure for real lorentz tensors. -/\ndef realTensorColor  : TensorColor"}
+{"name":"instMulActionTensorRealInstCommSemiringRealElemMatrixSumFinOfNatNatInstOfNatNatLorentzGroupToMonoidToDivInvMonoidLorentzGroupIsGroupRealLorentzTensor","declaration":"/-- The action of the Lorentz group on real Lorentz tensors. -/\ninstance instMulActionTensorRealInstCommSemiringRealElemMatrixSumFinOfNatNatInstOfNatNatLorentzGroupToMonoidToDivInvMonoidLorentzGroupIsGroupRealLorentzTensor {d : ℕ} : MulActionTensor (↑(LorentzGroup d)) (realLorentzTensor d)"}
+{"name":"instDecidableEqColorRealTensorColor","declaration":"instance instDecidableEqColorRealTensorColor  : DecidableEq realTensorColor.Color"}
+{"name":"instFintypeColorRealTensorColor","declaration":"instance instFintypeColorRealTensorColor  : Fintype realTensorColor.Color"}
+{"name":"realTensorColor.ColorType.up","declaration":"ctor realTensorColor.ColorType.up  : realTensorColor.ColorType"}

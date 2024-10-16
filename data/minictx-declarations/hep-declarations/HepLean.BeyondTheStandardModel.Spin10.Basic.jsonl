@@ -1,0 +1,3 @@
+{"name":"Spin10Model.GaugeGroupI","declaration":"/-- An informal definition. -/\ndef Spin10Model.GaugeGroupI  : InformalDefinition"}
+{"name":"Spin10Model.inclPatiSalam","declaration":"/-- An informal definition. -/\ndef Spin10Model.inclPatiSalam  : InformalDefinition"}
+{"name":"Spin10Model.inclSM","declaration":"/-- An informal definition. -/\ndef Spin10Model.inclSM  : InformalDefinition"}

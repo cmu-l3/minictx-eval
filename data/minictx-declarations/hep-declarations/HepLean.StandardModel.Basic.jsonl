@@ -1,0 +1,15 @@
+{"name":"StandardModel.gaugeGroupℤ₂SubGroup","declaration":"/-- An informal definition. -/\ndef StandardModel.gaugeGroupℤ₂SubGroup  : InformalDefinition"}
+{"name":"StandardModel.GaugeGroupℤ₆","declaration":"/-- An informal definition. -/\ndef StandardModel.GaugeGroupℤ₆  : InformalDefinition"}
+{"name":"Matrix.specialUnitaryGroup","declaration":"/-- `Matrix.specialUnitaryGroup` is the group of unitary `n` by `n` matrices where the determinant\nis 1. (This definition is only correct if 2 is invertible.)-/\ndef Matrix.specialUnitaryGroup (n : Type u_1) (α : Type u_2) [DecidableEq n] [Fintype n] [CommRing α] [StarRing α] : Submonoid (Matrix n n α)"}
+{"name":"StandardModel.GaugeGroupQuot.ℤ₆","declaration":"ctor StandardModel.GaugeGroupQuot.ℤ₆  : StandardModel.GaugeGroupQuot"}
+{"name":"StandardModel.gaugeGroupℤ₃SubGroup","declaration":"/-- An informal definition. -/\ndef StandardModel.gaugeGroupℤ₃SubGroup  : InformalDefinition"}
+{"name":"StandardModel.GaugeGroupℤ₃","declaration":"/-- An informal definition. -/\ndef StandardModel.GaugeGroupℤ₃  : InformalDefinition"}
+{"name":"Matrix.mem_specialUnitaryGroup_iff","declaration":"theorem Matrix.mem_specialUnitaryGroup_iff {n : Type u_1} {α : Type u_2} [DecidableEq n] [Fintype n] [CommRing α] [StarRing α] {A : Matrix n n α} : A ∈ Matrix.specialUnitaryGroup n α ↔ A ∈ Matrix.unitaryGroup n α ∧ Matrix.det A = 1"}
+{"name":"StandardModel.gaugeGroupℤ₆SubGroup","declaration":"/-- An informal definition. -/\ndef StandardModel.gaugeGroupℤ₆SubGroup  : InformalDefinition"}
+{"name":"StandardModel.GaugeGroupI","declaration":"/-- The global gauge group of the Standard Model with no discrete quotients.\nThe `I` in the Name is an indication of the statement that this has no discrete quotients. -/\ndef StandardModel.GaugeGroupI  : Type"}
+{"name":"StandardModel.GaugeGroupQuot.ℤ₂","declaration":"ctor StandardModel.GaugeGroupQuot.ℤ₂  : StandardModel.GaugeGroupQuot"}
+{"name":"StandardModel.GaugeGroupℤ₂","declaration":"/-- An informal definition. -/\ndef StandardModel.GaugeGroupℤ₂  : InformalDefinition"}
+{"name":"StandardModel.GaugeGroupQuot","declaration":"/-- Specifies the allowed quotients of `SU(3) x SU(2) x U(1)` which give a valid\ngauge group of the Standard Model. -/\ninductive StandardModel.GaugeGroupQuot  : Type"}
+{"name":"StandardModel.GaugeGroup","declaration":"/-- An informal definition. -/\ndef StandardModel.GaugeGroup  : InformalDefinition"}
+{"name":"StandardModel.GaugeGroupQuot.I","declaration":"ctor StandardModel.GaugeGroupQuot.I  : StandardModel.GaugeGroupQuot"}
+{"name":"StandardModel.GaugeGroupQuot.ℤ₃","declaration":"ctor StandardModel.GaugeGroupQuot.ℤ₃  : StandardModel.GaugeGroupQuot"}

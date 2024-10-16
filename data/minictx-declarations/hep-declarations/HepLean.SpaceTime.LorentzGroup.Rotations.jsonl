@@ -1,0 +1,4 @@
+{"name":"LorentzGroup.SO3ToMatrix","declaration":"/-- Given a element of `SO(3)` the matrix corresponding to a space-time rotation. -/\ndef LorentzGroup.SO3ToMatrix (A : GroupTheory.SO3) : Matrix (Fin 1 ⊕ Fin 3) (Fin 1 ⊕ Fin 3) ℝ"}
+{"name":"LorentzGroup.SO3ToMatrix_in_LorentzGroup","declaration":"theorem LorentzGroup.SO3ToMatrix_in_LorentzGroup (A : GroupTheory.SO3) : LorentzGroup.SO3ToMatrix A ∈ LorentzGroup 3"}
+{"name":"LorentzGroup.SO3ToLorentz","declaration":"/-- Given a element of `SO(3)` the element of the Lorentz group corresponding to a\nspace-time rotation. -/\ndef LorentzGroup.SO3ToLorentz  : GroupTheory.SO3 →* ↑(LorentzGroup 3)"}
+{"name":"LorentzGroup.SO3ToMatrix_injective","declaration":"theorem LorentzGroup.SO3ToMatrix_injective  : Function.Injective LorentzGroup.SO3ToMatrix"}

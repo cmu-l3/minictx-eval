@@ -1,0 +1,213 @@
+{"name":"HTPI.nondec_cons","declaration":"theorem HTPI.nondec_cons (n : ℕ) (L : List ℕ) : HTPI.nondec (n :: L) ↔ (∀ m ∈ L, n ≤ m) ∧ HTPI.nondec L"}
+{"name":"HTPI.gcd_c2_inv","declaration":"theorem HTPI.gcd_c2_inv {m : ℕ} {a : ℕ} (h1 : HTPI.rel_prime m a) : [↑a]_m * [HTPI.gcd_c2 m a]_m = [1]_m"}
+{"name":"HTPI.Theorem_7_3_1","declaration":"theorem HTPI.Theorem_7_3_1 (m : ℕ) [NeZero m] (a : ℤ) : ∃! r, 0 ≤ r ∧ r < ↑m ∧ a ≡ r (MOD m)"}
+{"name":"HTPI.num_rp_below_base","declaration":"theorem HTPI.num_rp_below_base {m : ℕ} : HTPI.num_rp_below m 0 = 0"}
+{"name":"HTPI.Euler.F","declaration":"def HTPI.Euler.F (m : ℕ) (i : ℕ) : ZMod m"}
+{"name":"HTPI.congr_symm","declaration":"theorem HTPI.congr_symm {m : ℕ} {a : ℤ} {b : ℤ} : a ≡ b (MOD m) → b ≡ a (MOD m)"}
+{"name":"HTPI.le_nonzero_prod_left","declaration":"theorem HTPI.le_nonzero_prod_left {a : ℕ} {b : ℕ} (h : a * b ≠ 0) : a ≤ a * b"}
+{"name":"HTPI.one_one_below","declaration":"def HTPI.one_one_below (n : ℕ) (g : ℕ → ℕ) : Prop"}
+{"name":"HTPI.Theorem_7_2_3","declaration":"theorem HTPI.Theorem_7_2_3 {a : ℕ} {b : ℕ} {p : ℕ} (h1 : HTPI.prime p) (h2 : p ∣ a * b) : p ∣ a ∨ p ∣ b"}
+{"name":"HTPI.cc_eq_iff_sub_zero","declaration":"theorem HTPI.cc_eq_iff_sub_zero (m : ℕ) (a : ℤ) (b : ℤ) : [a]_m = [b]_m ↔ [a - b]_m = [0]_m"}
+{"name":"HTPI.all_prime_cons","declaration":"theorem HTPI.all_prime_cons (n : ℕ) (L : List ℕ) : HTPI.all_prime (n :: L) ↔ HTPI.prime n ∧ HTPI.all_prime L"}
+{"name":"HTPI.swap_values","declaration":"theorem HTPI.swap_values (u : ℕ) (v : ℕ) (i : ℕ) : HTPI.swap u v i = v ∨ HTPI.swap u v i = u ∨ HTPI.swap u v i = i"}
+{"name":"HTPI.swap_onto_below","declaration":"theorem HTPI.swap_onto_below {u : ℕ} {v : ℕ} {n : ℕ} (h1 : u < n) (h2 : v < n) : HTPI.onto_below n (HTPI.swap u v)"}
+{"name":"HTPI.eq_one_of_dvd_one","declaration":"theorem HTPI.eq_one_of_dvd_one {n : ℕ} (h : n ∣ 1) : n = 1"}
+{"name":"HTPI.swap_maps_below","declaration":"theorem HTPI.swap_maps_below {u : ℕ} {v : ℕ} {n : ℕ} (h1 : u < n) (h2 : v < n) : HTPI.maps_below n (HTPI.swap u v)"}
+{"name":"HTPI.congr_mod_mod","declaration":"theorem HTPI.congr_mod_mod (m : ℕ) (a : ℤ) : a ≡ a % ↑m (MOD m)"}
+{"name":"HTPI.mod_cmpl_res","declaration":"theorem HTPI.mod_cmpl_res (m : ℕ) [NeZero m] (a : ℤ) : 0 ≤ a % ↑m ∧ a % ↑m < ↑m ∧ a ≡ a % ↑m (MOD m)"}
+{"name":"HTPI.Exercises.Lemma_7_4_6","declaration":"theorem HTPI.Exercises.Lemma_7_4_6 {a : ℕ} {b : ℕ} {c : ℕ} : HTPI.rel_prime (a * b) c ↔ HTPI.rel_prime a c ∧ HTPI.rel_prime b c"}
+{"name":"HTPI.Exercises.Lemma_7_1_10c","declaration":"theorem HTPI.Exercises.Lemma_7_1_10c {a : ℕ} {b : ℕ} (h1 : a ∣ b) (h2 : b ∣ a) : a = b"}
+{"name":"HTPI.gcd","declaration":"def HTPI.gcd (a : ℕ) (b : ℕ) : ℕ"}
+{"name":"HTPI.Theorem_7_3_6_7","declaration":"theorem HTPI.Theorem_7_3_6_7 {m : ℕ} (X : ZMod m) : X * [1]_m = X"}
+{"name":"HTPI.exists_cons_of_length_eq_succ","declaration":"theorem HTPI.exists_cons_of_length_eq_succ {A : Type} {l : List A} {n : ℕ} (h : List.length l = n + 1) : ∃ a L, l = a :: L ∧ List.length L = n"}
+{"name":"HTPI.prime_factorization","declaration":"def HTPI.prime_factorization (n : ℕ) (l : List ℕ) : Prop"}
+{"name":"HTPI.gcd_dvd_left","declaration":"theorem HTPI.gcd_dvd_left (a : ℕ) (b : ℕ) : HTPI.gcd a b ∣ a"}
+{"name":"HTPI.fund_thm_arith","declaration":"theorem HTPI.fund_thm_arith (n : ℕ) (h : n ≥ 1) : ∃! l, HTPI.prime_factorization n l"}
+{"name":"HTPI.num_rp_below","declaration":"def HTPI.num_rp_below (m : ℕ) (k : ℕ) : ℕ"}
+{"name":"HTPI.break_prod","declaration":"theorem HTPI.break_prod {m : ℕ} (n : ℕ) (f : ℕ → ZMod m) (j : ℕ) : HTPI.prod_seq (n + j) 0 f = HTPI.prod_seq n 0 f * HTPI.prod_seq j n f"}
+{"name":"HTPI.Exercises.gcd_greatest","declaration":"theorem HTPI.Exercises.gcd_greatest {a : ℕ} {b : ℕ} {d : ℕ} (h1 : HTPI.gcd a b ≠ 0) (h2 : d ∣ a) (h3 : d ∣ b) : d ≤ HTPI.gcd a b"}
+{"name":"HTPI.FG_prod","declaration":"theorem HTPI.FG_prod {m : ℕ} {a : ℕ} (h1 : HTPI.rel_prime m a) (k : ℕ) : HTPI.prod_seq k 0 (HTPI.Euler.F m ∘ HTPI.Euler.G m a) =\n  [↑a]_m ^ HTPI.num_rp_below m k * HTPI.prod_seq k 0 (HTPI.Euler.F m)"}
+{"name":"HTPI.FG_not_rp","declaration":"theorem HTPI.FG_not_rp {m : ℕ} {a : ℕ} {i : ℕ} (h1 : HTPI.rel_prime m a) (h2 : ¬HTPI.rel_prime m i) : HTPI.Euler.F m (HTPI.Euler.G m a i) = [1]_m"}
+{"name":"HTPI.mod_nonzero_lt","declaration":"theorem HTPI.mod_nonzero_lt (a : ℕ) {b : ℕ} (h : b ≠ 0) : a % b < b"}
+{"name":"HTPI.«term[_]__»","declaration":"def HTPI.«term[_]__»  : Lean.ParserDescr"}
+{"name":"HTPI.Theorem_7_4_2","declaration":"theorem HTPI.Theorem_7_4_2 {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : [↑a]_m ^ HTPI.phi m = [1]_m"}
+{"name":"HTPI.Euler's_theorem","declaration":"theorem HTPI.Euler's_theorem {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : ↑a ^ HTPI.phi m ≡ 1 (MOD m)"}
+{"name":"HTPI.G_maps_below","declaration":"theorem HTPI.G_maps_below (m : ℕ) (a : ℕ) [NeZero m] : HTPI.maps_below m (HTPI.Euler.G m a)"}
+{"name":"HTPI.cc_mul_inv_mod_eq_one","declaration":"theorem HTPI.cc_mul_inv_mod_eq_one {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : [↑a]_m * [↑(HTPI.inv_mod m a)]_m = [1]_m"}
+{"name":"HTPI.swap_prod_eq_prod_below","declaration":"theorem HTPI.swap_prod_eq_prod_below {m : ℕ} {u : ℕ} {n : ℕ} (f : ℕ → ZMod m) (h1 : u ≤ n) : HTPI.prod_seq u 0 (f ∘ HTPI.swap u n) = HTPI.prod_seq u 0 f"}
+{"name":"HTPI.Exercises.prod_nonzero_nonzero","declaration":"theorem HTPI.Exercises.prod_nonzero_nonzero (l : List ℕ) : (∀ a ∈ l, a ≠ 0) → HTPI.prod l ≠ 0"}
+{"name":"HTPI.prime_NeZero","declaration":"theorem HTPI.prime_NeZero {p : ℕ} (h : HTPI.prime p) : NeZero p"}
+{"name":"HTPI.cc_mod_0","declaration":"theorem HTPI.cc_mod_0 (a : ℤ) : [a]_0 = a"}
+{"name":"HTPI.Exercises.Exercise_7_3_4a","declaration":"theorem HTPI.Exercises.Exercise_7_3_4a {m : ℕ} (Z1 : ZMod m) (Z2 : ZMod m) (h1 : ∀ (X : ZMod m), X + Z1 = X) (h2 : ∀ (X : ZMod m), X + Z2 = X) : Z1 = Z2"}
+{"name":"HTPI.Ginv_maps_below","declaration":"theorem HTPI.Ginv_maps_below (m : ℕ) (a : ℕ) [NeZero m] : HTPI.maps_below m (HTPI.Euler.Ginv m a)"}
+{"name":"HTPI.prod_one","declaration":"theorem HTPI.prod_one {m : ℕ} (k : ℕ) (f : ℕ → ZMod m) : HTPI.prod_seq 1 k f = f k"}
+{"name":"HTPI.right_inv_onto_below","declaration":"theorem HTPI.right_inv_onto_below {n : ℕ} {g : ℕ → ℕ} {g' : ℕ → ℕ} (h1 : ∀ i < n, g (g' i) = i) (h2 : HTPI.maps_below n g') : HTPI.onto_below n g"}
+{"name":"HTPI.swap_one_one_below","declaration":"theorem HTPI.swap_one_one_below (u : ℕ) (v : ℕ) (n : ℕ) : HTPI.one_one_below n (HTPI.swap u v)"}
+{"name":"HTPI.all_prime","declaration":"def HTPI.all_prime (l : List ℕ) : Prop"}
+{"name":"HTPI.Theorem_7_2_5","declaration":"theorem HTPI.Theorem_7_2_5 (l1 : List ℕ) (l2 : List ℕ) : HTPI.nondec_prime_list l1 → HTPI.nondec_prime_list l2 → HTPI.prod l1 = HTPI.prod l2 → l1 = l2"}
+{"name":"HTPI.mul_class","declaration":"theorem HTPI.mul_class (m : ℕ) (a : ℤ) (b : ℤ) : [a]_m * [b]_m = [a * b]_m"}
+{"name":"HTPI.phi_def","declaration":"theorem HTPI.phi_def (m : ℕ) : HTPI.phi m = HTPI.num_rp_below m m"}
+{"name":"HTPI.mod_lt","declaration":"theorem HTPI.mod_lt (m : ℕ) [NeZero m] (a : ℤ) : a % ↑m < ↑m"}
+{"name":"HTPI.swap_swap","declaration":"theorem HTPI.swap_swap (u : ℕ) (v : ℕ) (n : ℕ) (i : ℕ) : i < n → HTPI.swap u v (HTPI.swap u v i) = i"}
+{"name":"HTPI.Exercises.Exercise_7_2_17a","declaration":"theorem HTPI.Exercises.Exercise_7_2_17a (a : ℕ) (b : ℕ) (c : ℕ) : HTPI.gcd a (b * c) ∣ HTPI.gcd a b * HTPI.gcd a c"}
+{"name":"HTPI.FG_rp","declaration":"theorem HTPI.FG_rp {m : ℕ} {a : ℕ} {i : ℕ} (h1 : HTPI.rel_prime m a) (h2 : HTPI.rel_prime m i) : HTPI.Euler.F m (HTPI.Euler.G m a i) = [↑a]_m * HTPI.Euler.F m i"}
+{"name":"HTPI.phi","declaration":"def HTPI.phi (m : ℕ) : ℕ"}
+{"name":"HTPI.break_prod_twice","declaration":"theorem HTPI.break_prod_twice {m : ℕ} {u : ℕ} {j : ℕ} {n : ℕ} (f : ℕ → ZMod m) (h1 : n = u + 1 + j) : HTPI.prod_seq (n + 1) 0 f = HTPI.prod_seq u 0 f * f u * HTPI.prod_seq j (u + 1) f * f n"}
+{"name":"HTPI.prod_eq_fun","declaration":"theorem HTPI.prod_eq_fun {m : ℕ} (f : ℕ → ZMod m) (g : ℕ → ZMod m) (k : ℕ) (n : ℕ) : (∀ i < n, f (k + i) = g (k + i)) → HTPI.prod_seq n k f = HTPI.prod_seq n k g"}
+{"name":"HTPI.comp_perm_below","declaration":"theorem HTPI.comp_perm_below {n : ℕ} {f : ℕ → ℕ} {g : ℕ → ℕ} (h1 : HTPI.perm_below n f) (h2 : HTPI.perm_below n g) : HTPI.perm_below n (f ∘ g)"}
+{"name":"HTPI.Theorem_7_2_2_Int","declaration":"theorem HTPI.Theorem_7_2_2_Int {a : ℕ} {c : ℕ} {b : ℤ} (h1 : ↑c ∣ ↑a * b) (h2 : HTPI.rel_prime a c) : ↑c ∣ b"}
+{"name":"HTPI.Lemma_7_4_5","declaration":"theorem HTPI.Lemma_7_4_5 {m : ℕ} {n : ℕ} (a : ℤ) (b : ℤ) (h1 : HTPI.rel_prime m n) : a ≡ b (MOD m * n) ↔ a ≡ b (MOD m) ∧ a ≡ b (MOD n)"}
+{"name":"HTPI.F_rp_def","declaration":"theorem HTPI.F_rp_def {m : ℕ} {i : ℕ} (h : HTPI.rel_prime m i) : HTPI.Euler.F m i = [↑i]_m"}
+{"name":"HTPI.congr_trans","declaration":"theorem HTPI.congr_trans {m : ℕ} {a : ℤ} {b : ℤ} {c : ℤ} : a ≡ b (MOD m) → b ≡ c (MOD m) → a ≡ c (MOD m)"}
+{"name":"HTPI.Exercises.congr_iff_mod_eq_Nat","declaration":"theorem HTPI.Exercises.congr_iff_mod_eq_Nat (m : ℕ) (a : ℕ) (b : ℕ) [NeZero m] : ↑a ≡ ↑b (MOD m) ↔ a % m = b % m"}
+{"name":"HTPI.left_inv_one_one_below","declaration":"theorem HTPI.left_inv_one_one_below {n : ℕ} {g : ℕ → ℕ} {g' : ℕ → ℕ} (h1 : ∀ i < n, g' (g i) = i) : HTPI.one_one_below n g"}
+{"name":"HTPI.rel_prime","declaration":"def HTPI.rel_prime (a : ℕ) (b : ℕ) : Prop"}
+{"name":"HTPI.invertible","declaration":"def HTPI.invertible {m : ℕ} (X : ZMod m) : Prop"}
+{"name":"HTPI.prod_nil","declaration":"theorem HTPI.prod_nil  : HTPI.prod [] = 1"}
+{"name":"HTPI.gcd_dvd","declaration":"theorem HTPI.gcd_dvd (b : ℕ) (a : ℕ) : HTPI.gcd a b ∣ a ∧ HTPI.gcd a b ∣ b"}
+{"name":"HTPI.Exercises.gcd_comm_lt","declaration":"theorem HTPI.Exercises.gcd_comm_lt {a : ℕ} {b : ℕ} (h : a < b) : HTPI.gcd a b = HTPI.gcd b a"}
+{"name":"HTPI.gcd_c1","declaration":"def HTPI.gcd_c1 (a : ℕ) (b : ℕ) : ℤ"}
+{"name":"HTPI.swap_prod_eq_prod","declaration":"theorem HTPI.swap_prod_eq_prod {m : ℕ} {u : ℕ} {n : ℕ} (f : ℕ → ZMod m) (h1 : u ≤ n) : HTPI.prod_seq (n + 1) 0 (f ∘ HTPI.swap u n) = HTPI.prod_seq (n + 1) 0 f"}
+{"name":"HTPI.F_not_rp_def","declaration":"theorem HTPI.F_not_rp_def {m : ℕ} {i : ℕ} (h : ¬HTPI.rel_prime m i) : HTPI.Euler.F m i = [1]_m"}
+{"name":"HTPI.F_invertible","declaration":"theorem HTPI.F_invertible (m : ℕ) (i : ℕ) : HTPI.invertible (HTPI.Euler.F m i)"}
+{"name":"HTPI.val_zero","declaration":"theorem HTPI.val_zero (n : ℕ) : ZMod.val [0]_(n + 1) = 0"}
+{"name":"HTPI.mod_nonneg","declaration":"theorem HTPI.mod_nonneg (m : ℕ) [NeZero m] (a : ℤ) : 0 ≤ a % ↑m"}
+{"name":"HTPI.Exercises.Exercise_7_3_4b","declaration":"theorem HTPI.Exercises.Exercise_7_3_4b {m : ℕ} (X : ZMod m) (Y1 : ZMod m) (Y2 : ZMod m) (h1 : X + Y1 = [0]_m) (h2 : X + Y2 = [0]_m) : Y1 = Y2"}
+{"name":"HTPI.perm_below","declaration":"def HTPI.perm_below (n : ℕ) (g : ℕ → ℕ) : Prop"}
+{"name":"HTPI.«term_≡_(MOD_)»","declaration":"def HTPI.«term_≡_(MOD_)»  : Lean.TrailingParserDescr"}
+{"name":"HTPI.trivial_swap","declaration":"theorem HTPI.trivial_swap (u : ℕ) : HTPI.swap u u = id"}
+{"name":"HTPI.swap_snd","declaration":"theorem HTPI.swap_snd (u : ℕ) (v : ℕ) : HTPI.swap u v v = u"}
+{"name":"HTPI.gcd_c2_base","declaration":"theorem HTPI.gcd_c2_base (a : ℕ) : HTPI.gcd_c2 a 0 = 0"}
+{"name":"HTPI.phi_prime","declaration":"theorem HTPI.phi_prime {p : ℕ} (h1 : HTPI.prime p) : HTPI.phi p = p - 1"}
+{"name":"HTPI.prod_seq","declaration":"def HTPI.prod_seq {m : ℕ} (j : ℕ) (k : ℕ) (f : ℕ → ZMod m) : ZMod m"}
+{"name":"HTPI.inv_mod","declaration":"def HTPI.inv_mod (m : ℕ) (a : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.Exercise_7_5_13a","declaration":"theorem HTPI.Exercises.Exercise_7_5_13a (a : ℕ) (h1 : HTPI.rel_prime 561 a) : ↑a ^ 560 ≡ 1 (MOD 3)"}
+{"name":"HTPI.Theorem_7_3_7","declaration":"theorem HTPI.Theorem_7_3_7 (m : ℕ) (a : ℕ) : HTPI.invertible [↑a]_m ↔ HTPI.rel_prime m a"}
+{"name":"HTPI.exists_least_prime_factor","declaration":"theorem HTPI.exists_least_prime_factor {n : ℕ} (h : 2 ≤ n) : ∃ p, HTPI.prime_factor p n ∧ ∀ (q : ℕ), HTPI.prime_factor q n → p ≤ q"}
+{"name":"HTPI.nondec","declaration":"def HTPI.nondec (l : List ℕ) : Prop"}
+{"name":"HTPI.swap_other","declaration":"theorem HTPI.swap_other {u : ℕ} {v : ℕ} {i : ℕ} (h1 : i ≠ u) (h2 : i ≠ v) : HTPI.swap u v i = i"}
+{"name":"HTPI.rel_prime_symm","declaration":"theorem HTPI.rel_prime_symm {a : ℕ} {b : ℕ} (h : HTPI.rel_prime a b) : HTPI.rel_prime b a"}
+{"name":"HTPI.Exercises.rel_prime_iff_no_common_factor","declaration":"theorem HTPI.Exercises.rel_prime_iff_no_common_factor (a : ℕ) (b : ℕ) : HTPI.rel_prime a b ↔ ¬∃ p, HTPI.prime p ∧ p ∣ a ∧ p ∣ b"}
+{"name":"HTPI.num_rp_below_step_not_rp","declaration":"theorem HTPI.num_rp_below_step_not_rp {m : ℕ} {j : ℕ} (h : ¬HTPI.rel_prime m j) : HTPI.num_rp_below m (j + 1) = HTPI.num_rp_below m j"}
+{"name":"HTPI.Exercises.Exercise_7_5_14b","declaration":"theorem HTPI.Exercises.Exercise_7_5_14b (n : ℕ) (b : ℤ) (h1 : HTPI.prime n) (h2 : b ^ 2 ≡ 1 (MOD n)) : b ≡ 1 (MOD n) ∨ b ≡ -1 (MOD n)"}
+{"name":"HTPI.G_one_one_below","declaration":"theorem HTPI.G_one_one_below {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : HTPI.one_one_below m (HTPI.Euler.G m a)"}
+{"name":"HTPI.Exercises.Theorem_7_3_6_3","declaration":"theorem HTPI.Exercises.Theorem_7_3_6_3 {m : ℕ} (X : ZMod m) : X + [0]_m = X"}
+{"name":"HTPI.exists_prime_factorization","declaration":"theorem HTPI.exists_prime_factorization (n : ℕ) : n ≥ 1 → ∃ l, HTPI.prime_factorization n l"}
+{"name":"HTPI.gcd_c1_base","declaration":"theorem HTPI.gcd_c1_base (a : ℕ) : HTPI.gcd_c1 a 0 = 1"}
+{"name":"HTPI.cons_prod_not_one","declaration":"theorem HTPI.cons_prod_not_one {p : ℕ} {l : List ℕ} (h : HTPI.nondec_prime_list (p :: l)) : HTPI.prod (p :: l) ≠ 1"}
+{"name":"HTPI.Exercises.congr_rel_prime","declaration":"theorem HTPI.Exercises.congr_rel_prime {m : ℕ} {a : ℕ} {b : ℕ} (h1 : ↑a ≡ ↑b (MOD m)) : HTPI.rel_prime m a ↔ HTPI.rel_prime m b"}
+{"name":"HTPI.Exercises.rel_prime_mod","declaration":"theorem HTPI.Exercises.rel_prime_mod (m : ℕ) (a : ℕ) : HTPI.rel_prime m (a % m) ↔ HTPI.rel_prime m a"}
+{"name":"HTPI.gcd_c2","declaration":"def HTPI.gcd_c2 (a : ℕ) (b : ℕ) : ℤ"}
+{"name":"HTPI.G_onto_below","declaration":"theorem HTPI.G_onto_below {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : HTPI.onto_below m (HTPI.Euler.G m a)"}
+{"name":"HTPI.Exercises.three_prime","declaration":"theorem HTPI.Exercises.three_prime  : HTPI.prime 3"}
+{"name":"HTPI.G_def","declaration":"theorem HTPI.G_def (m : ℕ) (a : ℕ) (i : ℕ) : HTPI.Euler.G m a i = a * i % m"}
+{"name":"HTPI.perm_prod","declaration":"theorem HTPI.perm_prod {m : ℕ} (f : ℕ → ZMod m) (n : ℕ) (g : ℕ → ℕ) : HTPI.perm_below n g → HTPI.prod_seq n 0 f = HTPI.prod_seq n 0 (f ∘ g)"}
+{"name":"HTPI.Exercises.gcd_is_nonzero","declaration":"theorem HTPI.Exercises.gcd_is_nonzero {a : ℕ} {b : ℕ} (h : a ≠ 0 ∨ b ≠ 0) : HTPI.gcd a b ≠ 0"}
+{"name":"HTPI.val_nat_eq_mod","declaration":"theorem HTPI.val_nat_eq_mod (n : ℕ) (k : ℕ) : ZMod.val [↑k]_(n + 1) = k % (n + 1)"}
+{"name":"HTPI.mul_mod_mod_eq_mul_mod","declaration":"theorem HTPI.mul_mod_mod_eq_mul_mod (m : ℕ) (a : ℕ) (b : ℕ) : a * (b % m) % m = a * b % m"}
+{"name":"HTPI.ge_one_of_prod_one","declaration":"theorem HTPI.ge_one_of_prod_one {a : ℕ} {b : ℕ} (h : a * b = 1) : a ≥ 1"}
+{"name":"HTPI.swap_prod_eq_prod_between","declaration":"theorem HTPI.swap_prod_eq_prod_between {m : ℕ} {u : ℕ} {j : ℕ} {n : ℕ} (f : ℕ → ZMod m) (h1 : n = u + 1 + j) : HTPI.prod_seq j (u + 1) (f ∘ HTPI.swap u n) = HTPI.prod_seq j (u + 1) f"}
+{"name":"HTPI.cc","declaration":"def HTPI.cc (m : ℕ) (a : ℤ) : ZMod m"}
+{"name":"HTPI.Exercises.Lemma_7_1_10b","declaration":"theorem HTPI.Exercises.Lemma_7_1_10b {a : ℕ} {b : ℕ} {n : ℕ} (h1 : n ≠ 0) (h2 : n * a ∣ n * b) : a ∣ b"}
+{"name":"HTPI.rel_prime_of_prime_not_dvd","declaration":"theorem HTPI.rel_prime_of_prime_not_dvd {a : ℕ} {p : ℕ} (h1 : HTPI.prime p) (h2 : ¬p ∣ a) : HTPI.rel_prime a p"}
+{"name":"HTPI.first_le_first","declaration":"theorem HTPI.first_le_first {p : ℕ} {q : ℕ} {l : List ℕ} {m : List ℕ} (h1 : HTPI.nondec_prime_list (p :: l)) (h2 : HTPI.nondec_prime_list (q :: m)) (h3 : HTPI.prod (p :: l) = HTPI.prod (q :: m)) : p ≤ q"}
+{"name":"HTPI.Exercises.num_rp_prime","declaration":"theorem HTPI.Exercises.num_rp_prime {p : ℕ} (h1 : HTPI.prime p) (k : ℕ) : k < p → HTPI.num_rp_below p (k + 1) = k"}
+{"name":"HTPI.mod_succ_lt","declaration":"theorem HTPI.mod_succ_lt (a : ℕ) (n : ℕ) : a % (n + 1) < n + 1"}
+{"name":"HTPI.Exercises.Lemma_7_1_10a","declaration":"theorem HTPI.Exercises.Lemma_7_1_10a {a : ℕ} {b : ℕ} (n : ℕ) (h : a ∣ b) : n * a ∣ n * b"}
+{"name":"HTPI.G_perm_below","declaration":"theorem HTPI.G_perm_below {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : HTPI.perm_below m (HTPI.Euler.G m a)"}
+{"name":"HTPI.Exercises.Theorem_7_3_11","declaration":"theorem HTPI.Exercises.Theorem_7_3_11 (m : ℕ) (n : ℕ) (a : ℤ) (b : ℤ) (h1 : n ≠ 0) : ↑n * a ≡ ↑n * b (MOD n * m) ↔ a ≡ b (MOD m)"}
+{"name":"HTPI.congr_mod","declaration":"def HTPI.congr_mod (m : ℕ) (a : ℤ) (b : ℤ) : Prop"}
+{"name":"HTPI.Ginv_def","declaration":"theorem HTPI.Ginv_def {m : ℕ} {a : ℕ} {i : ℕ} : HTPI.Euler.Ginv m a i = HTPI.Euler.G m (HTPI.inv_mod m a) i"}
+{"name":"HTPI.prod_cons","declaration":"theorem HTPI.prod_cons {n : ℕ} {L : List ℕ} : HTPI.prod (n :: L) = n * HTPI.prod L"}
+{"name":"HTPI.Exercises.rel_prime_symm","declaration":"theorem HTPI.Exercises.rel_prime_symm {a : ℕ} {b : ℕ} (h : HTPI.rel_prime a b) : HTPI.rel_prime b a"}
+{"name":"HTPI.dvd_prime","declaration":"theorem HTPI.dvd_prime {a : ℕ} {p : ℕ} (h1 : HTPI.prime p) (h2 : a ∣ p) : a = 1 ∨ a = p"}
+{"name":"HTPI.Exercises.Exercise_7_2_6","declaration":"theorem HTPI.Exercises.Exercise_7_2_6 (a : ℕ) (b : ℕ) : HTPI.rel_prime a b ↔ ∃ s t, s * ↑a + t * ↑b = 1"}
+{"name":"HTPI.prime","declaration":"def HTPI.prime (n : ℕ) : Prop"}
+{"name":"HTPI.prod_seq_zero_step","declaration":"theorem HTPI.prod_seq_zero_step {m : ℕ} (n : ℕ) (f : ℕ → ZMod m) : HTPI.prod_seq (n + 1) 0 f = HTPI.prod_seq n 0 f * f n"}
+{"name":"HTPI.exists_prime_factor","declaration":"theorem HTPI.exists_prime_factor (n : ℕ) : 2 ≤ n → ∃ p, HTPI.prime_factor p n"}
+{"name":"HTPI.nondec_prime_list","declaration":"def HTPI.nondec_prime_list (l : List ℕ) : Prop"}
+{"name":"HTPI.mod_mul_mod_eq_mul_mod","declaration":"theorem HTPI.mod_mul_mod_eq_mul_mod (m : ℕ) (a : ℕ) (b : ℕ) : a % m * b % m = a * b % m"}
+{"name":"HTPI.prime_not_one","declaration":"theorem HTPI.prime_not_one {p : ℕ} (h : HTPI.prime p) : p ≠ 1"}
+{"name":"HTPI.dvd_self","declaration":"theorem HTPI.dvd_self (n : ℕ) : n ∣ n"}
+{"name":"HTPI.Exercises.Theorem_7_2_3_Int","declaration":"theorem HTPI.Exercises.Theorem_7_2_3_Int {p : ℕ} {a : ℤ} {b : ℤ} (h1 : HTPI.prime p) (h2 : ↑p ∣ a * b) : ↑p ∣ a ∨ ↑p ∣ b"}
+{"name":"HTPI.congr_iff_mod_eq_Nat","declaration":"theorem HTPI.congr_iff_mod_eq_Nat (m : ℕ) (a : ℕ) (b : ℕ) [NeZero m] : ↑a ≡ ↑b (MOD m) ↔ a % m = b % m"}
+{"name":"HTPI.dvd_trans","declaration":"theorem HTPI.dvd_trans {a : ℕ} {b : ℕ} {c : ℕ} (h1 : a ∣ b) (h2 : b ∣ c) : a ∣ c"}
+{"name":"HTPI.nondec_nil","declaration":"theorem HTPI.nondec_nil  : HTPI.nondec []"}
+{"name":"HTPI.prod_seq_base","declaration":"theorem HTPI.prod_seq_base {m : ℕ} (k : ℕ) (f : ℕ → ZMod m) : HTPI.prod_seq 0 k f = [1]_m"}
+{"name":"HTPI.Exercises.Exercise_7_3_16","declaration":"theorem HTPI.Exercises.Exercise_7_3_16 {m : ℕ} {a : ℤ} {b : ℤ} (h : a ≡ b (MOD m)) (n : ℕ) : a ^ n ≡ b ^ n (MOD m)"}
+{"name":"HTPI.Exercises.dvd_a_of_dvd_b_mod","declaration":"theorem HTPI.Exercises.dvd_a_of_dvd_b_mod {a : ℕ} {b : ℕ} {d : ℕ} (h1 : d ∣ b) (h2 : d ∣ a % b) : d ∣ a"}
+{"name":"HTPI.Exercises.Like_Exercise_7_4_12","declaration":"theorem HTPI.Exercises.Like_Exercise_7_4_12 {m : ℕ} {a : ℕ} {p : ℕ} {q : ℕ} {k : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) (h2 : p = q + HTPI.phi m * k) : ↑a ^ p ≡ ↑a ^ q (MOD m)"}
+{"name":"HTPI.G_rp_iff","declaration":"theorem HTPI.G_rp_iff {m : ℕ} {a : ℕ} (h1 : HTPI.rel_prime m a) (i : ℕ) : HTPI.rel_prime m (HTPI.Euler.G m a i) ↔ HTPI.rel_prime m i"}
+{"name":"HTPI.Exercises.left_inv_one_one_below","declaration":"theorem HTPI.Exercises.left_inv_one_one_below {n : ℕ} {g : ℕ → ℕ} {g' : ℕ → ℕ} (h1 : ∀ i < n, g' (g i) = i) : HTPI.one_one_below n g"}
+{"name":"HTPI.Exercises.congr_trans","declaration":"theorem HTPI.Exercises.congr_trans {m : ℕ} {a : ℤ} {b : ℤ} {c : ℤ} : a ≡ b (MOD m) → b ≡ c (MOD m) → a ≡ c (MOD m)"}
+{"name":"HTPI.Ginv_right_inv","declaration":"theorem HTPI.Ginv_right_inv {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) (i : ℕ) : i < m → HTPI.Euler.G m a (HTPI.Euler.Ginv m a i) = i"}
+{"name":"HTPI.Exercises.gcd_comm","declaration":"theorem HTPI.Exercises.gcd_comm (a : ℕ) (b : ℕ) : HTPI.gcd a b = HTPI.gcd b a"}
+{"name":"HTPI.Exercises.Exercise_7_1_5","declaration":"theorem HTPI.Exercises.Exercise_7_1_5 (a : ℕ) (b : ℕ) (n : ℤ) : (∃ s t, s * ↑a + t * ↑b = n) ↔ ↑(HTPI.gcd a b) ∣ n"}
+{"name":"HTPI.cc_zero_iff_dvd","declaration":"theorem HTPI.cc_zero_iff_dvd (m : ℕ) (a : ℤ) : [a]_m = [0]_m ↔ ↑m ∣ a"}
+{"name":"HTPI.Exercises.Theorem_7_3_6_4","declaration":"theorem HTPI.Exercises.Theorem_7_3_6_4 {m : ℕ} (X : ZMod m) : ∃ Y, X + Y = [0]_m"}
+{"name":"HTPI.cc_neg_zero_of_cc_zero","declaration":"theorem HTPI.cc_neg_zero_of_cc_zero (m : ℕ) (a : ℤ) : [a]_m = [0]_m → [-a]_m = [0]_m"}
+{"name":"HTPI.Exercise_7_4_5_Nat","declaration":"theorem HTPI.Exercise_7_4_5_Nat (m : ℕ) (a : ℕ) (n : ℕ) : [↑a]_m ^ n = [↑a ^ n]_m"}
+{"name":"HTPI.list_elt_dvd_prod_by_length","declaration":"theorem HTPI.list_elt_dvd_prod_by_length (a : ℕ) (n : ℕ) (l : List ℕ) : List.length l = n → a ∈ l → a ∣ HTPI.prod l"}
+{"name":"HTPI.Exercises.in_prime_factorization_iff_prime_factor","declaration":"theorem HTPI.Exercises.in_prime_factorization_iff_prime_factor {a : ℕ} {l : List ℕ} (h1 : HTPI.prime_factorization a l) (p : ℕ) : p ∈ l ↔ HTPI.prime_factor p a"}
+{"name":"HTPI.Exercises.Exercise_7_2_5","declaration":"theorem HTPI.Exercises.Exercise_7_2_5 {a : ℕ} {b : ℕ} {l : List ℕ} {m : List ℕ} (h1 : HTPI.prime_factorization a l) (h2 : HTPI.prime_factorization b m) : HTPI.rel_prime a b ↔ ¬∃ p ∈ l, p ∈ m"}
+{"name":"HTPI.prime_pos","declaration":"theorem HTPI.prime_pos {p : ℕ} (h : HTPI.prime p) : p > 0"}
+{"name":"HTPI.Ginv_left_inv","declaration":"theorem HTPI.Ginv_left_inv {m : ℕ} {a : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) (i : ℕ) : i < m → HTPI.Euler.Ginv m a (HTPI.Euler.G m a i) = i"}
+{"name":"HTPI.prime_factor","declaration":"def HTPI.prime_factor (p : ℕ) (n : ℕ) : Prop"}
+{"name":"HTPI.congr_refl","declaration":"theorem HTPI.congr_refl (m : ℕ) (a : ℤ) : a ≡ a (MOD m)"}
+{"name":"HTPI.cc_eq_iff_congr","declaration":"theorem HTPI.cc_eq_iff_congr (m : ℕ) (a : ℤ) (b : ℤ) : [a]_m = [b]_m ↔ a ≡ b (MOD m)"}
+{"name":"HTPI.cc_eq_mod","declaration":"theorem HTPI.cc_eq_mod (m : ℕ) (a : ℤ) : [a]_m = [a % ↑m]_m"}
+{"name":"HTPI.gcd_c2_nonzero","declaration":"theorem HTPI.gcd_c2_nonzero (a : ℕ) {b : ℕ} (h : b ≠ 0) : HTPI.gcd_c2 a b = HTPI.gcd_c1 b (a % b) - HTPI.gcd_c2 b (a % b) * ↑(a / b)"}
+{"name":"HTPI.Theorem_7_1_6","declaration":"theorem HTPI.Theorem_7_1_6 {d : ℕ} {a : ℕ} {b : ℕ} (h1 : d ∣ a) (h2 : d ∣ b) : d ∣ HTPI.gcd a b"}
+{"name":"HTPI.perm_below_fixed","declaration":"theorem HTPI.perm_below_fixed {n : ℕ} {g : ℕ → ℕ} (h1 : HTPI.perm_below (n + 1) g) (h2 : g n = n) : HTPI.perm_below n g"}
+{"name":"HTPI.num_rp_below_step_rp","declaration":"theorem HTPI.num_rp_below_step_rp {m : ℕ} {j : ℕ} (h : HTPI.rel_prime m j) : HTPI.num_rp_below m (j + 1) = HTPI.num_rp_below m j + 1"}
+{"name":"HTPI.add_class","declaration":"theorem HTPI.add_class (m : ℕ) (a : ℤ) (b : ℤ) : [a]_m + [b]_m = [a + b]_m"}
+{"name":"HTPI.Exercises.perm_below_fixed","declaration":"theorem HTPI.Exercises.perm_below_fixed {n : ℕ} {g : ℕ → ℕ} (h1 : HTPI.perm_below (n + 1) g) (h2 : g n = n) : HTPI.perm_below n g"}
+{"name":"HTPI.Theorem_7_5_1","declaration":"theorem HTPI.Theorem_7_5_1 (p : ℕ) (q : ℕ) (n : ℕ) (e : ℕ) (d : ℕ) (k : ℕ) (m : ℕ) (c : ℕ) (p_prime : HTPI.prime p) (q_prime : HTPI.prime q) (p_ne_q : p ≠ q) (n_pq : n = p * q) (ed_congr_1 : e * d = k * (p - 1) * (q - 1) + 1) (h1 : [↑m]_n ^ e = [↑c]_n) : [↑c]_n ^ d = [↑m]_n"}
+{"name":"HTPI.Fprod_invertible","declaration":"theorem HTPI.Fprod_invertible (m : ℕ) (k : ℕ) : HTPI.invertible (HTPI.prod_seq k 0 (HTPI.Euler.F m))"}
+{"name":"HTPI.Theorem_7_2_2","declaration":"theorem HTPI.Theorem_7_2_2 {a : ℕ} {b : ℕ} {c : ℕ} (h1 : c ∣ a * b) (h2 : HTPI.rel_prime a c) : c ∣ b"}
+{"name":"HTPI.Exercise_7_2_6","declaration":"theorem HTPI.Exercise_7_2_6 (a : ℕ) (b : ℕ) : HTPI.rel_prime a b ↔ ∃ s t, s * ↑a + t * ↑b = 1"}
+{"name":"HTPI.swap","declaration":"def HTPI.swap (u : ℕ) (v : ℕ) (i : ℕ) : ℕ"}
+{"name":"HTPI.eq_one_of_prod_one","declaration":"theorem HTPI.eq_one_of_prod_one {a : ℕ} {b : ℕ} (h : a * b = 1) : a = 1"}
+{"name":"HTPI.Exercise_7_4_5_Int","declaration":"theorem HTPI.Exercise_7_4_5_Int (m : ℕ) (a : ℤ) (n : ℕ) : [a]_m ^ n = [a ^ n]_m"}
+{"name":"HTPI.swap_fst","declaration":"theorem HTPI.swap_fst (u : ℕ) (v : ℕ) : HTPI.swap u v u = v"}
+{"name":"HTPI.Exercises.comp_perm_below","declaration":"theorem HTPI.Exercises.comp_perm_below {n : ℕ} {f : ℕ → ℕ} {g : ℕ → ℕ} (h1 : HTPI.perm_below n f) (h2 : HTPI.perm_below n g) : HTPI.perm_below n (f ∘ g)"}
+{"name":"HTPI.Exercises.Theorem_7_3_10","declaration":"theorem HTPI.Exercises.Theorem_7_3_10 (m : ℕ) (a : ℕ) (b : ℤ) : ¬↑(HTPI.gcd m a) ∣ b → ¬∃ x, ↑a * x ≡ b (MOD m)"}
+{"name":"HTPI.Theorem_7_2_4","declaration":"theorem HTPI.Theorem_7_2_4 {p : ℕ} (h1 : HTPI.prime p) (l : List ℕ) : p ∣ HTPI.prod l → ∃ a ∈ l, p ∣ a"}
+{"name":"HTPI.prod","declaration":"def HTPI.prod (l : List ℕ) : ℕ"}
+{"name":"HTPI.prod_seq_step","declaration":"theorem HTPI.prod_seq_step {m : ℕ} (n : ℕ) (k : ℕ) (f : ℕ → ZMod m) : HTPI.prod_seq (n + 1) k f = HTPI.prod_seq n k f * f (k + n)"}
+{"name":"HTPI.maps_below","declaration":"def HTPI.maps_below (n : ℕ) (g : ℕ → ℕ) : Prop"}
+{"name":"HTPI.all_prime_nil","declaration":"theorem HTPI.all_prime_nil  : HTPI.all_prime []"}
+{"name":"HTPI.dvd_a_of_dvd_b_mod","declaration":"theorem HTPI.dvd_a_of_dvd_b_mod {a : ℕ} {b : ℕ} {d : ℕ} (h1 : d ∣ b) (h2 : d ∣ a % b) : d ∣ a"}
+{"name":"HTPI.onto_below","declaration":"def HTPI.onto_below (n : ℕ) (g : ℕ → ℕ) : Prop"}
+{"name":"HTPI.list_elt_dvd_prod","declaration":"theorem HTPI.list_elt_dvd_prod {a : ℕ} {l : List ℕ} (h : a ∈ l) : a ∣ HTPI.prod l"}
+{"name":"HTPI.mul_inv_mod_cancel","declaration":"theorem HTPI.mul_inv_mod_cancel {m : ℕ} {a : ℕ} {i : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) (h2 : i < m) : a * HTPI.inv_mod m a * i % m = i"}
+{"name":"HTPI.dvd_mod_of_dvd_a_b","declaration":"theorem HTPI.dvd_mod_of_dvd_a_b {a : ℕ} {b : ℕ} {d : ℕ} (h1 : d ∣ a) (h2 : d ∣ b) : d ∣ a % b"}
+{"name":"HTPI.Exercises.Exercise_7_4_5_Int","declaration":"theorem HTPI.Exercises.Exercise_7_4_5_Int (m : ℕ) (a : ℤ) (n : ℕ) : [a]_m ^ n = [a ^ n]_m"}
+{"name":"HTPI.Exercises.Like_Exercise_7_4_11","declaration":"theorem HTPI.Exercises.Like_Exercise_7_4_11 {m : ℕ} {a : ℕ} {p : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) (h2 : p + 1 = HTPI.phi m) : [↑a]_m * [↑a ^ p]_m = [1]_m"}
+{"name":"HTPI.gcd_dvd_right","declaration":"theorem HTPI.gcd_dvd_right (a : ℕ) (b : ℕ) : HTPI.gcd a b ∣ b"}
+{"name":"HTPI.cc_eq_iff_val_eq","declaration":"theorem HTPI.cc_eq_iff_val_eq {n : ℕ} (X : ZMod (n + 1)) (Y : ZMod (n + 1)) : X = Y ↔ ZMod.val X = ZMod.val Y"}
+{"name":"HTPI.le_nonzero_prod_right","declaration":"theorem HTPI.le_nonzero_prod_right {a : ℕ} {b : ℕ} (h : a * b ≠ 0) : b ≤ a * b"}
+{"name":"HTPI.gcd_nonzero","declaration":"theorem HTPI.gcd_nonzero (a : ℕ) {b : ℕ} (h : b ≠ 0) : HTPI.gcd a b = HTPI.gcd b (a % b)"}
+{"name":"HTPI.Exercises.Exercise_7_1_6","declaration":"theorem HTPI.Exercises.Exercise_7_1_6 (a : ℕ) (b : ℕ) (c : ℕ) : HTPI.gcd a b = HTPI.gcd (a + b * c) b"}
+{"name":"HTPI.Exercises.Exercise_7_2_9","declaration":"theorem HTPI.Exercises.Exercise_7_2_9 {a : ℕ} {b : ℕ} {j : ℕ} {k : ℕ} (h1 : HTPI.gcd a b ≠ 0) (h2 : a = j * HTPI.gcd a b) (h3 : b = k * HTPI.gcd a b) : HTPI.rel_prime j k"}
+{"name":"HTPI.prod_inv_iff_inv","declaration":"theorem HTPI.prod_inv_iff_inv {m : ℕ} {X : ZMod m} (h1 : HTPI.invertible X) (Y : ZMod m) : HTPI.invertible (X * Y) ↔ HTPI.invertible Y"}
+{"name":"HTPI.gcd_base","declaration":"theorem HTPI.gcd_base (a : ℕ) : HTPI.gcd a 0 = a"}
+{"name":"HTPI.gcd_lin_comb","declaration":"theorem HTPI.gcd_lin_comb (b : ℕ) (a : ℕ) : HTPI.gcd_c1 a b * ↑a + HTPI.gcd_c2 a b * ↑b = ↑(HTPI.gcd a b)"}
+{"name":"HTPI.num_rp_prime","declaration":"theorem HTPI.num_rp_prime {p : ℕ} (h1 : HTPI.prime p) (k : ℕ) : k < p → HTPI.num_rp_below p (k + 1) = k"}
+{"name":"HTPI.Exercises.Exercise_7_2_7","declaration":"theorem HTPI.Exercises.Exercise_7_2_7 {a : ℕ} {b : ℕ} {a' : ℕ} {b' : ℕ} (h1 : HTPI.rel_prime a b) (h2 : a' ∣ a) (h3 : b' ∣ b) : HTPI.rel_prime a' b'"}
+{"name":"HTPI.list_nil_iff_prod_one","declaration":"theorem HTPI.list_nil_iff_prod_one {l : List ℕ} (h : HTPI.nondec_prime_list l) : l = [] ↔ HTPI.prod l = 1"}
+{"name":"HTPI.Euler.Ginv","declaration":"def HTPI.Euler.Ginv (m : ℕ) (a : ℕ) (i : ℕ) : ℕ"}
+{"name":"HTPI.swap_perm_below","declaration":"theorem HTPI.swap_perm_below {u : ℕ} {v : ℕ} {n : ℕ} (h1 : u < n) (h2 : v < n) : HTPI.perm_below n (HTPI.swap u v)"}
+{"name":"HTPI.gcd_c1_nonzero","declaration":"theorem HTPI.gcd_c1_nonzero (a : ℕ) {b : ℕ} (h : b ≠ 0) : HTPI.gcd_c1 a b = HTPI.gcd_c2 b (a % b)"}
+{"name":"HTPI.cc_nat_zero_iff_dvd","declaration":"theorem HTPI.cc_nat_zero_iff_dvd (m : ℕ) (k : ℕ) : [↑k]_m = [0]_m ↔ m ∣ k"}
+{"name":"HTPI.cc_G","declaration":"theorem HTPI.cc_G (m : ℕ) (a : ℕ) (i : ℕ) : [↑(HTPI.Euler.G m a i)]_m = [↑a]_m * [↑i]_m"}
+{"name":"HTPI.Exercises.dvd_prime","declaration":"theorem HTPI.Exercises.dvd_prime {a : ℕ} {p : ℕ} (h1 : HTPI.prime p) (h2 : a ∣ p) : a = 1 ∨ a = p"}
+{"name":"HTPI.cc_neg_zero_iff_cc_zero","declaration":"theorem HTPI.cc_neg_zero_iff_cc_zero (m : ℕ) (a : ℤ) : [-a]_m = [0]_m ↔ [a]_m = [0]_m"}
+{"name":"HTPI.Theorem_7_3_6_1","declaration":"theorem HTPI.Theorem_7_3_6_1 {m : ℕ} (X : ZMod m) (Y : ZMod m) : X + Y = Y + X"}
+{"name":"HTPI.Exercises.congr_iff_mod_eq_Int","declaration":"theorem HTPI.Exercises.congr_iff_mod_eq_Int (m : ℕ) (a : ℤ) (b : ℤ) [NeZero m] : a ≡ b (MOD m) ↔ a % ↑m = b % ↑m"}
+{"name":"HTPI.Euler.G","declaration":"def HTPI.Euler.G (m : ℕ) (a : ℕ) (i : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.Exercise_7_1_10","declaration":"theorem HTPI.Exercises.Exercise_7_1_10 (a : ℕ) (b : ℕ) (n : ℕ) : HTPI.gcd (n * a) (n * b) = n * HTPI.gcd a b"}
+{"name":"HTPI.prime_in_list","declaration":"theorem HTPI.prime_in_list {p : ℕ} {l : List ℕ} (h1 : HTPI.prime p) (h2 : HTPI.all_prime l) (h3 : p ∣ HTPI.prod l) : p ∈ l"}
+{"name":"HTPI.nondec_prime_list_tail","declaration":"theorem HTPI.nondec_prime_list_tail {p : ℕ} {l : List ℕ} (h : HTPI.nondec_prime_list (p :: l)) : HTPI.nondec_prime_list l"}
+{"name":"HTPI.Lemma_7_5_1","declaration":"theorem HTPI.Lemma_7_5_1 {p : ℕ} {e : ℕ} {d : ℕ} {m : ℕ} {c : ℕ} {s : ℕ} {t : ℤ} (h1 : HTPI.prime p) (h2 : e * d = (p - 1) * s + 1) (h3 : ↑m ^ e - ↑c = ↑p * t) : ↑c ^ d ≡ ↑m (MOD p)"}
+{"name":"HTPI.cc_rep","declaration":"theorem HTPI.cc_rep {m : ℕ} (X : ZMod m) : ∃ a, X = [a]_m"}

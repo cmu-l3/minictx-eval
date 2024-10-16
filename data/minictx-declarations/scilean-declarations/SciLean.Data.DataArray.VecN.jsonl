@@ -1,0 +1,31 @@
+{"name":"SciLean.Vec3.instPlainDataTypeVec3","declaration":"instance SciLean.Vec3.instPlainDataTypeVec3  : SciLean.PlainDataType SciLean.Vec3"}
+{"name":"SciLean.Vec3.instArrayTypeVec3FinOfNatNatInstOfNatNatFloat","declaration":"instance SciLean.Vec3.instArrayTypeVec3FinOfNatNatInstOfNatNatFloat  : SciLean.ArrayType SciLean.Vec3 (Fin 3) Float"}
+{"name":"SciLean.Vec2.instArrayTypeVec2FinOfNatNatInstOfNatNatFloat","declaration":"instance SciLean.Vec2.instArrayTypeVec2FinOfNatNatInstOfNatNatFloat  : SciLean.ArrayType SciLean.Vec2 (Fin 2) Float"}
+{"name":"SciLean.Vec2.get","declaration":"def SciLean.Vec2.get (v : SciLean.Vec2) (i : Fin 2) : Float"}
+{"name":"SciLean.Vec2.instStructTypeVec2FinOfNatNatInstOfNatNatFloat","declaration":"instance SciLean.Vec2.instStructTypeVec2FinOfNatNatInstOfNatNatFloat  : SciLean.StructType SciLean.Vec2 (Fin 2) fun x => Float"}
+{"name":"SciLean.Vec2.x","declaration":"def SciLean.Vec2.x (self : SciLean.Vec2) : Float"}
+{"name":"SciLean.Vec3.«termV[_,_,_]»","declaration":"def SciLean.Vec3.«termV[_,_,_]»  : Lean.ParserDescr"}
+{"name":"SciLean.Vec2.mk","declaration":"ctor SciLean.Vec2.mk (x : Float) (y : Float) : SciLean.Vec2"}
+{"name":"SciLean.Vec3.instIndexedVec3FinOfNatNatInstOfNatNatFloat","declaration":"instance SciLean.Vec3.instIndexedVec3FinOfNatNatInstOfNatNatFloat  : LeanColls.Indexed SciLean.Vec3 (Fin 3) Float"}
+{"name":"SciLean.Vec2.instIndexedVec2FinOfNatNatInstOfNatNatFloat","declaration":"instance SciLean.Vec2.instIndexedVec2FinOfNatNatInstOfNatNatFloat  : LeanColls.Indexed SciLean.Vec2 (Fin 2) Float"}
+{"name":"SciLean.instInhabitedVec2","declaration":"instance SciLean.instInhabitedVec2  : Inhabited SciLean.Vec2"}
+{"name":"SciLean.Vec3.set","declaration":"def SciLean.Vec3.set (v : SciLean.Vec3) (i : Fin 3) (vi : Float) : SciLean.Vec3"}
+{"name":"SciLean.Vec2","declaration":"structure SciLean.Vec2  : Type"}
+{"name":"SciLean.instInhabitedVec3","declaration":"instance SciLean.instInhabitedVec3  : Inhabited SciLean.Vec3"}
+{"name":"SciLean.Vec2.set","declaration":"def SciLean.Vec2.set (v : SciLean.Vec2) (i : Fin 2) (vi : Float) : SciLean.Vec2"}
+{"name":"SciLean.Vec3.get","declaration":"def SciLean.Vec3.get (v : SciLean.Vec3) (i : Fin 3) : Float"}
+{"name":"SciLean.Vec3.mk","declaration":"ctor SciLean.Vec3.mk (x : Float) (y : Float) (z : Float) : SciLean.Vec3"}
+{"name":"SciLean.Vec2.«termV[_,_]»","declaration":"def SciLean.Vec2.«termV[_,_]»  : Lean.ParserDescr"}
+{"name":"SciLean.Vec3.instStructTypeVec3FinOfNatNatInstOfNatNatFloat","declaration":"instance SciLean.Vec3.instStructTypeVec3FinOfNatNatInstOfNatNatFloat  : SciLean.StructType SciLean.Vec3 (Fin 3) fun x => Float"}
+{"name":"SciLean.Vec3.intro","declaration":"def SciLean.Vec3.intro (f : Fin 3 → Float) : SciLean.Vec3"}
+{"name":"SciLean.det2","declaration":"def SciLean.det2 (A : SciLean.Vec2 → SciLean.Vec2) : Float"}
+{"name":"SciLean.det3","declaration":"def SciLean.det3 (A : SciLean.Vec3 → SciLean.Vec3) : Float"}
+{"name":"SciLean.Vec3.y","declaration":"def SciLean.Vec3.y (self : SciLean.Vec3) : Float"}
+{"name":"SciLean.Vec2.intro","declaration":"def SciLean.Vec2.intro (f : Fin 2 → Float) : SciLean.Vec2"}
+{"name":"SciLean.Vec2.normalize","declaration":"def SciLean.Vec2.normalize (v : SciLean.Vec2) : SciLean.Vec2"}
+{"name":"SciLean.Vec3.z","declaration":"def SciLean.Vec3.z (self : SciLean.Vec3) : Float"}
+{"name":"SciLean.Vec2.y","declaration":"def SciLean.Vec2.y (self : SciLean.Vec2) : Float"}
+{"name":"SciLean.Vec2.instPlainDataTypeVec2","declaration":"instance SciLean.Vec2.instPlainDataTypeVec2  : SciLean.PlainDataType SciLean.Vec2"}
+{"name":"SciLean.Vec3.normalize","declaration":"def SciLean.Vec3.normalize (v : SciLean.Vec3) : SciLean.Vec3"}
+{"name":"SciLean.Vec3.x","declaration":"def SciLean.Vec3.x (self : SciLean.Vec3) : Float"}
+{"name":"SciLean.Vec3","declaration":"structure SciLean.Vec3  : Type"}

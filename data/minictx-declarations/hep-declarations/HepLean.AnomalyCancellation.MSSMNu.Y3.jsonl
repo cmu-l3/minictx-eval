@@ -1,0 +1,4 @@
+{"name":"MSSMACC.Y₃_val","declaration":"theorem MSSMACC.Y₃_val  : MSSMACC.Y₃.val = MSSMACC.Y₃AsCharge"}
+{"name":"MSSMACC.doublePoint_Y₃_Y₃","declaration":"theorem MSSMACC.doublePoint_Y₃_Y₃ (R : ACCSystemLinear.LinSols MSSMACC.toACCSystemLinear) : ((MSSMACCs.cubeTriLin MSSMACC.Y₃.val) MSSMACC.Y₃.val) R.val = 0"}
+{"name":"MSSMACC.Y₃AsCharge","declaration":"/-- $Y_3$ is the charge which is hypercharge in all families, but with the third\nfamily of the opposite sign. -/\ndef MSSMACC.Y₃AsCharge  : ACCSystemCharges.Charges MSSMACC.toACCSystemCharges"}
+{"name":"MSSMACC.Y₃","declaration":"/-- $Y_3$ as a solution. -/\ndef MSSMACC.Y₃  : ACCSystem.Sols MSSMACC"}

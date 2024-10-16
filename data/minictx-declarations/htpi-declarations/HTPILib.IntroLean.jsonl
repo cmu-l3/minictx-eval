@@ -1,0 +1,7 @@
+{"name":"HTPI.two_imp","declaration":"theorem HTPI.two_imp (P : Prop) (Q : Prop) (R : Prop) (h1 : P → Q) (h2 : Q → ¬R) : R → ¬P"}
+{"name":"HTPI.Example_3_2_4","declaration":"theorem HTPI.Example_3_2_4 (P : Prop) (Q : Prop) (R : Prop) (h : P → Q → R) : ¬R → P → ¬Q"}
+{"name":"HTPI.extremely_easy","declaration":"theorem HTPI.extremely_easy (P : Prop) (h : P) : P"}
+{"name":"HTPI.very_easy","declaration":"theorem HTPI.very_easy (P : Prop) (Q : Prop) (h1 : P → Q) (h2 : P) : Q"}
+{"name":"HTPI.Example_3_2_5_simple","declaration":"theorem HTPI.Example_3_2_5_simple (B : Set ℕ) (C : Set ℕ) (a : ℕ) (h1 : a ∈ B) (h2 : a ∉ B \\ C) : a ∈ C"}
+{"name":"HTPI.Example_3_2_5_simple_general","declaration":"theorem HTPI.Example_3_2_5_simple_general (U : Type) (B : Set U) (C : Set U) (a : U) (h1 : a ∈ B) (h2 : a ∉ B \\ C) : a ∈ C"}
+{"name":"HTPI.easy","declaration":"theorem HTPI.easy (P : Prop) (Q : Prop) (R : Prop) (h1 : P → Q) (h2 : Q → R) (h3 : P) : R"}

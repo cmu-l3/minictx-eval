@@ -1,0 +1,59 @@
+{"name":"HTPI.empty_match","declaration":"theorem HTPI.empty_match {U : Type} {V : Type} {A : Set U} {B : Set V} (h1 : HTPI.empty A) (h2 : HTPI.empty B) : HTPI.matching (HTPI.emptyRel U V) A B"}
+{"name":"HTPI.finite_def","declaration":"theorem HTPI.finite_def {U : Type} (A : Set U) : HTPI.finite A ↔ ∃ n, HTPI.numElts A n"}
+{"name":"HTPI.I_0_empty","declaration":"theorem HTPI.I_0_empty  : HTPI.empty (HTPI.I 0)"}
+{"name":"HTPI.Theorem_8_1_3_3","declaration":"theorem HTPI.Theorem_8_1_3_3 {U : Type} {V : Type} {W : Type} {A : Set U} {B : Set V} {C : Set W} (h1 : A ∼ B) (h2 : B ∼ C) : A ∼ C"}
+{"name":"HTPI.remove_one_def","declaration":"theorem HTPI.remove_one_def {U : Type} {V : Type} (R : Rel U V) (u : U) (x : U) (v : V) (y : V) : HTPI.remove_one R u v x y ↔ x ≠ u ∧ y ≠ v ∧ (R x y ∨ R x v ∧ R u y)"}
+{"name":"HTPI.denum","declaration":"def HTPI.denum {U : Type} (A : Set U) : Prop"}
+{"name":"HTPI.remove_one_equinum","declaration":"theorem HTPI.remove_one_equinum {U : Type} {V : Type} {A : Set U} {B : Set V} {u : U} {v : V} (h1 : A ∼ B) (h2 : u ∈ A) (h3 : v ∈ B) : A \\ {u} ∼ B \\ {v}"}
+{"name":"HTPI.I","declaration":"def HTPI.I (n : ℕ) : Set ℕ"}
+{"name":"HTPI.id_one_one_on","declaration":"theorem HTPI.id_one_one_on {U : Type} (A : Set U) : HTPI.one_one_on id A"}
+{"name":"HTPI.one_elt_iff_singleton","declaration":"theorem HTPI.one_elt_iff_singleton {U : Type} (A : Set U) : HTPI.numElts A 1 ↔ ∃ x, A = {x}"}
+{"name":"HTPI.fcnl_on","declaration":"def HTPI.fcnl_on {U : Type} {V : Type} (R : Rel U V) (A : Set U) : Prop"}
+{"name":"HTPI.I_def","declaration":"theorem HTPI.I_def (k : ℕ) (n : ℕ) : k ∈ HTPI.I n ↔ k < n"}
+{"name":"HTPI.remove_one_iff","declaration":"theorem HTPI.remove_one_iff {U : Type} {V : Type} {A : Set U} {B : Set V} {R : Rel U V} (h1 : HTPI.matching R A B) {u : U} (h2 : u ∈ A) (v : V) {x : U} (h3 : x ∈ A \\ {u}) : ∃ w ∈ A, ∀ (y : V), HTPI.remove_one R u v x y ↔ R w y"}
+{"name":"HTPI.I_diff","declaration":"theorem HTPI.I_diff (n : ℕ) : HTPI.I (n + 1) \\ {n} = HTPI.I n"}
+{"name":"HTPI.fcnl_unique","declaration":"theorem HTPI.fcnl_unique {U : Type} {V : Type} {R : Rel U V} {A : Set U} {x : U} {y1 : V} {y2 : V} (h1 : HTPI.fcnl_on R A) (h2 : x ∈ A) (h3 : R x y1) (h4 : R x y2) : y1 = y2"}
+{"name":"HTPI.denum_def","declaration":"theorem HTPI.denum_def {U : Type} (A : Set U) : HTPI.denum A ↔ HTPI.Univ ℕ ∼ A"}
+{"name":"HTPI.I_max","declaration":"theorem HTPI.I_max (n : ℕ) : n ∈ HTPI.I (n + 1)"}
+{"name":"HTPI.one_match_def","declaration":"theorem HTPI.one_match_def {U : Type} {V : Type} (a : U) (x : U) (b : V) (y : V) : HTPI.one_match a b x y ↔ x = a ∧ y = b"}
+{"name":"HTPI.remove_one_fcnl","declaration":"theorem HTPI.remove_one_fcnl {U : Type} {V : Type} {R : Rel U V} {A : Set U} {B : Set V} {u : U} (h1 : HTPI.matching R A B) (h2 : u ∈ A) (v : V) : HTPI.fcnl_on (HTPI.remove_one R u v) (A \\ {u})"}
+{"name":"HTPI.emptyRel","declaration":"def HTPI.emptyRel (U : Type) (V : Type) (x : U) (y : V) : Prop"}
+{"name":"HTPI.I_1_singleton","declaration":"theorem HTPI.I_1_singleton  : HTPI.I 1 = {0}"}
+{"name":"HTPI.compRel_def","declaration":"theorem HTPI.compRel_def {U : Type} {V : Type} {W : Type} (S : Rel V W) (R : Rel U V) (u : U) (w : W) : HTPI.compRel S R u w ↔ ∃ x, R u x ∧ S x w"}
+{"name":"HTPI.invRel_def","declaration":"theorem HTPI.invRel_def {U : Type} {V : Type} (R : Rel U V) (u : U) (v : V) : HTPI.invRel R v u ↔ R u v"}
+{"name":"HTPI.«term_∼_»","declaration":"def HTPI.«term_∼_»  : Lean.TrailingParserDescr"}
+{"name":"HTPI.image_id","declaration":"theorem HTPI.image_id {U : Type} (A : Set U) : HTPI.image id A = A"}
+{"name":"HTPI.fcnl_exists","declaration":"theorem HTPI.fcnl_exists {U : Type} {V : Type} {R : Rel U V} {A : Set U} {x : U} (h1 : HTPI.fcnl_on R A) (h2 : x ∈ A) : ∃ y, R x y"}
+{"name":"HTPI.numElts","declaration":"def HTPI.numElts {U : Type} (A : Set U) (n : ℕ) : Prop"}
+{"name":"HTPI.compRel","declaration":"def HTPI.compRel {U : Type} {V : Type} {W : Type} (S : Rel V W) (R : Rel U V) : Rel U W"}
+{"name":"HTPI.singleton_of_diff_empty","declaration":"theorem HTPI.singleton_of_diff_empty {U : Type} {A : Set U} {a : U} (h1 : a ∈ A) (h2 : HTPI.empty (A \\ {a})) : A = {a}"}
+{"name":"HTPI.rel_within","declaration":"def HTPI.rel_within {U : Type} {V : Type} (R : Rel U V) (A : Set U) (B : Set V) : Prop"}
+{"name":"HTPI.one_match","declaration":"def HTPI.one_match {U : Type} {V : Type} (a : U) (b : V) (x : U) (y : V) : Prop"}
+{"name":"HTPI.remove_one_inv","declaration":"theorem HTPI.remove_one_inv {U : Type} {V : Type} (R : Rel U V) (u : U) (v : V) : HTPI.invRel (HTPI.remove_one R u v) = HTPI.remove_one (HTPI.invRel R) v u"}
+{"name":"HTPI.one_match_match","declaration":"theorem HTPI.one_match_match {U : Type} {V : Type} (a : U) (b : V) : HTPI.matching (HTPI.one_match a b) {a} {b}"}
+{"name":"HTPI.Theorem_8_1_3_1","declaration":"theorem HTPI.Theorem_8_1_3_1 {U : Type} (A : Set U) : A ∼ A"}
+{"name":"HTPI.numElts_def","declaration":"theorem HTPI.numElts_def {U : Type} (A : Set U) (n : ℕ) : HTPI.numElts A n ↔ HTPI.I n ∼ A"}
+{"name":"HTPI.zero_elts_iff_empty","declaration":"theorem HTPI.zero_elts_iff_empty {U : Type} (A : Set U) : HTPI.numElts A 0 ↔ HTPI.empty A"}
+{"name":"HTPI.ctble","declaration":"def HTPI.ctble {U : Type} (A : Set U) : Prop"}
+{"name":"HTPI.equinum_image","declaration":"theorem HTPI.equinum_image {U : Type} {V : Type} {A : Set U} {B : Set V} {f : U → V} (h1 : HTPI.one_one_on f A) (h2 : HTPI.image f A = B) : A ∼ B"}
+{"name":"HTPI.remove_one_numElts","declaration":"theorem HTPI.remove_one_numElts {U : Type} {A : Set U} {n : ℕ} {a : U} (h1 : HTPI.numElts A (n + 1)) (h2 : a ∈ A) : HTPI.numElts (A \\ {a}) n"}
+{"name":"HTPI.invRel","declaration":"def HTPI.invRel {U : Type} {V : Type} (R : Rel U V) : Rel V U"}
+{"name":"HTPI.equinum","declaration":"def HTPI.equinum {U : Type} {V : Type} (A : Set U) (B : Set V) : Prop"}
+{"name":"HTPI.remove_one_match","declaration":"theorem HTPI.remove_one_match {U : Type} {V : Type} {R : Rel U V} {A : Set U} {B : Set V} {u : U} {v : V} (h1 : HTPI.matching R A B) (h2 : u ∈ A) (h3 : v ∈ B) : HTPI.matching (HTPI.remove_one R u v) (A \\ {u}) (B \\ {v})"}
+{"name":"HTPI.nonempty_of_pos_numElts","declaration":"theorem HTPI.nonempty_of_pos_numElts {U : Type} {A : Set U} {n : ℕ} (h1 : HTPI.numElts A n) (h2 : n > 0) : ∃ x, x ∈ A"}
+{"name":"HTPI.relext","declaration":"theorem HTPI.relext {U : Type} {V : Type} {R : Rel U V} {S : Rel U V} (h : ∀ (u : U) (v : V), R u v ↔ S u v) : R = S"}
+{"name":"HTPI.comp_fcnl","declaration":"theorem HTPI.comp_fcnl {U : Type} {V : Type} {W : Type} {R : Rel U V} {S : Rel V W} {A : Set U} {B : Set V} {C : Set W} (h1 : HTPI.matching R A B) (h2 : HTPI.matching S B C) : HTPI.fcnl_on (HTPI.compRel S R) A"}
+{"name":"HTPI.Univ","declaration":"def HTPI.Univ (U : Type) : Set U"}
+{"name":"HTPI.remove_one","declaration":"def HTPI.remove_one {U : Type} {V : Type} (R : Rel U V) (u : U) (v : V) (x : U) (y : V) : Prop"}
+{"name":"HTPI.inv_comp","declaration":"theorem HTPI.inv_comp {U : Type} {V : Type} {W : Type} (R : Rel U V) (S : Rel V W) : HTPI.invRel (HTPI.compRel S R) = HTPI.compRel (HTPI.invRel R) (HTPI.invRel S)"}
+{"name":"HTPI.matching","declaration":"def HTPI.matching {U : Type} {V : Type} (R : Rel U V) (A : Set U) (B : Set V) : Prop"}
+{"name":"HTPI.singleton_one_elt","declaration":"theorem HTPI.singleton_one_elt {U : Type} (u : U) : HTPI.numElts {u} 1"}
+{"name":"HTPI.finite","declaration":"def HTPI.finite {U : Type} (A : Set U) : Prop"}
+{"name":"HTPI.comp_match","declaration":"theorem HTPI.comp_match {U : Type} {V : Type} {W : Type} {R : Rel U V} {S : Rel V W} {A : Set U} {B : Set V} {C : Set W} (h1 : HTPI.matching R A B) (h2 : HTPI.matching S B C) : HTPI.matching (HTPI.compRel S R) A C"}
+{"name":"HTPI.one_one_on","declaration":"def HTPI.one_one_on {U : Type} {V : Type} (f : U → V) (A : Set U) : Prop"}
+{"name":"HTPI.fcnl_on_empty","declaration":"theorem HTPI.fcnl_on_empty {U : Type} {V : Type} (R : Rel U V) {A : Set U} (h1 : HTPI.empty A) : HTPI.fcnl_on R A"}
+{"name":"HTPI.inv_inv","declaration":"theorem HTPI.inv_inv {U : Type} {V : Type} (R : Rel U V) : HTPI.invRel (HTPI.invRel R) = R"}
+{"name":"HTPI.inv_match","declaration":"theorem HTPI.inv_match {U : Type} {V : Type} {R : Rel U V} {A : Set U} {B : Set V} (h : HTPI.matching R A B) : HTPI.matching (HTPI.invRel R) B A"}
+{"name":"HTPI.remove_one_rel_within","declaration":"theorem HTPI.remove_one_rel_within {U : Type} {V : Type} {R : Rel U V} {A : Set U} {B : Set V} {x : U} {u : U} {y : V} {v : V} (h1 : HTPI.matching R A B) (h2 : HTPI.remove_one R u v x y) : x ∈ A \\ {u} ∧ y ∈ B \\ {v}"}
+{"name":"HTPI.Theorem_8_1_3_2","declaration":"theorem HTPI.Theorem_8_1_3_2 {U : Type} {V : Type} {A : Set U} {B : Set V} (h : A ∼ B) : B ∼ A"}
+{"name":"HTPI.RelWithinFromFunc","declaration":"def HTPI.RelWithinFromFunc {U : Type} {V : Type} (f : U → V) (A : Set U) (x : U) (y : V) : Prop"}

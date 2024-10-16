@@ -1,0 +1,3 @@
+{"name":"SciLean.«termRec_val__|_=>__|_,_=>_»","declaration":"def SciLean.«termRec_val__|_=>__|_,_=>_»  : Lean.ParserDescr"}
+{"name":"SciLean.unexpandNatRecOn","declaration":"def SciLean.unexpandNatRecOn  : Lean.PrettyPrinter.Unexpander"}
+{"name":"SciLean.unexpandNatRec","declaration":"def SciLean.unexpandNatRec  : Lean.PrettyPrinter.Unexpander"}

@@ -1,0 +1,62 @@
+{"name":"phaseShiftApply.td","declaration":"theorem phaseShiftApply.td (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 2 0 = Complex.exp (↑c * Complex.I + ↑d * Complex.I) * ↑V 2 0"}
+{"name":"CKMMatrix.Rcdcb","declaration":"/-- The ratio of the `cd` and `cb` elements of a CKM matrix. -/\ndef CKMMatrix.Rcdcb (V : CKMMatrix) : ℂ"}
+{"name":"phaseShiftRelation_refl","declaration":"theorem phaseShiftRelation_refl (U : ↥(Matrix.unitaryGroup (Fin 3) ℂ)) : PhaseShiftRelation U U"}
+{"name":"CKMMatrix.ud_us_ratio","declaration":"/-- The ratio of the `ud` and `us` elements of a CKM matrix. -/\ndef CKMMatrix.ud_us_ratio  : Lean.ParserDescr"}
+{"name":"phaseShiftRelation_trans","declaration":"theorem phaseShiftRelation_trans {U : ↥(Matrix.unitaryGroup (Fin 3) ℂ)} {V : ↥(Matrix.unitaryGroup (Fin 3) ℂ)} {W : ↥(Matrix.unitaryGroup (Fin 3) ℂ)} : PhaseShiftRelation U V → PhaseShiftRelation V W → PhaseShiftRelation U W"}
+{"name":"CKMMatrix.cs_element","declaration":"/-- The `cs`th element of the CKM matrix. -/\ndef CKMMatrix.cs_element  : Lean.ParserDescr"}
+{"name":"CKMMatrix.us_ud_ratio","declaration":"/-- The ratio of the `us` and `ud` elements of a CKM matrix. -/\ndef CKMMatrix.us_ud_ratio  : Lean.ParserDescr"}
+{"name":"phaseShiftApply","declaration":"/-- The matrix obtained from `V` by shifting the phases of the fermions. -/\ndef phaseShiftApply (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : CKMMatrix"}
+{"name":"CKMMatrix.cb_element","declaration":"/-- The `cb`th element of the CKM matrix. -/\ndef CKMMatrix.cb_element  : Lean.ParserDescr"}
+{"name":"VAbs'_equiv","declaration":"theorem VAbs'_equiv (i : Fin 3) (j : Fin 3) (V : CKMMatrix) (U : CKMMatrix) (h : V ≈ U) : VAbs' V i j = VAbs' U i j"}
+{"name":"VtsAbs","declaration":"/-- The absolute value of the `ts`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VtsAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"VudAbs","declaration":"/-- The absolute value of the `ud`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VudAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"CKMMatrix.us_element","declaration":"/-- The `us`th element of the CKM matrix. -/\ndef CKMMatrix.us_element  : Lean.ParserDescr"}
+{"name":"CKMMatrix.ub_ud_ratio","declaration":"/-- The ratio of the `ub` and `ud` elements of a CKM matrix. -/\ndef CKMMatrix.ub_ud_ratio  : Lean.ParserDescr"}
+{"name":"CKMMatrixSetoid","declaration":"instance CKMMatrixSetoid  : Setoid CKMMatrix"}
+{"name":"CKMMatrix.td_element","declaration":"/-- The `td`th element of the CKM matrix. -/\ndef CKMMatrix.td_element  : Lean.ParserDescr"}
+{"name":"CKMMatrix.ud_element","declaration":"/-- The `ud`th element of the CKM matrix. -/\ndef CKMMatrix.ud_element  : Lean.ParserDescr"}
+{"name":"phaseShiftApply.us","declaration":"theorem phaseShiftApply.us (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 0 1 = Complex.exp (↑a * Complex.I + ↑e * Complex.I) * ↑V 0 1"}
+{"name":"phaseShiftApply.cs","declaration":"theorem phaseShiftApply.cs (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 1 1 = Complex.exp (↑b * Complex.I + ↑e * Complex.I) * ↑V 1 1"}
+{"name":"CKMMatrix.Rcdcb_mul_cb","declaration":"theorem CKMMatrix.Rcdcb_mul_cb {V : CKMMatrix} (h : ↑V 1 2 ≠ 0) : ↑V 1 0 = CKMMatrix.Rcdcb V * ↑V 1 2"}
+{"name":"phaseShiftApply.ub","declaration":"theorem phaseShiftApply.ub (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 0 2 = Complex.exp (↑a * Complex.I + ↑f * Complex.I) * ↑V 0 2"}
+{"name":"CKMMatrix.Rcscb","declaration":"/-- The ratio of the `cs` and `cb` elements of a CKM matrix. -/\ndef CKMMatrix.Rcscb (V : CKMMatrix) : ℂ"}
+{"name":"VusAbs","declaration":"/-- The absolute value of the `us`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VusAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"VcsAbs","declaration":"/-- The absolute value of the `cs`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VcsAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"VAbs'","declaration":"/-- The aboslute value of the `(i,j)`th element of `V`. -/\ndef VAbs' (V : ↥(Matrix.unitaryGroup (Fin 3) ℂ)) (i : Fin 3) (j : Fin 3) : ℝ"}
+{"name":"CKMMatrix.Rcscb_mul_cb","declaration":"theorem CKMMatrix.Rcscb_mul_cb {V : CKMMatrix} (h : ↑V 1 2 ≠ 0) : ↑V 1 1 = CKMMatrix.Rcscb V * ↑V 1 2"}
+{"name":"phaseShiftApply.ts","declaration":"theorem phaseShiftApply.ts (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 2 1 = Complex.exp (↑c * Complex.I + ↑e * Complex.I) * ↑V 2 1"}
+{"name":"CKMMatrix.cd_cb_ratio","declaration":"/-- The ratio of the `cd` and `cb` elements of a CKM matrix. -/\ndef CKMMatrix.cd_cb_ratio  : Lean.ParserDescr"}
+{"name":"VcbAbs","declaration":"/-- The absolute value of the `cb`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VcbAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"phaseShiftRelation_symm","declaration":"theorem phaseShiftRelation_symm {U : ↥(Matrix.unitaryGroup (Fin 3) ℂ)} {V : ↥(Matrix.unitaryGroup (Fin 3) ℂ)} : PhaseShiftRelation U V → PhaseShiftRelation V U"}
+{"name":"CKMMatrix.ts_element","declaration":"/-- The `ts`th element of the CKM matrix. -/\ndef CKMMatrix.ts_element  : Lean.ParserDescr"}
+{"name":"phaseShiftMatrix_one","declaration":"theorem phaseShiftMatrix_one  : phaseShiftMatrix 0 0 0 = 1"}
+{"name":"phaseShiftMatrix_star","declaration":"theorem phaseShiftMatrix_star (a : ℝ) (b : ℝ) (c : ℝ) : Matrix.conjTranspose (phaseShiftMatrix a b c) = phaseShiftMatrix (-a) (-b) (-c)"}
+{"name":"phaseShiftApply_coe","declaration":"theorem phaseShiftApply_coe (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) =\n  ![![Complex.exp (Complex.I * ↑a), 0, 0], ![0, Complex.exp (Complex.I * ↑b), 0],\n        ![0, 0, Complex.exp (Complex.I * ↑c)]] *\n      ↑V *\n    ![![Complex.exp (Complex.I * ↑d), 0, 0], ![0, Complex.exp (Complex.I * ↑e), 0],\n      ![0, 0, Complex.exp (Complex.I * ↑f)]]"}
+{"name":"phaseShiftApply.tb","declaration":"theorem phaseShiftApply.tb (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 2 2 = Complex.exp (↑c * Complex.I + ↑f * Complex.I) * ↑V 2 2"}
+{"name":"phaseShiftApply.cb","declaration":"theorem phaseShiftApply.cb (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 1 2 = Complex.exp (↑b * Complex.I + ↑f * Complex.I) * ↑V 1 2"}
+{"name":"CKMMatrix_ext","declaration":"theorem CKMMatrix_ext {U : CKMMatrix} {V : CKMMatrix} (h : ↑U = ↑V) : U = V"}
+{"name":"VAbs","declaration":"/-- The absolute value of the `(i,j)`th any representative of `⟦V⟧`. -/\ndef VAbs (i : Fin 3) (j : Fin 3) : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"phaseShiftRelation_equiv","declaration":"theorem phaseShiftRelation_equiv  : Equivalence PhaseShiftRelation"}
+{"name":"CKMMatrix.Rubud","declaration":"/-- The ratio of the `ub` and `ud` elements of a CKM matrix. -/\ndef CKMMatrix.Rubud (V : CKMMatrix) : ℂ"}
+{"name":"CKMMatrix.ub_element","declaration":"/-- The `ub`th element of the CKM matrix. -/\ndef CKMMatrix.ub_element  : Lean.ParserDescr"}
+{"name":"VcdAbs","declaration":"/-- The absolute value of the `cd`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VcdAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"VtdAbs","declaration":"/-- The absolute value of the `td`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VtdAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"CKMMatrix.Rubus","declaration":"/-- The ratio of the `ub` and `us` elements of a CKM matrix. -/\ndef CKMMatrix.Rubus (V : CKMMatrix) : ℂ"}
+{"name":"phaseShiftMatrix","declaration":"/-- Given three real numbers `a b c` the complex matrix with `exp (I * a)` etc on the\nleading diagonal. -/\ndef phaseShiftMatrix (a : ℝ) (b : ℝ) (c : ℝ) : Matrix (Fin 3) (Fin 3) ℂ"}
+{"name":"CKMMatrix.Rudus","declaration":"/-- The ratio of the `ud` and `us` elements of a CKM matrix. -/\ndef CKMMatrix.Rudus (V : CKMMatrix) : ℂ"}
+{"name":"CKMMatrix","declaration":"/-- The type of CKM matrices. -/\ndef CKMMatrix  : Type"}
+{"name":"PhaseShiftRelation","declaration":"/-- The equivalence relation between CKM matrices. -/\ndef PhaseShiftRelation (U : ↥(Matrix.unitaryGroup (Fin 3) ℂ)) (V : ↥(Matrix.unitaryGroup (Fin 3) ℂ)) : Prop"}
+{"name":"phaseShift_coe","declaration":"theorem phaseShift_coe (a : ℝ) (b : ℝ) (c : ℝ) : ↑(phaseShift a b c) =\n  ![![Complex.exp (Complex.I * ↑a), 0, 0], ![0, Complex.exp (Complex.I * ↑b), 0], ![0, 0, Complex.exp (Complex.I * ↑c)]]"}
+{"name":"phaseShiftMatrix_mul","declaration":"theorem phaseShiftMatrix_mul (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : phaseShiftMatrix a b c * phaseShiftMatrix d e f = phaseShiftMatrix (a + d) (b + e) (c + f)"}
+{"name":"phaseShiftApply.ud","declaration":"theorem phaseShiftApply.ud (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 0 0 = Complex.exp (↑a * Complex.I + ↑d * Complex.I) * ↑V 0 0"}
+{"name":"VubAbs","declaration":"/-- The absolute value of the `ub`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VubAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"phaseShiftApply.equiv","declaration":"theorem phaseShiftApply.equiv (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : V ≈ phaseShiftApply V a b c d e f"}
+{"name":"CKMMatrix.Rusud","declaration":"/-- The ratio of the `us` and `ud` elements of a CKM matrix. -/\ndef CKMMatrix.Rusud (V : CKMMatrix) : ℂ"}
+{"name":"CKMMatrix.ub_us_ratio","declaration":"/-- The ratio of the `ub` and `us` elements of a CKM matrix. -/\ndef CKMMatrix.ub_us_ratio  : Lean.ParserDescr"}
+{"name":"phaseShift","declaration":"/-- Given three real numbers `a b c` the unitary matrix with `exp (I * a)` etc on the\nleading diagonal. -/\ndef phaseShift (a : ℝ) (b : ℝ) (c : ℝ) : ↥(Matrix.unitaryGroup (Fin 3) ℂ)"}
+{"name":"CKMMatrix.cd_element","declaration":"/-- The `cd`th element of the CKM matrix. -/\ndef CKMMatrix.cd_element  : Lean.ParserDescr"}
+{"name":"CKMMatrix.cs_cb_ratio","declaration":"/-- The ratio of the `cs` and `cb` elements of a CKM matrix. -/\ndef CKMMatrix.cs_cb_ratio  : Lean.ParserDescr"}
+{"name":"phaseShift_coe_matrix","declaration":"theorem phaseShift_coe_matrix (a : ℝ) (b : ℝ) (c : ℝ) : ↑(phaseShift a b c) = phaseShiftMatrix a b c"}
+{"name":"VtbAbs","declaration":"/-- The absolute value of the `tb`th element of a representative of an equivalence class of\nCKM matrices. -/\ndef VtbAbs  : Quotient CKMMatrixSetoid → ℝ"}
+{"name":"CKMMatrix.tb_element","declaration":"/-- The `tb`th element of the CKM matrix. -/\ndef CKMMatrix.tb_element  : Lean.ParserDescr"}
+{"name":"phaseShiftApply.cd","declaration":"theorem phaseShiftApply.cd (V : CKMMatrix) (a : ℝ) (b : ℝ) (c : ℝ) (d : ℝ) (e : ℝ) (f : ℝ) : ↑(phaseShiftApply V a b c d e f) 1 0 = Complex.exp (↑b * Complex.I + ↑d * Complex.I) * ↑V 1 0"}

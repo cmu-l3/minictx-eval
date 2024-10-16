@@ -1,0 +1,5 @@
+{"name":"ENNReal.ofNat_ne_top","declaration":"theorem ENNReal.ofNat_ne_top (n : ℕ) [Nat.AtLeastTwo n] : OfNat.ofNat n ≠ ⊤"}
+{"name":"ENNReal.add_ne_top'","declaration":"theorem ENNReal.add_ne_top' {a : ENNReal} {b : ENNReal} (ha : a ≠ ⊤) (hb : b ≠ ⊤) : a + b ≠ ⊤"}
+{"name":"PositivityForAesop","declaration":"/-- A version of the positivity tactic for use by `aesop`. -/\ndef PositivityForAesop  : Lean.Elab.Tactic.TacticM Unit"}
+{"name":"finiteness","declaration":"/-- Tactic to solve goals of the form `*** < ∞` and (equivalently) `*** ≠ ∞` in the extended\nnonnegative reals (`ℝ≥0∞`). -/\ndef finiteness  : Lean.ParserDescr"}
+{"name":"ENNReal.inv_ne_top'","declaration":"theorem ENNReal.inv_ne_top' {a : ENNReal} (h : a ≠ 0) : a⁻¹ ≠ ⊤"}

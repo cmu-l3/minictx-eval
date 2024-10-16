@@ -68,8 +68,8 @@ class InteractiveThread(threading.Thread):
                 break
 
             try:
-                self.session.expect('\r\n\r\n', timeout=10) #filter out input, pexpect print the input twice for unknown reason
-                self.session.expect(['\r\n\r\n', pexpect.EOF], timeout=10)
+                self.session.expect('\r\n\r\n', timeout=30) #filter out input, pexpect print the input twice for unknown reason
+                self.session.expect(['\r\n\r\n', pexpect.EOF], timeout=30)
                 output = self.session.before.strip()
                 output_dict = json.loads(output)
 

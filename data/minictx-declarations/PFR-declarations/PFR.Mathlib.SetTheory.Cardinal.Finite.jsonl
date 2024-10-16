@@ -1,0 +1,1 @@
+{"name":"Set.Nonempty.card_pos","declaration":"theorem Set.Nonempty.card_pos {α : Type u_1} {s : Set α} (hs : Set.Nonempty s) (hs' : Set.Finite s) : 0 < Nat.card ↑s"}

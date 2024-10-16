@@ -1,0 +1,1 @@
+{"name":"Asymptotics.isTheta_bot","declaration":"theorem Asymptotics.isTheta_bot {α : Type u_1} {E : Type u_3} {F : Type u_5} [Norm E] [Norm F] {f : α → E} {g : α → F} : f =Θ[⊥] g"}

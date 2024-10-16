@@ -1,0 +1,6 @@
+{"name":"AddSubgroupClass.coe_sub_coe","declaration":"theorem AddSubgroupClass.coe_sub_coe {S : Type u_1} {G : Type u_2} [SetLike S G] [SubtractionMonoid G] [AddSubgroupClass S G] (H : S) : ↑H - ↑H = ↑H"}
+{"name":"AddSubgroupClass.neg_coe","declaration":"theorem AddSubgroupClass.neg_coe {S : Type u_1} {G : Type u_2} [SetLike S G] [SubtractionMonoid G] [AddSubgroupClass S G] (H : S) : -↑H = ↑H"}
+{"name":"AddSubgroupClass.coe_add_coe","declaration":"theorem AddSubgroupClass.coe_add_coe {S : Type u_1} {G : Type u_2} [SetLike S G] [SubNegMonoid G] [AddSubgroupClass S G] (H : S) : ↑H + ↑H = ↑H"}
+{"name":"SubgroupClass.inv_coe","declaration":"theorem SubgroupClass.inv_coe {S : Type u_1} {G : Type u_2} [SetLike S G] [DivisionMonoid G] [SubgroupClass S G] (H : S) : (↑H)⁻¹ = ↑H"}
+{"name":"SubgroupClass.coe_div_coe","declaration":"theorem SubgroupClass.coe_div_coe {S : Type u_1} {G : Type u_2} [SetLike S G] [DivisionMonoid G] [SubgroupClass S G] (H : S) : ↑H / ↑H = ↑H"}
+{"name":"SubgroupClass.coe_mul_coe","declaration":"theorem SubgroupClass.coe_mul_coe {S : Type u_1} {G : Type u_2} [SetLike S G] [DivInvMonoid G] [SubgroupClass S G] (H : S) : ↑H * ↑H = ↑H"}

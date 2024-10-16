@@ -1,0 +1,67 @@
+{"name":"CS.mk","declaration":"ctor CS.mk {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (toFun : ℝ → E) (h1 : ContDiff ℝ (↑n) toFun) (h2 : HasCompactSupport toFun) : CS n E"}
+{"name":"W1.deriv","declaration":"def W1.deriv {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : W1 (n + 1) E) : W1 n E"}
+{"name":"funscale","declaration":"def funscale {E : Type u_2} (g : ℝ → E) (R : ℝ) (x : ℝ) : E"}
+{"name":"W21.instCoeSchwartzMapRealComplexNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpaceInstNormedAddCommGroupComplexComplexToRealInstRCLikeComplexW21","declaration":"instance W21.instCoeSchwartzMapRealComplexNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpaceInstNormedAddCommGroupComplexComplexToRealInstRCLikeComplexW21  : Coe (SchwartzMap ℝ ℂ) W21"}
+{"name":"W1.integrable","declaration":"def W1.integrable {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (self : W1 n E) ⦃k : ℕ⦄ : k ≤ n → MeasureTheory.Integrable (iteratedDeriv k self.toFun) MeasureTheory.volume"}
+{"name":"CS.bounded","declaration":"theorem CS.bounded {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {f : CS n E} : ∃ C, ∀ (v : ℝ), ‖f.toFun v‖ ≤ C"}
+{"name":"W21.ofCS2","declaration":"def W21.ofCS2 (f : CS 2 ℂ) : W21"}
+{"name":"trunc.instCoeTruncCSOfNatNatInstOfNatNatRealNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpace","declaration":"instance trunc.instCoeTruncCSOfNatNatInstOfNatNatRealNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpace  : Coe trunc (CS 2 ℝ)"}
+{"name":"W21.norm","declaration":"def W21.norm (f : ℝ → ℂ) : ℝ"}
+{"name":"trunc.mk","declaration":"ctor trunc.mk (toCS : CS 2 ℝ) (h3 : Set.indicator (Set.Icc (-1) 1) 1 ≤ toCS.toFun) (h4 : toCS.toFun ≤ Set.indicator (Set.Ioo (-2) 2) 1) : trunc"}
+{"name":"W1.continuous","declaration":"theorem W1.continuous {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : W1 n E) : Continuous f.toFun"}
+{"name":"W21.hf''","declaration":"theorem W21.hf'' (f : W21) : MeasureTheory.Integrable (deriv (deriv f.toFun)) MeasureTheory.volume"}
+{"name":"trunc.nonneg","declaration":"theorem trunc.nonneg (g : trunc) (x : ℝ) : 0 ≤ g.toFun x"}
+{"name":"CS.ext","declaration":"theorem CS.ext {n : ℕ} {E : Type u_2} : ∀ {inst : NormedAddCommGroup E} {inst_1 : NormedSpace ℝ E} (x y : CS n E), x.toFun = y.toFun → x = y"}
+{"name":"W1","declaration":"structure W1 (n : ℕ) (E : Type u_2) [NormedAddCommGroup E] [NormedSpace ℝ E] : Type u_2"}
+{"name":"W21.hf","declaration":"theorem W21.hf (f : W21) : MeasureTheory.Integrable f.toFun MeasureTheory.volume"}
+{"name":"CS.smul","declaration":"def CS.smul {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (R : ℝ) (f : CS n E) : CS n E"}
+{"name":"W21.instNormW21","declaration":"instance W21.instNormW21  : Norm W21"}
+{"name":"W1.differentiable","declaration":"theorem W1.differentiable {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : W1 (n + 1) E) : Differentiable ℝ f.toFun"}
+{"name":"W1.integrable_iteratedDeriv_Schwarz","declaration":"theorem W1.integrable_iteratedDeriv_Schwarz {n : ℕ} {f : SchwartzMap ℝ ℂ} : MeasureTheory.Integrable (iteratedDeriv n ⇑f) MeasureTheory.volume"}
+{"name":"CS.neg","declaration":"def CS.neg {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : CS n E) : CS n E"}
+{"name":"trunc.le_one","declaration":"theorem trunc.le_one (g : trunc) (x : ℝ) : g.toFun x ≤ 1"}
+{"name":"CS.deriv","declaration":"def CS.deriv {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : CS (n + 1) E) : CS n E"}
+{"name":"CS.toFun","declaration":"def CS.toFun {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (self : CS n E) : ℝ → E"}
+{"name":"CS.hasDerivAt_scale","declaration":"theorem CS.hasDerivAt_scale {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : CS (n + 1) E) (R : ℝ) (x : ℝ) : HasDerivAt (CS.scale f R).toFun (R⁻¹ • deriv f.toFun (R⁻¹ • x)) x"}
+{"name":"CS.deriv_scale","declaration":"theorem CS.deriv_scale {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {R : ℝ} {f : CS (n + 1) E} : CS.deriv (CS.scale f R) = R⁻¹ • CS.scale (CS.deriv f) R"}
+{"name":"CS.smul_apply","declaration":"theorem CS.smul_apply {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {f : CS n E} {R : ℝ} {x : ℝ} : (R • f).toFun x = R • f.toFun x"}
+{"name":"W1.of_Schwartz","declaration":"def W1.of_Schwartz {n : ℕ} (f : SchwartzMap ℝ ℂ) : W1 n ℂ"}
+{"name":"trunc.zero_at","declaration":"theorem trunc.zero_at {g : trunc} : g.toFun 0 = 1"}
+{"name":"CS.deriv_scale'","declaration":"theorem CS.deriv_scale' {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {R : ℝ} {v : ℝ} {f : CS (n + 1) E} : (CS.deriv (CS.scale f R)).toFun v = R⁻¹ • (CS.deriv f).toFun (R⁻¹ • v)"}
+{"name":"CS.scale","declaration":"def CS.scale {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (g : CS n E) (R : ℝ) : CS n E"}
+{"name":"CS.instNegCS","declaration":"instance CS.instNegCS {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} : Neg (CS n E)"}
+{"name":"W21.instHMulCSOfNatNatInstOfNatNatComplexInstNormedAddCommGroupComplexToNormedSpaceRealRCLikeComplexToRealInnerProductSpaceInstRCLikeComplexW21","declaration":"instance W21.instHMulCSOfNatNatInstOfNatNatComplexInstNormedAddCommGroupComplexToNormedSpaceRealRCLikeComplexToRealInnerProductSpaceInstRCLikeComplexW21  : HMul (CS 2 ℂ) W21 (CS 2 ℂ)"}
+{"name":"W21.instCoeCSOfNatNatInstOfNatNatComplexInstNormedAddCommGroupComplexToNormedSpaceRealRCLikeComplexToRealInnerProductSpaceInstRCLikeComplexW21","declaration":"instance W21.instCoeCSOfNatNatInstOfNatNatComplexInstNormedAddCommGroupComplexToNormedSpaceRealRCLikeComplexToRealInnerProductSpaceInstRCLikeComplexW21  : Coe (CS 2 ℂ) W21"}
+{"name":"trunc.h4","declaration":"def trunc.h4 (self : trunc) : self.toFun ≤ Set.indicator (Set.Ioo (-2) 2) 1"}
+{"name":"W1.mk","declaration":"ctor W1.mk {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (toFun : ℝ → E) (smooth : ContDiff ℝ (↑n) toFun) (integrable : ∀ ⦃k : ℕ⦄, k ≤ n → MeasureTheory.Integrable (iteratedDeriv k toFun) MeasureTheory.volume) : W1 n E"}
+{"name":"CS.ext_iff","declaration":"theorem CS.ext_iff {n : ℕ} {E : Type u_2} : ∀ {inst : NormedAddCommGroup E} {inst_1 : NormedSpace ℝ E} (x y : CS n E), x = y ↔ x.toFun = y.toFun"}
+{"name":"CS.h2","declaration":"def CS.h2 {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (self : CS n E) : HasCompactSupport self.toFun"}
+{"name":"W21.norm_nonneg","declaration":"theorem W21.norm_nonneg {f : ℝ → ℂ} : 0 ≤ W21.norm f"}
+{"name":"trunc.instCoeFunTruncForAllReal","declaration":"instance trunc.instCoeFunTruncForAllReal  : CoeFun trunc fun x => ℝ → ℝ"}
+{"name":"W1.toFun","declaration":"def W1.toFun {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (self : W1 n E) : ℝ → E"}
+{"name":"W21.hf'","declaration":"theorem W21.hf' (f : W21) : MeasureTheory.Integrable (deriv f.toFun) MeasureTheory.volume"}
+{"name":"W21.instHMulCSOfNatNatInstOfNatNatRealNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpaceW21ComplexInstNormedAddCommGroupComplexComplexToRealInstRCLikeComplex","declaration":"instance W21.instHMulCSOfNatNatInstOfNatNatRealNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpaceW21ComplexInstNormedAddCommGroupComplexComplexToRealInstRCLikeComplex  : HMul (CS 2 ℝ) W21 (CS 2 ℂ)"}
+{"name":"CS.continuous","declaration":"theorem CS.continuous {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : CS n E) : Continuous f.toFun"}
+{"name":"CS.deriv_smul","declaration":"theorem CS.deriv_smul {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {R : ℝ} {f : CS (n + 1) E} : CS.deriv (R • f) = R • CS.deriv f"}
+{"name":"CS.tendsto_scale","declaration":"theorem CS.tendsto_scale {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : CS n E) (x : ℝ) : Filter.Tendsto (fun R => (CS.scale f R).toFun x) Filter.atTop (nhds (f.toFun 0))"}
+{"name":"CS.hasDerivAt","declaration":"theorem CS.hasDerivAt {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : CS (n + 1) E) (x : ℝ) : HasDerivAt f.toFun ((CS.deriv f).toFun x) x"}
+{"name":"contDiff_ofReal","declaration":"theorem contDiff_ofReal  : ContDiff ℝ ⊤ Complex.ofReal'"}
+{"name":"W1.hasDerivAt","declaration":"theorem W1.hasDerivAt {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : W1 (n + 1) E) (x : ℝ) : HasDerivAt f.toFun ((W1.deriv f).toFun x) x"}
+{"name":"CS.instCoeFunCSForAllReal","declaration":"instance CS.instCoeFunCSForAllReal {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} : CoeFun (CS n E) fun x => ℝ → E"}
+{"name":"trunc.zero","declaration":"theorem trunc.zero (g : trunc) : g.toFun =ᶠ[nhds 0] 1"}
+{"name":"CS.h1","declaration":"def CS.h1 {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (self : CS n E) : ContDiff ℝ (↑n) self.toFun"}
+{"name":"tendsto_funscale","declaration":"theorem tendsto_funscale {E : Type u_1} [NormedAddCommGroup E] {f : ℝ → E} (hf : ContinuousAt f 0) (x : ℝ) : Filter.Tendsto (fun R => funscale f R x) Filter.atTop (nhds (f 0))"}
+{"name":"W21","declaration":"def W21  : Type"}
+{"name":"W1.iteratedDeriv_sub","declaration":"theorem W1.iteratedDeriv_sub {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {f : ℝ → E} {g : ℝ → E} (hf : ContDiff ℝ (↑n) f) (hg : ContDiff ℝ (↑n) g) : iteratedDeriv n (f - g) = iteratedDeriv n f - iteratedDeriv n g"}
+{"name":"trunc.h3","declaration":"def trunc.h3 (self : trunc) : Set.indicator (Set.Icc (-1) 1) 1 ≤ self.toFun"}
+{"name":"W1.instCoeFunW1ForAllReal","declaration":"instance W1.instCoeFunW1ForAllReal {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} : CoeFun (W1 n E) fun x => ℝ → E"}
+{"name":"CS.neg_apply","declaration":"theorem CS.neg_apply {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {f : CS n E} {x : ℝ} : (-f).toFun x = -f.toFun x"}
+{"name":"W1.smooth","declaration":"def W1.smooth {n : ℕ} {E : Type u_2} [NormedAddCommGroup E] [NormedSpace ℝ E] (self : W1 n E) : ContDiff ℝ (↑n) self.toFun"}
+{"name":"trunc","declaration":"structure trunc  : Type"}
+{"name":"CS.instCoeCSRealNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpaceComplexInstNormedAddCommGroupComplexComplexToRealInstRCLikeComplex","declaration":"instance CS.instCoeCSRealNormedAddCommGroupToNormedSpaceRCLikeInnerProductSpaceComplexInstNormedAddCommGroupComplexComplexToRealInstRCLikeComplex {n : ℕ} : Coe (CS n ℝ) (CS n ℂ)"}
+{"name":"W21_approximation","declaration":"theorem W21_approximation (f : W21) (g : trunc) : Filter.Tendsto (fun R => ‖f - W21.ofCS2 (CS.scale g.toCS R * f)‖) Filter.atTop (nhds 0)"}
+{"name":"W1.instSubW1","declaration":"instance W1.instSubW1 {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} : Sub (W1 n E)"}
+{"name":"W1.sub","declaration":"def W1.sub {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} (f : W1 n E) (g : W1 n E) : W1 n E"}
+{"name":"CS.instHSMulRealCS","declaration":"instance CS.instHSMulRealCS {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} : HSMul ℝ (CS n E) (CS n E)"}
+{"name":"CS","declaration":"structure CS (n : ℕ) (E : Type u_2) [NormedAddCommGroup E] [NormedSpace ℝ E] : Type u_2"}
+{"name":"CS.deriv_apply","declaration":"theorem CS.deriv_apply {E : Type u_1} [NormedAddCommGroup E] [NormedSpace ℝ E] {n : ℕ} {f : CS (n + 1) E} {x : ℝ} : (CS.deriv f).toFun x = deriv f.toFun x"}

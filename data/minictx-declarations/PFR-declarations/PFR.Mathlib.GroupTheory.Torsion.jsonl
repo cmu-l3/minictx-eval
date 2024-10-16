@@ -1,0 +1,1 @@
+{"name":"AddMonoid.IsTorsionFree.noZeroNsmulDivisors","declaration":"/-- See note [reducible non-instances]. -/\ndef AddMonoid.IsTorsionFree.noZeroNsmulDivisors {M : Type u_1} [AddMonoid M] (hM : AddMonoid.IsTorsionFree M) : NoZeroSMulDivisors ℕ M"}

@@ -1,0 +1,9 @@
+{"name":"SciLean.isntIsomorphicTypeId","declaration":"instance SciLean.isntIsomorphicTypeId {α : Sort u} : SciLean.IsomorphicType `RealToFloat α α"}
+{"name":"SciLean.instIsomorphicTypeMkStr1ForAllForAll","declaration":"instance SciLean.instIsomorphicTypeMkStr1ForAllForAll {α : Type u_1} {α' : Type u_2} {β : Type u_3} {β' : Type u_4} [SciLean.IsomorphicType `RealToFloat α α'] [SciLean.IsomorphicType `RealToFloat β β'] : SciLean.IsomorphicType `RealToFloat (α → β) (α' → β')"}
+{"name":"SciLean.instIsomorphicTypeRealToFloatProd","declaration":"instance SciLean.instIsomorphicTypeRealToFloatProd {α : Type u_1} {α' : Type u_2} {β : Type u_3} {β' : Type u_4} [SciLean.IsomorphicType `RealToFloat α α'] [SciLean.IsomorphicType `RealToFloat β β'] : SciLean.IsomorphicType `RealToFloat (α × β) (α' × β')"}
+{"name":"SciLean.instIsomorphicTypeMkStr1RealFloat","declaration":"def SciLean.instIsomorphicTypeMkStr1RealFloat  : SciLean.IsomorphicType `RealToFloat ℝ Float"}
+{"name":"SciLean.floatToReal","declaration":"def SciLean.floatToReal (x : Float) : ℝ"}
+{"name":"SciLean.realFloatEquiv","declaration":"/-- This axiom is obviously contradictory. We use it to compile programs that were designed only for reals or proper fields. With this axiom we can plug `Float` to function that would only accept types that have instance of `RCLike`\n\n-/\naxiom SciLean.realFloatEquiv  : ℝ ≃ Float"}
+{"name":"SciLean.isomorphicType_equiv_id","declaration":"theorem SciLean.isomorphicType_equiv_id {α : Type u_1} (a : α) : (SciLean.IsomorphicType.equiv `RealToFloat) a = a"}
+{"name":"SciLean.realToFloat","declaration":"def SciLean.realToFloat (x : ℝ) : Float"}
+{"name":"SciLean.instIsomorphicTypeMkStr1FloatReal","declaration":"def SciLean.instIsomorphicTypeMkStr1FloatReal  : SciLean.IsomorphicType `FloatToReal Float ℝ"}

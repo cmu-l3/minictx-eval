@@ -1,0 +1,8 @@
+{"name":"Parser.Attr.rand_push_E","declaration":"def Parser.Attr.rand_push_E  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_pull_E_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.rand_pull_E_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_push_E_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.rand_push_E_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_AD_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.rand_AD_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_simp_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.rand_simp_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_AD","declaration":"def Parser.Attr.rand_AD  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_simp","declaration":"def Parser.Attr.rand_simp  : Lean.ParserDescr"}
+{"name":"Parser.Attr.rand_pull_E","declaration":"def Parser.Attr.rand_pull_E  : Lean.ParserDescr"}

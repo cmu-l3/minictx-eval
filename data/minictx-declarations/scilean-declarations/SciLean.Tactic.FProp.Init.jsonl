@@ -1,0 +1,36 @@
+{"name":"SciLean.FProp.getFPropName?","declaration":"def SciLean.FProp.getFPropName? (e : Lean.Expr) : Option Lean.Name"}
+{"name":"SciLean.FPropM","declaration":"def SciLean.FPropM (α : Type) : Type"}
+{"name":"SciLean.FProp.funTransRuleAttr","declaration":"opaque SciLean.FProp.funTransRuleAttr  : Lean.TagAttribute"}
+{"name":"SciLean.FProp.instOrdName","declaration":"def SciLean.FProp.instOrdName  : Ord Lean.Name"}
+{"name":"SciLean.FProp.FPropRulesExt","declaration":"opaque SciLean.FProp.FPropRulesExt  : Lean.MergeMapDeclarationExtension SciLean.FProp.FPropRules"}
+{"name":"SciLean.FProp.fpropExt","declaration":"opaque SciLean.FProp.fpropExt  : Lean.PersistentEnvExtension (Lean.Name × Lean.Name) (Lean.Name × SciLean.FPropExt)\n  (Std.RBMap Lean.Name SciLean.FPropExt Lean.Name.quickCmp)"}
+{"name":"SciLean.FProp.FPropRules.instInhabitedFPropRules","declaration":"instance SciLean.FProp.FPropRules.instInhabitedFPropRules  : Inhabited SciLean.FProp.FPropRules"}
+{"name":"SciLean.FProp.getFPropRules","declaration":"def SciLean.FProp.getFPropRules (funName : Lean.Name) (fpropName : Lean.Name) : Lean.CoreM (Array Lean.Meta.SimpTheorem)"}
+{"name":"SciLean.FPropExt.identityRule","declaration":"/-- Custom rule for proving property of `fun x => x` -/\ndef SciLean.FPropExt.identityRule (self : SciLean.FPropExt) (expr : Lean.Expr) : SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FProp.getFPropExt?","declaration":"/-- Returns function transformation info if `e` is function tranformation expression.\n-/\ndef SciLean.FProp.getFPropExt? (e : Lean.Expr) : Lean.CoreM (Option SciLean.FPropExt)"}
+{"name":"SciLean.FProp.FPropRules.insert","declaration":"def SciLean.FProp.FPropRules.insert (fp : SciLean.FProp.FPropRules) (property : Lean.Name) (thrm : Lean.Name) : SciLean.FProp.FPropRules"}
+{"name":"SciLean.FProp.FPropRules","declaration":"/-- This holds a collection of property theorems for a fixed constant\n-/\ndef SciLean.FProp.FPropRules  : Type"}
+{"name":"SciLean.FProp.FPropRules.instToStringFPropRules","declaration":"instance SciLean.FProp.FPropRules.instToStringFPropRules  : ToString SciLean.FProp.FPropRules"}
+{"name":"SciLean.FProp.Config","declaration":"structure SciLean.FProp.Config  : Type"}
+{"name":"SciLean.FProp.State.cache","declaration":"/-- Simp's cache is used as the `fprop` tactic is designed to be used inside of simp and utilize its cache -/\ndef SciLean.FProp.State.cache (self : SciLean.FProp.State) : Lean.Meta.Simp.Cache"}
+{"name":"SciLean.FProp.FPropRules.empty","declaration":"def SciLean.FProp.FPropRules.empty  : SciLean.FProp.FPropRules"}
+{"name":"SciLean.FProp.mkFPropExt","declaration":"def SciLean.FProp.mkFPropExt {FpropExt : Type} (n : Lean.Name) : Lean.ImportM FpropExt"}
+{"name":"SciLean.FPropExt.discharger","declaration":"/-- Custom discharger for this function property - like proving (x≠0) -/\ndef SciLean.FPropExt.discharger (self : SciLean.FPropExt) : Lean.Expr → SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FPropExt.lambdaLetRule","declaration":"/-- Custom rule for proving property of `fun x => let y := g x; f x y` -/\ndef SciLean.FPropExt.lambdaLetRule (self : SciLean.FPropExt) (expr : Lean.Expr) (f : Lean.Expr) (g : Lean.Expr) : SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FPropExt.constantRule","declaration":"/-- Custom rule for proving property of `fun x => y` -/\ndef SciLean.FPropExt.constantRule (self : SciLean.FPropExt) (expr : Lean.Expr) : SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FProp.State","declaration":"structure SciLean.FProp.State  : Type"}
+{"name":"SciLean.FPropExt.replaceFPropFun","declaration":"/-- Replace the function -/\ndef SciLean.FPropExt.replaceFPropFun (self : SciLean.FPropExt) (expr : Lean.Expr) (newFun : Lean.Expr) : Lean.Expr"}
+{"name":"SciLean.FPropExt.compRule","declaration":"/-- Custom rule for proving property of `fun x => f (g x)` or `fun x => let y := g x; f y` -/\ndef SciLean.FPropExt.compRule (self : SciLean.FPropExt) (expr : Lean.Expr) (f : Lean.Expr) (g : Lean.Expr) : SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FPropExt.projRule","declaration":"/-- Custom rule for proving property of `fun x => x i` -/\ndef SciLean.FPropExt.projRule (self : SciLean.FPropExt) (expr : Lean.Expr) : SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FProp.instInhabitedFPropExt","declaration":"instance SciLean.FProp.instInhabitedFPropExt  : Inhabited SciLean.FPropExt"}
+{"name":"SciLean.fpropParam","declaration":"/-- Gadget for marking parameters for `fprop` and `ftrans` tactics.\n\nParameters marked like this are usually hard to prove. Right now, they are\nusually discharged with sorry.\n-/\ndef SciLean.fpropParam (α : Sort u) : Sort u"}
+{"name":"SciLean.FPropExt.name","declaration":"/-- Name of this extension, keep the default value! -/\ndef SciLean.FPropExt.name (self : SciLean.FPropExt) : Lean.Name"}
+{"name":"SciLean.FPropExt.lambdaLambdaRule","declaration":"/-- Custom rule for proving property of `fun x y => f y x` -/\ndef SciLean.FPropExt.lambdaLambdaRule (self : SciLean.FPropExt) (expr : Lean.Expr) (f : Lean.Expr) : SciLean.FPropM (Option Lean.Expr)"}
+{"name":"SciLean.FProp.getFProp?","declaration":"/-- Returns function property name, its extension and the function if `e` is function property expression.\n-/\ndef SciLean.FProp.getFProp? (e : Lean.Expr) : Lean.CoreM (Option (Lean.Name × SciLean.FPropExt × Lean.Expr))"}
+{"name":"SciLean.FProp.getFPropFun?","declaration":"/-- Returns function transformation info if `e` is function btranformation expression.\n-/\ndef SciLean.FProp.getFPropFun? (e : Lean.Expr) : Lean.CoreM (Option Lean.Expr)"}
+{"name":"SciLean.FProp.Config.mk","declaration":"ctor SciLean.FProp.Config.mk  : SciLean.FProp.Config"}
+{"name":"SciLean.FPropExt.mk","declaration":"ctor SciLean.FPropExt.mk (fpropName : Lean.Name) (getFPropFun? : Lean.Expr → Option Lean.Expr) (replaceFPropFun : Lean.Expr → Lean.Expr → Lean.Expr) (identityRule : Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (constantRule : Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (projRule : Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (compRule : Lean.Expr → Lean.Expr → Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (lambdaLetRule : Lean.Expr → Lean.Expr → Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (lambdaLambdaRule : Lean.Expr → Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (discharger : Lean.Expr → SciLean.FPropM (Option Lean.Expr)) (name : autoParam Lean.Name _auto✝) : SciLean.FPropExt"}
+{"name":"SciLean.FPropExt.getFPropFun?","declaration":"/-- Get the function  -/\ndef SciLean.FPropExt.getFPropFun? (self : SciLean.FPropExt) (expr : Lean.Expr) : Option Lean.Expr"}
+{"name":"SciLean.FProp.State.mk","declaration":"ctor SciLean.FProp.State.mk (cache : Lean.Meta.Simp.Cache) : SciLean.FProp.State"}
+{"name":"SciLean.FPropExt","declaration":"structure SciLean.FPropExt  : Type"}
+{"name":"SciLean.FPropExt.fpropName","declaration":"/-- Function transformation name -/\ndef SciLean.FPropExt.fpropName (self : SciLean.FPropExt) : Lean.Name"}

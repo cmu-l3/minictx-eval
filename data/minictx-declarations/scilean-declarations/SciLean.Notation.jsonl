@@ -1,0 +1,36 @@
+{"name":"SciLean.Dagger","declaration":"class SciLean.Dagger {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.«term∇·_»","declaration":"def SciLean.«term∇·_»  : Lean.ParserDescr"}
+{"name":"SciLean.OTimes","declaration":"class SciLean.OTimes {α : Sort u} {β : Sort v} (a : α) (b : β) {γ : outParam (Sort w)} (c : outParam γ) : Type"}
+{"name":"SciLean.Dagger.mk","declaration":"ctor SciLean.Dagger.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.Dagger a b"}
+{"name":"SciLean.Divergence","declaration":"class SciLean.Divergence {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.«doElem__-=_»","declaration":"def SciLean.«doElem__-=_»  : Lean.ParserDescr"}
+{"name":"SciLean.termℛ_","declaration":"def SciLean.termℛ_  : Lean.ParserDescr"}
+{"name":"SciLean.PartialDagger.mk","declaration":"ctor SciLean.PartialDagger.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.PartialDagger a b"}
+{"name":"SciLean.«term_⁻¹»","declaration":"def SciLean.«term_⁻¹»  : Lean.TrailingParserDescr"}
+{"name":"SciLean.TangentMap.mk","declaration":"ctor SciLean.TangentMap.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.TangentMap a b"}
+{"name":"SciLean.InverseNotation.mk","declaration":"ctor SciLean.InverseNotation.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.InverseNotation a b"}
+{"name":"SciLean.PartialDot","declaration":"class SciLean.PartialDot {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.OTimes.mk","declaration":"ctor SciLean.OTimes.mk {α : Sort u} {β : Sort v} {a : α} {b : β} {γ : outParam (Sort w)} {c : outParam γ} : SciLean.OTimes a b c"}
+{"name":"SciLean.term𝒯_","declaration":"def SciLean.term𝒯_  : Lean.ParserDescr"}
+{"name":"SciLean.Differential","declaration":"class SciLean.Differential {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.«term∂†_»","declaration":"def SciLean.«term∂†_»  : Lean.ParserDescr"}
+{"name":"SciLean.ReverseDifferential.mk","declaration":"ctor SciLean.ReverseDifferential.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.ReverseDifferential a b"}
+{"name":"SciLean.«doElem__*.=_»","declaration":"def SciLean.«doElem__*.=_»  : Lean.ParserDescr"}
+{"name":"SciLean.«doElem__/=_»","declaration":"def SciLean.«doElem__/=_»  : Lean.ParserDescr"}
+{"name":"SciLean.«term∂·_»","declaration":"def SciLean.«term∂·_»  : Lean.ParserDescr"}
+{"name":"SciLean.inv.instInverseNotation","declaration":"instance SciLean.inv.instInverseNotation {α : Type u_1} [Inv α] (a : α) : SciLean.InverseNotation a a⁻¹"}
+{"name":"SciLean.Integral.mk","declaration":"ctor SciLean.Integral.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.Integral a b"}
+{"name":"SciLean.Integral","declaration":"class SciLean.Integral {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.termⅆ_","declaration":"def SciLean.termⅆ_  : Lean.ParserDescr"}
+{"name":"SciLean.ReverseDifferential","declaration":"class SciLean.ReverseDifferential {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.«term_⊗_»","declaration":"def SciLean.«term_⊗_»  : Lean.TrailingParserDescr"}
+{"name":"SciLean.«term_†»","declaration":"def SciLean.«term_†»  : Lean.TrailingParserDescr"}
+{"name":"SciLean.Differential.mk","declaration":"ctor SciLean.Differential.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.Differential a b"}
+{"name":"SciLean.InverseNotation","declaration":"class SciLean.InverseNotation {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.«doElem__+=_»","declaration":"def SciLean.«doElem__+=_»  : Lean.ParserDescr"}
+{"name":"SciLean.PartialDagger","declaration":"class SciLean.PartialDagger {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}
+{"name":"SciLean.«term∫_»","declaration":"def SciLean.«term∫_»  : Lean.ParserDescr"}
+{"name":"SciLean.«doElem__*=_»","declaration":"def SciLean.«doElem__*=_»  : Lean.ParserDescr"}
+{"name":"SciLean.PartialDot.mk","declaration":"ctor SciLean.PartialDot.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.PartialDot a b"}
+{"name":"SciLean.Divergence.mk","declaration":"ctor SciLean.Divergence.mk {α : Sort u} {a : α} {β : outParam (Sort v)} {b : outParam β} : SciLean.Divergence a b"}
+{"name":"SciLean.TangentMap","declaration":"class SciLean.TangentMap {α : Sort u} (a : α) {β : outParam (Sort v)} (b : outParam β) : Type"}

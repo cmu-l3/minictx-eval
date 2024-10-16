@@ -1,0 +1,1 @@
+{"name":"Fin.toFloat","declaration":"def Fin.toFloat {n : Nat} (i : Fin n) : Float"}

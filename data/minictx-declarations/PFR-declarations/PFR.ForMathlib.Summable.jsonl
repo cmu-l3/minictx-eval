@@ -1,0 +1,2 @@
+{"name":"tsum_of_not_summable","declaration":"/-- Currently not needed. -/\ntheorem tsum_of_not_summable {S : Type u_1} {f : S → ℝ} (hf : ∀ (s : S), 0 ≤ f s) (hsum : ¬Summable f) : ∑' (s : S), ENNReal.ofReal (f s) = ⊤"}
+{"name":"tsum_eq_toReal_tsum_ofReal","declaration":"/-- Currently not needed. -/\ntheorem tsum_eq_toReal_tsum_ofReal {S : Type u_1} {f : S → ℝ} (hf : ∀ (s : S), 0 ≤ f s) : ∑' (s : S), f s = (∑' (s : S), ENNReal.ofReal (f s)).toReal"}

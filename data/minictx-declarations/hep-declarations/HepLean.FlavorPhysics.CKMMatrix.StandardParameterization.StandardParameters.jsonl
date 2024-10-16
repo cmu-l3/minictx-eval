@@ -1,0 +1,65 @@
+{"name":"C₁₂_of_Vub_one","declaration":"theorem C₁₂_of_Vub_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V = 1) : C₁₂ V = 1"}
+{"name":"θ₁₂","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `θ₁₂` in the\nstandard parameterization. --/\ndef θ₁₂ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"complexAbs_sin_θ₁₂","declaration":"theorem complexAbs_sin_θ₁₂ (V : Quotient CKMMatrixSetoid) : ↑(Complex.abs (Complex.sin ↑(θ₁₂ V))) = Complex.sin ↑(θ₁₂ V)"}
+{"name":"C₁₂_eq_ℂcos_θ₁₂","declaration":"theorem C₁₂_eq_ℂcos_θ₁₂ (V : Quotient CKMMatrixSetoid) : Complex.cos ↑(θ₁₂ V) = ↑(C₁₂ V)"}
+{"name":"C₁₃_eq_add_sq","declaration":"theorem C₁₃_eq_add_sq (V : Quotient CKMMatrixSetoid) : C₁₃ V = Real.sqrt (VudAbs V ^ 2 + VusAbs V ^ 2)"}
+{"name":"standParam.mulExpδ₁₃_on_param_abs","declaration":"theorem standParam.mulExpδ₁₃_on_param_abs (V : CKMMatrix) (δ₁₃ : ℝ) : ↑(Complex.abs (Invariant.mulExpδ₁₃ ⟦standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃⟧)) =\n  Complex.sin ↑(θ₁₂ ⟦V⟧) * Complex.cos ↑(θ₁₃ ⟦V⟧) ^ 2 * Complex.sin ↑(θ₂₃ ⟦V⟧) * Complex.sin ↑(θ₁₃ ⟦V⟧) *\n      Complex.cos ↑(θ₁₂ ⟦V⟧) *\n    Complex.cos ↑(θ₂₃ ⟦V⟧)"}
+{"name":"S₁₃_nonneg","declaration":"theorem S₁₃_nonneg (V : Quotient CKMMatrixSetoid) : 0 ≤ S₁₃ V"}
+{"name":"standParam.on_param_sin_θ₁₂_eq_zero","declaration":"theorem standParam.on_param_sin_θ₁₂_eq_zero {V : CKMMatrix} (δ₁₃ : ℝ) (h : Real.sin (θ₁₂ ⟦V⟧) = 0) : standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃ ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"S₁₂_eq_sin_θ₁₂","declaration":"theorem S₁₂_eq_sin_θ₁₂ (V : Quotient CKMMatrixSetoid) : Real.sin (θ₁₂ V) = S₁₂ V"}
+{"name":"Vs_zero_iff_cos_sin_zero","declaration":"theorem Vs_zero_iff_cos_sin_zero (V : CKMMatrix) : VudAbs ⟦V⟧ = 0 ∨ VubAbs ⟦V⟧ = 0 ∨ VusAbs ⟦V⟧ = 0 ∨ VcbAbs ⟦V⟧ = 0 ∨ VtbAbs ⟦V⟧ = 0 ↔\n  Real.cos (θ₁₂ ⟦V⟧) = 0 ∨\n    Real.cos (θ₁₃ ⟦V⟧) = 0 ∨\n      Real.cos (θ₂₃ ⟦V⟧) = 0 ∨ Real.sin (θ₁₂ ⟦V⟧) = 0 ∨ Real.sin (θ₁₃ ⟦V⟧) = 0 ∨ Real.sin (θ₂₃ ⟦V⟧) = 0"}
+{"name":"standParam.mulExpδ₁₃_on_param_neq_zero_arg","declaration":"theorem standParam.mulExpδ₁₃_on_param_neq_zero_arg (V : CKMMatrix) (δ₁₃ : ℝ) (h1 : Invariant.mulExpδ₁₃ ⟦standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃⟧ ≠ 0) : Complex.exp (↑(Complex.arg (Invariant.mulExpδ₁₃ ⟦standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃⟧)) * Complex.I) =\n  Complex.exp (↑δ₁₃ * Complex.I)"}
+{"name":"VtbAbs_eq_C₂₃_mul_C₁₃","declaration":"theorem VtbAbs_eq_C₂₃_mul_C₁₃ (V : Quotient CKMMatrixSetoid) : VtbAbs V = C₂₃ V * C₁₃ V"}
+{"name":"S₁₂_of_Vub_one","declaration":"theorem S₁₂_of_Vub_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V = 1) : S₁₂ V = 0"}
+{"name":"S₁₃_of_Vub_one","declaration":"theorem S₁₃_of_Vub_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V = 1) : S₁₃ V = 1"}
+{"name":"S₂₃_eq_ℂsin_θ₂₃","declaration":"theorem S₂₃_eq_ℂsin_θ₂₃ (V : Quotient CKMMatrixSetoid) : Complex.sin ↑(θ₂₃ V) = ↑(S₂₃ V)"}
+{"name":"VubAbs_eq_S₁₃","declaration":"theorem VubAbs_eq_S₁₃ (V : Quotient CKMMatrixSetoid) : VubAbs V = S₁₃ V"}
+{"name":"standParam.exists_for_CKMatrix","declaration":"theorem standParam.exists_for_CKMatrix (V : CKMMatrix) : ∃ θ₁₂ θ₁₃ θ₂₃ δ₁₃, V ≈ standParam θ₁₂ θ₁₃ θ₂₃ δ₁₃"}
+{"name":"standParam.on_param_cos_θ₁₂_eq_zero","declaration":"theorem standParam.on_param_cos_θ₁₂_eq_zero {V : CKMMatrix} (δ₁₃ : ℝ) (h : Real.cos (θ₁₂ ⟦V⟧) = 0) : standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃ ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"S₂₃_nonneg","declaration":"theorem S₂₃_nonneg (V : Quotient CKMMatrixSetoid) : 0 ≤ S₂₃ V"}
+{"name":"θ₁₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `θ₁₃` in the\nstandard parameterization. --/\ndef θ₁₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"C₂₃_eq_ℂcos_θ₂₃","declaration":"theorem C₂₃_eq_ℂcos_θ₂₃ (V : Quotient CKMMatrixSetoid) : Complex.cos ↑(θ₂₃ V) = ↑(C₂₃ V)"}
+{"name":"complexAbs_sin_θ₂₃","declaration":"theorem complexAbs_sin_θ₂₃ (V : Quotient CKMMatrixSetoid) : ↑(Complex.abs (Complex.sin ↑(θ₂₃ V))) = Complex.sin ↑(θ₂₃ V)"}
+{"name":"S₁₂_leq_one","declaration":"theorem S₁₂_leq_one (V : Quotient CKMMatrixSetoid) : S₁₂ V ≤ 1"}
+{"name":"standParam.on_param_cos_θ₂₃_eq_zero","declaration":"theorem standParam.on_param_cos_θ₂₃_eq_zero {V : CKMMatrix} (δ₁₃ : ℝ) (h : Real.cos (θ₂₃ ⟦V⟧) = 0) : standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃ ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"C₂₃_of_Vub_neq_one","declaration":"theorem C₂₃_of_Vub_neq_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V ≠ 1) : C₂₃ V = VtbAbs V / Real.sqrt (VudAbs V ^ 2 + VusAbs V ^ 2)"}
+{"name":"VcbAbs_eq_S₂₃_mul_C₁₃","declaration":"theorem VcbAbs_eq_S₂₃_mul_C₁₃ (V : Quotient CKMMatrixSetoid) : VcbAbs V = S₂₃ V * C₁₃ V"}
+{"name":"C₁₂","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `cos θ₁₂` in the\nstandard parameterization. --/\ndef C₁₂ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"complexAbs_sin_θ₁₃","declaration":"theorem complexAbs_sin_θ₁₃ (V : Quotient CKMMatrixSetoid) : ↑(Complex.abs (Complex.sin ↑(θ₁₃ V))) = Complex.sin ↑(θ₁₃ V)"}
+{"name":"complexAbs_cos_θ₂₃","declaration":"theorem complexAbs_cos_θ₂₃ (V : Quotient CKMMatrixSetoid) : ↑(Complex.abs (Complex.cos ↑(θ₂₃ V))) = Complex.cos ↑(θ₂₃ V)"}
+{"name":"S₁₂","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `sin θ₁₂` in the\nstandard parameterization. --/\ndef S₁₂ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"VudAbs_eq_C₁₂_mul_C₁₃","declaration":"theorem VudAbs_eq_C₁₂_mul_C₁₃ (V : Quotient CKMMatrixSetoid) : VudAbs V = C₁₂ V * C₁₃ V"}
+{"name":"S₂₃_sq_add_C₂₃_sq","declaration":"theorem S₂₃_sq_add_C₂₃_sq (V : Quotient CKMMatrixSetoid) : S₂₃ V ^ 2 + C₂₃ V ^ 2 = 1"}
+{"name":"standParam.on_param_sin_θ₁₃_eq_zero","declaration":"theorem standParam.on_param_sin_θ₁₃_eq_zero {V : CKMMatrix} (δ₁₃ : ℝ) (h : Real.sin (θ₁₃ ⟦V⟧) = 0) : standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃ ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"θ₂₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `θ₂₃` in the\nstandard parameterization. --/\ndef θ₂₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"S₁₂_nonneg","declaration":"theorem S₁₂_nonneg (V : Quotient CKMMatrixSetoid) : 0 ≤ S₁₂ V"}
+{"name":"standParam.mulExpδ₁₃_on_param_eq_zero_iff","declaration":"theorem standParam.mulExpδ₁₃_on_param_eq_zero_iff (V : CKMMatrix) (δ₁₃ : ℝ) : Invariant.mulExpδ₁₃ ⟦standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃⟧ = 0 ↔\n  VudAbs ⟦V⟧ = 0 ∨ VubAbs ⟦V⟧ = 0 ∨ VusAbs ⟦V⟧ = 0 ∨ VcbAbs ⟦V⟧ = 0 ∨ VtbAbs ⟦V⟧ = 0"}
+{"name":"C₁₃_eq_ℂcos_θ₁₃","declaration":"theorem C₁₃_eq_ℂcos_θ₁₃ (V : Quotient CKMMatrixSetoid) : Complex.cos ↑(θ₁₃ V) = ↑(C₁₃ V)"}
+{"name":"complexAbs_cos_θ₁₂","declaration":"theorem complexAbs_cos_θ₁₂ (V : Quotient CKMMatrixSetoid) : ↑(Complex.abs (Complex.cos ↑(θ₁₂ V))) = Complex.cos ↑(θ₁₂ V)"}
+{"name":"standParam.eq_standardParameterization_δ₃","declaration":"theorem standParam.eq_standardParameterization_δ₃ (V : CKMMatrix) : V ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) (δ₁₃ ⟦V⟧)"}
+{"name":"C₁₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `cos θ₁₃` in the\nstandard parameterization. --/\ndef C₁₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"S₁₃_sq_add_C₁₃_sq","declaration":"theorem S₁₃_sq_add_C₁₃_sq (V : Quotient CKMMatrixSetoid) : S₁₃ V ^ 2 + C₁₃ V ^ 2 = 1"}
+{"name":"S₁₂_sq_add_C₁₂_sq","declaration":"theorem S₁₂_sq_add_C₁₂_sq (V : Quotient CKMMatrixSetoid) : S₁₂ V ^ 2 + C₁₂ V ^ 2 = 1"}
+{"name":"standParam.on_param_cos_θ₁₃_eq_zero","declaration":"theorem standParam.on_param_cos_θ₁₃_eq_zero {V : CKMMatrix} (δ₁₃ : ℝ) (h : Real.cos (θ₁₃ ⟦V⟧) = 0) : standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃ ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"S₂₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `sin θ₂₃` in the\nstandard parameterization. --/\ndef S₂₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"S₂₃_leq_one","declaration":"theorem S₂₃_leq_one (V : Quotient CKMMatrixSetoid) : S₂₃ V ≤ 1"}
+{"name":"C₁₂_eq_Vud_div_sqrt","declaration":"theorem C₁₂_eq_Vud_div_sqrt {V : Quotient CKMMatrixSetoid} (ha : VubAbs V ≠ 1) : C₁₂ V = VudAbs V / Real.sqrt (VudAbs V ^ 2 + VusAbs V ^ 2)"}
+{"name":"standParam.eq_standParam_of_fstRowThdColRealCond","declaration":"theorem standParam.eq_standParam_of_fstRowThdColRealCond {V : CKMMatrix} (hb : ↑V 0 0 ≠ 0 ∨ ↑V 0 1 ≠ 0) (hV : CKMMatrix.FstRowThdColRealCond V) : V = standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) (-Complex.arg (↑V 0 2))"}
+{"name":"S₁₃_leq_one","declaration":"theorem S₁₃_leq_one (V : Quotient CKMMatrixSetoid) : S₁₃ V ≤ 1"}
+{"name":"C₁₃_of_Vub_eq_one","declaration":"theorem C₁₃_of_Vub_eq_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V = 1) : C₁₃ V = 0"}
+{"name":"standParam.eq_standParam_of_ubOnePhaseCond","declaration":"theorem standParam.eq_standParam_of_ubOnePhaseCond {V : CKMMatrix} (hV : CKMMatrix.ubOnePhaseCond V) : V = standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"S₁₃_eq_ℂsin_θ₁₃","declaration":"theorem S₁₃_eq_ℂsin_θ₁₃ (V : Quotient CKMMatrixSetoid) : Complex.sin ↑(θ₁₃ V) = ↑(S₁₃ V)"}
+{"name":"VusAbs_eq_S₁₂_mul_C₁₃","declaration":"theorem VusAbs_eq_S₁₂_mul_C₁₃ (V : Quotient CKMMatrixSetoid) : VusAbs V = S₁₂ V * C₁₃ V"}
+{"name":"δ₁₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to the phase `δ₁₃` in the\nstandard parameterization. --/\ndef δ₁₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"S₁₃_eq_sin_θ₁₃","declaration":"theorem S₁₃_eq_sin_θ₁₃ (V : Quotient CKMMatrixSetoid) : Real.sin (θ₁₃ V) = S₁₃ V"}
+{"name":"S₁₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `sin θ₁₃` in the\nstandard parameterization. --/\ndef S₁₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"S₁₂_eq_ℂsin_θ₁₂","declaration":"theorem S₁₂_eq_ℂsin_θ₁₂ (V : Quotient CKMMatrixSetoid) : Complex.sin ↑(θ₁₂ V) = ↑(S₁₂ V)"}
+{"name":"VubAbs_of_cos_θ₁₃_zero","declaration":"theorem VubAbs_of_cos_θ₁₃_zero {V : Quotient CKMMatrixSetoid} (h1 : Real.cos (θ₁₃ V) = 0) : VubAbs V = 1"}
+{"name":"standParam.exists_δ₁₃","declaration":"theorem standParam.exists_δ₁₃ (V : CKMMatrix) : ∃ δ₃, V ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₃"}
+{"name":"complexAbs_cos_θ₁₃","declaration":"theorem complexAbs_cos_θ₁₃ (V : Quotient CKMMatrixSetoid) : ↑(Complex.abs (Complex.cos ↑(θ₁₃ V))) = Complex.cos ↑(θ₁₃ V)"}
+{"name":"C₂₃","declaration":"/-- Given a CKM matrix `V` the real number corresponding to `sin θ₂₃` in the\nstandard parameterization. --/\ndef C₂₃ (V : Quotient CKMMatrixSetoid) : ℝ"}
+{"name":"S₂₃_eq_sin_θ₂₃","declaration":"theorem S₂₃_eq_sin_θ₂₃ (V : Quotient CKMMatrixSetoid) : Real.sin (θ₂₃ V) = S₂₃ V"}
+{"name":"standParam.mulExpδ₁₃_on_param_δ₁₃","declaration":"theorem standParam.mulExpδ₁₃_on_param_δ₁₃ (V : CKMMatrix) (δ₁₃ : ℝ) : Invariant.mulExpδ₁₃ ⟦standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃⟧ =\n  Complex.sin ↑(θ₁₂ ⟦V⟧) * Complex.cos ↑(θ₁₃ ⟦V⟧) ^ 2 * Complex.sin ↑(θ₂₃ ⟦V⟧) * Complex.sin ↑(θ₁₃ ⟦V⟧) *\n        Complex.cos ↑(θ₁₂ ⟦V⟧) *\n      Complex.cos ↑(θ₂₃ ⟦V⟧) *\n    Complex.exp (Complex.I * ↑δ₁₃)"}
+{"name":"standParam.on_param_sin_θ₂₃_eq_zero","declaration":"theorem standParam.on_param_sin_θ₂₃_eq_zero {V : CKMMatrix} (δ₁₃ : ℝ) (h : Real.sin (θ₂₃ ⟦V⟧) = 0) : standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) δ₁₃ ≈ standParam (θ₁₂ ⟦V⟧) (θ₁₃ ⟦V⟧) (θ₂₃ ⟦V⟧) 0"}
+{"name":"S₂₃_of_Vub_eq_one","declaration":"theorem S₂₃_of_Vub_eq_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V = 1) : S₂₃ V = VcdAbs V"}
+{"name":"S₂₃_of_Vub_neq_one","declaration":"theorem S₂₃_of_Vub_neq_one {V : Quotient CKMMatrixSetoid} (ha : VubAbs V ≠ 1) : S₂₃ V = VcbAbs V / Real.sqrt (VudAbs V ^ 2 + VusAbs V ^ 2)"}

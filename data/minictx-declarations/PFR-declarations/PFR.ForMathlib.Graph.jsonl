@@ -1,0 +1,11 @@
+{"name":"Set.graph_comp","declaration":"theorem Set.graph_comp {A : Type u_3} {B : Type u_4} {C : Type u_5} {f : A → B} (g : B → C) : Set.graph (g ∘ f) = (fun p => (p.1, g p.2)) '' Set.graph f"}
+{"name":"Set.image_snd_graph","declaration":"theorem Set.image_snd_graph {G : Type u_1} {G' : Type u_2} {f : G → G'} : Prod.snd '' Set.graph f = f '' Set.univ"}
+{"name":"Set.graph_nonempty","declaration":"theorem Set.graph_nonempty {G : Type u_1} {G' : Type u_2} [Nonempty G] (f : G → G') : Set.Nonempty (Set.graph f)"}
+{"name":"Set.graph","declaration":"def Set.graph {G : Type u_1} {G' : Type u_2} (f : G → G') : Set (G × G')"}
+{"name":"Set.fst_injOn_graph","declaration":"theorem Set.fst_injOn_graph {G : Type u_1} {G' : Type u_2} (f : G → G') : Set.InjOn Prod.fst (Set.graph f)"}
+{"name":"Set.mem_graph","declaration":"theorem Set.mem_graph {G : Type u_1} {G' : Type u_2} {f : G → G'} (x : G × G') : x ∈ Set.graph f ↔ f x.1 = x.2"}
+{"name":"Set.image_fst_graph","declaration":"theorem Set.image_fst_graph {G : Type u_1} {G' : Type u_2} {f : G → G'} : Prod.fst '' Set.graph f = Set.univ"}
+{"name":"Set.graph_def","declaration":"theorem Set.graph_def {G : Type u_1} {G' : Type u_2} (f : G → G') : Set.graph f = {x | ∃ x_1, (x_1, f x_1) = x}"}
+{"name":"Set.card_graph","declaration":"theorem Set.card_graph {G : Type u_1} {G' : Type u_2} (f : G → G') : Nat.card ↑(Set.graph f) = Nat.card G"}
+{"name":"Set.graph_add","declaration":"theorem Set.graph_add {G : Type u_1} {G' : Type u_2} [AddGroup G] [AddCommGroup G'] {f : G →+ G'} {c : G × G'} : (fun x => c + x) '' Set.graph ⇑f = {x | ∃ g, (g, f g + (c.2 - f c.1)) = x}"}
+{"name":"Set.equiv_filter_graph","declaration":"theorem Set.equiv_filter_graph {G : Type u_3} {G' : Type u_4} [AddCommGroup G] [Fintype G] [AddCommGroup G'] [Fintype G'] [DecidableEq G] [DecidableEq G'] (f : G → G') : let A := Set.Finite.toFinset ⋯;\n{ x //\n    x ∈\n      Finset.filter\n        (fun x =>\n          match x with\n          | (a, a') => a + a' ∈ A)\n        (A ×ˢ A) } ≃\n  ↑{x | f (x.1 + x.2) = f x.1 + f x.2}"}

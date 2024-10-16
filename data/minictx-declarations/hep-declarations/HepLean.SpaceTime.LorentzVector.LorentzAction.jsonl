@@ -1,0 +1,3 @@
+{"name":"LorentzVector.rep_apply_stdBasis","declaration":"theorem LorentzVector.rep_apply_stdBasis {d : ℕ} (g : ↑(LorentzGroup d)) (μ : Fin 1 ⊕ Fin d) : (LorentzVector.rep g) (LorentzVector.stdBasis μ) =\n  Finset.sum Finset.univ fun ν => Matrix.transpose (↑g) μ ν • LorentzVector.stdBasis ν"}
+{"name":"LorentzVector.rep_apply","declaration":"theorem LorentzVector.rep_apply {d : ℕ} (v : LorentzVector d) (g : ↑(LorentzGroup d)) : (LorentzVector.rep g) v = Matrix.mulVec (↑g) v"}
+{"name":"LorentzVector.rep","declaration":"/-- The contravariant action of the Lorentz group on a Lorentz vector. -/\ndef LorentzVector.rep {d : ℕ} : Representation ℝ (↑(LorentzGroup d)) (LorentzVector d)"}

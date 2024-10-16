@@ -1,0 +1,6 @@
+{"name":"Set.singleton_add'","declaration":"theorem Set.singleton_add' {α : Type u_1} [Add α] (a : α) (s : Set α) : {a} + s = a +ᵥ s"}
+{"name":"Set.vadd_sub_vadd_comm","declaration":"theorem Set.vadd_sub_vadd_comm {α : Type u_1} [AddCommGroup α] (a : α) (s : Set α) (b : α) (t : Set α) : a +ᵥ s - (b +ᵥ t) = a - b +ᵥ (s - t)"}
+{"name":"Set.singleton_mul'","declaration":"theorem Set.singleton_mul' {α : Type u_1} [Mul α] (a : α) (s : Set α) : {a} * s = a • s"}
+{"name":"Set.smul_div_smul_comm","declaration":"theorem Set.smul_div_smul_comm {α : Type u_1} [CommGroup α] (a : α) (s : Set α) (b : α) (t : Set α) : a • s / b • t = (a / b) • (s / t)"}
+{"name":"Set.mul_singleton'","declaration":"theorem Set.mul_singleton' {α : Type u_1} [Mul α] (s : Set α) (a : α) : s * {a} = MulOpposite.op a • s"}
+{"name":"Set.add_singleton'","declaration":"theorem Set.add_singleton' {α : Type u_1} [Add α] (s : Set α) (a : α) : s + {a} = AddOpposite.op a +ᵥ s"}

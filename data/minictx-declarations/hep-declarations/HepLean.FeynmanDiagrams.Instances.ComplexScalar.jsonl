@@ -1,0 +1,10 @@
+{"name":"PhiFour.instIsFinitePreFeynmanRuleComplexScalarFeynmanRules","declaration":"instance PhiFour.instIsFinitePreFeynmanRuleComplexScalarFeynmanRules  : PreFeynmanRule.IsFinitePreFeynmanRule PhiFour.complexScalarFeynmanRules"}
+{"name":"PhiFour.instOfNatVertexLabelComplexScalarFeynmanRules","declaration":"instance PhiFour.instOfNatVertexLabelComplexScalarFeynmanRules (a : ℕ) : OfNat PhiFour.complexScalarFeynmanRules.VertexLabel a"}
+{"name":"PhiFour.complexScalarFeynmanRules_VertexLabel","declaration":"theorem PhiFour.complexScalarFeynmanRules_VertexLabel  : PhiFour.complexScalarFeynmanRules.VertexLabel = Fin 3"}
+{"name":"PhiFour.complexScalarFeynmanRules_HalfEdgeLabel","declaration":"theorem PhiFour.complexScalarFeynmanRules_HalfEdgeLabel  : PhiFour.complexScalarFeynmanRules.HalfEdgeLabel = Fin 2"}
+{"name":"PhiFour.instOfNatHalfEdgeLabelComplexScalarFeynmanRules","declaration":"instance PhiFour.instOfNatHalfEdgeLabelComplexScalarFeynmanRules (a : ℕ) : OfNat PhiFour.complexScalarFeynmanRules.HalfEdgeLabel a"}
+{"name":"PhiFour.complexScalarFeynmanRules_vertexLabelMap","declaration":"theorem PhiFour.complexScalarFeynmanRules_vertexLabelMap (x : Fin 3) : PhiFour.complexScalarFeynmanRules.vertexLabelMap x =\n  match x with\n  | 0 => CategoryTheory.Over.mk ![0]\n  | 1 => CategoryTheory.Over.mk ![1]\n  | 2 => CategoryTheory.Over.mk ![0, 0, 1, 1]"}
+{"name":"PhiFour.complexScalarFeynmanRules_EdgeLabel","declaration":"theorem PhiFour.complexScalarFeynmanRules_EdgeLabel  : PhiFour.complexScalarFeynmanRules.EdgeLabel = Fin 1"}
+{"name":"PhiFour.instOfNatEdgeLabelComplexScalarFeynmanRules","declaration":"instance PhiFour.instOfNatEdgeLabelComplexScalarFeynmanRules (a : ℕ) : OfNat PhiFour.complexScalarFeynmanRules.EdgeLabel a"}
+{"name":"PhiFour.complexScalarFeynmanRules_edgeLabelMap","declaration":"theorem PhiFour.complexScalarFeynmanRules_edgeLabelMap (x : Fin 1) : PhiFour.complexScalarFeynmanRules.edgeLabelMap x =\n  match x with\n  | 0 => CategoryTheory.Over.mk ![0, 1]"}
+{"name":"PhiFour.complexScalarFeynmanRules","declaration":"/-- The pre-Feynman rules for a complex scalar theory. -/\ndef PhiFour.complexScalarFeynmanRules  : PreFeynmanRule"}

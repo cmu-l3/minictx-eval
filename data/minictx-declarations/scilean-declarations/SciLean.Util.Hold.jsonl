@@ -1,0 +1,1 @@
+{"name":"SciLean.hold","declaration":"def SciLean.hold {α : Sort u_1} (a : α) : α"}

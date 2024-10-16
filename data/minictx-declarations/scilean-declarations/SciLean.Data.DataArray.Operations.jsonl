@@ -1,0 +1,8 @@
+{"name":"SciLean.DataArrayN.mapIdxMono","declaration":"def SciLean.DataArrayN.mapIdxMono {I : Type} {X : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] (x : SciLean.DataArrayN X I) (f : I → X → X) : SciLean.DataArrayN X I"}
+{"name":"SciLean.DataArrayN.min","declaration":"def SciLean.DataArrayN.min {I : Type} {X : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] [Min X] [Inhabited X] (x : SciLean.DataArrayN X I) : X"}
+{"name":"SciLean.DataArrayN.mapMono","declaration":"def SciLean.DataArrayN.mapMono {I : Type} {X : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] (x : SciLean.DataArrayN X I) (f : X → X) : SciLean.DataArrayN X I"}
+{"name":"SciLean.DataArrayN.reduceD","declaration":"def SciLean.DataArrayN.reduceD {I : Type} {X : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] (x : SciLean.DataArrayN X I) (f : X → X → X) (default : X) : X"}
+{"name":"SciLean.DataArrayN.foldIdx","declaration":"def SciLean.DataArrayN.foldIdx {I : Type} {X : Type} {Y : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] (x : SciLean.DataArrayN X I) (f : I → Y → X → Y) (init : Y) : Y"}
+{"name":"SciLean.DataArrayN.max","declaration":"def SciLean.DataArrayN.max {I : Type} {X : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] [Max X] [Inhabited X] (x : SciLean.DataArrayN X I) : X"}
+{"name":"SciLean.DataArrayN.reduce","declaration":"def SciLean.DataArrayN.reduce {I : Type} {X : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] [Inhabited X] (x : SciLean.DataArrayN X I) (f : X → X → X) : X"}
+{"name":"SciLean.DataArrayN.fold","declaration":"def SciLean.DataArrayN.fold {I : Type} {X : Type} {Y : Type} [SciLean.IndexType I] [SciLean.PlainDataType X] (x : SciLean.DataArrayN X I) (f : Y → X → Y) (init : Y) : Y"}

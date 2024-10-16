@@ -1,0 +1,17 @@
+{"name":"SciLean.Meta.let_unfold1","declaration":"def SciLean.Meta.let_unfold1  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.tacticLet_unfold_","declaration":"def SciLean.Meta.tacticLet_unfold_  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.letMoveUp","declaration":"/-- Moves let binding upwards, maximum by `n?` positions. Returns none if there is no such let binding.\n\nFor example for the following expresion\n```\n  let x := ..\n  let y := ..\n  let z := ..\n  f x y z\n```\ncalling `letMoveUp e (λ n => n == `z) (some 1)` will produce\n```\n  let x := ..\n  let z := ..\n  let y := ..\n  f x y z\n```\nbut only if the value of `y` does not depend on `z`.\n\nChanging `(some 1)` to `(some 2)` or `none`, `let z := ...` will be move to the top.\n-/\ndef SciLean.Meta.letMoveUp (e : Lean.Expr) (p : Lean.Name → Bool) (n? : Option Nat) : Option Lean.Expr"}
+{"name":"SciLean.Meta.letUnfold","declaration":"def SciLean.Meta.letUnfold (e : Lean.Expr) (id : Lean.Name) : Lean.Expr"}
+{"name":"SciLean.Meta.let_add","declaration":"def SciLean.Meta.let_add  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.convLetUnfold","declaration":"def SciLean.Meta.convLetUnfold  : Lean.Elab.Tactic.Tactic"}
+{"name":"SciLean.Meta.letUnfold1","declaration":"def SciLean.Meta.letUnfold1 (e : Lean.Expr) (id : Lean.Name) (nth : optParam Nat 0) : Lean.Expr"}
+{"name":"SciLean.Meta.letMoveDown","declaration":"/-- Moves let binding down, maximum by `n?` positions. Returns none if there is no such let binding.\n\nFor example for the following expresion\n```\n  let x := ..\n  let y := ..\n  let z := ..\n  f x y z\n```\ncalling `letMoveUp e (λ n => n == `x) (some 2)` will produce\n```\n  let y := ..\n  let z := ..\n  let x := ..\n  f x y z\n```\nbut only if the value of `y` does not depend on `z`.\n\n\nLet binding is specified by a running `p` on let binding name.\n-/\ndef SciLean.Meta.letMoveDown (e : Lean.Expr) (p : Lean.Name → Bool) (n? : Option Nat) : Option Lean.Expr"}
+{"name":"SciLean.Meta.let_move_down","declaration":"def SciLean.Meta.let_move_down  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.convLetMoveUp","declaration":"def SciLean.Meta.convLetMoveUp  : Lean.Elab.Tactic.Tactic"}
+{"name":"SciLean.Meta.convLetAdd","declaration":"def SciLean.Meta.convLetAdd  : Lean.Elab.Tactic.Tactic"}
+{"name":"SciLean.Meta.let_move_up","declaration":"def SciLean.Meta.let_move_up  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.convLetUnfold1","declaration":"def SciLean.Meta.convLetUnfold1  : Lean.Elab.Tactic.Tactic"}
+{"name":"SciLean.Meta.letMoveUp.run","declaration":"def SciLean.Meta.letMoveUp.run (p : Lean.Name → Bool) (n? : Option Nat) (e : Lean.Expr) : Option (Lean.Expr × Nat)"}
+{"name":"SciLean.Meta.tacticLet_move_up__","declaration":"def SciLean.Meta.tacticLet_move_up__  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.tacticLet_unfold1__","declaration":"def SciLean.Meta.tacticLet_unfold1__  : Lean.ParserDescr"}
+{"name":"SciLean.Meta.let_unfold","declaration":"def SciLean.Meta.let_unfold  : Lean.ParserDescr"}

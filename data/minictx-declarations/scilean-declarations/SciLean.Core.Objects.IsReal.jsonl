@@ -1,0 +1,28 @@
+{"name":"SciLean.ExtendedReal","declaration":"inductive SciLean.ExtendedReal (R : Type u_1) : Type u_1"}
+{"name":"SciLean.IsReal.is_real","declaration":"def SciLean.IsReal.is_real {R : semiOutParam (Type u_1)} [self : SciLean.IsReal R] (x : R) : RCLike.im x = 0"}
+{"name":"SciLean.ComputableDist","declaration":"class SciLean.ComputableDist (R : Type u_1) (X : Type u_2) [SciLean.IsReal R] [Dist X] : Type (max u_1 u_2)"}
+{"name":"SciLean.ComputableNorm.is_norm","declaration":"def SciLean.ComputableNorm.is_norm {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [Norm X] [self : SciLean.ComputableNorm R X] (x : X) : RCLike.re (SciLean.cnorm x) = ‖x‖"}
+{"name":"SciLean.NotationOverField.«term‖_‖»","declaration":"/-- Norm, usually `‖x‖ = (∑ i, ‖x i‖^p)^(1/p)` for some `p`\n\nWARRNING: This is override for normal norm notation that provides computable version of norm if available.\n-/\ndef SciLean.NotationOverField.«term‖_‖»  : Lean.ParserDescr"}
+{"name":"SciLean.instZeroExtendedReal","declaration":"instance SciLean.instZeroExtendedReal (R : Type u_1) [SciLean.IsReal R] : Zero (SciLean.ExtendedReal R)"}
+{"name":"SciLean.ComputableNorm.cnorm","declaration":"def SciLean.ComputableNorm.cnorm {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [Norm X] [self : SciLean.ComputableNorm R X] : X → R"}
+{"name":"SciLean.instIsRealReal","declaration":"instance SciLean.instIsRealReal  : SciLean.IsReal ℝ"}
+{"name":"SciLean.IsReal.mk","declaration":"ctor SciLean.IsReal.mk {R : semiOutParam (Type u_1)} [toRCLike : RCLike R] (is_real : ∀ (x : R), RCLike.im x = 0) : SciLean.IsReal R"}
+{"name":"SciLean.ComputableNorm.mk","declaration":"ctor SciLean.ComputableNorm.mk {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [Norm X] (cnorm : X → R) (is_norm : ∀ (x : X), RCLike.re (cnorm x) = ‖x‖) : SciLean.ComputableNorm R X"}
+{"name":"SciLean.instBotExtendedReal","declaration":"instance SciLean.instBotExtendedReal (R : Type u_1) [SciLean.IsReal R] : Bot (SciLean.ExtendedReal R)"}
+{"name":"SciLean.ComputableEDist.is_edist","declaration":"def SciLean.ComputableEDist.is_edist {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [EDist X] [self : SciLean.ComputableEDist R X] (x : X) (y : X) : SciLean.ExtendedReal.toEReal R (SciLean.cedist x y) = ↑(edist x y)"}
+{"name":"SciLean.instOrdExtendedReal","declaration":"instance SciLean.instOrdExtendedReal (R : Type u_1) [SciLean.IsReal R] [Ord R] : Ord (SciLean.ExtendedReal R)"}
+{"name":"SciLean.ExtendedReal.toEReal","declaration":"def SciLean.ExtendedReal.toEReal (R : Type u_1) [SciLean.IsReal R] (x : SciLean.ExtendedReal R) : EReal"}
+{"name":"SciLean.ComputableDist.mk","declaration":"ctor SciLean.ComputableDist.mk {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [Dist X] (cdist : X → X → R) (is_dist : ∀ (x y : X), RCLike.re (cdist x y) = dist x y) : SciLean.ComputableDist R X"}
+{"name":"SciLean.ComputableEDist","declaration":"class SciLean.ComputableEDist (R : Type u_1) (X : Type u_2) [SciLean.IsReal R] [EDist X] : Type (max u_1 u_2)"}
+{"name":"SciLean.instTopExtendedReal","declaration":"instance SciLean.instTopExtendedReal (R : Type u_1) [SciLean.IsReal R] : Top (SciLean.ExtendedReal R)"}
+{"name":"SciLean.ComputableDist.is_dist","declaration":"def SciLean.ComputableDist.is_dist {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [Dist X] [self : SciLean.ComputableDist R X] (x : X) (y : X) : RCLike.re (SciLean.cdist x y) = dist x y"}
+{"name":"SciLean.ExtendedReal.negInf","declaration":"ctor SciLean.ExtendedReal.negInf {R : Type u_1} : SciLean.ExtendedReal R"}
+{"name":"SciLean.IsReal","declaration":"class SciLean.IsReal (R : semiOutParam (Type u_1)) : Type u_1"}
+{"name":"SciLean.instOneExtendedReal","declaration":"instance SciLean.instOneExtendedReal (R : Type u_1) [SciLean.IsReal R] : One (SciLean.ExtendedReal R)"}
+{"name":"SciLean.ComputableDist.cdist","declaration":"def SciLean.ComputableDist.cdist {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [Dist X] [self : SciLean.ComputableDist R X] : X → X → R"}
+{"name":"SciLean.instNegExtendedReal","declaration":"instance SciLean.instNegExtendedReal (R : Type u_1) [SciLean.IsReal R] : Neg (SciLean.ExtendedReal R)"}
+{"name":"SciLean.ExtendedReal.posInf","declaration":"ctor SciLean.ExtendedReal.posInf {R : Type u_1} : SciLean.ExtendedReal R"}
+{"name":"SciLean.ExtendedReal.val","declaration":"ctor SciLean.ExtendedReal.val {R : Type u_1} (r : R) : SciLean.ExtendedReal R"}
+{"name":"SciLean.ComputableEDist.cedist","declaration":"def SciLean.ComputableEDist.cedist {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [EDist X] [self : SciLean.ComputableEDist R X] : X → X → SciLean.ExtendedReal R"}
+{"name":"SciLean.ComputableEDist.mk","declaration":"ctor SciLean.ComputableEDist.mk {R : Type u_1} {X : Type u_2} [SciLean.IsReal R] [EDist X] (cedist : X → X → SciLean.ExtendedReal R) (is_edist : ∀ (x y : X), SciLean.ExtendedReal.toEReal R (cedist x y) = ↑(edist x y)) : SciLean.ComputableEDist R X"}
+{"name":"SciLean.ComputableNorm","declaration":"class SciLean.ComputableNorm (R : Type u_1) (X : Type u_2) [SciLean.IsReal R] [Norm X] : Type (max u_1 u_2)"}

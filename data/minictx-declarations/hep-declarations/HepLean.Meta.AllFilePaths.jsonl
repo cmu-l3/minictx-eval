@@ -1,0 +1,2 @@
+{"name":"allFilePaths","declaration":"/-- Gets an array of all file paths in `HepLean`. -/\ndef allFilePaths  : IO (Array System.FilePath)"}
+{"name":"allFilePaths.go","declaration":"/-- The recursive function underlying `allFilePaths`. -/\nopaque allFilePaths.go (prev : Array System.FilePath) (root : Lean.Name) (path : System.FilePath) : IO (Array System.FilePath)"}

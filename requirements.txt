@@ -1,6 +1,6 @@
-openai
-pexpect
-tiktoken
-tqdm
-transformers
-vllm
+openai==1.51.2
+pexpect==4.9.0
+tiktoken==0.7.0
+tqdm==4.66.5
+transformers==4.45.2
+vllm==0.5.1

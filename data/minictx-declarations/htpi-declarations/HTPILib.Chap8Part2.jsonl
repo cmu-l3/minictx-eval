@@ -1,0 +1,183 @@
+{"name":"HTPI.Theorem_8_1_5_1_to_2","declaration":"theorem HTPI.Theorem_8_1_5_1_to_2 {U : Type} {A : Set U} (h1 : HTPI.ctble A) : ∃ R, HTPI.fcnl_onto_from_nat R A"}
+{"name":"HTPI.numElts_prod","declaration":"theorem HTPI.numElts_prod {U : Type} {V : Type} {A : Set U} {B : Set V} {m : ℕ} {n : ℕ} (h1 : HTPI.numElts A m) (h2 : HTPI.numElts B n) : HTPI.numElts (A ×ₛ B) (m * n)"}
+{"name":"HTPI.seq_cons_image","declaration":"theorem HTPI.seq_cons_image {U : Type} (A : Set U) (n : ℕ) : HTPI.image (HTPI.seq_cons U) (A ×ₛ HTPI.seq_by_length A n) = HTPI.seq_by_length A (n + 1)"}
+{"name":"HTPI.Set_prod","declaration":"def HTPI.Set_prod {U : Type} {V : Type} (A : Set U) (B : Set V) : Set (U × V)"}
+{"name":"HTPI.neb_phi","declaration":"theorem HTPI.neb_phi (m : ℕ) : HTPI.num_elts_below (HTPI.Set_rp_below m) m (HTPI.phi m)"}
+{"name":"HTPI.fnnn_one_one","declaration":"theorem HTPI.fnnn_one_one  : HTPI.one_to_one HTPI.fnnn"}
+{"name":"HTPI.left_NeZero_of_mul","declaration":"theorem HTPI.left_NeZero_of_mul {m : ℕ} {n : ℕ} (h : m * n ≠ 0) : NeZero m"}
+{"name":"HTPI.phi_is_numElts","declaration":"theorem HTPI.phi_is_numElts (m : ℕ) : HTPI.numElts (HTPI.Set_rp_below m) (HTPI.phi m)"}
+{"name":"HTPI.cum_rep_image","declaration":"def HTPI.cum_rep_image {U : Type} {V : Type} (R : Rel U V) (S : Rel U V) (X0 : Set U) : Set U"}
+{"name":"HTPI.enum_not_skip","declaration":"theorem HTPI.enum_not_skip {A : Set ℕ} ⦃m : ℕ⦄ ⦃s : ℕ⦄ : HTPI.num_elts_below A m s → ∀ t < s, ∃ n, HTPI.enum A t n"}
+{"name":"HTPI.Rel_prod","declaration":"def HTPI.Rel_prod {U : Type} {V : Type} {W : Type} {X : Type} (R : Rel U V) (S : Rel W X) (p : U × W) (q : V × X) : Prop"}
+{"name":"HTPI.Exercises.Theorem_8_2_1_2","declaration":"theorem HTPI.Exercises.Theorem_8_2_1_2 {U : Type} {A : Set U} {B : Set U} (h1 : HTPI.ctble A) (h2 : HTPI.ctble B) : HTPI.ctble (A ∪ B)"}
+{"name":"HTPI.fzn_nat","declaration":"theorem HTPI.fzn_nat (k : ℕ) : HTPI.fzn ↑k = 2 * k"}
+{"name":"HTPI.Lemma_8_2_2_2","declaration":"theorem HTPI.Lemma_8_2_2_2 {U : Type} {F : Set (Set U)} (h : ∀ A ∈ F, HTPI.ctble A) : ∃ f, ∀ A ∈ F, HTPI.fcnl_onto_from_nat (f A) A"}
+{"name":"HTPI.ctble_of_onto_func_from_N","declaration":"theorem HTPI.ctble_of_onto_func_from_N {U : Type} {A : Set U} {f : ℕ → U} (h1 : ∀ x ∈ A, ∃ n, f n = x) : HTPI.ctble A"}
+{"name":"HTPI.fqn","declaration":"def HTPI.fqn (q : ℚ) : ℕ"}
+{"name":"HTPI.csb_match_not_cri","declaration":"theorem HTPI.csb_match_not_cri {U : Type} {V : Type} {R : Rel U V} {S : Rel U V} {X0 : Set U} {x : U} {y : V} (h1 : HTPI.csb_match R S X0 x y) (h2 : x ∉ HTPI.cum_rep_image R S X0) : S x y"}
+{"name":"HTPI.equinum_Univ","declaration":"theorem HTPI.equinum_Univ {U : Type} {V : Type} {f : U → V} (h1 : HTPI.one_to_one f) (h2 : HTPI.onto f) : HTPI.Univ U ∼ HTPI.Univ V"}
+{"name":"HTPI.fnz_onto","declaration":"theorem HTPI.fnz_onto  : HTPI.onto HTPI.fnz"}
+{"name":"HTPI.Theorem_8_1_5_2","declaration":"theorem HTPI.Theorem_8_1_5_2 {U : Type} (A : Set U) : HTPI.ctble A ↔ ∃ R, HTPI.fcnl_onto_from_nat R A"}
+{"name":"HTPI.Theorem_8_1_6","declaration":"theorem HTPI.Theorem_8_1_6  : HTPI.denum (HTPI.Univ ℚ)"}
+{"name":"HTPI.fzn_neg_succ_nat","declaration":"theorem HTPI.fzn_neg_succ_nat (k : ℕ) : HTPI.fzn (-↑(k + 1)) = 2 * k + 1"}
+{"name":"HTPI.qr_image","declaration":"theorem HTPI.qr_image (m : ℕ) (n : ℕ) : HTPI.image (HTPI.qr n) (HTPI.I (m * n)) = HTPI.I m ×ₛ HTPI.I n"}
+{"name":"HTPI.Theorem_8_2_2","declaration":"theorem HTPI.Theorem_8_2_2 {U : Type} {F : Set (Set U)} (h1 : HTPI.ctble F) (h2 : ∀ A ∈ F, HTPI.ctble A) : HTPI.ctble (⋃₀ F)"}
+{"name":"HTPI.bdd_subset_nat_match","declaration":"theorem HTPI.bdd_subset_nat_match {A : Set ℕ} {m : ℕ} {s : ℕ} (h1 : ∀ n ∈ A, n < m) (h2 : HTPI.num_elts_below A m s) : HTPI.matching (HTPI.enum A) (HTPI.I s) A"}
+{"name":"HTPI.Exercises.Rel_image","declaration":"def HTPI.Exercises.Rel_image {U : Type} {V : Type} (R : Rel U V) (A : Set U) : Set V"}
+{"name":"HTPI.fqn_one_one","declaration":"theorem HTPI.fqn_one_one  : HTPI.one_to_one HTPI.fqn"}
+{"name":"HTPI.Z_equinum_N","declaration":"theorem HTPI.Z_equinum_N  : HTPI.Univ ℤ ∼ HTPI.Univ ℕ"}
+{"name":"HTPI.restrict_to","declaration":"def HTPI.restrict_to {U : Type} {V : Type} (S : Rel U V) (A : Set U) (x : U) (y : V) : Prop"}
+{"name":"HTPI.tri","declaration":"def HTPI.tri (k : ℕ) : ℕ"}
+{"name":"HTPI.Exercises.Part","declaration":"def HTPI.Exercises.Part (A : Type) : Set (Set (Set A))"}
+{"name":"HTPI.fcnl_onto_from_nat","declaration":"def HTPI.fcnl_onto_from_nat {U : Type} (R : Rel ℕ U) (A : Set U) : Prop"}
+{"name":"HTPI.csb_match","declaration":"def HTPI.csb_match {U : Type} {V : Type} (R : Rel U V) (S : Rel U V) (X0 : Set U) (x : U) (y : V) : Prop"}
+{"name":"HTPI.unique_val_on_N","declaration":"def HTPI.unique_val_on_N {U : Type} (R : Rel ℕ U) : Prop"}
+{"name":"HTPI.neb_exists","declaration":"theorem HTPI.neb_exists (A : Set ℕ) (n : ℕ) : ∃ s, HTPI.num_elts_below A n s"}
+{"name":"HTPI.Exercises.saz_pair_part","declaration":"theorem HTPI.Exercises.saz_pair_part (X : Set ℕ) : HTPI.partition (HTPI.Exercises.saz_pair X)"}
+{"name":"HTPI.least_rel_to","declaration":"def HTPI.least_rel_to {U : Type} (S : Rel ℕ U) (x : U) (n : ℕ) : Prop"}
+{"name":"HTPI.Exercises.pair_ctble","declaration":"theorem HTPI.Exercises.pair_ctble {U : Type} (a : U) (b : U) : HTPI.ctble {a, b}"}
+{"name":"HTPI.neb_step_elt","declaration":"theorem HTPI.neb_step_elt {A : Set ℕ} {n : ℕ} (h1 : n ∈ A) (s : ℕ) : HTPI.num_elts_below A (n + 1) s ↔ 1 ≤ s ∧ HTPI.num_elts_below A n (s - 1)"}
+{"name":"HTPI.Exercises.EqRelExt","declaration":"def HTPI.Exercises.EqRelExt (A : Type) : Set (Set (A × A))"}
+{"name":"HTPI.ctble_iff_equinum_set_nat","declaration":"theorem HTPI.ctble_iff_equinum_set_nat {U : Type} (A : Set U) : HTPI.ctble A ↔ ∃ I, I ∼ A"}
+{"name":"HTPI.neb_unique","declaration":"theorem HTPI.neb_unique (A : Set ℕ) ⦃n : ℕ⦄ ⦃s1 : ℕ⦄ ⦃s2 : ℕ⦄ : HTPI.num_elts_below A n s1 → HTPI.num_elts_below A n s2 → s1 = s2"}
+{"name":"HTPI.Set_rp_below_def","declaration":"theorem HTPI.Set_rp_below_def (a : ℕ) (m : ℕ) : a ∈ HTPI.Set_rp_below m ↔ HTPI.rel_prime m a ∧ a < m"}
+{"name":"HTPI.right_NeZero_of_mul","declaration":"theorem HTPI.right_NeZero_of_mul {m : ℕ} {n : ℕ} (h : m * n ≠ 0) : NeZero n"}
+{"name":"HTPI.unbdd_subset_nat","declaration":"theorem HTPI.unbdd_subset_nat {A : Set ℕ} (h1 : ∀ (m : ℕ), ∃ n ∈ A, n ≥ m) : HTPI.denum A"}
+{"name":"HTPI.Exercises.Exercise_8_1_5","declaration":"theorem HTPI.Exercises.Exercise_8_1_5 {U : Type} {V : Type} {A : Set U} {B : Set V} (h1 : A ∼ B) : 𝒫 A ∼ 𝒫 B"}
+{"name":"HTPI.Rel_prod_def","declaration":"theorem HTPI.Rel_prod_def {U : Type} {V : Type} {W : Type} {X : Type} (R : Rel U V) (S : Rel W X) (u : U) (v : V) (w : W) (x : X) : (R ×ᵣ S) (u, w) (v, x) ↔ R u v ∧ S w x"}
+{"name":"HTPI.Exercises.CSB_func","declaration":"theorem HTPI.Exercises.CSB_func {U : Type} {V : Type} {f : U → V} {g : V → U} (h1 : HTPI.one_to_one f) (h2 : HTPI.one_to_one g) : HTPI.Univ U ∼ HTPI.Univ V"}
+{"name":"HTPI.Exercises.Like_Exercise_8_2_7","declaration":"theorem HTPI.Exercises.Like_Exercise_8_2_7  : ∃ P, HTPI.partition P ∧ HTPI.denum P ∧ ∀ X ∈ P, HTPI.denum X"}
+{"name":"HTPI.ctble_of_equinum_ctble","declaration":"theorem HTPI.ctble_of_equinum_ctble {U : Type} {V : Type} {A : Set U} {B : Set V} (h1 : A ∼ B) (h2 : HTPI.ctble A) : HTPI.ctble B"}
+{"name":"HTPI.Exercises.remove_one_iff","declaration":"theorem HTPI.Exercises.remove_one_iff {U : Type} {V : Type} {A : Set U} {B : Set V} {R : Rel U V} (h1 : HTPI.matching R A B) {u : U} (h2 : u ∈ A) (v : V) {x : U} (h3 : x ∈ A \\ {u}) : ∃ w ∈ A, ∀ (y : V), HTPI.remove_one R u v x y ↔ R w y"}
+{"name":"HTPI.Exercises.EqRel_equinum_EqRelExt","declaration":"theorem HTPI.Exercises.EqRel_equinum_EqRelExt (A : Type) : HTPI.Exercises.EqRel A ∼ HTPI.Exercises.EqRelExt A"}
+{"name":"HTPI.Exercises.unctbly_many_inf_set_nat","declaration":"theorem HTPI.Exercises.unctbly_many_inf_set_nat  : ¬HTPI.ctble {X | ¬HTPI.finite X}"}
+{"name":"HTPI.set_elt_powerset_univ","declaration":"theorem HTPI.set_elt_powerset_univ {U : Type} (A : Set U) : A ∈ 𝒫 HTPI.Univ U"}
+{"name":"HTPI.neb_step_not_elt","declaration":"theorem HTPI.neb_step_not_elt {A : Set ℕ} {n : ℕ} (h1 : n ∉ A) (s : ℕ) : HTPI.num_elts_below A (n + 1) s ↔ HTPI.num_elts_below A n s"}
+{"name":"HTPI.«term_×ₛ_»","declaration":"def HTPI.«term_×ₛ_»  : Lean.TrailingParserDescr"}
+{"name":"HTPI.Exercises.shift_I_equinum","declaration":"theorem HTPI.Exercises.shift_I_equinum (n : ℕ) (m : ℕ) : HTPI.I m ∼ HTPI.I (n + m) \\ HTPI.I n"}
+{"name":"HTPI.exists_least_rel_to","declaration":"theorem HTPI.exists_least_rel_to {U : Type} {S : Rel ℕ U} {x : U} (h1 : ∃ n, S n x) : ∃ n, HTPI.least_rel_to S x n"}
+{"name":"HTPI.Exercises.qr_image","declaration":"theorem HTPI.Exercises.qr_image (m : ℕ) (n : ℕ) : HTPI.image (HTPI.qr n) (HTPI.I (m * n)) = HTPI.I m ×ₛ HTPI.I n"}
+{"name":"HTPI.subset_nat_ctble","declaration":"theorem HTPI.subset_nat_ctble (A : Set ℕ) : HTPI.ctble A"}
+{"name":"HTPI.Exercises.neb_nrpb","declaration":"theorem HTPI.Exercises.neb_nrpb (m : ℕ) ⦃k : ℕ⦄ : k ≤ m → HTPI.num_elts_below (HTPI.Set_rp_below m) k (HTPI.num_rp_below m k)"}
+{"name":"HTPI.Lemma_8_2_4_2","declaration":"theorem HTPI.Lemma_8_2_4_2 {U : Type} {A : Set U} (h1 : HTPI.ctble A) (n : ℕ) : HTPI.ctble (HTPI.seq_by_length A n)"}
+{"name":"HTPI.Exercise_6_1_16a1","declaration":"theorem HTPI.Exercise_6_1_16a1 (n : ℕ) : HTPI.nat_even n ∨ HTPI.nat_odd n"}
+{"name":"HTPI.mod_mod","declaration":"def HTPI.mod_mod (m : ℕ) (n : ℕ) (a : ℕ) : ℕ × ℕ"}
+{"name":"HTPI.fnnn","declaration":"def HTPI.fnnn (p : ℕ × ℕ) : ℕ"}
+{"name":"HTPI.Exercises.Rel_image_on_power_set","declaration":"theorem HTPI.Exercises.Rel_image_on_power_set {U : Type} {V : Type} {R : Rel U V} {A : Set U} {C : Set U} {B : Set V} (h1 : HTPI.matching R A B) (h2 : C ∈ 𝒫 A) : HTPI.Exercises.Rel_image R C ∈ 𝒫 B"}
+{"name":"HTPI.seq_cons_one_one","declaration":"theorem HTPI.seq_cons_one_one (U : Type) : HTPI.one_to_one (HTPI.seq_cons U)"}
+{"name":"HTPI.le_of_fnnn_eq","declaration":"theorem HTPI.le_of_fnnn_eq {a1 : ℕ} {b1 : ℕ} {a2 : ℕ} {b2 : ℕ} (h1 : HTPI.fnnn (a1, b1) = HTPI.fnnn (a2, b2)) : a1 + b1 ≤ a2 + b2"}
+{"name":"HTPI.Exercises.denum_not_finite","declaration":"theorem HTPI.Exercises.denum_not_finite {U : Type} {A : Set U} (h : HTPI.denum A) : ¬HTPI.finite A"}
+{"name":"HTPI.Exercises.ctble_of_onto_func_from_N","declaration":"theorem HTPI.Exercises.ctble_of_onto_func_from_N {U : Type} {A : Set U} {f : ℕ → U} (h1 : ∀ x ∈ A, ∃ n, f n = x) : HTPI.ctble A"}
+{"name":"HTPI.Exercises.EqRel_Nat_equinum_PN","declaration":"theorem HTPI.Exercises.EqRel_Nat_equinum_PN  : HTPI.Exercises.EqRel ℕ ∼ 𝒫 HTPI.Univ ℕ"}
+{"name":"HTPI.Exercises.one_match_fcnl","declaration":"theorem HTPI.Exercises.one_match_fcnl {U : Type} {V : Type} (a : U) (b : V) : HTPI.fcnl_on (HTPI.one_match a b) {a}"}
+{"name":"HTPI.Theorem_8_2_4","declaration":"theorem HTPI.Theorem_8_2_4 {U : Type} {A : Set U} (h1 : HTPI.ctble A) : HTPI.ctble (HTPI.seq A)"}
+{"name":"HTPI.Exercises.fnz_fzn","declaration":"theorem HTPI.Exercises.fnz_fzn  : HTPI.fnz ∘ HTPI.fzn = id"}
+{"name":"HTPI.Exercises.tri_step","declaration":"theorem HTPI.Exercises.tri_step (k : ℕ) : HTPI.tri (k + 1) = HTPI.tri k + k + 1"}
+{"name":"HTPI.image_fqn_unbdd","declaration":"theorem HTPI.image_fqn_unbdd (m : ℕ) : ∃ n ∈ HTPI.image HTPI.fqn (HTPI.Univ ℚ), n ≥ m"}
+{"name":"HTPI.seq_cons","declaration":"def HTPI.seq_cons (U : Type) (p : U × List U) : List U"}
+{"name":"HTPI.neb_increase","declaration":"theorem HTPI.neb_increase {A : Set ℕ} {n : ℕ} {s : ℕ} (h1 : HTPI.enum A s n) ⦃m : ℕ⦄ : m ≥ n + 1 → ∀ ⦃t : ℕ⦄, HTPI.num_elts_below A m t → s < t"}
+{"name":"HTPI.Cantor's_theorem","declaration":"theorem HTPI.Cantor's_theorem  : ¬HTPI.ctble (𝒫 HTPI.Univ ℕ)"}
+{"name":"HTPI.enum_le","declaration":"theorem HTPI.enum_le {A : Set ℕ} {t : ℕ} {n1 : ℕ} {n2 : ℕ} (h1 : HTPI.enum A t n1) (h2 : HTPI.enum A t n2) : n1 ≤ n2"}
+{"name":"HTPI.mod_elt_Set_rp_below","declaration":"theorem HTPI.mod_elt_Set_rp_below {a : ℕ} {m : ℕ} [NeZero m] (h1 : HTPI.rel_prime m a) : a % m ∈ HTPI.Set_rp_below m"}
+{"name":"HTPI.inv_enum_fcnl","declaration":"theorem HTPI.inv_enum_fcnl (A : Set ℕ) : HTPI.fcnl_on (HTPI.invRel (HTPI.enum A)) A"}
+{"name":"HTPI.neb_nrpb","declaration":"theorem HTPI.neb_nrpb (m : ℕ) ⦃k : ℕ⦄ : k ≤ m → HTPI.num_elts_below (HTPI.Set_rp_below m) k (HTPI.num_rp_below m k)"}
+{"name":"HTPI.Lemma_8_2_2_1","declaration":"theorem HTPI.Lemma_8_2_2_1 {U : Type} {F : Set (Set U)} {f : Set U → Rel ℕ U} (h1 : HTPI.ctble F) (h2 : ∀ A ∈ F, HTPI.fcnl_onto_from_nat (f A) A) : HTPI.ctble (⋃₀ F)"}
+{"name":"HTPI.elt_Univ","declaration":"theorem HTPI.elt_Univ {U : Type} (u : U) : u ∈ HTPI.Univ U"}
+{"name":"HTPI.fzn_one_one","declaration":"theorem HTPI.fzn_one_one  : HTPI.one_to_one HTPI.fzn"}
+{"name":"HTPI.Set_rp_below_prod","declaration":"theorem HTPI.Set_rp_below_prod {m : ℕ} {n : ℕ} (h1 : HTPI.rel_prime m n) : HTPI.Set_rp_below (m * n) ∼ HTPI.Set_rp_below m ×ₛ HTPI.Set_rp_below n"}
+{"name":"HTPI.Exercises.Theorem_8_1_2_2","declaration":"theorem HTPI.Exercises.Theorem_8_1_2_2 {U : Type} {V : Type} {A : Set U} {C : Set U} {B : Set V} {D : Set V} (h1 : HTPI.empty (A ∩ C)) (h2 : HTPI.empty (B ∩ D)) (h3 : A ∼ B) (h4 : C ∼ D) : A ∪ C ∼ B ∪ D"}
+{"name":"HTPI.eq_numElts_of_equinum","declaration":"theorem HTPI.eq_numElts_of_equinum {U : Type} {V : Type} {A : Set U} {B : Set V} {n : ℕ} (h1 : A ∼ B) (h2 : HTPI.numElts A n) : HTPI.numElts B n"}
+{"name":"HTPI.sbl_base","declaration":"theorem HTPI.sbl_base {U : Type} (A : Set U) : HTPI.seq_by_length A 0 = {[]}"}
+{"name":"HTPI.Lemma_7_4_7_aux","declaration":"theorem HTPI.Lemma_7_4_7_aux {m : ℕ} {n : ℕ} {s : ℤ} {t : ℤ} (h : s * ↑m + t * ↑n = 1) (a : ℕ) (b : ℕ) : t * ↑n * ↑a + s * ↑m * ↑b ≡ ↑a (MOD m)"}
+{"name":"HTPI.Exercises.ctble_of_equinum_ctble","declaration":"theorem HTPI.Exercises.ctble_of_equinum_ctble {U : Type} {V : Type} {A : Set U} {B : Set V} (h1 : A ∼ B) (h2 : HTPI.ctble A) : HTPI.ctble B"}
+{"name":"HTPI.fnnn_def","declaration":"theorem HTPI.fnnn_def (a : ℕ) (b : ℕ) : HTPI.fnnn (a, b) = HTPI.tri (a + b) + a"}
+{"name":"HTPI.Exercises.set_to_list","declaration":"theorem HTPI.Exercises.set_to_list {U : Type} {A : Set U} (h : HTPI.finite A) : ∃ l, ∀ (x : U), x ∈ l ↔ x ∈ A"}
+{"name":"HTPI.Exercises.Rel_image_one_one_on","declaration":"theorem HTPI.Exercises.Rel_image_one_one_on {U : Type} {V : Type} {R : Rel U V} {A : Set U} {B : Set V} (h1 : HTPI.matching R A B) : HTPI.one_one_on (HTPI.Exercises.Rel_image R) (𝒫 A)"}
+{"name":"HTPI.csb_match_cri","declaration":"theorem HTPI.csb_match_cri {U : Type} {V : Type} {R : Rel U V} {S : Rel U V} {X0 : Set U} {x : U} {y : V} (h1 : HTPI.csb_match R S X0 x y) (h2 : x ∈ HTPI.cum_rep_image R S X0) : R x y"}
+{"name":"HTPI.eq_of_I_equinum","declaration":"theorem HTPI.eq_of_I_equinum ⦃m : ℕ⦄ ⦃n : ℕ⦄ : HTPI.I m ∼ HTPI.I n → m = n"}
+{"name":"HTPI.Exercises.equinum_sub","declaration":"theorem HTPI.Exercises.equinum_sub {U : Type} {V : Type} {A : Set U} {C : Set U} {B : Set V} (h1 : A ∼ B) (h2 : C ⊆ A) : ∃ D ⊆ B, C ∼ D"}
+{"name":"HTPI.Exercises.EqRel","declaration":"def HTPI.Exercises.EqRel (A : Type) : Set (HTPI.BinRel A)"}
+{"name":"HTPI.I_prod","declaration":"theorem HTPI.I_prod (m : ℕ) (n : ℕ) : HTPI.I (m * n) ∼ HTPI.I m ×ₛ HTPI.I n"}
+{"name":"HTPI.Exercises.sub_EqRel_Nat_equinum_PN","declaration":"theorem HTPI.Exercises.sub_EqRel_Nat_equinum_PN  : ∃ C ⊆ HTPI.Exercises.EqRel ℕ, C ∼ 𝒫 HTPI.Univ ℕ"}
+{"name":"HTPI.Set_prod_def","declaration":"theorem HTPI.Set_prod_def {U : Type} {V : Type} (A : Set U) (B : Set V) (a : U) (b : V) : (a, b) ∈ A ×ₛ B ↔ a ∈ A ∧ b ∈ B"}
+{"name":"HTPI.fzn_onto","declaration":"theorem HTPI.fzn_onto  : HTPI.onto HTPI.fzn"}
+{"name":"HTPI.Lemma_7_4_6","declaration":"theorem HTPI.Lemma_7_4_6 {a : ℕ} {b : ℕ} {c : ℕ} : HTPI.rel_prime (a * b) c ↔ HTPI.rel_prime a c ∧ HTPI.rel_prime b c"}
+{"name":"HTPI.enum_fcnl_of_unbdd","declaration":"theorem HTPI.enum_fcnl_of_unbdd {A : Set ℕ} (h1 : ∀ (m : ℕ), ∃ n ∈ A, n ≥ m) : HTPI.fcnl_on (HTPI.enum A) (HTPI.Univ ℕ)"}
+{"name":"HTPI.Theorem_8_2_1_1","declaration":"theorem HTPI.Theorem_8_2_1_1 {U : Type} {V : Type} {A : Set U} {B : Set V} (h1 : HTPI.ctble A) (h2 : HTPI.ctble B) : HTPI.ctble (A ×ₛ B)"}
+{"name":"HTPI.Lemma_8_2_4_4","declaration":"theorem HTPI.Lemma_8_2_4_4 {U : Type} (A : Set U) : HTPI.ctble (HTPI.sbl_set A)"}
+{"name":"HTPI.Theorem_8_1_5_3_to_1","declaration":"theorem HTPI.Theorem_8_1_5_3_to_1 {U : Type} {A : Set U} (h1 : ∃ R, HTPI.fcnl_one_one_to_nat R A) : HTPI.ctble A"}
+{"name":"HTPI.qr_def","declaration":"theorem HTPI.qr_def (n : ℕ) (a : ℕ) : HTPI.qr n a = (a / n, a % n)"}
+{"name":"HTPI.Exercises.one_match_match","declaration":"theorem HTPI.Exercises.one_match_match {U : Type} {V : Type} (a : U) (b : V) : HTPI.matching (HTPI.one_match a b) {a} {b}"}
+{"name":"HTPI.nat_rel_onto","declaration":"def HTPI.nat_rel_onto {U : Type} (R : Rel ℕ U) (A : Set U) : Prop"}
+{"name":"HTPI.Theorem_8_1_5_2_to_3","declaration":"theorem HTPI.Theorem_8_1_5_2_to_3 {U : Type} {A : Set U} (h1 : ∃ R, HTPI.fcnl_onto_from_nat R A) : ∃ R, HTPI.fcnl_one_one_to_nat R A"}
+{"name":"HTPI.unbdd_subset_nat_match","declaration":"theorem HTPI.unbdd_subset_nat_match {A : Set ℕ} (h1 : ∀ (m : ℕ), ∃ n ∈ A, n ≥ m) : HTPI.matching (HTPI.enum A) (HTPI.Univ ℕ) A"}
+{"name":"HTPI.Exercises.prod_match","declaration":"theorem HTPI.Exercises.prod_match {U : Type} {V : Type} {W : Type} {X : Type} {A : Set U} {B : Set V} {C : Set W} {D : Set X} {R : Rel U V} {S : Rel W X} (h1 : HTPI.matching R A B) (h2 : HTPI.matching S C D) : HTPI.matching (R ×ᵣ S) (A ×ₛ C) (B ×ₛ D)"}
+{"name":"HTPI.num_elts_below","declaration":"def HTPI.num_elts_below (A : Set ℕ) (m : ℕ) (s : ℕ) : Prop"}
+{"name":"HTPI.fnz","declaration":"def HTPI.fnz (n : ℕ) : ℤ"}
+{"name":"HTPI.Exercises.shift_and_zero","declaration":"def HTPI.Exercises.shift_and_zero (X : Set ℕ) : Set ℕ"}
+{"name":"HTPI.Lemma_8_2_4_3","declaration":"theorem HTPI.Lemma_8_2_4_3 {U : Type} (A : Set U) : ⋃₀ HTPI.sbl_set A = HTPI.seq A"}
+{"name":"HTPI.csb_cri_of_cri","declaration":"theorem HTPI.csb_cri_of_cri {U : Type} {V : Type} {R : Rel U V} {S : Rel U V} {X0 : Set U} {x1 : U} {x2 : U} {y : V} (h1 : HTPI.csb_match R S X0 x1 y) (h2 : HTPI.csb_match R S X0 x2 y) (h3 : x1 ∈ HTPI.cum_rep_image R S X0) : x2 ∈ HTPI.cum_rep_image R S X0"}
+{"name":"HTPI.Exercises.ctble_of_one_one_func_to_N","declaration":"theorem HTPI.Exercises.ctble_of_one_one_func_to_N {U : Type} {A : Set U} {f : U → ℕ} (h1 : HTPI.one_one_on f A) : HTPI.ctble A"}
+{"name":"HTPI.fnz_odd","declaration":"theorem HTPI.fnz_odd (k : ℕ) : HTPI.fnz (2 * k + 1) = -↑(k + 1)"}
+{"name":"HTPI.Exercises.EqRel_equinum_Part","declaration":"theorem HTPI.Exercises.EqRel_equinum_Part (A : Type) : HTPI.Exercises.EqRel A ∼ HTPI.Exercises.Part A"}
+{"name":"HTPI.one_one_on_of_one_one","declaration":"theorem HTPI.one_one_on_of_one_one {U : Type} {V : Type} {f : U → V} (h : HTPI.one_to_one f) (A : Set U) : HTPI.one_one_on f A"}
+{"name":"HTPI.fnz_fzn","declaration":"theorem HTPI.fnz_fzn  : HTPI.fnz ∘ HTPI.fzn = id"}
+{"name":"HTPI.tri_incr","declaration":"theorem HTPI.tri_incr {j : ℕ} {k : ℕ} (h1 : j ≤ k) : HTPI.tri j ≤ HTPI.tri k"}
+{"name":"HTPI.seq_cons_def","declaration":"theorem HTPI.seq_cons_def {U : Type} (x : U) (l : List U) : HTPI.seq_cons U (x, l) = x :: l"}
+{"name":"HTPI.mod_mod_image","declaration":"theorem HTPI.mod_mod_image {m : ℕ} {n : ℕ} (h1 : HTPI.rel_prime m n) : HTPI.image (HTPI.mod_mod m n) (HTPI.Set_rp_below (m * n)) = HTPI.Set_rp_below m ×ₛ HTPI.Set_rp_below n"}
+{"name":"HTPI.Cantor_Schroeder_Bernstein_theorem","declaration":"theorem HTPI.Cantor_Schroeder_Bernstein_theorem {U : Type} {V : Type} {A : Set U} {C : Set U} {B : Set V} {D : Set V} (h1 : C ⊆ A) (h2 : D ⊆ B) (h3 : A ∼ D) (h4 : C ∼ B) : A ∼ B"}
+{"name":"HTPI.Exercises.Exercise_8_2_8","declaration":"theorem HTPI.Exercises.Exercise_8_2_8 {U : Type} {A : Set U} {B : Set U} (h : HTPI.empty (A ∩ B)) : 𝒫(A ∪ B) ∼ 𝒫 A ×ₛ 𝒫 B"}
+{"name":"HTPI.Exercises.tri_incr","declaration":"theorem HTPI.Exercises.tri_incr {j : ℕ} {k : ℕ} (h1 : j ≤ k) : HTPI.tri j ≤ HTPI.tri k"}
+{"name":"HTPI.Exercises.intervals_equinum","declaration":"theorem HTPI.Exercises.intervals_equinum  : {x | 0 < x ∧ x < 1} ∼ {x | 0 < x ∧ x ≤ 1}"}
+{"name":"HTPI.fnz_one_one","declaration":"theorem HTPI.fnz_one_one  : HTPI.one_to_one HTPI.fnz"}
+{"name":"HTPI.prod_match","declaration":"theorem HTPI.prod_match {U : Type} {V : Type} {W : Type} {X : Type} {A : Set U} {B : Set V} {C : Set W} {D : Set X} {R : Rel U V} {S : Rel W X} (h1 : HTPI.matching R A B) (h2 : HTPI.matching S C D) : HTPI.matching (R ×ᵣ S) (A ×ₛ C) (B ×ₛ D)"}
+{"name":"HTPI.rel_prime_mod","declaration":"theorem HTPI.rel_prime_mod (m : ℕ) (a : ℕ) : HTPI.rel_prime m (a % m) ↔ HTPI.rel_prime m a"}
+{"name":"HTPI.rep_common_image","declaration":"def HTPI.rep_common_image {U : Type} {V : Type} (R : Rel U V) (S : Rel U V) (X0 : Set U) (n : ℕ) : Set U"}
+{"name":"HTPI.Exercises.Theorem_8_1_7","declaration":"theorem HTPI.Exercises.Theorem_8_1_7 {U : Type} {A : Set U} {B : Set U} {n : ℕ} {m : ℕ} (h1 : HTPI.empty (A ∩ B)) (h2 : HTPI.numElts A n) (h3 : HTPI.numElts B m) : HTPI.numElts (A ∪ B) (n + m)"}
+{"name":"HTPI.Exercises.Like_Exercise_8_2_4","declaration":"theorem HTPI.Exercises.Like_Exercise_8_2_4 {U : Type} {A : Set U} (h : HTPI.ctble A) : HTPI.ctble {X | X ⊆ A ∧ HTPI.finite X}"}
+{"name":"HTPI.fzn_fnz","declaration":"theorem HTPI.fzn_fnz  : HTPI.fzn ∘ HTPI.fnz = id"}
+{"name":"HTPI.fcnl_one_one_to_nat","declaration":"def HTPI.fcnl_one_one_to_nat {U : Type} (R : Rel U ℕ) (A : Set U) : Prop"}
+{"name":"HTPI.Exercises.inv_one_match","declaration":"theorem HTPI.Exercises.inv_one_match {U : Type} {V : Type} (a : U) (b : V) : HTPI.invRel (HTPI.one_match a b) = HTPI.one_match b a"}
+{"name":"HTPI.Exercises.EqRel_Nat_equinum_sub_PN","declaration":"theorem HTPI.Exercises.EqRel_Nat_equinum_sub_PN  : ∃ D ⊆ 𝒫 HTPI.Univ ℕ, HTPI.Exercises.EqRel ℕ ∼ D"}
+{"name":"HTPI.bdd_subset_nat","declaration":"theorem HTPI.bdd_subset_nat {A : Set ℕ} {m : ℕ} {s : ℕ} (h1 : ∀ n ∈ A, n < m) (h2 : HTPI.num_elts_below A m s) : HTPI.I s ∼ A"}
+{"name":"HTPI.Exercises.prod_fcnl","declaration":"theorem HTPI.Exercises.prod_fcnl {U : Type} {V : Type} {W : Type} {X : Type} {R : Rel U V} {S : Rel W X} {A : Set U} {C : Set W} (h1 : HTPI.fcnl_on R A) (h2 : HTPI.fcnl_on S C) : HTPI.fcnl_on (R ×ᵣ S) (A ×ₛ C)"}
+{"name":"HTPI.Theorem_7_4_4","declaration":"theorem HTPI.Theorem_7_4_4 {m : ℕ} {n : ℕ} (h1 : HTPI.rel_prime m n) : HTPI.phi (m * n) = HTPI.phi m * HTPI.phi n"}
+{"name":"HTPI.enum_unique","declaration":"theorem HTPI.enum_unique (A : Set ℕ) (t : ℕ) ⦃n1 : ℕ⦄ ⦃n2 : ℕ⦄ : HTPI.enum A t n1 → HTPI.enum A t n2 → n1 = n2"}
+{"name":"HTPI.seq","declaration":"def HTPI.seq {U : Type} (A : Set U) : Set (List U)"}
+{"name":"HTPI.mod_mod_one_one_on","declaration":"theorem HTPI.mod_mod_one_one_on {m : ℕ} {n : ℕ} (h1 : HTPI.rel_prime m n) : HTPI.one_one_on (HTPI.mod_mod m n) (HTPI.Set_rp_below (m * n))"}
+{"name":"HTPI.Lemma_7_4_7","declaration":"theorem HTPI.Lemma_7_4_7 {m : ℕ} {n : ℕ} [NeZero m] [NeZero n] (h1 : HTPI.rel_prime m n) (a : ℕ) (b : ℕ) : ∃ r < m * n, ↑r ≡ ↑a (MOD m) ∧ ↑r ≡ ↑b (MOD n)"}
+{"name":"HTPI.fnnn_onto","declaration":"theorem HTPI.fnnn_onto  : HTPI.onto HTPI.fnnn"}
+{"name":"HTPI.Exercises.Rel_image_image","declaration":"theorem HTPI.Exercises.Rel_image_image {U : Type} {V : Type} {R : Rel U V} {A : Set U} {B : Set V} (h1 : HTPI.matching R A B) : HTPI.image (HTPI.Exercises.Rel_image R) (𝒫 A) = 𝒫 B"}
+{"name":"HTPI.tri_step","declaration":"theorem HTPI.tri_step (k : ℕ) : HTPI.tri (k + 1) = HTPI.tri k + k + 1"}
+{"name":"HTPI.Exercises.saz_pair","declaration":"def HTPI.Exercises.saz_pair (X : Set ℕ) : Set (Set ℕ)"}
+{"name":"HTPI.Theorem_8_1_5_3","declaration":"theorem HTPI.Theorem_8_1_5_3 {U : Type} (A : Set U) : HTPI.ctble A ↔ ∃ R, HTPI.fcnl_one_one_to_nat R A"}
+{"name":"HTPI.Exercise_8_1_17","declaration":"theorem HTPI.Exercise_8_1_17 {U : Type} {A : Set U} {B : Set U} (h1 : B ⊆ A) (h2 : HTPI.ctble A) : HTPI.ctble B"}
+{"name":"HTPI.«term_×ᵣ_»","declaration":"def HTPI.«term_×ᵣ_»  : Lean.TrailingParserDescr"}
+{"name":"HTPI.Exercises.fnz_odd","declaration":"theorem HTPI.Exercises.fnz_odd (k : ℕ) : HTPI.fnz (2 * k + 1) = -↑(k + 1)"}
+{"name":"HTPI.rep_common_image_step","declaration":"theorem HTPI.rep_common_image_step {U : Type} {V : Type} (R : Rel U V) (S : Rel U V) (X0 : Set U) (m : ℕ) (a : U) : a ∈ HTPI.rep_common_image R S X0 (m + 1) ↔ ∃ x ∈ HTPI.rep_common_image R S X0 m, ∃ y, R x y ∧ S a y"}
+{"name":"HTPI.sbl_set","declaration":"def HTPI.sbl_set {U : Type} (A : Set U) : Set (Set (List U))"}
+{"name":"HTPI.Exercises.Exercise_8_1_8b","declaration":"theorem HTPI.Exercises.Exercise_8_1_8b {U : Type} {A : Set U} {B : Set U} (h1 : HTPI.finite A) (h2 : B ⊆ A) : HTPI.finite B"}
+{"name":"HTPI.qr_one_one","declaration":"theorem HTPI.qr_one_one (n : ℕ) : HTPI.one_to_one (HTPI.qr n)"}
+{"name":"HTPI.NxN_equinum_N","declaration":"theorem HTPI.NxN_equinum_N  : HTPI.Univ (ℕ × ℕ) ∼ HTPI.Univ ℕ"}
+{"name":"HTPI.qr","declaration":"def HTPI.qr (n : ℕ) (a : ℕ) : ℕ × ℕ"}
+{"name":"HTPI.Lemma_8_2_4_1","declaration":"theorem HTPI.Lemma_8_2_4_1 {U : Type} (A : Set U) (n : ℕ) : A ×ₛ HTPI.seq_by_length A n ∼ HTPI.seq_by_length A (n + 1)"}
+{"name":"HTPI.fzn","declaration":"def HTPI.fzn (a : ℤ) : ℕ"}
+{"name":"HTPI.numElts_unique","declaration":"theorem HTPI.numElts_unique {U : Type} {A : Set U} {m : ℕ} {n : ℕ} (h1 : HTPI.numElts A m) (h2 : HTPI.numElts A n) : m = n"}
+{"name":"HTPI.congr_rel_prime","declaration":"theorem HTPI.congr_rel_prime {m : ℕ} {a : ℕ} {b : ℕ} (h1 : ↑a ≡ ↑b (MOD m)) : HTPI.rel_prime m a ↔ HTPI.rel_prime m b"}
+{"name":"HTPI.Set_rp_below","declaration":"def HTPI.Set_rp_below (m : ℕ) : Set ℕ"}
+{"name":"HTPI.Theorem_8_1_2_1","declaration":"theorem HTPI.Theorem_8_1_2_1 {U : Type} {V : Type} {W : Type} {X : Type} {A : Set U} {B : Set V} {C : Set W} {D : Set X} (h1 : A ∼ B) (h2 : C ∼ D) : A ×ₛ C ∼ B ×ₛ D"}
+{"name":"HTPI.Exercises.Rel_image_inv","declaration":"theorem HTPI.Exercises.Rel_image_inv {U : Type} {V : Type} {R : Rel U V} {A : Set U} {C : Set U} {B : Set V} (h1 : HTPI.matching R A B) (h2 : C ∈ 𝒫 A) : HTPI.Exercises.Rel_image (HTPI.invRel R) (HTPI.Exercises.Rel_image R C) = C"}
+{"name":"HTPI.enum","declaration":"def HTPI.enum (A : Set ℕ) (s : ℕ) (n : ℕ) : Prop"}
+{"name":"HTPI.Exercises.Exercise_8_2_6b","declaration":"theorem HTPI.Exercises.Exercise_8_2_6b (A : Type) (B : Type) (C : Type) : HTPI.Univ (A × B → C) ∼ HTPI.Univ (A → B → C)"}
+{"name":"HTPI.fnz_even","declaration":"theorem HTPI.fnz_even (k : ℕ) : HTPI.fnz (2 * k) = ↑k"}
+{"name":"HTPI.Exercises.seq_cons_image","declaration":"theorem HTPI.Exercises.seq_cons_image {U : Type} (A : Set U) (n : ℕ) : HTPI.image (HTPI.seq_cons U) (A ×ₛ HTPI.seq_by_length A n) = HTPI.seq_by_length A (n + 1)"}
+{"name":"HTPI.seq_def","declaration":"theorem HTPI.seq_def {U : Type} (A : Set U) (l : List U) : l ∈ HTPI.seq A ↔ ∀ x ∈ l, x ∈ A"}
+{"name":"HTPI.Exercises.Exercise_8_1_1_b","declaration":"theorem HTPI.Exercises.Exercise_8_1_1_b  : HTPI.denum {n | HTPI.even n}"}
+{"name":"HTPI.fqn_def","declaration":"theorem HTPI.fqn_def (q : ℚ) : HTPI.fqn q = HTPI.fnnn (HTPI.fzn q.num, q.den)"}
+{"name":"HTPI.seq_by_length","declaration":"def HTPI.seq_by_length {U : Type} (A : Set U) (n : ℕ) : Set (List U)"}
+{"name":"HTPI.mod_mod_def","declaration":"theorem HTPI.mod_mod_def (m : ℕ) (n : ℕ) (a : ℕ) : HTPI.mod_mod m n a = (a % m, a % n)"}
+{"name":"HTPI.neb_step","declaration":"theorem HTPI.neb_step (A : Set ℕ) (n : ℕ) (s : ℕ) : HTPI.num_elts_below A (n + 1) s ↔ n ∈ A ∧ 1 ≤ s ∧ HTPI.num_elts_below A n (s - 1) ∨ n ∉ A ∧ HTPI.num_elts_below A n s"}
+{"name":"HTPI.enum_union_fam","declaration":"def HTPI.enum_union_fam {U : Type} (F : Set (Set U)) (f : Set U → Rel ℕ U) (R : Rel ℕ (Set U)) (n : ℕ) (a : U) : Prop"}
+{"name":"HTPI.Exercises.N_not_finite","declaration":"theorem HTPI.Exercises.N_not_finite  : ¬HTPI.finite (HTPI.Univ ℕ)"}
+{"name":"HTPI.eq_zero_of_I_zero_equinum","declaration":"theorem HTPI.eq_zero_of_I_zero_equinum {n : ℕ} (h1 : HTPI.I 0 ∼ HTPI.I n) : n = 0"}
+{"name":"HTPI.Exercises.Exercise_8_1_17","declaration":"theorem HTPI.Exercises.Exercise_8_1_17 {U : Type} {A : Set U} {B : Set U} (h1 : B ⊆ A) (h2 : HTPI.ctble A) : HTPI.ctble B"}

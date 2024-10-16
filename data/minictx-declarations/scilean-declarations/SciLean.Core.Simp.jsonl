@@ -1,0 +1,20 @@
+{"name":"Parser.Attr.add_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.add_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.add_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.add_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.smul_push","declaration":"def Parser.Attr.smul_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sum_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.sum_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.neg_push","declaration":"def Parser.Attr.neg_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sum_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.sum_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.add_push","declaration":"def Parser.Attr.add_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.add_pull","declaration":"def Parser.Attr.add_pull  : Lean.ParserDescr"}
+{"name":"Parser.Attr.neg_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.neg_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sub_pull","declaration":"def Parser.Attr.sub_pull  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sum_pull","declaration":"def Parser.Attr.sum_pull  : Lean.ParserDescr"}
+{"name":"Parser.Attr.neg_pull","declaration":"def Parser.Attr.neg_pull  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sub_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.sub_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.neg_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.neg_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sub_push","declaration":"def Parser.Attr.sub_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sum_push","declaration":"def Parser.Attr.sum_push  : Lean.ParserDescr"}
+{"name":"Parser.Attr.sub_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.sub_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.smul_pull_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.smul_pull_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.smul_push_proc","declaration":"/-- Simplification procedure -/\ndef Parser.Attr.smul_push_proc  : Lean.ParserDescr"}
+{"name":"Parser.Attr.smul_pull","declaration":"def Parser.Attr.smul_pull  : Lean.ParserDescr"}

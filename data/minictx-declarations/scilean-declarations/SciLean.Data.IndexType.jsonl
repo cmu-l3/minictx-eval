@@ -1,0 +1,12 @@
+{"name":"IndexType.reduceD","declaration":"def IndexType.reduceD {ι : Type v} [SciLean.IndexType ι] {α : Type u_2} (f : ι → α) (op : α → α → α) (default : α) : α"}
+{"name":"IndexType.sum","declaration":"def IndexType.sum {ι : Type v} [SciLean.IndexType ι] {α : Type u} [Zero α] [Add α] (f : ι → α) : α"}
+{"name":"IndexType.argValMax","declaration":"def IndexType.argValMax {X : Type u_1} {I : Type u_2} [SciLean.IndexType I] [Inhabited I] (f : I → X) [LT X] [(x x' : X) → Decidable (x < x')] : I × X"}
+{"name":"IndexType.product","declaration":"def IndexType.product {α : Type u_1} [One α] [Mul α] {ι : Type u_2} [SciLean.IndexType ι] (f : ι → α) : α"}
+{"name":"IndexType.reduce","declaration":"def IndexType.reduce {ι : Type v} [SciLean.IndexType ι] {α : Type u_2} [Inhabited α] (f : ι → α) (op : α → α → α) : α"}
+{"name":"IndexType.unexpandProduct","declaration":"def IndexType.unexpandProduct  : Lean.PrettyPrinter.Unexpander"}
+{"name":"IndexType.«term∑_,_»","declaration":"def IndexType.«term∑_,_»  : Lean.ParserDescr"}
+{"name":"IndexType.unexpandSum","declaration":"def IndexType.unexpandSum  : Lean.PrettyPrinter.Unexpander"}
+{"name":"IndexType.«term∏_,_»","declaration":"def IndexType.«term∏_,_»  : Lean.ParserDescr"}
+{"name":"IndexType.argMax","declaration":"def IndexType.argMax {X : Type u_1} {I : Type u_2} [SciLean.IndexType I] [Inhabited I] (f : I → X) [LT X] [(x x' : X) → Decidable (x < x')] : I"}
+{"name":"IndexType.instDecidableForAll","declaration":"instance IndexType.instDecidableForAll {ι : Type v} [SciLean.IndexType ι] (P : ι → Prop) [(i : ι) → Decidable (P i)] : Decidable (∀ (i : ι), P i)"}
+{"name":"IndexType.reduceMD","declaration":"def IndexType.reduceMD {ι : Type v} [SciLean.IndexType ι] {α : Type u_2} {m : Type u_2 → Type u_3} [Monad m] (f : ι → α) (op : α → α → m α) (default : α) : m α"}

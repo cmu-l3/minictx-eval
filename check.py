@@ -7,11 +7,13 @@ import transformers
 import vllm
 import re
 import sys
+import torch
 from datetime import datetime
 from pathlib import Path
 from tqdm import tqdm, trange
 
 from repl_wrapper import InteractiveThread
+from premise_retriever import retrieve
 
 import openai
 import tiktoken
@@ -37,39 +39,6 @@ def _load_data(dataset_name, dataset_path):
                 example["theoremStatement"] = example["statement"]
                 del example["statement"]
                 example["srcContext"] = "import MiniF2F.Minif2fImport\n  open BigOperators Real Nat Topology\n"
-
-    elif 'prime' in dataset_name:
-        data = []
-        with open(dataset_path) as f:
-            for line in f.readlines():
-                data_ = json.loads(line)
-                data.append(data_)
-    elif 'pfr' in dataset_name:
-        data = []
-        with open(dataset_path) as f:
-            for line in f.readlines():
-                data_ = json.loads(line)
-                data.append(data_)
-    elif 'math2001' in dataset_name:
-        data = []
-        with open(dataset_path) as f:
-            for line in f.readlines():
-                data_ = json.loads(line)
-                data.append(data_)
-    elif 'residue' in dataset_name:
-        data = []
-        with open(dataset_path) as f:
-            for line in f.readlines():
-                data_ = json.loads(line)
-                data.append(data_)
-        data = [x for x in data if x['file'] == 'PrimeNumberTheoremAnd/PrimeNumberTheoremAnd/ResidueCalcOnRectangles.lean' and (x['theoremStatement'].startswith('lemma') or x['theoremStatement'].startswith('theorem'))]
-    elif 'htpi' in dataset_name:
-        data = []
-        with open(dataset_path) as f:
-            for line in f.readlines():
-                data_ = json.loads(line)
-                data.append(data_)
-        data = [x for x in data if x['module'].startswith('HTPILib.Chap7') and (x['theoremStatement'].startswith('lemma') or x['theoremStatement'].startswith('theorem'))]
     else:
         data = []
         with open(dataset_path) as f:
@@ -96,6 +65,27 @@ def discard_after_marker(text, marker='/- BEGIN EXERCISES -/\n'):
     if marker_index != -1:
         return text[:marker_index] + marker
     return text
+
+def _load_jsonl(filepath):  # return empty if file does not exist
+    if os.path.exists(filepath):
+        data = []
+        with open(filepath, 'r', encoding='utf-8') as file:
+            for line in file:
+                data.append(json.loads(line))
+        return data
+    else:
+        return []
+
+def get_premises(example, premise_path):
+    if not os.path.exists(premise_path):
+        raise FileNotFoundError(f"The folder '{premise_path}' does not exist.")
+    # folder = "pfr-declarations"
+    project_premises = []
+    for module in example["dependencyMetadata"]["importedModules"]:
+        file = module + ".jsonl"
+        premises = _load_jsonl(os.path.join(premise_path, file))
+        project_premises += [premise["declaration"] for premise in premises]
+    return project_premises
 
 def generate_api(prompt, model, temperatures, num_samples, max_tokens=256):
     texts, scores = [], []
@@ -136,7 +126,7 @@ def remove_last_comment(ctx):
     ctx = re.sub(pattern, '', ctx, flags=re.DOTALL)
     return ctx
 
-def generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens=256, stop=["\ntheorem","\n\n\n", "---", "[/TAC]"]):
+def generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens=256, stop=["\n\n\n", "---", "[/TAC]"]):
     texts, scores = [], []
     params = vllm.SamplingParams(
         n=num_samples,
@@ -156,7 +146,6 @@ def generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens
     texts, scores = _unique_sorted(texts, scores)
     return texts, scores
 
-
 def _unique_sorted(texts, scores):
     texts_ = []
     scores_ = []
@@ -166,23 +155,36 @@ def _unique_sorted(texts, scores):
             scores_.append(s)
     return texts_, scores_
 
-def _prompt_fewshot(tokenizer, theorem_statement, ctx = None, state = None, tactics = None, task = "tactic_prediction"):
-    with open(f"prompt/{task}.txt", "r") as infile:
-        prompt = infile.read()
+def _prompt_fewshot(tokenizer, theorem_statement, ctx = None, state = None, tactics = None, premises = None, task = "tactic_prediction"):
+    if premises != None:
+        with open(f"prompt/{task}_premise.txt", "r") as infile:
+            prompt = infile.read()
+    else:
+        with open(f"prompt/{task}.txt", "r") as infile:
+            prompt = infile.read()
     
-    if task == "tactic_prediction":
+    if task == "tactic_prediction" or task == "tactic_prediction_fewshot":
         prompt = prompt.format(state)
         return prompt
     elif task == "tactic_prediction_context":
         ctx = discard_after_marker(ctx)  # Discard exercise context for HTPI
         ctx = truncate_middle(ctx, tokenizer)
         ctx = ctx + theorem_statement + "\n  " + "\n  ".join(tactics)
-        prompt = prompt.format(ctx, state)
+        if premises != None:
+            premises_str = "\n".join(premises)
+            prompt = prompt.format(ctx, premises_str, state)
+        else:
+            prompt = prompt.format(ctx, state)
+
+        print(prompt)
         return prompt
     elif task == "full_proof_context":
-        ctx = ctx
-        new_ctx = truncate_middle(ctx, tokenizer)
-        prompt = prompt.format(new_ctx, theorem_statement)
+        if premises != None:
+            premises_str = "\n".join(premises)
+            prompt = prompt.format(ctx, premises_str, theorem_statement)
+        else:
+            prompt = prompt.format(ctx, theorem_statement)
+        prompt = truncate_middle(prompt, tokenizer)
         return prompt
     elif task == "full_proof":
         prompt = prompt.format(theorem_statement)
@@ -241,13 +243,30 @@ def _eval_tactic(next_tactic, thread, proof_state, example):
     return {"status": "invalid"}
 
 
-def evaluation_API(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=512, max_iters=None):
+def evaluation_API(example, task, thread_id, repl_path, lean_env_path, premise_path, model, tokenizer, re_model, re_tokenizer, prompt_fn, temperature, num_samples, max_tokens=1024, max_iters=None):
     theorem_statement = example["theoremStatement"] + " := by\n  "
-
     
     imports = example["srcContext"]
 
-    prompt = prompt_fn(tokenizer, theorem_statement, imports, task=task)
+    retrieved_premises = None
+    if premise_path:
+        thread = InteractiveThread(thread_id, repl_path, lean_env_path, initial_context = imports, timeout=600)
+        thread.start()
+        output = thread.submit_and_receive({"cmd": theorem_statement + " sorry", "env": 0})
+        if output != None and "sorries" in output:
+            proof_state = output["sorries"][-1]["proofState"]
+        else:
+            thread.stop()
+            thread.join()
+            return {'success': False, 'msg': "Search ended"}
+        goal = get_goal(output)
+        thread.stop()
+        thread.join()
+
+        premises = get_premises(example, premise_path)
+        retrieved_premises = retrieve(re_model, re_tokenizer, goal, premises, k=20)
+
+    prompt = prompt_fn(tokenizer, theorem_statement, imports, retrieved_premises, task=task)
 
     responses = generate_api(prompt, model, [temperature], num_samples, max_tokens)
     responses = process_responses_GPT4o(responses)
@@ -292,7 +311,7 @@ def evaluation_API(example, task, thread_id, repl_path, lean_env_path, model, to
     return {"success": False,
             "proof": None}
 
-def best_first_search(example, task, thread_id, repl_path, lean_env_path, model, tokenizer, prompt_fn, temperature, num_samples, max_tokens=64, max_iters=250):
+def best_first_search(example, task, thread_id, repl_path, lean_env_path, premise_path, model, tokenizer, re_model, re_tokenizer, prompt_fn, temperature, num_samples, max_tokens=64, max_iters=250):
     theorem_statement = example["theoremStatement"] + " := by"
     imports = example["srcContext"]
     
@@ -329,7 +348,12 @@ def best_first_search(example, task, thread_id, repl_path, lean_env_path, model,
         # Dequeue the tuple with minimum score
         score, tactics, goal, proof_state = heapq.heappop(queue)
 
-        prompt = prompt_fn(tokenizer, theorem_statement, imports, goal, tactics, task)
+        retrieved_premises = None
+        if premise_path:
+            premises = get_premises(example, premise_path)
+            retrieved_premises = retrieve(re_model, re_tokenizer, goal, premises, k=20)
+        
+        prompt = prompt_fn(tokenizer, theorem_statement, imports, goal, tactics, retrieved_premises, task)
 
         tactic_cands, tactic_scores = generate_vllm(prompt, model, tokenizer, temperature, num_samples, max_tokens)
         visited = set([goal])
@@ -392,13 +416,14 @@ if __name__ == "__main__":
     parser.add_argument(
         '--task',
         default='tactic_prediction',
-        choices=['tactic_prediction', 'tactic_prediction_context', 'full_proof', 'full_proof_context']
+        choices=['tactic_prediction', 'tactic_prediction_context', 'full_proof', 'full_proof_context', 'tactic_prediction_fewshot']
     )
     parser.add_argument(
         '--dataset-name',
         default='mathlib'
     )
     parser.add_argument('--dataset-path', default='data/mathlib.jsonl')
+    parser.add_argument('--premise-path', default=None)
     parser.add_argument('--output-dir', default='output/mathlib')
     parser.add_argument('--tp-degree', type=int, default=1)
     parser.add_argument('--max-iters', type=int, default=100)
@@ -421,6 +446,15 @@ if __name__ == "__main__":
         model, tokenizer = _load_model(args.model_name, args.tp_degree)
         evaluation = best_first_search
 
+    # device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cpu")
+
+    if args.premise_path:   #use premise if premise path is not None
+        re_tokenizer = transformers.AutoTokenizer.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small")
+        re_model = transformers.AutoModelForTextEncoding.from_pretrained("kaiyuy/leandojo-lean4-retriever-byt5-small").to(device)  
+    else:
+        re_model, re_tokenizer = None, None
+
     output_dir = make_output_dir(args.output_dir)
     examples = _load_data(args.dataset_name, args.dataset_path)
     
@@ -433,7 +467,7 @@ if __name__ == "__main__":
     for example in examples:
         example["full_name"] = get_full_name(example["theoremStatement"])
         count += 1
-        out = evaluation(example, args.task, thread_id, args.repl_path, args.lean_env_path, model, tokenizer, prompt_fn, args.temperatures, args.num_samples, max_iters = args.max_iters)
+        out = evaluation(example, args.task, thread_id, args.repl_path, args.lean_env_path, args.premise_path, model, tokenizer, re_model, re_tokenizer, prompt_fn, args.temperatures, args.num_samples, max_iters = args.max_iters)
         if out['success']: 
             successes += 1
             example["proof"] = out

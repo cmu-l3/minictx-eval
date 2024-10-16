@@ -1,0 +1,11 @@
+{"name":"Array.joinrM","declaration":"def Array.joinrM {m : Type u_1 → Type u_2} {β : Type u_1} {α : Type u_3} [Monad m] [Inhabited β] (xs : Array α) (map : α → m β) (op : β → β → m β) : m β"}
+{"name":"Array.colexOrd","declaration":"/-- Ordering by size then by colexicographical ordering(right to left).\n-/\ndef Array.colexOrd {α : Type u_1} [Ord α] (as : Array α) (bs : Array α) : Ordering"}
+{"name":"Array.mergeSplit","declaration":"def Array.mergeSplit {α : Type u_1} (ids : Array (Nat ⊕ Nat)) (bs : Array α) (cs : Array α) [Inhabited α] : Array α"}
+{"name":"Array.splitIdx","declaration":"/-- Splits array into two based on function p. It also returns indices that can be used to merge two array back together.\n-/\ndef Array.splitIdx {α : Type} (as : Array α) (p : Fin (Array.size as) → α → Bool) : Array α × Array α × Array (Nat ⊕ Nat)"}
+{"name":"Array.joinlM","declaration":"def Array.joinlM {m : Type u_1 → Type u_2} {β : Type u_1} {α : Type u_3} [Monad m] [Inhabited β] (xs : Array α) (map : α → m β) (op : β → β → m β) : m β"}
+{"name":"Array.lexOrd","declaration":"/-- Ordering by size then by lexicographical ordering(left to right).\n-/\ndef Array.lexOrd {α : Type u_1} [Ord α] (as : Array α) (bs : Array α) : Ordering"}
+{"name":"Array.riffle","declaration":"def Array.riffle {α : Type u_1} (xs : Array α) (ys : Array α) : Array α"}
+{"name":"Array.splitM","declaration":"def Array.splitM {α : Type} {m : Type → Type u_1} [Monad m] (as : Array α) (p : α → m Bool) : m (Array α × Array α)"}
+{"name":"Array.partitionIdxM","declaration":"def Array.partitionIdxM {α : Type} {m : Type → Type u_1} [Monad m] (as : Array α) (p : Fin (Array.size as) → α → m Bool) : m (Array α × Array α × Array (Nat ⊕ Nat))"}
+{"name":"Array.joinl","declaration":"def Array.joinl {β : Type u_1} {α : Type u_2} [Inhabited β] (xs : Array α) (map : α → β) (op : β → β → β) : β"}
+{"name":"Array.joinr","declaration":"def Array.joinr {β : Type u_1} {α : Type u_2} [Inhabited β] (xs : Array α) (map : α → β) (op : β → β → β) : β"}

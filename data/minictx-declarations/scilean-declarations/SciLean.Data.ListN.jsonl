@@ -1,0 +1,19 @@
+{"name":"ListN.add_elemwise","declaration":"theorem ListN.add_elemwise {α : Type u_1} {n : Nat} [Add α] (x : α) (y : α) (xs : ListN α n) (ys : ListN α n) : ListN.cons x xs + ListN.cons y ys = ListN.cons (x + y) (xs + ys)"}
+{"name":"ListN.toArray","declaration":"def ListN.toArray {α : Type u_1} {n : Nat} (l : ListN α n) : Array α"}
+{"name":"ListN","declaration":"inductive ListN (α : Type u) : Nat → Type u"}
+{"name":"ListN.instMulListN","declaration":"instance ListN.instMulListN {α : Type u_1} {n : Nat} [Mul α] : Mul (ListN α n)"}
+{"name":"ListN.instAddListN","declaration":"instance ListN.instAddListN {α : Type u_1} {n : Nat} [Add α] : Add (ListN α n)"}
+{"name":"ListN.unexpandListNCons","declaration":"def ListN.unexpandListNCons  : Lean.PrettyPrinter.Unexpander"}
+{"name":"ListN.cons","declaration":"ctor ListN.cons {α : Type u} {n : Nat} (x : α) (xs : ListN α n) : ListN α (n + 1)"}
+{"name":"ListN.nil","declaration":"ctor ListN.nil {α : Type u} : ListN α 0"}
+{"name":"ListN.toList","declaration":"def ListN.toList {α : Type u_1} {n : Nat} (l : ListN α n) : List α"}
+{"name":"ListN.unexpandListNNil","declaration":"def ListN.unexpandListNNil  : Lean.PrettyPrinter.Unexpander"}
+{"name":"ListN.instToStringListN","declaration":"instance ListN.instToStringListN {α : Type u_1} {n : Nat} [ToString α] : ToString (ListN α n)"}
+{"name":"ListN.div_elemwise","declaration":"theorem ListN.div_elemwise {α : Type u_1} {n : Nat} [Div α] (x : α) (y : α) (xs : ListN α n) (ys : ListN α n) : ListN.cons x xs / ListN.cons y ys = ListN.cons (x / y) (xs / ys)"}
+{"name":"ListN.instDivListN","declaration":"instance ListN.instDivListN {α : Type u_1} {n : Nat} [Div α] : Div (ListN α n)"}
+{"name":"ListN.toArray.go","declaration":"def ListN.toArray.go {α : Type u_1} {m : Nat} (a : Array α) (l : ListN α m) : Array α"}
+{"name":"ListN.instSubListN","declaration":"instance ListN.instSubListN {α : Type u_1} {n : Nat} [Sub α] : Sub (ListN α n)"}
+{"name":"ListN.mul_elemwise","declaration":"theorem ListN.mul_elemwise {α : Type u_1} {n : Nat} [Mul α] (x : α) (y : α) (xs : ListN α n) (ys : ListN α n) : ListN.cons x xs * ListN.cons y ys = ListN.cons (x * y) (xs * ys)"}
+{"name":"ListN.map₂","declaration":"def ListN.map₂ {α : Type u_1} {β : Type u_2} {γ : Type u_3} {n : Nat} (op : α → β → γ) (l : ListN α n) (l' : ListN β n) : ListN γ n"}
+{"name":"ListN.«term[_]'»","declaration":"/-- Notation for list literals with list lenght in its type. -/\ndef ListN.«term[_]'»  : Lean.ParserDescr"}
+{"name":"ListN.sub_elemwise","declaration":"theorem ListN.sub_elemwise {α : Type u_1} {n : Nat} [Sub α] (x : α) (y : α) (xs : ListN α n) (ys : ListN α n) : ListN.cons x xs - ListN.cons y ys = ListN.cons (x - y) (xs - ys)"}

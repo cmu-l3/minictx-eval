@@ -1,0 +1,1 @@
+{"name":"SciLean.splitByCtors?","declaration":"/-- Decomposes an element `e` that is a nested application of constructors\n\nFor example, calling this function on `x : (Nat×Nat)×Nat` returns `(#[x.1.1, x.1.2, x.1], fun a b c => ((a,b),c))`\n-/\ndef SciLean.splitByCtors? (e : Lean.Expr) : Lean.MetaM (Option (Array Lean.Expr × Array Lean.Expr × Lean.Expr))"}

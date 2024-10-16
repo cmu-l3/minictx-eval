@@ -1,0 +1,4 @@
+{"name":"MSSMACC.B₃AsCharge","declaration":"/-- `B₃` is the charge which is $B-L$ in all families, but with the third\nfamily of the opposite sign. -/\ndef MSSMACC.B₃AsCharge  : ACCSystemCharges.Charges MSSMACC.toACCSystemCharges"}
+{"name":"MSSMACC.B₃_val","declaration":"theorem MSSMACC.B₃_val  : MSSMACC.B₃.val = MSSMACC.B₃AsCharge"}
+{"name":"MSSMACC.B₃","declaration":"/-- `B₃` as a solution. -/\ndef MSSMACC.B₃  : ACCSystem.Sols MSSMACC"}
+{"name":"MSSMACC.doublePoint_B₃_B₃","declaration":"theorem MSSMACC.doublePoint_B₃_B₃ (R : ACCSystemLinear.LinSols MSSMACC.toACCSystemLinear) : ((MSSMACCs.cubeTriLin MSSMACC.B₃.val) MSSMACC.B₃.val) R.val = 0"}

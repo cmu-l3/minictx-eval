@@ -1,0 +1,1 @@
+{"name":"IntegrableAtFilter.sup_iff","declaration":"theorem IntegrableAtFilter.sup_iff {α : Type u_1} {β : Type u_2} [MeasurableSpace α] [NormedAddCommGroup β] {f : α → β} {μ : MeasureTheory.Measure α} {l : Filter α} {l' : Filter α} : MeasureTheory.IntegrableAtFilter f (l ⊔ l') μ ↔\n  MeasureTheory.IntegrableAtFilter f l μ ∧ MeasureTheory.IntegrableAtFilter f l' μ"}
